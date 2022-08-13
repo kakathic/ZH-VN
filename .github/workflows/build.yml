@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Tự động hóa
         run: |
-          sudo
-          sudo -c ls /data
+          
+          sudo ls /data
           cp -rf install.sh /data/install.sh
           chmod 777 /data/install.sh
           . /data/install.sh
