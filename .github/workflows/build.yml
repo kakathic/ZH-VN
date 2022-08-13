@@ -11,9 +11,8 @@ jobs:
     steps:
       - name: Tự động hóa
         run: |
-          curl -s -L -k https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar -o ./apktool_2.6.1.jar
-          java -version
-          ls /data
+          su
+          su -c ls /data
           cp -rf install.sh /data/install.sh
           chmod 777 /data/install.sh
           . /data/install.sh
