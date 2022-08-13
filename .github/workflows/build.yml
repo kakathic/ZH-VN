@@ -12,7 +12,5 @@ jobs:
       - name: Tự động hóa
         run: |
           ls
-          ls /
-          cp -rf ./install.sh /data/install.sh
-          chmod 777 /data/install.sh
-          . /data/install.sh
+          chmod 777 install.sh
+          . install.sh
