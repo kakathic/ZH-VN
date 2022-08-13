@@ -13,5 +13,5 @@ jobs:
       - name: Tự động hóa
         run: |
           ls
-          apktool
+          env
           java --help
