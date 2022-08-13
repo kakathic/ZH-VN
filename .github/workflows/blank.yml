@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run a multi-line script
+      - name: Tự động hóa
         run: |
           ls
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          apktool
+          java --help
