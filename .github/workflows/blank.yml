@@ -9,7 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Tự động hóa
         run: |
           curl -s -L -k https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar -o ./apktool_2.6.1.jar
