@@ -14,4 +14,4 @@ jobs:
         run: |
           ls
           env
-          java --help
+          java -version
