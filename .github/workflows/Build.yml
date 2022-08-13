@@ -15,4 +15,4 @@ jobs:
           java -version
           ls
           java -jar apktool_2.6.1.jar
-          exec install.sh
+          exec ./install.sh
