@@ -13,6 +13,6 @@ jobs:
         run: |
           curl -s -L -k https://github.com/iBotPeaches/Apktool/releases/download/v2.6.1/apktool_2.6.1.jar -o ./apktool_2.6.1.jar
           java -version
-          ls
+          ls /
           java -jar apktool_2.6.1.jar
-          sh ./install.sh
+          sh install.sh
