@@ -40,7 +40,7 @@ done
 Phienban="$(Xem "https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json" | jq -r .version)"
 
 ListTM="Tmp
-Pro
+pro
 apk"
 
 for Vak in $ListTM; do
@@ -137,6 +137,6 @@ fi
 # Nén lại
 
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip pro/* framework-miui-res apk/*
+zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/* pro/*
 
 
