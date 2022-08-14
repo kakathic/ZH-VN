@@ -20,7 +20,7 @@ AutoAll () {
 for gwgeh in $(Timkiem "$1" "$3"); do
 
 until false; do
-
+sleep 1
 rhhgh="$(grep -c "$1" $gwgeh)"
 echo $rhhgh
 [ "$rhhgh" == 0 ] && break
