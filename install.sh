@@ -16,6 +16,14 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 
 Timkiem () { grep -Rl "$1" $2; }
 
+Thaythe () {
+Tt1="$(Timkiem "$1" "$3")"
+[ "$Tt1" ] && echo "MOD: $1 -> $2"
+for Tt2 in $Tt1; do
+[ "$Tt2" ] && sed -i "s|$1|Le$2|g" $Tt2
+done
+}
+
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
 
 ListTM="Tmp
@@ -66,17 +74,9 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
 modtt () {
 
-evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*")"
-[ "$evbhe" ] && echo "MOD: Khu vực việt nam"
-for rgeg in $evbhe; do
-[ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
-done
-
-Sksjh="$(Timkiem "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*")"
-[ "$Sksjh" ] && echo "MOD: Global"
-for udud in $Sksjh; do
-[ "$udud" ] && sed -i 's|Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z|Le/h/a;->a:Z|g' $udud
-done
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Le/h/a;->a:Z" "${1%.*}/smali*"
+Thaythe "ro.miui.region" "ro.khu.vuc" "${1%.*}/smali*"
+Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 
 }
 
