@@ -27,13 +27,13 @@ apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/Apks/Zz.$vad" 2>/dev/
 
 spt=$(($spt + 1))
 if [ -s "$GITHUB_WORKSPACE/Apks/Zz.$vad" ];then
-echo "$spt. $vad" 
+echo "$spt - $vad" 
 else
-echo "$spt. $vad
+echo "$spt - $vad
 
 $(cat $GITHUB_WORKSPACE/log)
 "
-# Trùng string
+
 if [ "$(grep -cm1 'is already defined.' $GITHUB_WORKSPACE/log)" == 1 ];then
 while true; do
 Linktk=$(grep -m1 'is already defined.' $GITHUB_WORKSPACE/log | cut -d : -f2)
