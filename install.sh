@@ -50,5 +50,6 @@ done
 cd $GITHUB_WORKSPACE/miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
+mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/Pack.zip framework.zip Apks/*
+zip -qr $GITHUB_WORKSPACE/Pack.zip framework-miui-res Apks/*
