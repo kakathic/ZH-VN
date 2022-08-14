@@ -1,9 +1,11 @@
 name: CI
 on:
  push:
-    branches: [ "Vip" ]
+  branches:
+      - Vip
  pull_request:
-    branches: [ "Vip" ]
+  branches:
+      - Vip
   workflow_dispatch:
 jobs:
   build:
