@@ -22,5 +22,6 @@ jobs:
           tag: 
           name: ${{ github.ref_name }}
           tag_name: Test-${{ github.ref_name }}
+          prerelease: true
           files: Pack.zip
           generate_release_notes: true
