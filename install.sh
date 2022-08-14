@@ -143,8 +143,8 @@ repapk $Themeossn
 fi
 
 Modbaomat(){
-cp -f ${1%.*}/smali*/miuix/os/a.smali $GITHUB_WORKSPACE
-mv -f $GITHUB_WORKSPACE/a.smali ${1%.*}/smali*/miuix/os/b.smali
+Kjffgb=$(find ${1%.*}/smali*/miuix/os/a.smali)
+cp -f $Kjffgb ${Kjffgb%/*}/b.smali
 Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b.smali"
 
 Listknd="com/miui/securityscan
