@@ -15,6 +15,22 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 }
 
 Timkiem () { grep -Rl "$1" $2; }
+AutoAll () {
+for gwgeh in $(Timkiem "$1" "$3"); do
+while true; do
+rhhgh="$(grep -c "$1" $gwgeh)"
+[ "$rhhgh" == 0 ] && break
+rhheg="$(grep -m1 "$1" $gwgeh)"
+ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
+rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
+[ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
+echo $gwgeh
+if [ "$rhbrb" != 1 ];then
+break
+fi
+done
+done
+}
 
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
 
@@ -65,8 +81,22 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
 # Mod apk
 
-unapk $GITHUB_WORKSPACE/Hpk/Thoitiet.apk
-Timkiem "ro.miui.region" $GITHUB_WORKSPACE/Hpk/Thoitiet/smali*
+modtt () {
+AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
+AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
+evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*")"
+[ "$evbhe" ] && echo "MOD: Khu vực việt nam"
+for rgeg in $evbhe; do
+[ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
+done
+}
+
+thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
+if [ -e "$thoitietpath" ];then
+unapk $thoitietpath
+modtt $thoitietpath
+repapk $thoitietpath
+fi
 
 
 # Nén lại
