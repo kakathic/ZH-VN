@@ -14,6 +14,9 @@ apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
 zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 }
 
+Taive () { curl -s -L "$1" -o "$2"; }
+Xem () { curl -s -L -G "$1"; }
+
 Timkiem () { grep -Rl "$1" $2; }
 
 Thaythe () {
@@ -24,7 +27,7 @@ for Tt2 in $Tt1; do
 done
 }
 
-Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
+Phienban="$(Xem "https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json" | jq -r .version)"
 
 ListTM="Tmp
 apk"
