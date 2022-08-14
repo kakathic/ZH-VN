@@ -47,7 +47,7 @@ fi
 fi
 done
 
-cd $GITHUB_WORKSPACE/miui
+cd $GITHUB_WORKSPACE/MIUI
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
