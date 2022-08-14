@@ -27,6 +27,14 @@ for Tt2 in $Tt1; do
 done
 }
 
+Vsmali () {
+Vtk="$(Timkiem "$1" "$4")"
+Vbd="$(echo "$3" | sed -z 's|\n|\\n|g')"
+for Vka in $Vtk; do
+echo "MOD: $(echo "$1" | sed 's|\\||g')"
+sed -i -e "/^$1/,/$2/c $Vbd" "$Vka"
+done
+}
 Phienban="$(Xem "https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json" | jq -r .version)"
 
 ListTM="Tmp
