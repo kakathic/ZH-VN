@@ -1,7 +1,11 @@
 # kakathic
 apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
 apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
-
+chmod 777 $GITHUB_WORKSPACE/Tools/toybox
+find () { $GITHUB_WORKSPACE/Tools/toybox find "$@"; }
+grep () { $GITHUB_WORKSPACE/Tools/toybox grep "$@"; }
+cut () { $GITHUB_WORKSPACE/Tools/toybox cut "$@"; }
+sed () { $GITHUB_WORKSPACE/Tools/toybox sed "$@"; }
 Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
