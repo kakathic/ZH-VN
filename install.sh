@@ -6,6 +6,28 @@ Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
+Timkiem () { find $2 -name "$3" -exec grep -Rl "$1" {} +; }
+# Tự động thay
+AutoAll () {
+for gwgeh in $(Timkiem "$1" "$3" "*.smali"); do
+while true; do
+rhhgh="$(grep -c "$1" $gwgeh)"
+[ "$rhhgh" == 0 ] && break
+rhheg="$(grep -m1 "$1" $gwgeh)"
+ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
+rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
+[ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
+[ "$rhbrb" != 1 ] && break
+done
+done
+
+unapk(){
+apktool d -q -f "$1" -o "${1%.*}"
+}
+repapk(){
+apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
+zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
+}
 
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
 
@@ -53,5 +75,29 @@ cd $GITHUB_WORKSPACE/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
+
+# khu vực mod apk
+
+modtt(){
+evbhe="$(Timkiem "ro.miui.region" "${1%.*}/classes*" "*.smali")"
+[ "$evbhe" ] && echo "MOD: Khu vực việt nam"
+for rgeg in $evbhe; do
+[ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
+done
+AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/classes*"
+AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/classes*" "0x1" "${1%.*}/classes*"
+}
+
+thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
+if [ -e $thoitietpath ];then
+unapk $thoitietpath
+modtt $thoitietpath
+repapk $thoitietpath
+fi
+
+# Nén lại
+
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
+zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip Thoitiet.apk framework-miui-res apk/*
+
+
