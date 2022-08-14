@@ -140,7 +140,7 @@ repapk $Themeossn
 fi
 
 Modbaomat(){
-cp -rf "${1%.*}/smali*/miuix/os/a" "${1%.*}/smali*/miuix/os/b"
+cp -rf ${1%.*}/smali*/miuix/os/a.smali ${1%.*}/smali*/miuix/os/b.smali
 Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b"
 
 Listknd="com/miui/securityscan
