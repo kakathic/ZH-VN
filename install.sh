@@ -17,6 +17,8 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 Taive () { curl -s -L "$1" -o "$2"; }
 Xem () { curl -s -L -G "$1"; }
 
+Geplai(){ cat "$GITHUB_WORKSPACE/Hpk/$1".* > "$GITHUB_WORKSPACE/Hpk/$1".apk; }
+
 Timkiem () { grep -Rl "$1" $2; }
 
 Thaythe () {
@@ -123,6 +125,7 @@ Thaythe "DRM_ERROR_UNKNOWN" "DRM_ERROR_UNKNOWN" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
 }
 
+Geplai "Theme"
 Themeossn="$GITHUB_WORKSPACE/Hpk/Theme.apk"
 if [ -e "$Themeossn" ];then
 unapk $Themeossn
