@@ -16,8 +16,8 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 
 Timkiem () { grep -Rl "$1" $2; }
 AutoAll () {
-Timkiem "$1" "$3" >> $GITHUB_WORKSPACE/txtkk
-for gwgeh in $(cat $GITHUB_WORKSPACE/txtkk); do
+for gwgeh in $(Timkiem "$1" "$3"); do
+
 while true; do
 rhhgh="$(grep -c "$1" $gwgeh)"
 [ "$rhhgh" == 0 ] && break
@@ -25,12 +25,13 @@ rhheg="$(grep -m1 "$1" $gwgeh)"
 ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
 rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
 [ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
-echo $gwgeh
+echo "$gwgeh $rhbrb"
 if [ "$rhbrb" != 1 ];then
 break
-fi
-done
-done
+fi;
+done;
+
+done;
 }
 
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
