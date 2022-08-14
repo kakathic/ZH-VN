@@ -25,7 +25,7 @@ done
 }
 
 unapk () {
-apktool d -q -f "$1" -o "${1%.*}"
+apktool d -q -r -f "$1" -o "${1%.*}"
 }
 repapk () {
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
@@ -48,7 +48,7 @@ for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
 
-apktool b -f $vad -o $GITHUB_WORKSPACE/Tmp/Zz.$vad >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
+apktool b -f -s $vad -o $GITHUB_WORKSPACE/Tmp/Zz.$vad >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 
 spt=$(($spt + 1))
@@ -82,6 +82,7 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # khu vực mod apk
 
 modtt () {
+echo ${1%.*}
 evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
@@ -93,9 +94,9 @@ AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
 if [ -e "$thoitietpath" ];then
-unapk $thoitietpath 2>&1
-modtt $thoitietpath 2>&1
-repapk $thoitietpath 2>&1
+unapk $thoitietpath
+modtt $thoitietpath
+repapk $thoitietpath
 fi
 
 # Nén lại
