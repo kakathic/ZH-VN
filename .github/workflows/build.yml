@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Tự động hóa
+      - name: Chạy Code
         run: |
           chmod 777 install.sh
           . install.sh
@@ -20,8 +20,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag: 
-          name: ${{ github.ref_name }}
-          tag_name: Test-${{ github.ref_name }}
-          files: Pack.zip
+          name: Tool ZH-VN
+          tag_name: Package
+          files: VH_1.0.zip
           prerelease: true
           generate_release_notes: true
