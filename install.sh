@@ -6,7 +6,7 @@ apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
-Timkiem () { find $2 -name "$3" | xargs -0 grep -Rl "$1"; }
+Timkiem () { find $2 -name "$3" -print0 | xargs -0 grep -Rl "$1"; }
 
 # Tự động thay
 AutoAll () {
@@ -18,6 +18,7 @@ rhheg="$(grep -m1 "$1" $gwgeh)"
 ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
 rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
 [ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
+echo $gwgeh
 [ "$rhbrb" != 1 ] && break
 done
 done
@@ -81,16 +82,14 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # khu vực mod apk
 
 modtt () {
-find ${1%.*}/smali* -name '*.smali'
-evbhe="$(find ${1%.*}/smali* -name '*.smali' -exec grep -Rl "ro.miui.region" {} +)"
-#evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
+AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
+AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
+evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
 echo $evbhe
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
 done
-AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
-AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
