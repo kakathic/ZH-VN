@@ -34,9 +34,9 @@ apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/n
 
 spt=$(($spt + 1))
 if [ -s "$GITHUB_WORKSPACE/apk/Zz.$vad" ];then
-echo "$spt - $vad" 
+echo "$spt $vad" 
 else
-echo "$spt - $vad
+echo "$spt $vad
 
 $(cat $GITHUB_WORKSPACE/log)
 "
