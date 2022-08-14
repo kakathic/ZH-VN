@@ -25,7 +25,7 @@ echo $rhhgh
 rhheg="$(grep -m1 "$1" $gwgeh)"
 ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
 rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
-[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $rhbrb
+[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $gwgeh
 if [ "$rhbrb" != 1 ];then
 break
 fi;
