@@ -145,7 +145,6 @@ fi
 Modbaomat(){
 Kjffgb=$(find ${1%.*}/smali*/miuix/os/a.smali)
 cp -rf $GITHUB_WORKSPACE/Tools/b.smali ${Kjffgb%/*}
-Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b.smali"
 
 Listknd="com/miui/securityscan
 com/miui/securityscan/b0
