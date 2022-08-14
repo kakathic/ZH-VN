@@ -19,7 +19,7 @@ Timkiem () { grep -Rl "$1" $2; }
 AutoAll () {
 for gwgeh in $(Timkiem "$1" "$3"); do
 
-for eheh in $RANDOM; do
+until false; do
 
 rhhgh="$(grep -c "$1" $gwgeh)"
 echo $rhhgh
