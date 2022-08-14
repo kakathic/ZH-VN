@@ -18,7 +18,7 @@ Timkiem () { grep -Rl "$1" $2; }
 AutoAll () {
 for gwgeh in $(Timkiem "$1" "$3"); do
 
-Kh()
+Kh(){
 rhhgh="$(grep -c "$1" $gwgeh)"
 [ "$rhhgh" == 0 ] && break
 rhheg="$(grep -m1 "$1" $gwgeh)"
