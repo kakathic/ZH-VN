@@ -134,6 +134,36 @@ Modtheme $Themeossn
 repapk $Themeossn
 fi
 
+Modbaomat(){
+cp -rf "${1%.*}/smali*/miuix/os/a" "${1%.*}/smali*/miuix/os/b"
+Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b"
+
+Listknd="com/miui/securityscan
+com/miui/securityscan/b0
+com/miui/securityscan/cards
+com/miui/securityscan/d0
+com/miui/securityscan/fileobserver
+com/miui/securityscan/model/manualitem
+com/miui/securityscan/model/manualitem/defaultapp
+com/miui/securityscan/s
+com/miui/securityscan/scanner
+com/miui/securityscan/u
+com/miui/securityscan/ui/main
+com/miui/securityscan/ui/settings"
+
+for vdk in $Listknd; do
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/a;->b:Z" "${1%.*}/smali*/$vdk/*"
+done
+}
+
+Geplai "Baomat"
+Baomatossn="$GITHUB_WORKSPACE/Hpk/Baomat.apk"
+if [ -e "$Themeossn" ];then
+unapk $Baomatossn
+Modtheme $Baomatossn
+repapk $Baomatossn
+fi
+
 # Nén lại
 
 cd $GITHUB_WORKSPACE
