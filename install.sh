@@ -16,23 +16,6 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 
 Timkiem () { grep -Rl "$1" $2; }
 
-AutoAll () {
-for gwgeh in $(grep -Rl "$1" $3); do
-for i in $RANDOM; do
-rhhgh="$(grep -c "$1" $gwgeh)"
-echo $rhhgh
-[ "$rhhgh" == 0 ] && break
-rhheg="$(grep -m1 "$1" $gwgeh)"
-ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
-rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
-[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $gwgeh
-if [ "$rhbrb" != 1 ];then
-break
-fi;
-done
-done;
-}
-
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
 
 ListTM="Tmp
@@ -83,29 +66,19 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # Mod apk
 
 modtt () {
+
 evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*")"
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
 done
 
-for gwgeh in $(grep -Rl "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" ${1%.*}/smali*); do
-for i in $RANDOM; do
-rhhgh="$(grep -c "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" $gwgeh)"
-echo $rhhgh
-[ "$rhhgh" == 0 ] && break
-rhheg="$(grep -m1 "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" $gwgeh)"
-ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z|0x1|")"
-rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
-[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $gwgeh
-if [ "$rhbrb" != 1 ];then
-break
-fi;
+Sksjh="$(Timkiem "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*")"
+[ "$Sksjh" ] && echo "MOD: Global"
+for udud in $Sksjh; do
+[ "$udud" ] && sed -i 's|Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z|Le/h/a;->a:Z|g' $udud
 done
-done;
 
-#AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
-AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
