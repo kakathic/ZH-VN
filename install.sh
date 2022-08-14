@@ -7,7 +7,7 @@ apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
-Timkiem () { find $2 -name "$3" -exec grep -Rl "$1" {} +; }
+Timkiem () { find $2 -name "$3" | xargs grep -Rl "$1"; }
 
 # Tự động thay
 AutoAll () {
@@ -82,7 +82,6 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # khu vực mod apk
 
 modtt () {
-ls ${1%.*}
 evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
@@ -94,13 +93,9 @@ AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
 if [ -e "$thoitietpath" ];then
-echo $thoitietpath
 unapk $thoitietpath
-echo $thoitietpath
 modtt $thoitietpath
-echo $thoitietpath
 repapk $thoitietpath
-echo $thoitietpath
 fi
 
 # Nén lại
