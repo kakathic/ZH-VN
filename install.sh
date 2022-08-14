@@ -122,7 +122,7 @@ Vsmali ".method private static isAdValid" \
 
 Thaythe "ro.miui.region" "ro.khu.vuc.cn" "${1%.*}/smali*"
 Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_ERROR_UNKNOWN" "${1%.*}/smali*"
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
 }
 
