@@ -93,9 +93,9 @@ AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
 if [ -e "$thoitietpath" ];then
-unapk $thoitietpath
-modtt $thoitietpath
-repapk $thoitietpath
+unapk $thoitietpath 2>&1
+modtt $thoitietpath 2>&1
+repapk $thoitietpath 2>&1
 fi
 
 # Nén lại
