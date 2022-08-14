@@ -1,6 +1,6 @@
 # kakathic
-apktool () { java -jar Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
-apksign () { java -jar Tools/apksigner.jar sign --cert "Tools/releasekey.x509.pem" --key "Tools/releasekey.pk8" --out "$2" "$1"; }
+apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
+apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
 
 Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
@@ -8,14 +8,13 @@ apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/Apks/Zz.$vad" 2>/dev/
 }
 
 ListTM="Tmp
-Apks
-"
+Apks"
 
 for Vak in $ListTM; do
 mkdir -p $Vak
 done
 spt=0
-cd vi-VN
+cd $GITHUB_WORKSPACE/vi-VN
 
 for vad in *.apk; do
 
