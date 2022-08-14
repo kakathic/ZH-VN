@@ -6,7 +6,7 @@ apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
-Timkiem () { find $2 -name "$3" -print0 | xargs -0 grep -Rl "$1"; }
+Timkiem () { find $2 -name "$3" -exec grep -Rl "$1" {} +; }
 
 # Tự động thay
 AutoAll () {
@@ -84,12 +84,6 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 modtt () {
 AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
 AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
-evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
-echo $evbhe
-[ "$evbhe" ] && echo "MOD: Khu vực việt nam"
-for rgeg in $evbhe; do
-[ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
-done
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
