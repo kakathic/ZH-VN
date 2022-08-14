@@ -19,7 +19,7 @@ jobs:
           # ls /bin/jq
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
           chmod 777 install.sh
-          . install.sh
+          sudo . install.sh
       - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
