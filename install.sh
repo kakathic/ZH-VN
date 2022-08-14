@@ -14,6 +14,8 @@ apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
 zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 }
 
+Timkiem () { grep -Rl "$1" $2; }
+
 Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
 
 ListTM="Tmp
@@ -25,6 +27,7 @@ done
 spt=0
 cd $GITHUB_WORKSPACE/Vietnam
 
+Kk(){
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
@@ -58,6 +61,13 @@ cd $GITHUB_WORKSPACE/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
+}
+
+# Mod apk
+
+unapk $GITHUB_WORKSPACE/Hpk/Thoitiet.apk
+Timkiem "ro.miui.region" $GITHUB_WORKSPACE/Hpk/Thoitiet/smali*
+
 
 # Nén lại
 
