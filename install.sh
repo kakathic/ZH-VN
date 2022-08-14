@@ -7,6 +7,8 @@ apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
+Phienban="$(cat $GITHUB_WORKSPACE/README.md | grep -m1 'Version:' | awk '{print $2}')"
+
 ListTM="Tmp
 apk"
 
@@ -52,4 +54,4 @@ cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/VH_1.0.zip framework-miui-res apk/*
+zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
