@@ -16,7 +16,8 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 
 Timkiem () { grep -Rl "$1" $2; }
 AutoAll () {
-for gwgeh in $(Timkiem "$1" "$3"); do
+Timkiem "$1" "$3" >> $GITHUB_WORKSPACE/txtkk
+for gwgeh in $(cat $GITHUB_WORKSPACE/txtkk); do
 while true; do
 rhhgh="$(grep -c "$1" $gwgeh)"
 [ "$rhhgh" == 0 ] && break
@@ -82,13 +83,13 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # Mod apk
 
 modtt () {
-AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
-AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*")"
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
 done
+AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
+AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
