@@ -1,191 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<plurals name="a_hour_ago">
-		<item quantity="other">1 giờ trước</item>
-	</plurals>
-	<plurals name="abbrev_a_hour_ago">
-		<item quantity="other">1 giờ trước</item>
-	</plurals>
-	<plurals name="abbrev_half_hour_ago">
-		<item quantity="other">Nửa tiếng trước</item>
-	</plurals>
-	<plurals name="abbrev_in_a_hour">
-		<item quantity="other">Trong 1 giờ</item>
-	</plurals>
-	<plurals name="abbrev_in_half_hour">
-		<item quantity="other">Trong nửa giờ</item>
-	</plurals>
-	<plurals name="abbrev_in_less_than_one_minute">
-		<item quantity="other">Ngay lập tức</item>
-	</plurals>
-	<plurals name="abbrev_in_num_minutes">
-		<item quantity="other">tính bằng %d phút</item>
-		<item quantity="one">trong 1 phút</item>
-	</plurals>
-	<plurals name="abbrev_less_than_one_minute_ago">
-		<item quantity="other">Vừa rồi</item>
-	</plurals>
-	<plurals name="abbrev_num_minutes_ago">
-		<item quantity="other">%d mins trước</item>
-		<item quantity="one">1 phút trước</item>
-	</plurals>
-	<plurals name="half_hour_ago">
-		<item quantity="other">Nửa tiếng trước</item>
-	</plurals>
-	<plurals name="in_a_hour">
-		<item quantity="other">Trong 1 giờ</item>
-	</plurals>
-	<plurals name="in_half_hour">
-		<item quantity="other">Trong nửa giờ</item>
-	</plurals>
-	<plurals name="in_less_than_one_minute">
-		<item quantity="other">Ngay lập tức</item>
-	</plurals>
-	<plurals name="in_num_minutes">
-		<item quantity="other">tính bằng %d phút</item>
-		<item quantity="one">trong 1 phút</item>
-	</plurals>
-	<plurals name="less_than_one_minute_ago">
-		<item quantity="other">Vừa rồi</item>
-	</plurals>
-	<plurals name="miuix_appcompat_items_selected">
-		<item quantity="other">%d các mục được chọn</item>
-		<item quantity="one">%d mục được chọn</item>
-	</plurals>
-	<plurals name="num_minutes_ago">
-		<item quantity="other">%d phút trước</item>
-		<item quantity="one">1 phút trước</item>
-	</plurals>
-	<plurals name="pa_accessibility_olympic_bronze_medal_count">
-		<item quantity="other">%d huy chương đồng</item>
-		<item quantity="one">%d huy chương đồng</item>
-	</plurals>
-	<plurals name="pa_accessibility_olympic_gold_medal_count">
-		<item quantity="other">%d huy chương vàng</item>
-		<item quantity="one">%d huy chương vàng</item>
-	</plurals>
-	<plurals name="pa_accessibility_olympic_medal_count">
-		<item quantity="other">%d Huy chương</item>
-		<item quantity="one">%d tổng số huy chương</item>
-	</plurals>
-	<plurals name="pa_accessibility_olympic_rank">
-		<item quantity="other">Đặt %d</item>
-		<item quantity="one">Đặt %d</item>
-	</plurals>
-	<plurals name="pa_accessibility_olympic_silver_medal_count">
-		<item quantity="other">%d huy chương bạc</item>
-		<item quantity="one">%d huy chương bạc</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_desktop_1">
-		<item quantity="other">Cửa hàng Widget. Danh sách ứng dụng. %d các mục trong danh sách ứng dụng.</item>
-		<item quantity="one">Cửa hàng Widget. Danh sách ứng dụng. %d mục trong danh sách ứng dụng.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_desktop_3">
-		<item quantity="other">Số %d trong danh sách.</item>
-		<item quantity="one">Số %d trong danh sách.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_desktop_4">
-		<item quantity="other">Các mặt hàng chứa %d widgets. Double Tap để mở mô tả tiện ích.</item>
-		<item quantity="one">Các mặt hàng chứa %d widget. Double Tap để mở mô tả tiện ích.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_minus_desktop_1">
-		<item quantity="other">Cửa hàng Widget. Danh sách ứng dụng. %d các mục trong danh sách.</item>
-		<item quantity="one">Cửa hàng Widget. Danh sách ứng dụng. %d mục trong danh sách.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_minus_desktop_3">
-		<item quantity="other">Số %d trong danh sách.</item>
-		<item quantity="one">Số %d trong danh sách.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_minus_desktop_4">
-		<item quantity="other">Các mặt hàng chứa %d widgets. Double Tap để mở mô tả tiện ích.</item>
-		<item quantity="one">Các mặt hàng chứa %d widget. Double Tap để mở mô tả tiện ích.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_third_1">
-		<item quantity="other">Cửa hàng Widget. Danh sách ứng dụng. %d các mục trong danh sách.</item>
-		<item quantity="one">Cửa hàng Widget. Danh sách ứng dụng. %d mục trong danh sách.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_third_3">
-		<item quantity="other">Số %d trong danh sách.</item>
-		<item quantity="one">Số %d trong danh sách.</item>
-	</plurals>
-	<plurals name="pa_accessibility_picker_widget_app_group_item_add_to_third_4">
-		<item quantity="other">Các mặt hàng chứa %d widgets. Double Tap để mở mô tả tiện ích.</item>
-		<item quantity="one">Các mặt hàng chứa %d widget. Double Tap để mở mô tả tiện ích.</item>
-	</plurals>
-	<plurals name="pa_base_time_hour_ago">
-		<item quantity="other">%d giờ trước</item>
-		<item quantity="one">%d giờ trước</item>
-	</plurals>
-	<plurals name="pa_base_time_minute_ago">
-		<item quantity="other">%d mins trước</item>
-		<item quantity="one">%d min trước đây</item>
-	</plurals>
-	<plurals name="pa_edit_text_limit">
-		<item quantity="other">Nhập lên đến %1$d ký tự</item>
-		<item quantity="one">Nhập tối đa đến %1$d ký tự</item>
-	</plurals>
-	<plurals name="pa_edit_text_min_length">
-		<item quantity="other">Ít nhất %1$d ký tự</item>
-		<item quantity="one">Ít nhất %1$d ký tự</item>
-	</plurals>
-	<plurals name="pa_express_content_title_1">
-		<item quantity="other">%d gói đang trên đường của họ</item>
-		<item quantity="one">Gói %d đang trên đường</item>
-	</plurals>
-	<plurals name="pa_express_history_dialog_delete_message">
-		<item quantity="other">Xóa các mục %s ngay bây giờ?</item>
-		<item quantity="one">Xóa mục %s ngay bây giờ?</item>
-	</plurals>
-	<plurals name="pa_express_history_menu_select_num">
-		<item quantity="other">Các mục được chọn %s</item>
-		<item quantity="one">Đã chọn %s mục</item>
-	</plurals>
-	<plurals name="pa_express_main_mul_choice_title">
-		<item quantity="other">%d các mục được chọn</item>
-		<item quantity="one">%d mục được chọn</item>
-	</plurals>
-	<plurals name="pa_express_settings_title_2">
-		<item quantity="other">Bạn đã thêm %d số điện thoại</item>
-		<item quantity="one">Bạn đã thêm %d số điện thoại</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_abandoned">
-		<item quantity="other">%d gói bị bỏ rơi</item>
-		<item quantity="one">%d gói bị bỏ rơi</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_agent">
-		<item quantity="other">%d Gói đang chờ đón</item>
-		<item quantity="one">%d gói đang chờ đón</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_canceled">
-		<item quantity="other">%d gói bị hủy</item>
-		<item quantity="one">%d gói bị hủy</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_delivering">
-		<item quantity="other">%d gói ra để giao hàng</item>
-		<item quantity="one">%d gói ra để giao hàng</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_failed">
-		<item quantity="other">%d Gói gặp vấn đề</item>
-		<item quantity="one">%d Gói gặp vấn đề</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_on_ground">
-		<item quantity="other">%d Gói đang vận chuyển</item>
-		<item quantity="one">%d gói trong quá trình vận chuyển</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_reject">
-		<item quantity="other">%d gói không thể được phân phối</item>
-		<item quantity="one">%d gói không thể được giao</item>
-	</plurals>
-	<plurals name="pa_express_widget_list_left_panel_subtitle_sign">
-		<item quantity="other">%d gói được phân phối</item>
-		<item quantity="one">%d gói được phân phối</item>
-	</plurals>
-	<plurals name="pa_shopping_page_product_delete_dialog_message">
-		<item quantity="other">Xóa %d đã chọn các mục ngay bây giờ?</item>
-		<item quantity="one">Xóa %d đã chọn mục ngay bây giờ?</item>
-	</plurals>
-	<plurals name="pa_stock_display_list_label">
-		<item quantity="other">%1$d các công ty trên tiện ích</item>
-		<item quantity="one">%1$d công ty trên tiện ích</item>
-	</plurals>
+    <plurals name="assistant_day">
+        <item quantity="other">Trong %d ngày</item>
+        <item quantity="one">Trong %d ngày</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="other">%1$d ngày trước</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="other">%1$d giờ trước</item>
+    </plurals>
+    <plurals name="main_delete_desc">
+        <item quantity="other">Xóa %s mục khỏi yêu thích?</item>
+    </plurals>
+    <plurals name="main_mark_fav_num">
+        <item quantity="other">Đã đánh dấu %s mục là quan trọng</item>
+    </plurals>
+    <plurals name="main_mark_select_num">
+        <item quantity="other">Đã chọn %s mục</item>
+    </plurals>
+    <plurals name="mins_ago">
+        <item quantity="other">%1$d phút trước</item>
+    </plurals>
+    <plurals name="sms_hour_suffix">
+        <item quantity="other">Khởi hành trong %d giờ</item>
+    </plurals>
+    <plurals name="sms_minute_suffix">
+        <item quantity="other">Khởi hành trong %d phút</item>
+    </plurals>
+    <plurals name="sms_title_hours">
+        <item quantity="other">%d giờ</item>
+    </plurals>
+    <plurals name="sms_title_minutes">
+        <item quantity="other">%d phút</item>
+    </plurals>
+    <plurals name="step_km">
+        <item quantity="other">%d km</item>
+    </plurals>
+    <plurals name="steps">
+        <item quantity="other">%d|bước</item>
+        <item quantity="zero">%d|bước</item>
+        <item quantity="one">%d|bước</item>
+    </plurals>
+    <plurals name="time_hour_ago">
+        <item quantity="other">%d giờ trước</item>
+        <item quantity="one">%d giờ trước</item>
+    </plurals>
+    <plurals name="time_minute_ago">
+        <item quantity="other">%d phút trước</item>
+        <item quantity="one">%d phút trước</item>
+    </plurals>
+    <plurals name="miot_device_camera_size">
+        <item quantity="other">%d máy ảnh thông minh</item>
+    </plurals>
+    <plurals name="book_start_interval">
+        <item quantity="other">Khởi hành trong %d ngày</item>
+    </plurals>
+    <plurals name="sms_day_suffix">
+        <item quantity="other">Khởi hành trong %d ngày</item>
+    </plurals>
+    <plurals name="express_history_dialog_delete_message">
+        <item quantity="other">Xóa %s mục khỏi vận chuyển?</item>
+    </plurals>
+    <plurals name="express_history_menu_select_num">
+        <item quantity="other">Đã chọn %s mục</item>
+    </plurals>
+    <plurals name="payment_record_dialog_delete_message">
+        <item quantity="other">Xóa %s mục khỏi thanh toán?</item>
+    </plurals>
+    <plurals name="payment_record_menu_select_num">
+        <item quantity="other">Đã chọn %s mục</item>
+    </plurals>
+    <plurals name="shopping_delete_num">
+        <item quantity="other">Xóa %s mục đã chọn?</item>
+    </plurals>
+    <plurals name="agenda_count_down">
+        <item quantity="other">Trong %d phút</item>
+    </plurals>
+    <plurals name="express_setting_phone_binded_info">
+        <item quantity="other">Đã thêm %d số điện thoại</item>
+    </plurals>
+    <plurals name="abbrev_a_hour_ago">
+        <item quantity="other">1 giờ trước</item>
+    </plurals>
+    <plurals name="abbrev_half_hour_ago">
+        <item quantity="other">Nửa giờ trước</item>
+    </plurals>
+    <plurals name="less_than_one_minute_ago">
+        <item quantity="other">Vừa xong</item>
+    </plurals>
+    <plurals name="abbrev_in_a_hour">
+        <item quantity="other">Trong 1 giờ</item>
+    </plurals>
+    <plurals name="in_a_hour">
+        <item quantity="other">Trong 1 giờ</item>
+    </plurals>
+    <plurals name="num_minutes_ago">
+        <item quantity="other">%d phút trước</item>
+        <item quantity="one">1 phút trước</item>
+    </plurals>
+    <plurals name="in_half_hour">
+        <item quantity="other">Trong nửa giờ</item>
+    </plurals>
+    <plurals name="half_hour_ago">
+        <item quantity="other">Nửa giờ trước</item>
+    </plurals>
+    <plurals name="a_hour_ago">
+        <item quantity="other">1 giờ trước</item>
+    </plurals>
+    <plurals name="abbrev_in_num_minutes">
+        <item quantity="other">trong %d phút</item>
+        <item quantity="one">trong 1 phút</item>
+    </plurals>
+    <plurals name="abbrev_num_minutes_ago">
+        <item quantity="other">%d phút trước</item>
+        <item quantity="one">1 phút trước</item>
+    </plurals>
+    <plurals name="abbrev_less_than_one_minute_ago">
+        <item quantity="other">Vừa xong</item>
+    </plurals>
+    <plurals name="in_less_than_one_minute">
+        <item quantity="other">Tức thì</item>
+    </plurals>
+    <plurals name="abbrev_in_half_hour">
+        <item quantity="other">Trong nửa giờ</item>
+    </plurals>
+    <plurals name="abbrev_in_less_than_one_minute">
+        <item quantity="other">Tức thì</item>
+    </plurals>
+    <plurals name="in_num_minutes">
+        <item quantity="other">trong %d phút</item>
+        <item quantity="one">trong 1 phút</item>
+    </plurals>
+    <plurals name="app_miot_total_device">
+        <item quantity="other">%1$d thiết bị</item>
+    </plurals>
+    <plurals name="base_time_minute_ago">
+        <item quantity="other">%d phút trước</item>
+    </plurals>
+    <plurals name="agenda_anniversary_day">
+        <item quantity="other">· %1$d ngày</item>
+    </plurals>
+    <plurals name="agenda_tip_count_down">
+        <item quantity="other">Bắt đầu trong %1$d phút</item>
+    </plurals>
+    <plurals name="app_express_content_title_1">
+        <item quantity="other">%d đơn hàng đang trên đường vận chuyển</item>
+    </plurals>
+    <plurals name="agenda_anniversary_year">
+        <item quantity="other">· %1$d năm</item>
+    </plurals>
+    <plurals name="base_time_hour_ago">
+        <item quantity="other">%d giờ trước</item>
+    </plurals>
+    <plurals name="agenda_countdown_day">
+        <item quantity="other">· Trong %1$d ngày</item>
+    </plurals>
+    <plurals name="app_course_to_start">
+        <item quantity="other">Bắt đầu sau %1$d phút</item>
+    </plurals>
+    <plurals name="app_express_settings_title_2">
+        <item quantity="other">Đã thêm %d số điện thoại</item>
+    </plurals>
+    <plurals name="miuix_appcompat_items_selected">
+        <item quantity="other">%d mục đã chọn</item>
+    </plurals>
 </resources>

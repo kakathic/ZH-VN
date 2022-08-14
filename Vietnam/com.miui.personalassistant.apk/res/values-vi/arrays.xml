@@ -1,239 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string-array name="detailed_am_pms">
-<item>Đêm</item>
-<item>Sáng</item>
-<item>Sáng</item>
-<item>Trưa</item>
-<item>Chiều</item>
-<item>Tối</item>
-<item>Đêm</item>
-</string-array>
-<string-array name="am_pms">
-<item>AM</item>
-<item>PM</item>
-</string-array>
-<string-array name="chinese_days">
-<item>01</item>
-<item>02</item>
-<item>03</item>
-<item>04</item>
-<item>05</item>
-<item>06</item>
-<item>07</item>
-<item>08</item>
-<item>09</item>
-<item>10</item>
-<item>11</item>
-<item>12</item>
-<item>13</item>
-<item>14</item>
-<item>15</item>
-<item>16</item>
-<item>17</item>
-<item>18</item>
-<item>19</item>
-<item>20</item>
-<item>21</item>
-<item>22</item>
-<item>23</item>
-<item>24</item>
-<item>25</item>
-<item>26</item>
-<item>27</item>
-<item>28</item>
-<item>29</item>
-<item>30</item>
-</string-array>
-<string-array name="chinese_digits">
-<item>0</item>
-<item>1</item>
-<item>2</item>
-<item>3</item>
-<item>4</item>
-<item>5</item>
-<item>6</item>
-<item>7</item>
-<item>8</item>
-<item>9</item>
-<item>10</item>
-</string-array>
-<string-array name="chinese_leap_months">
-<item></item>
-<item>Nhuận</item>
-</string-array>
-<string-array name="chinese_months">
-<item>1</item>
-<item>2</item>
-<item>3</item>
-<item>4</item>
-<item>5</item>
-<item>6</item>
-<item>7</item>
-<item>8</item>
-<item>9</item>
-<item>10</item>
-<item>11</item>
-<item>12</item>
-</string-array>
-<string-array name="chinese_symbol_animals">
-<item>Tý</item>
-<item>Sửu</item>
-<item>Dần</item>
-<item>Mão</item>
-<item>Thìn</item>
-<item>Tỵ</item>
-<item>Ngọ</item>
-<item>Mùi</item>
-<item>Thân</item>
-<item>Dậu</item>
-<item>Tuất</item>
-<item>Hợi</item>
-</string-array>
-<string-array name="earthly_branches">
-<item>Tý</item>
-<item>Sửu</item>
-<item>Dần</item>
-<item>Mão</item>
-<item>Thìn</item>
-<item>Tỵ</item>
-<item>Ngọ</item>
-<item>Mùi</item>
-<item>Thân</item>
-<item>Dậu</item>
-<item>Tuất</item>
-<item>Hợi</item>
-</string-array>
-<string-array name="eras">
-<item>TCN</item>
-<item>SCN</item>
-</string-array>
-<string-array name="heavenly_stems">
-<item>Giáp </item>
-<item>Ất </item>
-<item>Bính </item>
-<item>Đinh </item>
-<item>Mậu </item>
-<item>Kỷ </item>
-<item>Canh </item>
-<item>Tân </item>
-<item>Nhâm </item>
-<item>Quý </item>
-</string-array>
-<string-array name="months">
-<item>Tháng một</item>
-<item>Tháng hai</item>
-<item>Tháng ba</item>
-<item>Tháng tư</item>
-<item>Tháng năm</item>
-<item>Tháng sáu</item>
-<item>Tháng bảy</item>
-<item>Tháng tám</item>
-<item>Tháng chín</item>
-<item>Tháng mười</item>
-<item>Tháng mười một</item>
-<item>Tháng mười hai</item>
-</string-array>
-<string-array name="months_short">
-<item>Tháng 1</item>
-<item>Tháng 2</item>
-<item>Tháng 3</item>
-<item>Tháng 4</item>
-<item>Tháng 5</item>
-<item>Tháng 6</item>
-<item>Tháng 7</item>
-<item>Tháng 8</item>
-<item>Tháng 9</item>
-<item>Tháng 10</item>
-<item>Tháng 11</item>
-<item>Tháng 12</item>
-</string-array>
-<string-array name="months_shortest">
-<item>Thg 1</item>
-<item>Thg 2</item>
-<item>Thg 3</item>
-<item>Thg 4</item>
-<item>Thg 5</item>
-<item>Thg 6</item>
-<item>Thg 7</item>
-<item>Thg 8</item>
-<item>Thg 9</item>
-<item>Thg 10</item>
-<item>Thg 11</item>
-<item>Thg 12</item>
-</string-array>
-<string-array name="solar_terms">
-<item></item>
-<item>Tiểu Hàn</item>
-<item>Đại Hàn</item>
-<item>Lập Xuân</item>
-<item>Vũ Thủy</item>
-<item>Kinh Trập</item>
-<item>Xuân Phân</item>
-<item>Thanh Minh</item>
-<item>Cốc Vũ</item>
-<item>Lập Hạ</item>
-<item>Tiểu Mãn</item>
-<item>Mang Chủng</item>
-<item>Hạ Chí</item>
-<item>Tiểu Thử</item>
-<item>Đại Thử</item>
-<item>Lập Thu</item>
-<item>Xử Thử</item>
-<item>Bạch Lộ</item>
-<item>Thu Phân</item>
-<item>Hàn Lộ</item>
-<item>Tuyết Sương</item>
-<item>Lập Đông</item>
-<item>Tiểu Tuyết</item>
-<item>Đại Tuyết</item>
-<item>Đông Chí</item>
-</string-array>
-<string-array name="week_days">
-<item>Chủ nhật</item>
-<item>Thứ hai</item>
-<item>Thứ ba</item>
-<item>Thứ tư</item>
-<item>Thứ năm</item>
-<item>Thứ sáu</item>
-<item>Thứ bảy</item>
-</string-array>
-<string-array name="week_days_short">
-<item>CN</item>
-<item>Th 2</item>
-<item>Th 3</item>
-<item>Th 4</item>
-<item>Th 5</item>
-<item>Th 6</item>
-<item>Th 7</item>
-</string-array>
-<string-array name="week_days_shortest">
-<item>CN</item>
-<item>T2</item>
-<item>T3</item>
-<item>T4</item>
-<item>T5</item>
-<item>T6</item>
-<item>T7</item>
-</string-array>
+    <string-array name="express_status_detail">
+        <item>Đang trên đường</item>
+        <item>Đang phân phát</item>
+    </string-array>
+    <string-array name="express_status_all">
+        <item>Đang trên đường</item>
+        <item>Đang phân phát</item>
+        <item>Đã giao hàng</item>
+        <item>Không rõ</item>
+        <item>Đã nhận</item>
+        <item>Đã từ chối</item>
+        <item>Bị trả về</item>
+        <item>Không rõ</item>
+    </string-array>
+    <string-array name="day_time_space">
+        <item>Tối</item>
+        <item>Sáng sớm</item>
+        <item>Buổi sáng</item>
+        <item>Giữa trưa</item>
+        <item>Buổi chiều</item>
+        <item>Chiều muộn</item>
+        <item>Chiều tối</item>
+    </string-array>
+    <string-array name="aqi_title_prefix">
+        <item>Không khí %1$s</item>
+        <item>Không khí %1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+    </string-array>
+    <string-array name="aqi_title_append">
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s ô nhiễm</item>
+        <item>%1$s ô nhiễm</item>
+        <item>%1$s ô nhiễm</item>
+        <item>%1$s ô nhiễm</item>
+    </string-array>
+    <string-array name="aqi_title">
+        <item>Tuyệt vời</item>
+        <item>Tốt</item>
+        <item>Khá</item>
+        <item>Trung bình</item>
+        <item>Nặng</item>
+        <item>Nghiêm trọng</item>
+    </string-array>
+    <string-array name="detail_font_size">
+        <item>Nhỏ</item>
+        <item>Bình thường</item>
+        <item>Lớn</item>
+    </string-array>
+    <string-array name="stock_color_schema">
+        <item>Đỏ - lên, Xanh - xuống</item>
+        <item>Xanh - lên, Đỏ - xuống</item>
+    </string-array>
+    <string-array name="keyword_recommend_unit">
+        <item>Muốn</item>
+        <item>Chỉ cần</item>
+    </string-array>
+    <string-array name="map_keyword">
+        <item>Tắc nghẽn</item>
+        <item>Số km tắc nghẽn</item>
+        <item>Số km chậm</item>
+        <item>Làm đường</item>
+    </string-array>
+    <string-array name="map_title">
+        <item>Cao điểm du lịch</item>
+        <item>Tắc nghẽn nghiêm trọng</item>
+        <item>Giao thông thông suốt</item>
+        <item>Không có tắc nghẽn rõ ràng</item>
+        <item>Giao thông bất thường</item>
+    </string-array>
+    <string-array name="sms_exclude_category">
+        <item>Trả nợ</item>
+    </string-array>
+    <string-array name="province_for_short">
+        <item>Bắc Kinh</item>
+        <item>Thiên Tân</item>
+        <item>Thượng Hải</item>
+        <item>Trùng Khánh</item>
+        <item>Hà Bắc</item>
+        <item>Hà Nam</item>
+        <item>Vân Nam</item>
+        <item>Liêu Ninh</item>
+        <item>Hắc Long Giang</item>
+        <item>Hồ Nam</item>
+        <item>An Huy</item>
+        <item>Sơn Đông</item>
+        <item>Tân Cương</item>
+        <item>Giang Tô</item>
+        <item>Chiết Giang</item>
+        <item>Giang Tây</item>
+        <item>Hồ Bắc</item>
+        <item>Quảng Tây</item>
+        <item>Cam Túc</item>
+        <item>Sơn Tây</item>
+        <item>Mông Tự</item>
+        <item>Thiểm Tây</item>
+        <item>Cát Lâm</item>
+        <item>Phúc Kiến</item>
+        <item>Quý Châu</item>
+        <item>Quảng Đông</item>
+        <item>Thanh Hải</item>
+        <item>Thành Quan</item>
+        <item>Tứ Xuyên</item>
+        <item>Phủ Ninh</item>
+        <item>Hải Nam</item>
+    </string-array>
+    <string-array name="agenda_weeks_of_year">
+        <item>Tuần 1</item>
+        <item>Tuần 2</item>
+        <item>Tuần 3</item>
+        <item>Tuần %1$d</item>
+    </string-array>
+    <string-array name="app_commute_tab_array">
+        <item>Lái xe</item>
+        <item>Phương tiện công cộng</item>
+        <item>Taxi</item>
+    </string-array>
+    <string-array name="base_day_time_space">
+        <item>Tối</item>
+        <item>Tối</item>
+        <item>Sáng</item>
+        <item>Trưa</item>
+        <item>Trưa</item>
+        <item>Chiều</item>
+        <item>Chiều</item>
+    </string-array>
+    <string-array name="commute_transit_strategy">
+        <item>Khuyến nghị thông minh</item>
+        <item>Thời gian ngắn</item>
+        <item>Chuyển ít</item>
+        <item>Đi bộ ít</item>
+        <item>Không bao gồm tàu điện ngầm</item>
+    </string-array>
+    <string-array name="app_health_setting_text_array_duration">
+        <item>10 phút</item>
+        <item>20 phút</item>
+        <item>30 phút</item>
+        <item>60 phút</item>
+    </string-array>
     <string-array name="pa_home_week_days">
         <item>Chủ nhật</item>
         <item>Thứ hai</item>
         <item>Thứ ba</item>
-        <item>Thứ tư</item>
-        <item>thứ năm</item>
+        <item>Thứ Tư</item>
+        <item>Thứ năm</item>
         <item>Thứ sáu</item>
         <item>Thứ bảy</item>
         <item>Chủ nhật</item>
-    </string-array>
-        <string-array name="pa_covid_items_default">
-        <item>COVID-19</item>
-        <item>Mã sức khỏe</item>
-        <item>PCR</item>
-        <item>Các khu vực rủi ro cao</item>
-    </string-array>
-    <string-array name="pa_stock_color_schema_value_array">
-        <item>Đỏ - lên, xanh - xuống</item>
-        <item>Xanh lá cây - lên, đỏ - xuống</item>
     </string-array>
 </resources>
