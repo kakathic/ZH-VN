@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="string" name="holiday_update_title" id="0x7f020000" />
+    <public type="string" name="holiday_update_summary" id="0x7f020001" />
+    <public type="string" name="holiday_data_updating" id="0x7f020002" />
+    <public type="string" name="holiday_data_update_failed" id="0x7f020003" />
+    <public type="string" name="holiday_data_update_succeed" id="0x7f020004" />
+    <public type="string" name="holiday_data_no_network" id="0x7f020005" />
+    <public type="string" name="calendar_storage" id="0x7f020006" />
+    <public type="string" name="upgrade_msg" id="0x7f020007" />
+    <public type="string" name="calendar_default_name" id="0x7f020008" />
+    <public type="string" name="calendar_info" id="0x7f020009" />
+    <public type="string" name="calendar_info_error" id="0x7f02000a" />
+    <public type="string" name="calendar_info_no_calendars" id="0x7f02000b" />
+    <public type="string" name="calendar_info_events" id="0x7f02000c" />
+    <public type="string" name="calendar_info_events_dirty" id="0x7f02000d" />
+    <public type="string" name="provider_label" id="0x7f02000e" />
+    <public type="string" name="debug_tool_delete_button" id="0x7f02000f" />
+    <public type="string" name="debug_tool_start_button" id="0x7f020010" />
+    <public type="string" name="debug_tool_message" id="0x7f020011" />
+    <public type="string" name="debug_tool_email_sender_picker" id="0x7f020012" />
+    <public type="string" name="debug_tool_email_subject" id="0x7f020013" />
+    <public type="string" name="debug_tool_email_body" id="0x7f020014" />
+    <public type="string" name="channel_name" id="0x7f020015" />
+    <public type="string" name="cta_notice" id="0x7f020016" />
+</resources>
