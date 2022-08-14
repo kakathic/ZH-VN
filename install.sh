@@ -82,7 +82,8 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # khu vực mod apk
 
 modtt () {
-evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
+evbhe="$(find ${1%.*}/smali* -name '*.smali' -exec grep -Rl "ro.miui.region" {} +)"
+#evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
 echo $evbhe
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
