@@ -19,7 +19,7 @@ cd vi-VN
 
 for vad in *.apk; do
 
-cp -rf Test/* $vad
+cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
 
 apktool b -f $vad -o $GITHUB_WORKSPACE/Tmp/Zz.$vad 2>$GITHUB_WORKSPACE/log >$GITHUB_WORKSPACE/log
