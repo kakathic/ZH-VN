@@ -19,7 +19,9 @@ ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
 rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
 [ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
 echo $gwgeh
-[ "$rhbrb" != 1 ] && break
+if [ "$rhbrb" != 1 ];then
+break
+fi
 done
 done
 }
