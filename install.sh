@@ -36,11 +36,6 @@ spt=$(($spt + 1))
 if [ -s "$GITHUB_WORKSPACE/apk/Zz.$vad" ];then
 echo "$spt $vad" 
 else
-echo "$spt $vad
-
-$(cat $GITHUB_WORKSPACE/log)
-"
-
 if [ "$(grep -cm1 'is already defined.' $GITHUB_WORKSPACE/log)" == 1 ];then
 while true; do
 Linktk=$(grep -m1 'is already defined.' $GITHUB_WORKSPACE/log | cut -d : -f2)
@@ -52,6 +47,10 @@ sed -i '/'$Vbtk'/d' $GITHUB_WORKSPACE/log
 done
 Autofix
 fi
+[ -s "$GITHUB_WORKSPACE/apk/Zz.$vad" ] && echo "$spt $vad" || echo "Error: $vad
+
+$(cat $GITHUB_WORKSPACE/log)
+"
 fi
 done
 
