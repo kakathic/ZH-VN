@@ -1,5 +1,5 @@
 # kakathic
-apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar "$@"; }
+apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 "$@"; }
 apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
 Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
@@ -126,8 +126,8 @@ Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
 }
 
-Geplai "Theme"
-Themeossn="$GITHUB_WORKSPACE/Hpk/Theme.apk"
+Geplai "com.android.thememanager"
+Themeossn="$GITHUB_WORKSPACE/Hpk/com.android.thememanager.apk"
 if [ -e "$Themeossn" ];then
 unapk $Themeossn
 Modtheme $Themeossn
@@ -156,8 +156,8 @@ Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/a;->b:Z" "${1%.*}
 done
 }
 
-Geplai "Baomat"
-Baomatossn="$GITHUB_WORKSPACE/Hpk/Baomat.apk"
+Geplai "com.miui.securitycenter"
+Baomatossn="$GITHUB_WORKSPACE/Hpk/com.miui.securitycenter.apk"
 if [ -e "$Themeossn" ];then
 unapk $Baomatossn
 Modbaomat $Baomatossn
