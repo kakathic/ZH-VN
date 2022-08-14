@@ -54,7 +54,7 @@ done
 spt=0
 cd $GITHUB_WORKSPACE/Vietnam
 
-
+Kllll(){
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
@@ -89,6 +89,7 @@ cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
+}
 # Mod apk
 
 modtt () {
@@ -140,8 +141,8 @@ repapk $Themeossn
 fi
 
 Modbaomat(){
-cp -rf ${1%.*}/smali*/miuix/os/a.smali ${1%.*}/smali*/miuix/os/b.smali
-Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b"
+cp -a -f ${1%.*}/smali*/miuix/os/a.smali ${1%.*}/smali*/miuix/os/b.smali
+Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b.smali"
 
 Listknd="com/miui/securityscan
 com/miui/securityscan/b0
