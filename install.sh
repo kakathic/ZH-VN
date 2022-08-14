@@ -21,10 +21,10 @@ rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
 done
 done
 
-unapk(){
+unapk () {
 apktool d -q -f "$1" -o "${1%.*}"
 }
-repapk(){
+repapk () {
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
 zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 }
@@ -78,14 +78,14 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
 # khu vực mod apk
 
-modtt(){
-evbhe="$(Timkiem "ro.miui.region" "${1%.*}/classes*" "*.smali")"
+modtt () {
+evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
 done
-AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/classes*"
-AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/classes*" "0x1" "${1%.*}/classes*"
+AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
+AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
