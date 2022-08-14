@@ -98,6 +98,37 @@ modtt $thoitietpath
 repapk $thoitietpath
 fi
 
+Modtheme() {
+Vsmali ".method public isVideoAd()Z" \
+".end method" \
+'.method public isVideoAd()Z
+    .registers 2
+    const/4 v0, 0x0
+    return v0
+.end method' \
+"${1%.*}/smali*"
+
+Vsmali ".method private static isAdValid" \
+".end method" \
+'.method private static isAdValid(Lcom/android/thememanager/basemodule/ad/model/AdInfo;)Z
+    .registers 2
+    const/4 p0, 0x0
+    return p0
+.end method' \
+"${1%.*}/smali*"
+
+Thaythe "ro.miui.region" "ro.khu.vuc.cn" "${1%.*}/smali*"
+Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_ERROR_UNKNOWN" "${1%.*}/smali*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
+}
+
+Themeossn="$GITHUB_WORKSPACE/Hpk/Theme.apk"
+if [ -e "$Themeossn" ];then
+unapk $Themeossn
+Modtheme $Themeossn
+repapk $Themeossn
+fi
 
 # Nén lại
 
