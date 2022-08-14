@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<string name="QQ">QQ</string>	<string name="abc_action_bar_home_description">Điều hướng về nhà</string>
+
+	<string name="abc_action_bar_up_description">Điều hướng lên</string>
+
+	<string name="abc_action_menu_overflow_description">Lựa chọn khác</string>
+
+	<string name="abc_action_mode_done">Xong</string>
+
+	<string name="abc_activity_chooser_view_see_all">Nhìn thấy tất cả</string>
+
+	<string name="abc_activitychooserview_choose_application">Chọn một ứng dụng</string>
+
+	<string name="abc_capital_off">OFF</string>
+
+	<string name="abc_capital_on">ON</string>
+
+	<string name="abc_menu_alt_shortcut_label">Alt+</string>
+
+	<string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+
+	<string name="abc_menu_delete_shortcut_label">delete</string>
+
+	<string name="abc_menu_enter_shortcut_label">enter</string>
+
+	<string name="abc_menu_function_shortcut_label">Function+</string>
+
+	<string name="abc_menu_meta_shortcut_label">Meta+</string>
+
+	<string name="abc_menu_shift_shortcut_label">Shift+</string>
+
+	<string name="abc_menu_space_shortcut_label">space</string>
+
+	<string name="abc_menu_sym_shortcut_label">Sym+</string>
+
+	<string name="abc_prepend_shortcut_label">Menu+</string>
+
+	<string name="abc_search_hint">Tìm kiếm…</string>
+
+	<string name="abc_searchview_description_clear">Truy vấn rõ ràng</string>
+
+	<string name="abc_searchview_description_query">Tìm kiếm truy vấn</string>
+
+	<string name="abc_searchview_description_search">Tìm kiếm</string>
+
+	<string name="abc_searchview_description_submit">Gửi truy vấn</string>
+
+	<string name="abc_searchview_description_voice">Tìm kiếm bằng giọng nói</string>
+
+	<string name="abc_shareactionprovider_share_with">Chia sẽ với</string>
+
+	<string name="abc_shareactionprovider_share_with_application">Chia sẻ với %s</string>
+
+	<string name="abc_toolbar_collapse_description">Sụp đổ</string>
+
+	<string name="app_name">Trợ lý ghi âm</string>
+
+	<string name="audio_volume">âm lượng âm thanh</string>
+
+	<string name="boy">cậu bé</string>
+
+	<string name="call_recording_notification_complete_one">Ghi lại thành công. Nhấn để xem</string>
+
+	<string name="call_recording_notification_complete_other">Ghi lại %d cuộc gọi thành công</string>
+
+	<string name="call_recording_notification_title">Máy ghi âm thoại</string>
+
+	<string name="call_recording_notification_title_error">Không thể ghi lại cuộc gọi thoại</string>
+
+	<string name="confirm">xác nhận</string>
+
+	<string name="copy">Sao chép</string>
+
+	<string name="cta_HIPS_Perm_Location_Desc">Để ghi âm và âm thanh</string>
+
+	<string name="cta_main_purpose">Chào mừng bạn đến với các bản ghi ứng dụng! Bạn có thể sử dụng ứng dụng này để ghi lại các cuộc gọi thoại được thực hiện trong các ứng dụng của bên thứ ba. Ứng dụng này sẽ truy cập biệt danh người gọi để ghi tên đã lưu. \nLưu ý rằng vi phạm quyền riêng tư của người khác là bất hợp pháp. Bạn không được sử dụng bất kỳ thông tin nào có được thông qua tính năng này để vi phạm quyền riêng tư của người khác. Nếu bạn sử dụng thông tin trên bất hợp pháp, bạn sẽ cho rằng tất cả các rủi ro pháp lý phát sinh từ đó.</string>
+
+	<string name="custom_define_perference_title">Chi tiết quyền</string>
+
+	<string name="custom_define_permission_desc_android.permission_group.MICROPHONE">Để ghi âm và âm thanh</string>
+
+	<string name="custom_define_permission_desc_android.permission_group.STORAGE">Để lưu bản ghi</string>
+
+	<string name="equalizer">Cân bằng</string>
+
+	<string name="expand_button_title">Tiên tiến</string>
+
+	<string name="feishu">Feishu</string>
+
+	<string name="girl">cô gái</string>
+
+	<string name="hall">hall</string>
+
+	<string name="introduct_always_on">Ghi lại tất cả các cuộc gọi trong các ứng dụng của bên thứ ba</string>
+
+	<string name="introduct_open">Hiển thị nút ghi trong các cuộc gọi trong các ứng dụng của bên thứ ba</string>
+
+	<string name="miui_audioloopback">MIUI Audio Loopback</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_pull_to_refresh">Kéo xuống để làm mới</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_refreshed">Làm mới thành công</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_refreshing">Làm mới…</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_release_to_refresh">Phát hành để làm mới</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_up_nodata">Đó là tất cả cho bây giờ</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_up_none">Đó là tất cả cho bây giờ</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_up_refresh">Đợi một chút…</string>
+
+	<string name="miuix_sbl_tracking_progress_labe_up_refresh_fail">Không thể tải các mặt hàng</string>
+
+	<string name="not_set">Không được thiết lập</string>
+
+	<string name="openAPPs">Ứng dụng có sẵn</string>
+
+	<string name="original">nguyên bản</string>
+
+	<string name="preference_copied">\"%1$s\" sao chép vào bảng tạm.</string>
+
+	<string name="record_name">Máy ghi âm thoại</string>
+
+	<string name="reverb">dội lại</string>
+
+	<string name="room">phòng</string>
+
+	<string name="search_menu_title">Tìm kiếm</string>
+
+	<string name="status_bar_notification_info_overflow">999+</string>
+
+	<string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+
+	<string name="theatre">nhà hát</string>
+
+	<string name="v7_preference_off">OFF</string>
+
+	<string name="v7_preference_on">ON</string>
+
+	<string name="voip_notice">Nhấn để hiển thị %s</string>
+
+	<string name="voipcord_privacy">Chính sách bảo mật</string>
+
+	<string name="voiprecord_always_on">Ghi lại cuộc gọi tự động</string>
+
+	<string name="voiprecord_open">Máy ghi âm thoại</string>
+
+	<string name="wechat">WeChat</string>
+
+</resources>
