@@ -14,14 +14,13 @@ jobs:
       - uses: actions/checkout@v3
       - name: Tự động hóa
         run: |
-          echo 123
           chmod 777 install.sh
           . install.sh
       - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ github.ref_name }}
+          tag: 
+          name: ${{ github.ref_name }}
           tag_name: Test-${{ github.ref_name }}
           files: Pack.zip
-          prerelease: true
           generate_release_notes: true
