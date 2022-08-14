@@ -17,8 +17,7 @@ zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/${1##*/}"
 Timkiem () { grep -Rl "$1" $2; }
 
 AutoAll () {
-for gwgeh in $(Timkiem "$1" "$3"); do
-echo $gwgeh
+for gwgeh in $(grep -Rl "$1" $3); do
 for i in $RANDOM; do
 rhhgh="$(grep -c "$1" $gwgeh)"
 echo $rhhgh
@@ -26,8 +25,7 @@ echo $rhhgh
 rhheg="$(grep -m1 "$1" $gwgeh)"
 ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|$1|$2|")"
 rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
-[ "$rhbrb" == 1 ] && sed -i "s|$rhheg|$ggege|" $gwgeh
-echo "$gwgeh"
+[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $rhbrb
 if [ "$rhbrb" != 1 ];then
 break
 fi;
