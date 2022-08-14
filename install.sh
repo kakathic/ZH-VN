@@ -6,7 +6,9 @@ Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
+
 Timkiem () { find $2 -name "$3" -exec grep -Rl "$1" {} +; }
+
 # Tự động thay
 AutoAll () {
 for gwgeh in $(Timkiem "$1" "$3" "*.smali"); do
@@ -20,6 +22,7 @@ rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
 [ "$rhbrb" != 1 ] && break
 done
 done
+}
 
 unapk () {
 apktool d -q -f "$1" -o "${1%.*}"
