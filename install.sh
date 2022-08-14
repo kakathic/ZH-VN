@@ -143,8 +143,7 @@ repapk $Themeossn
 fi
 
 Modbaomat(){
-Tlinh=$(fint ${1%.*}/smali*/miuix/os/a.smali | head -n 1)
-cat $Tlinh > ${Tlinh%/*}/b.smali
+cp -f ${1%.*}/smali*/miuix/os/a.smali ${1%.*}/smali*/miuix/os/b.smali
 Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*/miuix/os/b.smali"
 
 Listknd="com/miui/securityscan
