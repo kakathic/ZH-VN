@@ -164,7 +164,23 @@ Modbaomat $Baomatossn
 repapk $Baomatossn
 fi
 
+Modapk(){
+Vsmali ".method public static o(Landroid\/content\/pm\/ApplicationInfo;)Z" \
+".end method" \
+'.method public static o(Landroid/content/pm/ApplicationInfo;)Z
+    .registers 3
+    const/4 v1, 0x1
+    return v1
+.end method' \
+"$(Timkiem "iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I" "${1%.*}/smali*")"
+}
 
+Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
+if [ -e "$Themeossn" ];then
+unapk $Apkossn
+Modapk $Apkossn
+repapk $Apkossn
+fi
 
 
 # Nén lại
