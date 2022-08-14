@@ -15,11 +15,11 @@ jobs:
       - name: Chạy Code
         run: |
           sudo apt install zipalign
-          sudo apt install apktool
-          ls /bin
-          apktool
+          # sudo apt install apktool
+          # ls /bin
+          # apktool
           chmod 777 install.sh
-          #. install.sh
+          . install.sh
       - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
