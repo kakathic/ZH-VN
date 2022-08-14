@@ -10,8 +10,13 @@ unapk () {
 apktool d -q -r -f "$1" -o "${1%.*}"
 }
 repapk () {
-apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/Test-${1##*/}"
-zipalign -f -p 4 "$GITHUB_WORKSPACE/Test-${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
+rm -fr $GITHUB_WORKSPACE/pro/*
+mkdir -p $GITHUB_WORKSPACE/pro/lib/arm64
+cp -rf "${1%.*}/lib/arm64-v8a/*" $GITHUB_WORKSPACE/pro/lib/arm64
+apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/kest/${1##*/}"
+zipalign -f -p 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
+cd $GITHUB_WORKSPACE/pro
+zip -qr $GITHUB_WORKSPACE/${1##*/} *
 }
 
 Taive () { curl -s -L "$1" -o "$2"; }
@@ -186,6 +191,6 @@ fi
 # Nén lại
 
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/* pro/*
-
+zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
+mv -f  $GITHUB_WORKSPACE/*.apk $GITHUB_WORKSPACE/*.zip
 
