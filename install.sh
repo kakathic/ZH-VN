@@ -94,7 +94,7 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 
 }
 
-thoitietpath="$GITHUB_WORKSPACE/Hpk/Thoitiet.apk"
+thoitietpath="$GITHUB_WORKSPACE/Hpk/com.miui.weather2.apk"
 if [ -e "$thoitietpath" ];then
 unapk $thoitietpath
 modtt $thoitietpath
@@ -160,9 +160,12 @@ Geplai "Baomat"
 Baomatossn="$GITHUB_WORKSPACE/Hpk/Baomat.apk"
 if [ -e "$Themeossn" ];then
 unapk $Baomatossn
-Modtheme $Baomatossn
+Modbaomat $Baomatossn
 repapk $Baomatossn
 fi
+
+
+
 
 # Nén lại
 
