@@ -14,7 +14,7 @@ for Vak in $ListTM; do
 mkdir -p $Vak
 done
 spt=0
-cd $GITHUB_WORKSPACE/vi-VN
+cd $GITHUB_WORKSPACE/VietNam
 
 for vad in *.apk; do
 
