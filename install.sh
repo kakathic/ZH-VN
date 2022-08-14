@@ -30,7 +30,6 @@ if [ "$rhbrb" != 1 ];then
 break
 fi;
 done
-
 done;
 }
 
@@ -89,7 +88,23 @@ evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*")"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
 done
-AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
+
+for gwgeh in $(grep -Rl "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" ${1%.*}/smali*); do
+for i in $RANDOM; do
+rhhgh="$(grep -c "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" $gwgeh)"
+echo $rhhgh
+[ "$rhhgh" == 0 ] && break
+rhheg="$(grep -m1 "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" $gwgeh)"
+ggege="$(echo "$rhheg" | sed -e 's|sget-boolean|const|' -e "s|Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z|0x1|")"
+rhbrb="$(echo "$rhheg" | grep -c 'sget-boolean')"
+[ "$rhbrb" == 1 ] && sed -i -e "s|$rhheg|$ggege|" $gwgeh
+if [ "$rhbrb" != 1 ];then
+break
+fi;
+done
+done;
+
+#AutoAll "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "${1%.*}/smali*"
 AutoAll "Le/h/a;->a:Z" "0x1" "${1%.*}/smali*" "0x1" "${1%.*}/smali*"
 }
 
