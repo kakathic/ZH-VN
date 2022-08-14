@@ -103,7 +103,7 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 }
 
 thoitietpath="$GITHUB_WORKSPACE/Hpk/com.miui.weather2.apk"
-if [ -e "$thoitietpath" ];then
+if [ ! -e "$thoitietpath" ];then
 unapk $thoitietpath
 modtt $thoitietpath
 repapk $thoitietpath
@@ -136,7 +136,7 @@ Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smal
 
 Geplai "com.android.thememanager"
 Themeossn="$GITHUB_WORKSPACE/Hpk/com.android.thememanager.apk"
-if [ -e "$Themeossn" ];then
+if [ ! -e "$Themeossn" ];then
 unapk $Themeossn
 Modtheme $Themeossn
 repapk $Themeossn
