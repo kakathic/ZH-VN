@@ -20,7 +20,7 @@ Thaythe () {
 Tt1="$(Timkiem "$1" "$3")"
 [ "$Tt1" ] && echo "MOD: $1 -> $2"
 for Tt2 in $Tt1; do
-[ "$Tt2" ] && sed -i "s|$1|Le$2|g" $Tt2
+[ "$Tt2" ] && sed -i "s|$1|$2|g" $Tt2
 done
 }
 
