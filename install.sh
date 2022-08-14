@@ -4,28 +4,28 @@ apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHU
 
 Autofix () {
 apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
-apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/Apks/Zz.$vad" 2>/dev/null >/dev/null
+apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
 ListTM="Tmp
-Apks"
+apk"
 
 for Vak in $ListTM; do
 mkdir -p $Vak
 done
 spt=0
-cd $GITHUB_WORKSPACE/VietNam
+cd $GITHUB_WORKSPACE/Vietnam
 
 for vad in *.apk; do
 
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
 
-apktool b -f $vad -o $GITHUB_WORKSPACE/Tmp/Zz.$vad 2>$GITHUB_WORKSPACE/log >$GITHUB_WORKSPACE/log
-apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/Apks/Zz.$vad" 2>/dev/null >/dev/null
+apktool b -f $vad -o $GITHUB_WORKSPACE/Tmp/Zz.$vad >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
+apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 
 spt=$(($spt + 1))
-if [ -s "$GITHUB_WORKSPACE/Apks/Zz.$vad" ];then
+if [ -s "$GITHUB_WORKSPACE/apk/Zz.$vad" ];then
 echo "$spt - $vad" 
 else
 echo "$spt - $vad
@@ -52,4 +52,4 @@ cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/Pack.zip framework-miui-res Apks/*
+zip -qr $GITHUB_WORKSPACE/Pack.zip framework-miui-res apk/*
