@@ -12,7 +12,7 @@ apktool d -q -r -f "$1" -o "${1%.*}"
 repapk () {
 rm -fr $GITHUB_WORKSPACE/pro/*
 mkdir -p $GITHUB_WORKSPACE/pro/lib/arm64
-cp -rf "${1%.*}/lib/arm64-v8a/*" $GITHUB_WORKSPACE/pro/lib/arm64
+cp -rf ${1%.*}/lib/arm64-v8a/* $GITHUB_WORKSPACE/pro/lib/arm64
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/kest/${1##*/}"
 zipalign -f -p 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
 cd $GITHUB_WORKSPACE/pro
