@@ -7,7 +7,7 @@ apktool b -f $vad -o "$GITHUB_WORKSPACE/Tmp/Zz.$vad" 2>/dev/null >/dev/null
 apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/null >/dev/null
 }
 
-Timkiem () { find $2 -name "$3" | xargs grep -Rl "$1"; }
+Timkiem () { find $2 -name "$3" | xargs -0 grep -Rl "$1"; }
 
 # Tự động thay
 AutoAll () {
@@ -82,8 +82,8 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 # khu vực mod apk
 
 modtt () {
-echo ${1%.*}
 evbhe="$(Timkiem "ro.miui.region" "${1%.*}/smali*" "*.smali")"
+echo $evbhe
 [ "$evbhe" ] && echo "MOD: Khu vực việt nam"
 for rgeg in $evbhe; do
 [ "$rgeg" ] && sed -i 's|ro.miui.region|ro.khu.vuc|g' $rgeg
