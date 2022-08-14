@@ -7,9 +7,11 @@ apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/n
 }
 
 unapk () {
+echo "Unpack: ${1##*/}"
 apktool d -q -r -f "$1" -o "${1%.*}"
 }
 repapk () {
+echo "Repack: ${1##*/}"
 rm -fr $GITHUB_WORKSPACE/pro/*
 mkdir -p $GITHUB_WORKSPACE/pro/lib/arm64
 cp -rf ${1%.*}/lib/arm64-v8a/* $GITHUB_WORKSPACE/pro/lib/arm64
