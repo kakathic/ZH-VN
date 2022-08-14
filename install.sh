@@ -18,9 +18,8 @@ Timkiem () { grep -Rl "$1" $2; }
 
 AutoAll () {
 for gwgeh in $(Timkiem "$1" "$3"); do
-
-until false; do
-sleep 1
+echo $gwgeh
+for i in $RANDOM; do
 rhhgh="$(grep -c "$1" $gwgeh)"
 echo $rhhgh
 [ "$rhhgh" == 0 ] && break
