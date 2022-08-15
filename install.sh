@@ -32,7 +32,7 @@ Timkiem () { grep -Rl "$1" $2; }
 
 Thaythe () {
 Tt1="$(Timkiem "$1" "$3")"
-[ "$Tt1" ] && echo "MOD: $1 -> $2" | sed 's|\\||g'
+[ "$Tt1" ] && echo "MOD: $1 -> $2" | sed -e 's|\\\n||g' -e 's|\\||g'
 for Tt2 in $Tt1; do
 [ "$Tt2" ] && sed -i -e "s|$1|$2|g" $Tt2
 done
