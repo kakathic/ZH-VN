@@ -154,12 +154,22 @@ Vsmali ".method public static o(Landroid\/content\/pm\/ApplicationInfo;)Z" \
 }
 
 Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
-if [ -e "$Themeossn" ];then
+if [ -e "$Apkossn" ];then
 unapk $Apkossn
 Modapk $Apkossn
 repapk $Apkossn
 fi
 
+Modappval(){
+Thaythe "MM:dd" "dd:MM" "${1%.*}/smali*/c/i/e/f/e/l.smali"
+}
+
+Appvaluossn="$GITHUB_WORKSPACE/Hpk/com.miui.personalassistant.apk"
+if [ -e "$Appvaluossn" ];then
+unapk $Appvaluossn
+Modappval $Appvaluossn
+repapk $Appvaluossn
+fi
 
 # Nén lại
 
