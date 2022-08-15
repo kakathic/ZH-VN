@@ -34,7 +34,7 @@ Thaythe () {
 Tt1="$(Timkiem "$1" "$3")"
 [ "$Tt1" ] && echo "MOD: $1 -> $2"
 for Tt2 in $Tt1; do
-[ "$Tt2" ] && sed -i "s|$1|$2|g" $Tt2
+[ "$Tt2" ] && sed -i -e "s|$1|$2|g" $Tt2
 done
 }
 
@@ -58,7 +58,7 @@ done
 spt=0
 cd $GITHUB_WORKSPACE/Vietnam
 
-# Kllll(){
+Kllll(){
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
@@ -93,7 +93,7 @@ cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
-# }
+}
 # Mod apk
 
 modtt () {
@@ -104,7 +104,7 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 
 }
 
-thoitietpath="$GITHUB_WORKSPACE/Hpk/com.miui.weather2.apk"
+# thoitietpath="$GITHUB_WORKSPACE/Hpk/com.miui.weather2.apk"
 if [ -e "$thoitietpath" ];then
 unapk $thoitietpath
 modtt $thoitietpath
@@ -129,9 +129,7 @@ Vsmali ".method private static isAdValid" \
     return p0
 .end method' \
 "${1%.*}/smali*"
-Thaythe "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z" "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z
-const/4 v0, 0x1
-return v0" "${1%.*}/smali*"
+Thaythe "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z" "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z \n const/4 v0, 0x1 \n return v0" "${1%.*}/smali*"
 Thaythe "ro.miui.region" "ro.khu.vuc.cn" "${1%.*}/smali*"
 Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
@@ -156,7 +154,7 @@ Vsmali ".method public static o(Landroid\/content\/pm\/ApplicationInfo;)Z" \
 "$(Timkiem "iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I" "${1%.*}/smali*")"
 }
 
-Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
+# Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
 if [ -e "$Apkossn" ];then
 unapk $Apkossn
 Modapk $Apkossn
@@ -167,7 +165,7 @@ Modappval(){
 Thaythe "MM:dd" "dd:MM" "${1%.*}/smali*/c/i/e/f/e/l.smali"
 }
 
-Appvaluossn="$GITHUB_WORKSPACE/Hpk/com.miui.personalassistant.apk"
+# Appvaluossn="$GITHUB_WORKSPACE/Hpk/com.miui.personalassistant.apk"
 if [ -e "$Appvaluossn" ];then
 unapk $Appvaluossn
 Modappval $Appvaluossn
@@ -179,7 +177,7 @@ Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*"
 }
 
-Homebgf="$GITHUB_WORKSPACE/Hpk/com.miui.home.apk"
+# Homebgf="$GITHUB_WORKSPACE/Hpk/com.miui.home.apk"
 if [ -e "$Homebgf" ];then
 unapk $Homebgf
 Modhome $Homebgf
