@@ -171,6 +171,18 @@ Modappval $Appvaluossn
 repapk $Appvaluossn
 fi
 
+Modhome(){
+Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*"
+}
+
+Homebgf="$GITHUB_WORKSPACE/Hpk/com.miui.home.apk"
+if [ -e "$Homebgf" ];then
+unapk $Homebgf
+Modhome $Homebgf
+repapk $Homebgf
+fi
+
 # Nén lại
 
 cd $GITHUB_WORKSPACE
