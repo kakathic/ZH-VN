@@ -146,7 +146,7 @@ Modbaomat(){
 Kjffgb=$(find ${1%.*}/smali*/miuix/os/a.smali)
 cp -rf $GITHUB_WORKSPACE/Tools/b.smali ${Kjffgb%/*}
 
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/*"
+#Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/b0/*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/cards/*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/d0/*"
