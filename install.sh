@@ -146,22 +146,19 @@ Modbaomat(){
 Kjffgb=$(find ${1%.*}/smali*/miuix/os/a.smali)
 cp -rf $GITHUB_WORKSPACE/Tools/b.smali ${Kjffgb%/*}
 
-Listknd="com/miui/securityscan
-com/miui/securityscan/b0
-com/miui/securityscan/cards
-com/miui/securityscan/d0
-com/miui/securityscan/fileobserver
-com/miui/securityscan/model/manualitem
-com/miui/securityscan/model/manualitem/defaultapp
-com/miui/securityscan/s
-com/miui/securityscan/scanner
-com/miui/securityscan/u
-com/miui/securityscan/ui/main
-com/miui/securityscan/ui/settings"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/b0/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/cards/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/d0/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/fileobserver/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/model/manualitem/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/model/manualitem/defaultapp/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/s/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/scanner/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/u/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/ui/main/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/com/miui/securityscan/ui/settings/*"
 
-for vdk in $Listknd; do
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/$vdk/*" 2>/dev/null
-done
 }
 
 Geplai "com.miui.securitycenter"
