@@ -175,5 +175,7 @@ fi
 
 cd $GITHUB_WORKSPACE
 zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
-mv -f  $GITHUB_WORKSPACE/*.apk $GITHUB_WORKSPACE/*.zip
 
+for vahhh in $GITHUB_WORKSPACE/*.apk; do
+mv -f  $vahhh "${vahhh%.*}".zip
+done
