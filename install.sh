@@ -134,7 +134,6 @@ Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
 }
 
-Geplai "com.android.thememanager"
 Themeossn="$GITHUB_WORKSPACE/Hpk/com.android.thememanager.apk"
 if [ -e "$Themeossn" ];then
 unapk $Themeossn
