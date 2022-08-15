@@ -56,7 +56,7 @@ done
 spt=0
 cd $GITHUB_WORKSPACE/Vietnam
 
-Kllll(){
+# Kllll(){
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
@@ -91,7 +91,7 @@ cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
-}
+# }
 # Mod apk
 
 modtt () {
