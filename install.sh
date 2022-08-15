@@ -160,7 +160,7 @@ com/miui/securityscan/ui/main
 com/miui/securityscan/ui/settings"
 
 for vdk in $Listknd; do
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/$vdk/*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/b;->b:Z" "${1%.*}/smali*/$vdk/*" 2>/dev/null
 done
 }
 
