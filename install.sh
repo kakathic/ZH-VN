@@ -7,7 +7,8 @@ apksign "$GITHUB_WORKSPACE/Tmp/Zz.$vad" "$GITHUB_WORKSPACE/apk/Zz.$vad" 2>/dev/n
 }
 
 unapk () {
-echo "Unpack: ${1##*/}"
+echo "
+Unpack: ${1##*/}"
 apktool d -q -r -f "$1" -o "${1%.*}"
 }
 repapk () {
@@ -128,7 +129,9 @@ Vsmali ".method private static isAdValid" \
     return p0
 .end method' \
 "${1%.*}/smali*"
-
+Thaythe "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z" "iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z
+const/4 v0, 0x1
+return v0" "${1%.*}/smali*"
 Thaythe "ro.miui.region" "ro.khu.vuc.cn" "${1%.*}/smali*"
 Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
