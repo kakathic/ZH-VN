@@ -60,6 +60,8 @@ spt=0
 
 Taive "https://github.com/kakathic/ZH-VN/archive/refs/heads/VN.zip" "$GITHUB_WORKSPACE/Tmp/VN.zip"
 unzip -oq "$GITHUB_WORKSPACE/Tmp/VN.zip" -d "$GITHUB_WORKSPACE"
+
+ls $GITHUB_WORKSPACE
 cd $GITHUB_WORKSPACE/Vietnam
 
 for vad in *.apk; do
