@@ -2,10 +2,10 @@ name: CI
 on:
  push:
   branches:
-      - VN
+      - ZH
  pull_request:
   branches:
-      - VN
+      - ZH
   workflow_dispatch:
 jobs:
   build:
@@ -14,12 +14,12 @@ jobs:
       - uses: actions/checkout@v3
       - name: Chạy Code
         run: |
-          # sudo apt install zipalign >/dev/null
-          ls
-          env
+          sudo apt install zipalign >/dev/null
+          # ls
+          # env
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
           chmod 777 install.sh
-          # . install.sh
+          . install.sh
       - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
