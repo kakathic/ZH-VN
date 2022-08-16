@@ -184,7 +184,6 @@ repapk $Homebgf
 fi
 
 # Nén lại
-
 cd $GITHUB_WORKSPACE
 zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
 
