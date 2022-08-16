@@ -17,7 +17,7 @@ jobs:
       - name: Chạy Code
         run: |
           # sudo apt install zipalign >/dev/null
-          # sudo apt install apktool
+          ls
           env
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
           chmod 777 install.sh
