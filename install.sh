@@ -55,12 +55,12 @@ for Vak in $ListTM; do
 mkdir -p $Vak
 done
 spt=0
-cd $GITHUB_WORKSPACE/Vietnam
 
 # Kllll(){
 
 Taive "https://github.com/kakathic/ZH-VN/archive/refs/heads/VN.zip" "$GITHUB_WORKSPACE/Tmp/VN.zip"
 unzip -oq "$GITHUB_WORKSPACE/Tmp/VN.zip" -d "$GITHUB_WORKSPACE"
+cd $GITHUB_WORKSPACE/Vietnam
 
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
