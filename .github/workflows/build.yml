@@ -2,10 +2,10 @@ name: CI
 on:
  push:
   branches:
-      - Vip
+      - VH
  pull_request:
   branches:
-      - Vip
+      - VH
   workflow_dispatch:
 jobs:
   build:
