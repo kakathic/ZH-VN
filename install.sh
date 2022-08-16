@@ -61,8 +61,7 @@ spt=0
 Taive "https://github.com/kakathic/ZH-VN/archive/refs/heads/VN.zip" "$GITHUB_WORKSPACE/Tmp/VN.zip"
 unzip -oq "$GITHUB_WORKSPACE/Tmp/VN.zip" -d "$GITHUB_WORKSPACE"
 
-ls $GITHUB_WORKSPACE
-cd $GITHUB_WORKSPACE/Vietnam
+cd $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam
 
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
@@ -93,7 +92,7 @@ $(cat $GITHUB_WORKSPACE/log)
 fi
 done
 
-cd $GITHUB_WORKSPACE/Miui
+cd $GITHUB_WORKSPACE/ZH-VN-VN/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
