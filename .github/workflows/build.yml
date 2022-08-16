@@ -21,7 +21,7 @@ jobs:
           chmod 777 install.sh
           . install.sh
       - name: Tải lên
-        uses: softprops/kakathic@v1
+        uses: softprops/kakathic-release@v1
         with:
           tag: 
           name: Tool ZH-VN
