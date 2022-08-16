@@ -45,7 +45,7 @@ sed -i -e "/^$1/,/$2/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 done
 }
 
-Phienban="$(Xem "https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json" | jq -r .version)"
+Phienban="$(cat "$GITHUB_WORKSPACE/Update.json" | jq -r .version)"
 
 ListTM="Tmp
 pro
