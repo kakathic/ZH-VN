@@ -1,0 +1,31 @@
+name: CI
+on:
+ push:
+  branches:
+      - Vip
+ pull_request:
+  branches:
+      - Vip
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Chạy Code
+        run: |
+          sudo apt install zipalign >/dev/null
+          # sudo apt install apktool
+          # ls /bin/jq
+          # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
+          chmod 777 install.sh
+          . install.sh
+      - name: Tải lên
+        uses: softprops/action-gh-release@v1
+        with:
+          tag: 
+          name: Tool ZH-VN
+          tag_name: Package
+          files: ./*.zip
+          prerelease: true
+          generate_release_notes: true
