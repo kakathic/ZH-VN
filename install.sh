@@ -18,7 +18,7 @@ mkdir -p $GITHUB_WORKSPACE/pro/lib/arm64
 cp -rf ${1%.*}/lib/arm64-v8a/* $GITHUB_WORKSPACE/pro/lib/arm64
 rm -fr ${1%.*}/lib
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/kest/${1##*/}"
-zipalign -f -p 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
+zipalign -f 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
 cd $GITHUB_WORKSPACE/pro
 zip -qr $GITHUB_WORKSPACE/${1##*/} *
 }
