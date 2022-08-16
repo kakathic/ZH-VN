@@ -2,11 +2,9 @@ name: CI
 on:
  push:
   branches:
-      - ZH
       - VN
  pull_request:
   branches:
-      - ZH
       - VN
   workflow_dispatch:
 jobs:
