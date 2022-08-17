@@ -26,7 +26,6 @@ jobs:
           tag: 
           name: Tool ZH-VN
           tag_name: Package
-          files: ./*.zip
-          files: ./Version.txt
+          files: ./*.zip ./Version.txt
           prerelease: true
           generate_release_notes: true
