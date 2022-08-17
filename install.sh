@@ -63,6 +63,9 @@ unzip -oq "$GITHUB_WORKSPACE/Tmp/VN.zip" -d "$GITHUB_WORKSPACE"
 
 cd $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam
 
+cat com.android.settings.apk/res/values-vi/strings1.xml com.android.settings.apk/res/values-vi/strings2.xml > com.android.settings.apk/res/values-vi/strings.xml
+rm -fr com.android.settings.apk/res/values-vi/strings1.xml com.android.settings.apk/res/values-vi/strings2.xml
+
 for vad in *.apk; do
 cp -rf $GITHUB_WORKSPACE/Test/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
