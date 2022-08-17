@@ -165,17 +165,6 @@ Modapk $Apkossn
 repapk $Apkossn
 fi
 
-Modappval(){
-Thaythe "MM:dd" "dd:MM" "${1%.*}/smali*/c/i/e/f/e/l.smali"
-}
-
-Appvaluossn="$GITHUB_WORKSPACE/Hpk/com.miui.personalassistant.apk"
-if [ -e "$Appvaluossn" ];then
-unapk $Appvaluossn
-Modappval $Appvaluossn
-repapk $Appvaluossn
-fi
-
 Modhome(){
 Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*"
