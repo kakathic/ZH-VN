@@ -23,7 +23,7 @@ cp -rf ${1%.*}/lib/arm64-v8a/* $GITHUB_WORKSPACE/pro/lib/arm64
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/kest/${1##*/}"
 zipalign -f 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
 cd $GITHUB_WORKSPACE/pro
-zip -qr $GITHUB_WORKSPACE/${1##*/} *
+zip -qr $GITHUB_WORKSPACE/Up/${1##*/} *
 }
 
 Taive () { curl -s -L "$1" -o "$2"; }
@@ -55,6 +55,7 @@ exit 0
 fi
 
 ListTM="Tmp
+Up
 pro
 apk"
 
@@ -189,11 +190,11 @@ fi
 
 # Nén lại
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
+zip -qr $GITHUB_WORKSPACE/Up/VH_$Phienban.zip framework-miui-res apk/*
 
-for vahhh in $GITHUB_WORKSPACE/*.apk; do
+for vahhh in $GITHUB_WORKSPACE/Up/*.apk; do
 mv -f  $vahhh "${vahhh%.*}".zip
 done
 
-echo "$Phienban" > $GITHUB_WORKSPACE/Version.txt
+echo "$Phienban" > $GITHUB_WORKSPACE/Up/Version.txt
 
