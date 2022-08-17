@@ -1,4 +1,7 @@
 # kakathic
+
+
+
 apktool () { java -jar $GITHUB_WORKSPACE/Tools/apktool-2.6.2-f3f199-SNAPSHOT-small.jar -api 33 "$@"; }
 apksign () { java -jar $GITHUB_WORKSPACE/Tools/apksigner.jar sign --cert "$GITHUB_WORKSPACE/Tools/releasekey.x509.pem" --key "$GITHUB_WORKSPACE/Tools/releasekey.pk8" --out "$2" "$1"; }
 Autofix () {
@@ -46,6 +49,10 @@ done
 }
 
 Phienban="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version)"
+
+if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Version.txt)" == "$Phienban" ];then
+exit 0
+fi
 
 ListTM="Tmp
 pro
@@ -187,3 +194,6 @@ zip -qr $GITHUB_WORKSPACE/VH_$Phienban.zip framework-miui-res apk/*
 for vahhh in $GITHUB_WORKSPACE/*.apk; do
 mv -f  $vahhh "${vahhh%.*}".zip
 done
+
+echo "$Phienban" > $GITHUB_WORKSPACE/Version.txt
+
