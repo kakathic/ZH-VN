@@ -119,7 +119,7 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 
 }
 
-thoitietpath="$GITHUB_WORKSPACE/Hpk/com.miui.weather2.apk"
+thoitietpath="$GITHUB_WORKSPACE/ZH-VN-VN/Apk/com.miui.weather2.apk"
 if [ -e "$thoitietpath" ];then
 unapk $thoitietpath
 modtt $thoitietpath
@@ -151,7 +151,7 @@ Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lg/r/b;->a:Z" "${1%.*}/smali*"
 }
 
-Themeossn="$GITHUB_WORKSPACE/Hpk/com.android.thememanager.apk"
+Themeossn="$GITHUB_WORKSPACE/ZH-VN-VN/Apk/com.android.thememanager.apk"
 if [ -e "$Themeossn" ];then
 unapk $Themeossn
 Modtheme $Themeossn
@@ -169,7 +169,7 @@ Vsmali ".method public static o(Landroid\/content\/pm\/ApplicationInfo;)Z" \
 "$(Timkiem "iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I" "${1%.*}/smali*")"
 }
 
-Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
+Apkossn="$GITHUB_WORKSPACE/ZH-VN-VN/Apk/com.miui.packageinstaller.apk"
 if [ -e "$Apkossn" ];then
 unapk $Apkossn
 Modapk $Apkossn
@@ -181,7 +181,7 @@ Thaythe "ro.product.mod_device" "ro.product.modcn" "${1%.*}/smali*"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z" "${1%.*}/smali*"
 }
 
-Homebgf="$GITHUB_WORKSPACE/Hpk/com.miui.home.apk"
+Homebgf="$GITHUB_WORKSPACE/ZH-VN-VN/Apk/com.miui.home.apk"
 if [ -e "$Homebgf" ];then
 unapk $Homebgf
 Modhome $Homebgf
