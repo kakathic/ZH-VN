@@ -1,0 +1,101 @@
+# kakathic
+
+id=MI
+name=VH-MI
+version=7.7
+versionCode=77
+author=kakathic
+description=Phần mềm dịch tự động rom miui, và mod thêm một số tính năng.
+
+# Ủng hộ:
+# Teckombank: 19034902604017
+# Paypal: http://paypal.me/kakathic
+# Telegram: @kakathic
+# Facebook: http://fb.com/kakathic
+
+# Dữ liệu cập nhật 
+updateJson=https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/update.json
+
+# Thêm ngôn ngữ bạn muốn dịch (Ví dụ: vi-VN )
+Linknn=vi-VN
+
+# Tên ngôn ngữ: (Tiếng Việt)
+LinkTn=Tiếng Việt
+
+
+# Khu vực có thể chỉnh sửa 
+# Để trống là nó sẽ hiện chọn bằng phím âm lượng trong quá trình cài đặt
+# Tùy chọn tự động
+
+#-----------------------#
+# Bật tắt dịch ngôn ngữ: 
+# 1 Bật
+# 2 Tắt
+VH=
+
+# Thêm lịch âm vào màn hình khóa và thanh thông báo 
+# 1 Tắt
+# 2 Bật
+Licham2=
+#-----------------------#
+
+#-------#
+# Thêm font chữ tiếng Việt: 
+# 1 Tắt
+# 2 Font IOS
+# 3 File
+fontchu=
+# Mục thứ 3
+# Ở bộ nhớ trong tìm thư mục VH-MI/fonts
+# Hãy để font trong thư mục đó.
+#-------#
+
+# Cài gói gapp tự động cho rom china gốc:
+# 1 Tắt
+# 2 Bật
+gapp=
+
+# Hiện tên nhà mạng ở phần thông báo nền china:
+# 1 Tắt
+# 2 Bật
+Systemui=
+
+# Cho phép cài đặt chủ đề bên thứ ba:
+# 1 Tắt
+# 2 Bật
+theme=
+
+# Cho phép cập nhật ứng dụng hệ thống
+# 1 Tắt
+# 2 Bật
+caiapk=
+
+# Cài đặt ứng dụng thời tiết Mod
+# 1 Tắt
+# 2 Bật
+Thoitiet=
+
+# Sửa thông báo chậm, hoặc chuyển nền global 
+# 1 Tắt
+# 2 Fix thông báo 
+# 3 Global 
+# 4 Mod Global
+global=
+
+# Xoá bỏ ứng dụng GetApps mà không bị treo logo:
+# 1 Tắt
+# 2 Bật
+gettapp=
+
+# Hiện thị bàn phím nâng cao:
+# 1 Tắt
+# 2 Bật
+banphim=
+
+
+# Sau khi cài đặt xong module có khởi động lại thiết bị không:
+# 1 Tắt
+# 2 Bật
+khoidl=
+
+#--------------------------------------#
