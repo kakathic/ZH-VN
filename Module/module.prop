@@ -2,8 +2,6 @@
 
 id=MI
 name=VH-MI
-version=7.7
-versionCode=77
 author=kakathic
 description=Phần mềm dịch tự động rom miui, và mod thêm một số tính năng.
 
@@ -14,7 +12,7 @@ description=Phần mềm dịch tự động rom miui, và mod thêm một số 
 # Facebook: http://fb.com/kakathic
 
 # Dữ liệu cập nhật 
-updateJson=https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/update.json
+updateJson=https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Up.json
 
 # Thêm ngôn ngữ bạn muốn dịch (Ví dụ: vi-VN )
 Linknn=vi-VN
