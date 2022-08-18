@@ -19,7 +19,7 @@ jobs:
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
           chmod 777 install.sh
           . install.sh
-      - name: Tải lên VH MOD
+      - name: Tải lên VH
         uses: softprops/action-gh-release@v1
         with:
           tag: 
@@ -28,7 +28,7 @@ jobs:
           files: Up/*
           prerelease: true
           generate_release_notes: true
-      - name: Tải lên VH-MI
+      - name: Tải lên Zip
         uses: softprops/action-gh-release@v1
         with:
           tag: 
