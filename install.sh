@@ -57,6 +57,7 @@ sudo apt install zipalign >/dev/null
 ListTM="Tmp
 Up
 pro
+notamlich
 apk"
 
 for Vak in $ListTM; do
@@ -107,6 +108,17 @@ cd $GITHUB_WORKSPACE/ZH-VN-VN/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
+
+# Not âm lịch
+sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam/com.android.systemui.apk/res/values-vi/strings.xml $GITHUB_WORKSPACE/ZH-VN-VN/Miui/theme_values.xml
+apktool b -f -s $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam/com.android.systemui.apk -o $GITHUB_WORKSPACE/Tmp/com.android.systemui.apk >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
+apksign "$GITHUB_WORKSPACE/Tmp/com.android.systemui.apk" "$GITHUB_WORKSPACE/notamlich/Zz.com.android.systemui.apk" 2>/dev/null >/dev/null
+
+cd $GITHUB_WORKSPACE/ZH-VN-VN/Miui
+cp -rf theme_values.xml nightmode
+zip -qr $GITHUB_WORKSPACE/framework2.zip *
+mv -f $GITHUB_WORKSPACE/framework2.zip $GITHUB_WORKSPACE/notamlich/framework-miui-res
+
 
 # }
 # Mod apk
@@ -190,7 +202,7 @@ fi
 
 # Nén lại
 cd $GITHUB_WORKSPACE
-zip -qr $GITHUB_WORKSPACE/Up/VH_$Phienban.zip framework-miui-res apk/*
+zip -qr $GITHUB_WORKSPACE/Up/VH_$Phienban.zip framework-miui-res notamlich/ apk/*
 
 for vahhh in $GITHUB_WORKSPACE/Up/*.apk; do
 mv -f  $vahhh "${vahhh%.*}".zip
