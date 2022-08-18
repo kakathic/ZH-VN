@@ -51,6 +51,7 @@ Phienban="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.jso
 if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Version.txt)" == "$Phienban" ];then
 exit 0
 fi
+sudo apt install zipalign >/dev/null
 
 ListTM="Tmp
 Up
