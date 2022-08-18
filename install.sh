@@ -47,6 +47,7 @@ done
 }
 
 Phienban="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version)"
+Phienban2="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .versionCode)"
 
 if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Version.txt)" == "$Phienban" ];then
 exit 0
@@ -196,4 +197,10 @@ mv -f  $vahhh "${vahhh%.*}".zip
 done
 
 echo "$Phienban" > $GITHUB_WORKSPACE/Up/Version.txt
+
+echo "version=$Phienban
+versionCode=$Phienban2" >> $GITHUB_WORKSPACE/Module/module.prop
+
+cd $GITHUB_WORKSPACE/Module
+zip -qr $GITHUB_WORKSPACE/VH-MI_$Phienban.Zip *
 
