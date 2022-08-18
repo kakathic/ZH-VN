@@ -29,7 +29,6 @@ jobs:
           files: Up/*
           prerelease: true
           generate_release_notes: true
-        with:
           tag: 
           name: Tool VH-MI
           tag_name: Download
