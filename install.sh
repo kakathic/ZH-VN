@@ -46,8 +46,8 @@ sed -i -e "/^$1/,/$2/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 done
 }
 
-Phienban="$(cat $GITHUB_WORKSPACE/Up.json | jq -r .version)"
-Phienban2="$(cat $GITHUB_WORKSPACE/Up.json | jq -r .versionCode)"
+Phienban="$(grep 'version=' $GITHUB_WORKSPACE/Module/module.prop | cut -d = -f2)"
+Phienban2="$(grep 'versionCode=' $GITHUB_WORKSPACE/Module/module.prop | cut -d = -f2)"
 
 if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Version.txt)" == "$Phienban" ];then
 exit 0
@@ -208,10 +208,12 @@ for vahhh in $GITHUB_WORKSPACE/Up/*.apk; do
 mv -f  $vahhh "${vahhh%.*}_$Phienban".zip
 done
 
-echo "$Phienban" > $GITHUB_WORKSPACE/Up/Version.txt
-
-echo "version=$Phienban
-versionCode=$Phienban2" >> $GITHUB_WORKSPACE/Module/module.prop
+echo '{
+"version": "'$Phienban'",
+"versionCode": "'$Phienban2'",
+"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/VH-MI_'$Phienban'.Zip",
+"changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
+}' > $GITHUB_WORKSPACE/Up/Up.json
 
 cd $GITHUB_WORKSPACE/Module
 zip -qr $GITHUB_WORKSPACE/VH-MI_$Phienban.Zip *
