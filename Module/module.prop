@@ -14,7 +14,7 @@ version=7.7
 # Facebook: http://fb.com/kakathic
 
 # Dữ liệu cập nhật 
-updateJson=https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Up.json
+updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/Up.json
 
 # Thêm ngôn ngữ bạn muốn dịch (Ví dụ: vi-VN )
 Linknn=vi-VN
