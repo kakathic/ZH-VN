@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:compileSdkVersion="23"
-    android:compileSdkVersionCodename="2.0"
-    package="zz..Test.com.android"
-    platformBuildVersionCode="31"
-    platformBuildVersionName="12">
+    android:compileSdkVersion="1"
+    android:compileSdkVersionCodename="1.0"
+    package="zz..Test.com.android">
     <application
         android:hasCode="false"
         android:extractNativeLibs="false" />
     <overlay
         android:isStatic="true"
-        android:priority="0"
+        android:priority="1"
         android:targetPackage="Test.com.android" />
 </manifest>
