@@ -22,7 +22,6 @@ jobs:
       - name: Tải lên VH
         uses: softprops/action-gh-release@v1
         with:
-          tag: 
           name: Tool
           tag_name: Package
           files: Up/*
@@ -31,7 +30,6 @@ jobs:
       - name: Tải lên Zip
         uses: softprops/action-gh-release@v1
         with:
-          tag: 
           name: Tool VH-MI
           tag_name: Download
           files: VH-MI_*.Zip
