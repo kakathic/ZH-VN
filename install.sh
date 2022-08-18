@@ -46,8 +46,8 @@ sed -i -e "/^$1/,/$2/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 done
 }
 
-Phienban="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version)"
-Phienban2="$(Xem https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .versionCode)"
+Phienban="$(cat $GITHUB_WORKSPACE/Up.json | jq -r .version)"
+Phienban2="$(cat $GITHUB_WORKSPACE/Up.json | jq -r .versionCode)"
 
 if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Version.txt)" == "$Phienban" ];then
 exit 0
