@@ -1,4 +1,4 @@
-name: AUTO BUILD VH-MI
+name: Auto Build VH-MI
 on:
  push:
   branches:
