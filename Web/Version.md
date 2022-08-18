@@ -1,6 +1,6 @@
 **Xem thêm thông tin**
 ----
-+ [Tổng hợp các phiên bản VH-MI](https://github.com/kakathic/ZH-VN/releases)
++ [Tổng hợp các phiên bản VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/Download)
 
 + [Trang chủ](https://kakathic.github.io/ZH-VN/Web/Index)
 
