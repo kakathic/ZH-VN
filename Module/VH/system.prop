@@ -1,0 +1,9 @@
+persist.sys.power.default.powermode=1
+ro.miui.support_miui_ime_bottom=1
+ro.miui.has_security_keyboard=0
+ro.khu.vuc=VN
+ro.vi.tri=vn
+ro.khu.vuc.cn=CN
+ro.vi.tri.cn=cn
+ro.vendor.audio.sfx.harmankardon=1
+persist.sys.ai_preload_cloud=1
