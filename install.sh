@@ -21,7 +21,7 @@ cp -rf ${1%.*}/lib/arm64-v8a/* $GITHUB_WORKSPACE/pro/lib/arm64
 apktool b -q -c -f "${1%.*}" -o "$GITHUB_WORKSPACE/kest/${1##*/}"
 zipalign -f 4 "$GITHUB_WORKSPACE/kest/${1##*/}" "$GITHUB_WORKSPACE/pro/${1##*/}"
 cd $GITHUB_WORKSPACE/pro
-zip -qr $GITHUB_WORKSPACE/Up/${1##*/} *
+zip -qr $GITHUB_WORKSPACE/Up/${1##*/}_$Phienban *
 }
 
 Taive () { curl -s -L "$1" -o "$2"; }
