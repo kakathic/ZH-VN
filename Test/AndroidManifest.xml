@@ -8,6 +8,6 @@
         android:extractNativeLibs="false" />
     <overlay
         android:isStatic="true"
-        android:priority="1"
+        android:priority="0"
         android:targetPackage="Test.com.android" />
 </manifest>
