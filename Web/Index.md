@@ -69,13 +69,13 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 6. Việt hóa Widget
 
-  + Hãy lôi widget ra App vault và sử dụng lệnh `su -c Appvault.sh`
-  + Nó sẽ tự động việt hóa khi bạn khởi động lại máy nhưng phải bật mạng nha
-  + Gõ lệnh như trên thì nó sẽ việt hóa luôn.
+   + Hãy lôi widget ra App vault và sử dụng lệnh `su -c Appvault.sh`
+   + Nó sẽ tự động việt hóa khi bạn khởi động lại máy nhưng phải bật mạng nha
+   + Gõ lệnh như trên thì nó sẽ việt hóa luôn.
 
 7. Cài apk ứng dụng hệ thống 
 
-  + Cho phép các app thường có thể cập nhật ứng dụng hệ thống
+   + Cho phép các app thường có thể cập nhật ứng dụng hệ thống
 
 8. Cài Gapps cho máy hỗ trợ từ android 10 đến 13
 
