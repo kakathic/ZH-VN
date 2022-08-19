@@ -30,20 +30,20 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 2. Thêm âm lịch tính năng này chỉ có tác dụng khi chọn thêm tiếng việt
 
 3. Thêm font đã việt hóa
-   + Bạn cũng có thể tự thêm font của mình bằng cách vào thư mục sau
-   + `/storage/emulated/0/VH-MI/fonts` hoặc `/sdcard/VH-MI/fonts`
-   + Hãy đổi tên file font của bạn thành `MiLanProVF.ttf`
-   + Module nó sẽ tự nhận diện font
-   + Bạn cũng có thể để những file font khác vào thư mục đó.
++ Bạn cũng có thể tự thêm font của mình bằng cách vào thư mục sau
++ `/storage/emulated/0/VH-MI/fonts` hoặc `/sdcard/VH-MI/fonts`
++ Hãy đổi tên file font của bạn thành `MiLanProVF.ttf`
++ Module nó sẽ tự nhận diện font
++ Bạn cũng có thể để những file font khác vào thư mục đó.
 
 4. Chỉnh màu bàn phím nâng cao
 
-   + Vào thư mục sau
-   + `/storage/emulated/0/VH-MI/color` hoặc `/sdcard/VH-MI/color`
-   + Hãy sửa lại mã màu sáng và tối cho cùng màu với bàn phím 
++ Vào thư mục sau
++ `/storage/emulated/0/VH-MI/color` hoặc `/sdcard/VH-MI/color`
++ Hãy sửa lại mã màu sáng và tối cho cùng màu với bàn phím 
 
 5. Chỉnh sửa sâu vào hệ thống
-   
+
 - China mod
 
   + Tắt thông báo khay nhớ tạm cho rom dev
