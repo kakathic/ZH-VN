@@ -6,6 +6,10 @@
 
 **Nhật ký thay đổi**
 ----
+7.7
+
++ Chuyển đổi căn bản module
+
 7.6
 
 Siêu tối ưu hệ thống module cài nhanh hơn 
