@@ -25,8 +25,6 @@
 
 > [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
 
-- Nếu quá lâu không được trả lời hãy gửi vào nhóm [Telegram](http://t.me/toolvn) sẽ có người duyệt giúp bạn.
-
 - Hai ảnh ở dưới cho bạn biết tài khoản mi id và tên máy.
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp0.jpg" height="auto" width="99%" />
