@@ -1,4 +1,4 @@
-name: Auto Build VH-MI
+name: Auto Build
 on:
  push:
   branches:
@@ -30,7 +30,7 @@ jobs:
       - name: Tải lên Zip
         uses: softprops/action-gh-release@v1
         with:
-          name: Tool VH-MI
+          name: VH-MI
           tag_name: Download
           files: VH-MI_*.Zip
 
