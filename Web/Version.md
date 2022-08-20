@@ -12,7 +12,7 @@
 
 x.x
 
-Siêu tối ưu hệ thống module cài nhanh hơn 
++ Siêu tối ưu hệ thống module cài nhanh hơn 
 
 x.x
 
