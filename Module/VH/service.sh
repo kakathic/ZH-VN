@@ -10,11 +10,11 @@ sleep 2
 fi
 done
 
+sleep 5
+
 pm disable com.miui.analytics
 pm disable com.xiaomi.joyose
-pm disable com.google.android.gms/.chimera.GmsIntentOperationService
-
-sleep 5
+# pm disable com.google.android.gms/.chimera.GmsIntentOperationService
 
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn
