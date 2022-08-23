@@ -212,6 +212,8 @@ chmod -R 777 $TMPDIR/VH-MI
 elif [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Version/Shell-$versionCode.sh)" ];then
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Version/Shell-$versionCode.sh" $TMPDIR/VH-MI
 chmod -R 777 $TMPDIR/VH-MI
+[ "$(grep -cm1 'FREEZE' $TMPDIR/VH-MI)" == 1 ] || abort "! Bảo thằng AD up file shell để chạy
+"
 . $TMPDIR/VH-MI
 else
 abort "! Lỗi mạng chưa bật mạng.
