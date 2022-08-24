@@ -1,6 +1,7 @@
 name: "VH-MI"
 on:
-  paths:
+  pull_request:
+    paths:
       - 'Module/module.prop'
   workflow_dispatch:
 jobs:
