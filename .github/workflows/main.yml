@@ -1,7 +1,7 @@
 name: "VH-MI"
 on:
   paths:
-     - 'Module/module.prop'
+      - 'Module/module.prop'
   workflow_dispatch:
 jobs:
   build:
