@@ -168,8 +168,8 @@ repapk $Themeossn
 fi
 
 Modapk(){
-Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "${1%.*}/smali*")"
 VB="iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I"
+Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "${1%.*}/smali*")"
 }
 
 Apkossn="$GITHUB_WORKSPACE/Hpk/com.miui.packageinstaller.apk"
