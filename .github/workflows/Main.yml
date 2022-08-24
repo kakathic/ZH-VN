@@ -1,11 +1,5 @@
 name: Auto Build
 on:
- push:
-  branches:
-      - ZH
- pull_request:
-  branches:
-      - ZH
   workflow_dispatch:
 jobs:
   build:
