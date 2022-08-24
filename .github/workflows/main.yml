@@ -1,4 +1,4 @@
-name: Auto Build
+name: "VH-MI"
 on:
   workflow_dispatch:
 jobs:
