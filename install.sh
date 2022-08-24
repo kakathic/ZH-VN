@@ -49,9 +49,6 @@ done
 Phienban="$(grep 'version=' $GITHUB_WORKSPACE/Module/module.prop | cut -d = -f2)"
 Phienban2="$(grep 'versionCode=' $GITHUB_WORKSPACE/Module/module.prop | cut -d = -f2)"
 
-if [ "$(Xem https://github.com/kakathic/ZH-VN/releases/download/Package/Up.json | jq -r .version)" == "$Phienban" ];then
-exit 0
-fi
 sudo apt install zipalign >/dev/null
 
 ListTM="Tmp
