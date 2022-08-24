@@ -20,7 +20,7 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 - Để mô-đun hỗ trợ lâu dài mỗi thiết bị khi sử dụng phải ủng hộ 10k để sử dụng vĩnh viễn.
 
-- [Xem chi tiết](https://kakathic.github.io/ZH-VN/Web/Support)
+- [Xem chi tiết](./Web/Support)
 
 **Tính năng của VH-MI**
 ---
