@@ -6,6 +6,14 @@
 
 **Nhật ký thay đổi**
 ----
+1.3
+
+- Fix
+
+1.2
+
+- Fix
+
 1.0
 
 + Chuyển đổi căn bản module
