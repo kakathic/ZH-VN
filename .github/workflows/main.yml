@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    name: 'Quá trình thực hiện'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,7 +17,7 @@ jobs:
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
           chmod 777 install.sh
           . install.sh
-      - name: Tải lên VH
+      - name: 'Tải lên'
         uses: softprops/action-gh-release@v1
         with:
           name: Tool
@@ -24,7 +25,7 @@ jobs:
           files: Up/*
           prerelease: true
           generate_release_notes: true
-      - name: Tải lên Zip
+      - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
