@@ -64,10 +64,7 @@ spt=0
 
 # Kllll(){
 
-Taive "https://github.com/kakathic/ZH-VN/archive/refs/heads/VN.zip" "$GITHUB_WORKSPACE/Tmp/VN.zip"
-unzip -oq "$GITHUB_WORKSPACE/Tmp/VN.zip" -d "$GITHUB_WORKSPACE"
-
-cd $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam
+cd $GITHUB_WORKSPACE/Vietnam
 
 cat com.android.settings.apk/res/values-vi/strings1.xml com.android.settings.apk/res/values-vi/strings2.xml > com.android.settings.apk/res/values-vi/strings.xml
 rm -fr com.android.settings.apk/res/values-vi/strings1.xml com.android.settings.apk/res/values-vi/strings2.xml
@@ -101,17 +98,17 @@ $(cat $GITHUB_WORKSPACE/log)
 fi
 done
 
-cd $GITHUB_WORKSPACE/ZH-VN-VN/Miui
+cd $GITHUB_WORKSPACE/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework.zip *
 mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 
 # Not âm lịch
-sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam/com.android.systemui.apk/res/values-vi/strings.xml $GITHUB_WORKSPACE/ZH-VN-VN/Miui/theme_values.xml
-apktool b -f -s $GITHUB_WORKSPACE/ZH-VN-VN/Vietnam/com.android.systemui.apk -o $GITHUB_WORKSPACE/Tmp/com.android.systemui.apk >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
+sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $GITHUB_WORKSPACE/Vietnam/com.android.systemui.apk/res/values-vi/strings.xml $GITHUB_WORKSPACE/Miui/theme_values.xml
+apktool b -f -s $GITHUB_WORKSPACE/Vietnam/com.android.systemui.apk -o $GITHUB_WORKSPACE/Tmp/com.android.systemui.apk >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
 apksign "$GITHUB_WORKSPACE/Tmp/com.android.systemui.apk" "$GITHUB_WORKSPACE/notamlich/Zz.com.android.systemui.apk" 2>/dev/null >/dev/null
 
-cd $GITHUB_WORKSPACE/ZH-VN-VN/Miui
+cd $GITHUB_WORKSPACE/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $GITHUB_WORKSPACE/framework2.zip *
 mv -f $GITHUB_WORKSPACE/framework2.zip $GITHUB_WORKSPACE/notamlich/framework-miui-res
