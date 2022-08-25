@@ -3,7 +3,7 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: Mark stale issues and pull requests
+name: Đánh dấu các vấn đề cũ và yêu cầu kéo
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
     - uses: actions/stale@v5
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
+        stale-issue-message: 'Thông báo sự cố cũ'
+        stale-pr-message: 'Thông báo yêu cầu kéo cũ'
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
