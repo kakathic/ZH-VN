@@ -201,7 +201,7 @@ echo '{
 "versionCode": "'$Phienban2'",
 "zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/VH-MI_'$Phienban'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
-}' > $GITHUB_WORKSPACE/Up/Up.json
+}' > $GITHUB_WORKSPACE/Up.json
 
 cd $GITHUB_WORKSPACE/Module
 zip -qr $GITHUB_WORKSPACE/VH-MI_$Phienban.Zip *
