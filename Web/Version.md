@@ -2,10 +2,13 @@
 ----
 + [Tổng hợp các phiên bản VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/Download)
 
-+ [Trang chủ](https://kakathic.github.io/ZH-VN/Web/Index)
++ [Trang chủ](https://github.com/kakathic/ZH-VN)
 
 **Nhật ký thay đổi**
 ----
+1.3
+
+- Fix trình cài đặt 
 
 1.2
 
