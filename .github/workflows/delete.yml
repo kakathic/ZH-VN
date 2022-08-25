@@ -1,7 +1,7 @@
 name: Auto delete old workflow runs
 on:
   schedule:
-    - cron: '2 2 * * *'
+    - cron: '30 8 * * *'
   workflow_dispatch:
 jobs:
   del_runs:
