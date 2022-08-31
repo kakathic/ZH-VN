@@ -6,6 +6,10 @@
 
 **Nhật ký thay đổi**
 ----
+1.4
+
++ Fix thông báo
+
 1.3
 
 - Fix trình cài đặt 
