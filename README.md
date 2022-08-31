@@ -26,6 +26,12 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 ---
 
 1. Thêm tiếng việt
+   + Để thêm tiếng việt từng ứng dụng hãy làm theo bước sau
+   + Tạo 1 file ở trong thư mục `/sdcard/VH-MI`
+   + Tên là `XList.md`
+   + Rồi thêm ứng dụng muốn việt hóa vào đó
+   + Ví dụ: `com.android.systemui` nó sẽ việt hóa ứng dụng Giao diện hệ thống
+   + `com.android.systemui` là tên gói của ứng dụng đó
 
 2. Thêm âm lịch tính năng này chỉ có tác dụng khi chọn thêm tiếng việt
 
