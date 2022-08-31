@@ -16,6 +16,8 @@ pm disable com.xiaomi.joyose
 
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn
+cmd appops set $Ksksn START_FOREGROUND allow
+cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
 am set-standby-bucket $Ksksn 10
 cmd package compile -m speed $Ksksn
