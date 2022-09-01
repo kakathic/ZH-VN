@@ -7,7 +7,7 @@ name: Đánh dấu các vấn đề cũ và yêu cầu kéo
 
 on:
   schedule:
-  - cron: '37 13 * * *'
+  - cron: '37 13 1 * *'
 
 jobs:
   stale:
