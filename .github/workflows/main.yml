@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     name: 'Quá trình thực hiện'
+    if: github.repository == 'kakathic/ZH-VN' && github.ref == 'refs/heads/ZH'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
