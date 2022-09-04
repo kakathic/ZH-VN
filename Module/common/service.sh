@@ -17,9 +17,7 @@ if [ "$Auto" == 100 ];then
 for sksb in $Adb/*; do
 echo > "$sksb/disable"
 done
-rm -fr /data/dalvik-cache/*/*framework*
-rm -fr /data/system/package_cache/*
-rm -fr /data/resource-cache/*
+rm -fr /data/dalvik-cache/*/*framework* /data/system/package_cache/* /data/resource-cache/* /data/adb/service.d/Tol.sh
 reboot
 fi
 done
