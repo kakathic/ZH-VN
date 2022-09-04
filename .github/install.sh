@@ -106,8 +106,9 @@ mv -f $GITHUB_WORKSPACE/framework.zip $GITHUB_WORKSPACE/framework-miui-res
 sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $GITHUB_WORKSPACE/Vietnam/com.android.systemui.apk/res/values-vi/strings.xml $GITHUB_WORKSPACE/Vietnam/miui.system.apk/res/values-vi/strings.xml
 apktool b -f -s $GITHUB_WORKSPACE/Vietnam/com.android.systemui.apk -o $GITHUB_WORKSPACE/Tmp/com.android.systemui.apk >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
 apksign "$GITHUB_WORKSPACE/Tmp/com.android.systemui.apk" "$GITHUB_WORKSPACE/notamlich/Zz.com.android.systemui.apk" 2>/dev/null >/dev/null
+
 apktool b -f -s $GITHUB_WORKSPACE/Vietnam/miui.system.apk -o $GITHUB_WORKSPACE/Tmp/miui.system.apk >$GITHUB_WORKSPACE/log 2>>$GITHUB_WORKSPACE/log
-apksign "$GITHUB_WORKSPACE/Tmp/miui.system.apk" "$GITHUB_WORKSPACE/notamlich/miui.system.apk" 2>/dev/null >/dev/null
+apksign "$GITHUB_WORKSPACE/Tmp/miui.system.apk" "$GITHUB_WORKSPACE/notamlich/Zz.miui.system.apk" 2>/dev/null >/dev/null
 
 
 # }
