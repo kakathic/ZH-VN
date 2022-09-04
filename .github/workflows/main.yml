@@ -17,7 +17,7 @@ jobs:
           # ls
           # env
           # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
-          chmod 777 install.sh
+          chmod 777 .github/install.sh
           . .github/install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
