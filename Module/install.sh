@@ -52,7 +52,7 @@ abort
 elif [ "$Key" == "KEY_VOLUMEUP" ];then
 [ "$input" == "$input2" ] && input=1 || input=$(($input + 1))
 ui_print2 "$input"
-#input swipe 500 2000 500 0 50
+# input swipe 500 2000 500 0 50
 sleep 0.3
 Kgg
 elif [ "$Key" == "KEY_VOLUMEDOWN" ];then
@@ -152,7 +152,7 @@ on_install () {
 [ -e $VHMI/reset ] && rm -fr $Dtool/backup/*
 [ -e "$MPATH" ] && rm -fr $MPATH/*
 # Tạo thư mục
-ListTM="$MODPATH${framework%/*}/tmp
+ListTM="$MODPATH/system/media/tmp
 $TMPDIR/rac
 $TMPDIR/tun
 $VHMI/fonts
