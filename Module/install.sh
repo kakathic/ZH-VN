@@ -52,7 +52,7 @@ abort
 elif [ "$Key" == "KEY_VOLUMEUP" ];then
 [ "$input" == "$input2" ] && input=1 || input=$(($input + 1))
 ui_print2 "$input"
-input swipe 500 500 500 0 20
+#input swipe 500 2000 500 0 50
 sleep 0.3
 Kgg
 elif [ "$Key" == "KEY_VOLUMEDOWN" ];then
