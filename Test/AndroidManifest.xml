@@ -6,7 +6,6 @@
     platformBuildVersionCode="31"
     platformBuildVersionName="12">
     <application
-        android:hasCode="false"
         android:extractNativeLibs="false" />
     <overlay
         android:priority="999"
