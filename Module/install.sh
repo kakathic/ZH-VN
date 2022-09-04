@@ -189,7 +189,7 @@ versionCode=$versionCode
 " >> $TMPDIR/module.prop
 
 # Bỏ Gms china
-Ptkkf=$(find /*/*/etc/permissions/*cn.google*.xml | head -n1)
+Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
 if [ -e $Ptkkf ];then
 mkdir -p $MPATH${Ptkkf%/*}
 cp -rf $Ptkkf $MPATH${Ptkkf%/*}
