@@ -6,6 +6,10 @@
 
 **Nhật ký thay đổi**
 ----
+1.5
+
++ Sửa lại file VH
+
 1.4
 
 + Fix thông báo
