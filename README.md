@@ -1,3 +1,5 @@
+# ZH-VN
+
 Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tính năng hay.
 
 **Hướng dẫn cài đặt**
