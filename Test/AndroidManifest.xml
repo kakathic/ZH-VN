@@ -3,7 +3,7 @@
     android:compileSdkVersion="23"
     android:compileSdkVersionCodename="2.0"
     package="zz..Test.com.android"
-    platformBuildVersionCode="31"
+    platformBuildVersionCode="27"
     platformBuildVersionName="12">
     <application
         android:extractNativeLibs="false" />
