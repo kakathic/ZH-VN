@@ -9,7 +9,6 @@
 1.5
 
 + Sửa lại file VH
-+ Thêm bong bóng tròn chat messenger
 
 1.4
 
