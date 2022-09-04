@@ -9,7 +9,7 @@
         android:hasCode="false"
         android:extractNativeLibs="false" />
     <overlay
+        android:priority="999"
         android:isStatic="true"
-        android:priority="0"
         android:targetPackage="Test.com.android" />
 </manifest>
