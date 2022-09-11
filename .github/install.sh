@@ -26,7 +26,7 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cd $TOME/.github/$1
-zip -qr -9 '$TOME/Zip/'$1'_'$Vs'.Zip' *
+zip -r '$TOME/Zip/'$1'_'$Vs'.Zip' *
 }
 
 Taoup Gapps
