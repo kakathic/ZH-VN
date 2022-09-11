@@ -22,6 +22,4 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $GITHUB_WORKSPACE/Up/Up.json
 
-cd $GITHUB_WORKSPACE/Module
-zip -qr $GITHUB_WORKSPACE/VH-MI_$Phienban.Zip *
-
+7za a -tzip -o $TOME/Zip/Gapps.Zip $TOME/.github/Gapps/*
