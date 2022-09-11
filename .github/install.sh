@@ -9,7 +9,8 @@ for vah in $1; do
 done
 }
 
-TTM "Zip"
+TTM "Zip
+Up"
 
 apktool(){ java -jar $TOOLS/apktool-2.6.2.jar "$@"; }     
 baksmali(){ java -jar $TOOLS/baksmali-2.3.4.jar d "$@"; }     
@@ -30,5 +31,5 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $GITHUB_WORKSPACE/Up/Up.json
 
-7za a -r -tzip -o $TOME/Zip/Gapps.Zip $TOME/.github/Gapps/*
+7za a -r -tzip -o$TOME/Zip/Gapps.Zip $TOME/.github/Gapps/*
 ls $TOME
