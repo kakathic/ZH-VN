@@ -4,7 +4,7 @@ TOOLS="$TOME/.github/Tools"
 
 TTM(){
 for vah in $1; do
-[ -e $vah ] || mkdir -p "$vah"
+[ -e "$TOME/$vah" ] || mkdir -p "$TOME/$vah"
 done
 }
 
