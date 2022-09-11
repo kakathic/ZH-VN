@@ -17,19 +17,20 @@ baksmali(){ java -jar $TOOLS/baksmali-2.3.4.jar d "$@"; }
 smali(){ java -jar $TOOLS/smali-2.5.2.jar a "$@"; }     
 sudo apt install zipalign >/dev/null
 
-
-
-
-
-
-
-
+Taoup(){
+Vs=$(grep 'version=' $TOME/.github/$1/module.prop | cut -d = -f2);
+Vscode=$(grep 'versionCode=' $TOME/.github/$1/module.prop | cut -d = -f2);
 echo '{
-"version": "'$Phienban'",
-"versionCode": "'$Phienban2'",
-"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/VH-MI_'$Phienban'.Zip",
+"version": "'$Vs'",
+"versionCode": "'$Vscode'",
+"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/'$1'_'$Vs'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
-}' > $GITHUB_WORKSPACE/Up/Up.json
+}' > $TOME/Up/$1.json
+7za a -r -tzip -o'$TOME/Zip/'$1'_'$Vs'.Zip' $TOME/.github/$1/*
+}
 
-7za a -r -tzip -o$TOME/Zip/Gapps.Zip $TOME/.github/Gapps/*
-ls $TOME
+Taoup Gapps
+Taoup Getapps
+Taoup Pinstaller
+Taoup Theme
+Taoup ZH-VN
