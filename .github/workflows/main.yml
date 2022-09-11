@@ -32,7 +32,7 @@ jobs:
         with:
           name: VH-MI
           tag_name: Download
-          files: VH-MI_*.Zip
+          files: Zip/*.Zip
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
         with:
