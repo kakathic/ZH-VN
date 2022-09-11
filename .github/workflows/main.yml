@@ -4,7 +4,7 @@ on:
     - cron: '0 0 1 * *'
   push:
     paths:
-      - 'Module/module.prop'
+      - '.github/install.sh'
 jobs:
   build:
     name: 'Quá trình thực hiện'
