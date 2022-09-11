@@ -25,7 +25,8 @@ echo '{
 "zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/'$1'_'$Vs'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
-7za a -r -tzip '$TOME/Zip/'$1'_'$Vs'.Zip' $TOME/.github/$1/*
+cd $TOME/.github/$1
+zip -qr '$TOME/Zip/'$1'_'$Vs'.Zip' *
 }
 
 Taoup Gapps
