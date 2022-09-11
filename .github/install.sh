@@ -33,3 +33,5 @@ Taoup Getapps
 Taoup Pinstaller
 Taoup Theme
 Taoup ZH-VN
+
+ls $TOME/Zip
