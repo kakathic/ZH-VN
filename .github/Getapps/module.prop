@@ -1,0 +1,8 @@
+# kakathic
+id=VH-GA
+versionCode=1
+version=1.0
+name=Delete Getapps
+description=Xoá ứng dụng Getapps mà không bị treo máy
+updateJson=https://github.com/kakathic/ZH-VN/releases/download/Up/GA.json
+author=kakathic
