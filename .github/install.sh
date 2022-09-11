@@ -10,7 +10,7 @@ done
 
 TTM "Zip
 Up"
-
+ls
 apktool(){ java -jar $TOOLS/apktool-2.6.2.jar "$@"; }     
 baksmali(){ java -jar $TOOLS/baksmali-2.3.4.jar d "$@"; }     
 smali(){ java -jar $TOOLS/smali-2.5.2.jar a "$@"; }     
@@ -26,7 +26,7 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cd $TOME/.github/$1
-zip -qr '$TOME/Zip/'$1'_'$Vs'.Zip' *
+zip -qr -9 '$TOME/Zip/'$1'_'$Vs'.Zip' *
 }
 
 Taoup Gapps
