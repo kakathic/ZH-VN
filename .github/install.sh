@@ -4,13 +4,13 @@ TOOLS="$TOME/.github/Tools"
 
 TTM(){
 for vah in $1; do
-[ -e $vah ] || mkdir -p "$TOME/$vah"
+[ -e $vah ] || mkdir -p "$vah"
 done
 }
 
 TTM "Zip
 Up"
- 
+
 apktool(){ java -jar $TOOLS/apktool-2.6.2.jar "$@"; }     
 baksmali(){ java -jar $TOOLS/baksmali-2.3.4.jar d "$@"; }     
 smali(){ java -jar $TOOLS/smali-2.5.2.jar a "$@"; }     
