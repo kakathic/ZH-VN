@@ -8,7 +8,7 @@ MODPATH="${0%/*}"
 
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
-if [ "$Auto" == 100 ];then
+if [ "$Auto" == 100 ] && [ "$API" -ge 30 ];then
 echo > $MODPATH/disable
 reboot
 fi
