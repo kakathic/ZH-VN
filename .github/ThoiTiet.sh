@@ -1,5 +1,6 @@
 # kakathic
 TOME=$GITHUB_WORKSPACE
+sudo apt install zipalign >/dev/null
 
 apktool () { java -jar $TOME/.github/Tools/apktool-2.6.2.jar "$@"; }       
 
@@ -10,9 +11,11 @@ apktool d -q -r -f "$1" -o "${1%.*}"
 
 repapk () {
 echo "Repack: ${1##*/}"
-apktool b -q -c -f "${1%.*}" -o "$TOME/Up/${1##*/}"
+apktool b -q -c -f "${1%.*}" -o "$TOME/Op/${1##*/}"
+zipalign -f 4 "$TOME/Op/${1##*/}" "$TOME/Up/${1##*/}"
 }
 
+mkdir -p $TOME/Up
 Timkiem () { grep -Rl "$1" $2; }
 
 Thaythe () {
