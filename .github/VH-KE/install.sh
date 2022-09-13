@@ -147,8 +147,8 @@ ui_print "- Tính năng Mod nâng cao ?"
 ui_print
 ui_print2 "1. Tắt"
 ui_print2 "2. China Mod"
-ui_print2 "3. Global"
-ui_print2 "4. Global Mod"
+ui_print2 "3. China > Global"
+ui_print2 "4. China > Global Mod"
 
 if [ "$(GP global)" ];then
 chinann=$(GP global)
