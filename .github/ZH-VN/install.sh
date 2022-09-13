@@ -33,7 +33,7 @@ error="- Lỗi không tìm thấy hoặc lỗi mạng!
 
 
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64 !"
+[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
 baksmali () {
 java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"
