@@ -23,10 +23,14 @@ for Tt2 in $Tt1; do
 done
 }
 
-unapk "$TOME/Hpk/com.miui.weather2.apk"
+modTT(){
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Le/h/a;->a:Z" "${1%.*}/smali*"
 Thaythe "ro.miui.region" "ro.khu.vuc" "${1%.*}/smali*"
 Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
+}
+
+unapk "$TOME/Hpk/com.miui.weather2.apk"
+modTT "$TOME/Hpk/com.miui.weather2.apk"
 repapk "$TOME/Hpk/com.miui.weather2.apk"
 
 
