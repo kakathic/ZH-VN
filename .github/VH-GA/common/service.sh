@@ -7,16 +7,6 @@ MODPATH="${0%/*}"
 # Later in the booting process, the class late_start will be triggered, and Magisk “service” mode will be started. In this mode, service scripts are executed.
 
 # Code
-RD="$RANDOM"
-while true; do
-echo > /sdcard/$RD
-if [ -e /sdcard/$RD ];then
-rm -fr /sdcard/$RD
-break
-else
-sleep 2
-fi
-done
 
 module_exec() {
     if [ ! -z magiskhide ]; then
@@ -25,14 +15,21 @@ module_exec() {
         MONGWU_SAID=`magiskhide $@`
     fi
 }
-    if [ -e $MODPATH/NO ];then
+if [ -e $MODPATH/NO ];then
+sleep 15
+boot=`getprop sys.boot_completed`
+if [ $boot -eq 1 ]; then
     module_exec enable
+    sleep 5
     module_exec rm com.google.android.gms
-    pm install -g --dont-kill --install-reason 3 $MODPATH/system/product/priv-app/GmsCore/GmsCore.apk
-    pm install -g --dont-kill --install-reason 3 $MODPATH/system/product/priv-app/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk
-    pm uninstall -k com.google.android.gms
-    pm uninstall -k com.android.vending
+    sleep 5
+    pm install -g $MODPATH/system/product/priv-app/GmsCore/GmsCore.apk
+    sleep 10
+    pm uninstall com.google.android.gms
+    sleep 10
+    # pm clear com.google.android.gms
     module_exec add com.google.android.gms
-    sleep 2
+    sleep 5
     module_exec rm com.google.android.gms
-    fi
+fi
+fi
