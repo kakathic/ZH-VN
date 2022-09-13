@@ -1,10 +1,11 @@
 name: "VH-MI"
 on:
-  schedule:
-    - cron: '0 0 1 * *'
   push:
     paths:
-      - '.github/install.sh'
+      - '.github/VH-GA/module.prop'
+      - '.github/VH-KE/module.prop'
+      - '.github/VH-PT/module.prop'
+      - '.github/ZH-VN/module.prop'
 jobs:
   build:
     name: 'Quá trình thực hiện'
@@ -14,11 +15,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Chạy Code
         run: |
-          # ls
-          # env
-          # curl -s -G -L https://raw.githubusercontent.com/kakathic/VH-MI/main/update.json | jq -r .version
-          chmod 777 .github/install.sh
-          . .github/install.sh
+          # kakathic
+          . .github/Install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
