@@ -1,8 +1,0 @@
-# kakathic
-id=VH-PI
-versionCode=1
-version=1.0
-name=Update Apk MIUI
-description=Cho phép cập nhật ứng dụng hệ thống bằng file apk.
-updateJson=https://github.com/kakathic/ZH-VN/releases/download/Up/PI.json
-author=kakathic
