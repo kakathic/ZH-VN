@@ -32,7 +32,7 @@ error="! Lỗi không tìm thấy hoặc lỗi mạng!
 "
 
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64 !"
+[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
 ## Introduce
 print_modname(){
