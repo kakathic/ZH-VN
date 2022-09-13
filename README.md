@@ -1,4 +1,4 @@
-# ZH-VN [![VH-MI](https://github.com/kakathic/ZH-VN/actions/workflows/main.yml/badge.svg)](https://github.com/kakathic/ZH-VN/actions/workflows/main.yml)
+# ZH-VN
 
 Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tính năng hay.
 
