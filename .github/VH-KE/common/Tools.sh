@@ -73,6 +73,9 @@ done
 
 GP () { grep_prop $1 $TMPDIR/module.prop; }
 
+API=$(getprop ro.build.version.sdk)
+ABI=$(getprop ro.product.cpu.abi)
+
 if [ "$ABI" = "x86" ]; then
 export ARCH=x86
 export ARMT=i686
