@@ -33,8 +33,7 @@ error="! Lỗi không tìm thấy hoặc lỗi mạng!
 
 [ "$API" -ge 31 ] && miuik='miui-'
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64 !
-"
+[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
 # mount
 mrw () {
