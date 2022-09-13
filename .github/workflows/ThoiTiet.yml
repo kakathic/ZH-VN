@@ -1,4 +1,4 @@
-name: "Mod Thời Tiết"
+name: "Mod Weather"
 on:
   workflow_dispatch:
   push:
