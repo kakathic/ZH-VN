@@ -59,7 +59,7 @@ unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 ## code
 #Xu_install jre
 TTM "/data/local/tmp
-$MODPATH/product/priv-app"
+$MODPATH/system/product/priv-app"
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 # Copy file apk
@@ -75,22 +75,22 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
-if [ "$(pm path "com.android.vending" | grep -cm1 '/data/')" != 1 ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
 mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
-cp -rf /data/local/tmp/GooglePlayServicesUpdater $MODPATH/system/product/priv-app
+cp -rf /data/local/tmp/GooglePlayServicesUpdater/*.apk $MODPATH
 pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
 fi
 
-if [ -z "$(pm path "com.google.android.gms")" ] && [ ! -e $NVBASE/modules/system/product/priv-app/GmsCore/GmsCore.apk ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GmsCore.apk')" ];then
 echo > $MODPATH/NO
 mkdir -p /data/local/tmp/GmsCore;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/GmsCore/GmsCore.apk;
-cp -rf /data/local/tmp/GmsCore $MODPATH/system/product/priv-app
+cp -rf /data/local/tmp/GmsCore/*.apk $MODPATH
 pm install -r /data/local/tmp/GmsCore/GmsCore.apk >&2
 fi
 
-if [ -z "$(pm path "com.google.android.inputmethod.latin")" ] || [ ! -e $NVBASE/modules/system/product/priv-app/Gboard/Gboard.apk ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Gboard.apk')" ];then
 mkdir -p /data/local/tmp/Gboard;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gboard.apk" "/data/local/tmp/Gboard/Gboard.apk";
 pm install -r /data/local/tmp/Gboard/Gboard.apk >&2
