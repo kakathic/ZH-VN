@@ -8,28 +8,34 @@ MODPATH="${0%/*}"
 
 # Code
 
+RD="$RANDOM"
+while true; do
+echo > /sdcard/$RD
+if [ -e /sdcard/$RD ];then
+rm -fr /sdcard/$RD
+break
+else
+sleep 2
+fi
+done
+
 module_exec() {
-    if [ ! -z magiskhide ]; then
-        MONGWU_SAID=`magisk --denylist $@`
-    else
-        MONGWU_SAID=`magiskhide $@`
-    fi
+if [ ! -z magiskhide ]; then
+MONGWU_SAID=`magisk --denylist $@`
+else
+MONGWU_SAID=`magiskhide $@`
+fi
 }
 if [ -e $MODPATH/NO ];then
-sleep 15
-boot=`getprop sys.boot_completed`
-if [ $boot -eq 1 ]; then
-    module_exec enable
-    sleep 5
-    module_exec rm com.google.android.gms
-    sleep 5
-    pm install -g $MODPATH/system/product/priv-app/GmsCore/GmsCore.apk
-    sleep 10
-    pm uninstall com.google.android.gms
-    sleep 10
-    # pm clear com.google.android.gms
-    module_exec add com.google.android.gms
-    sleep 5
-    module_exec rm com.google.android.gms
-fi
+module_exec enable
+module_exec rm com.google.android.gms
+pm install -g --dont-kill --install-reason 3 $MODPATH/GmsCore.apk
+pm install -g --dont-kill --install-reason 3 $MODPATH/GooglePlayServicesUpdater.apk
+sleep 2
+pm uninstall -k com.google.android.gms
+pm uninstall -k com.android.vending
+# pm clear com.google.android.gms
+module_exec add com.google.android.gms
+sleep 2
+module_exec rm com.google.android.gms
 fi
