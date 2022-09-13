@@ -1,8 +1,9 @@
-name: "VH-MI"
+name: "Mod Thời Tiết"
 on:
+  workflow_dispatch:
   push:
     paths:
-      - '.github/install.sh'
+      - 'Hpk/com.miui.weather2.apk'
 jobs:
   build:
     name: 'Quá trình thực hiện'
