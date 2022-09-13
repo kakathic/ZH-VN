@@ -18,8 +18,9 @@ echo '{
 "version": "'$Vs'",
 "versionCode": "'$Vscode'",
 "zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/Download/'$1'-'$Vs'.Zip",
-"changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
+"changelog": "https://github.com/kakathic/ZH-VN/releases/download/Up/'$1'.md"
 }' > $TOME/Up/$1.json
+cat $TOME/Web/Version.md > $TOME/Up/$1.md
 cd $TOME/.github/$1
 zip -qr "$TOME/Zip/$1-$Vs.Zip" *
 }
