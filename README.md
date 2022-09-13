@@ -17,13 +17,13 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 - Hãy khởi động lại máy và bãn sẽ có tiếng việt để dùng ok.
 
-   - **VH-GA:** Cài Gapps, thêm dịch vụ Google 
+> **VH-GA:** Cài Gapps, thêm dịch vụ Google 
 
-   - **VH-PT:** Crack Miui, hack theme, cài app hệ thống v.v
+> **VH-PT:** Crack Miui, hack theme, cài app hệ thống v.v
 
-   - **VH-KE:** Các tính năng nâng cao, bật bàn phím china mod v.v
+> **VH-KE:** Các tính năng nâng cao, bật bàn phím china mod v.v
 
-   - **ZH-VN:** Thêm tiếng Việt và fix thông báo
+> **ZH-VN:** Thêm tiếng Việt và fix thông báo
 
 **Hỗ trợ mô-đun**
 ---
