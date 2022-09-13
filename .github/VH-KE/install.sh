@@ -98,7 +98,7 @@ fi
 }
 
 CPfile(){
-Pathfw="$(find /system -name ''$miuik''$1'.jar')"
+Pathfw="$(find /system find -type f -name ''$miuik''$1'.jar')"
 cp -f "$(magisk --path)/.magisk/mirror/system_root/$Pathfw" "$TMPDIR/Apk"
 echo "$Pathfw" > $TMPDIR/Apk/''$miuik''$1'.txt'
 }
