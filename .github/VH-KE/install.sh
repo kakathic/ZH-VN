@@ -196,9 +196,10 @@ sed(){ toybox sed "$@";}
 cut(){ toybox cut "$@";}
 
 TTM "$TMPDIR/Apk/tmp
+/sdcard/VH-MI/color
 /data/tools/apk"
 
-[ -e "$VHMI/color/Tối.ini" ] || cp -f $TMPDIR/*.ini /sdcard/VH-MI/color
+[ -e "/sdcard/VH-MI/color/Tối.ini" ] || cp -f $TMPDIR/*.ini /sdcard/VH-MI/color
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 
