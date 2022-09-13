@@ -194,6 +194,7 @@ Xu_install baksmali 2.3.4
 Xu_install zipalign
 Xu_install zip
 Xu_install toybox
+Xu_install jq
 
 sed(){ toybox sed "$@";}
 cut(){ toybox cut "$@";}
