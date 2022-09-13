@@ -11,7 +11,7 @@ MODPATH="${0%/*}"
 # Automatically turn off the module if 100 seconds wait at the logo
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
-if [ "$Auto" == 100 ];then
+if [ "$Auto" == 100 ] && [ "$API" -ge 30 ];then
 echo > $MODPATH/disable
 echo '
 [ -e /data/unencrypted/magisk_modules ] && Adb=/data/unencrypted/magisk_modules || Adb=/data/adb/modules
