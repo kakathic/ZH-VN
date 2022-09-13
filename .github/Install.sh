@@ -11,11 +11,6 @@ done
 TTM "Zip
 Up"
 
-apktool(){ java -jar $TOOLS/apktool-2.6.2.jar "$@"; }     
-baksmali(){ java -jar $TOOLS/baksmali-2.3.4.jar d "$@"; }     
-smali(){ java -jar $TOOLS/smali-2.5.2.jar a "$@"; }     
-sudo apt install zipalign zip >/dev/null
-
 Taoup(){
 Vs=$(grep 'version=' $TOME/.github/$1/module.prop | cut -d = -f2);
 Vscode=$(grep 'versionCode=' $TOME/.github/$1/module.prop | cut -d = -f2);
@@ -29,9 +24,8 @@ cd $TOME/.github/$1
 zip -qr "$TOME/Zip/$1-$Vs.Zip" *
 }
 
-Taoup Gapps
-Taoup Getapps
-Taoup Pinstaller
-Taoup Theme
+Taoup VH-PT
+Taoup VH-KE
+Taoup VH-GA
 Taoup ZH-VN
 
