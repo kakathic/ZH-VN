@@ -77,17 +77,16 @@ cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
 pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
 else
-[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(find $(magisk --path)/.magisk/mirror/* -type f -name "${PTC##*/}")" "$TMPDIR/Apk/$1.apk"
+[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(magisk --path)/.magisk/mirror/system_root$PTC" "$TMPDIR/Apk/$1.apk"
 echo "$PTC" > "$TMPDIR/Apk/$1.txt"
 fi
 }
 
 CPfile(){
-Pathfw="$(find /system -type f -name ''$miuik''$1'.jar')"
-cp -f "$(magisk --path)/.magisk/mirror/system_root/$Pathfw" "$TMPDIR/Apk"
+Pathfw="$(find /system* -type f -name ''$miuik''$1'.jar')"
+cp -f "$(magisk --path)/.magisk/mirror/system_root$Pathfw" "$TMPDIR/Apk"
 echo "$Pathfw" > $TMPDIR/Apk/''$miuik''$1'.txt'
 }
-
 
 ## Introduce
 print_modname(){
