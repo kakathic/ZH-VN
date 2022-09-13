@@ -20,7 +20,7 @@ export PATH="/data/tools/bin:$PATH"
 #Ten1="${0##*/}"; Ten2="${Ten1%.*}"
 sed () { /data/tools/bin/toybox sed "$@"; }
 zip () { /data/tools/bin/zip "$@"; }
-
+grep () { /data/tools/bin/toybox grep "$@"; }
 
 DICHVB(){
 Tekk="$(echo "$@" | sed -z -e 's|\n||g' -e "s|'||g" -e "s|&amp;|&|g" -e "s|&#10;|;;|g")"
@@ -73,7 +73,7 @@ fi
 
 kkdfgf=$(grep -cm1 'value=' "$lonu/strings_vi_VN.xml")
 [ "$kkdfgf" == 1 ] && cat "$lonu/strings_vi_VN.xml" | tr ' ' '\n' | grep 'value=' | cut -d '"' -f2 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log"
-grep 'name=' "$lonu/strings_vi_VN.xml" | cut -d '><' -f3 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log"
+grep 'name=' "$lonu/strings_vi_VN.xml" | cut -d '>' -f2 | cut -d '<' -f1 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log"
 while true; do
 hrhhrd3="$(grep -m1 '=' "${Lik%/*}/tmp/log" | cut -d '=' -f2)"
 if [ "$hrhhrd3" ];then
@@ -86,7 +86,7 @@ fi
 done
 fi
 if [ -e "$dbebh" ];then
-grep 'item' "$dbebh" | cut -d '><' -f3 | awk '{print "+"$0"+"}' >> "${Lik%/*}/tmp/log2"
+grep 'item' "$dbebh" | cut -d '>' -f2 | cut -d '<' -f1 | awk '{print "+"$0"+"}' >> "${Lik%/*}/tmp/log2"
 cat "$dbebh" | tr ' ' '\n' | grep 'displayTitle=' | cut -d '"' -f2 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log2"
 cat "$dbebh" | tr ' ' '\n' | grep 'des=' | cut -d '"' -f2 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log2"
 while true; do
@@ -129,7 +129,6 @@ fi
 
 done
 echo "- Tổng kho $kakabs widget, đã dịch xong"
-rm -fr "/data/Vip123.sh"
-#rm -fr "$Link1"/*
+
 #killall com.miui.home
 killall com.miui.personalassistant 2>/dev/null
