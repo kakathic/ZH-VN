@@ -92,7 +92,7 @@ cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
 pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
 else
-[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf $(magisk --path)/.magisk/mirror/system_root/$PTC "$TMPDIR/Apk/$1.apk"
+[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(find $(magisk --path)/.magisk/mirror/system_root/* -type f -name "${PTC##*/}")" "$TMPDIR/Apk/$1.apk"
 echo "$PTC" > "$TMPDIR/Apk/$1.txt"
 fi
 }
@@ -417,7 +417,7 @@ if [ "$chinann" == 2 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
 # Hệ thống mount
 kssndh="$(find /system -name ''$miuik'services.jar')"
 mrw
-rm -fr ${kssndh%/*}/oat ${kssndh%/*}/arm64 ${kssndh%/*}/arm
+rm -fr ${kssndh%/*}/oat ${kssndh%/*}/arm64 ${kssndh%/*}/arm ${kssndh%/*}/*.vdex
 mro
 
 if [ -e ${kssndh%/*}/oat ];then
