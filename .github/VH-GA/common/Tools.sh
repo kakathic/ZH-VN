@@ -67,7 +67,7 @@ Xem(){
 # Freeze
 FREEZE(){
 for TARGET in $1; do
-[ -e "$1" ] && mktouch $MODPATH$TARGET/.replace
+mktouch $MODPATH$TARGET/.replace
 done
 }
 
