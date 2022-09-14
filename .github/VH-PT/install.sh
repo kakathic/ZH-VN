@@ -150,7 +150,7 @@ fi
 ui_print "  $unzip"
 ui_print
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
-echo "ro.product.vip=$(getprop ro.product.device)_global" >> $MODPATH/system.prop
+echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 
 ## code
 Xu_install jre
@@ -199,7 +199,7 @@ fi
 
 if [ "$apkcai" == 1 ];then
 VB="iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I"
-Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "com.miui.packageinstaller" "classes*")"
+Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "com.miui.packageinstaller/classes*")"
 fi
 
 if [ "$tietkiem" == 1 ];then
@@ -216,7 +216,7 @@ com/miui/powerkeeper/ui
 com/miui/powerkeeper/utils"
 
 for vhjs in $Bebrb; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/$vhjs/*.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/$vhjs/*.smali"
 done
 
 Vsmali ".method public static isFeatureOn()Z" \
