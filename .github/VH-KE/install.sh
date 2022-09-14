@@ -35,7 +35,6 @@ Viewonline(){
 Viewonline "https://raw.githubusercontent.com/kakathic/Tools/Vip/Tools.sh" > $MODPATH/Tools.sh
 . $MODPATH/Tools.sh; [ "$TTvip" == 1 ] || abort "$error";
 
-[ "$API" -ge 31 ] && miuik='miui-'
 ## Check the system devices
 [ "$ARCH" == "arm64" ] || abort "$error2"
 
