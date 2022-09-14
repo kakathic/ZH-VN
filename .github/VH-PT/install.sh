@@ -130,6 +130,23 @@ Vk 2
 ttiet=$input
 fi
 
+ui_print "- Mod ứng dụng Tiết kiệm pin ?"
+ui_print
+ui_print2 "1. Có"
+ui_print2 "2. Không"
+
+if [ "$(GP TKpin)" ];then
+tietkiem=$(GP TKpin)
+ui_print
+ui_print2 "Chọn: $tietkiem"
+ui_print
+else
+ui_print
+ui_print2 "1"
+Vk 2
+tietkiem=$input
+fi
+
 ## Unzip system
 ui_print "  $unzip"
 ui_print
@@ -150,12 +167,15 @@ cut(){ toybox cut "$@";}
 TTM "$TMPDIR/Apk/tmp
 /data/tools/apk"
 
+echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
+
 # Copy file apk
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
 [ "$apkcai" == 1 ] && CPapk com.miui.packageinstaller
 [ "$baomat" == 1 ] && CPapk com.miui.securitycenter
+[ "$tietkiem" == 1 ] && CPapk com.miui.powerkeeper
 
 # giải nén file
 Giainen
@@ -181,6 +201,22 @@ fi
 if [ "$apkcai" == 1 ];then
 VB="iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I"
 Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "com.miui.packageinstaller" "classes*")"
+fi
+
+if [ "$tietkiem" == 1 ];then
+pm clear com.miui.powerkeeper >&2
+Autoone "Lmiui/os/Build;->IS_STABLE_VERSION:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+Vsmali ".method public static isFeatureOn()Z" \
+".end method" \
+'.method public static isFeatureOn()Z
+    .registers 3
+    const/4 v1, 0x0
+    return v1
+.end method' \
+"$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+
 fi
 
 if [ "$Teme" == 1 ];then
