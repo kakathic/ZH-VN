@@ -23,7 +23,15 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 > **VH-KE:** Các tính năng nâng cao, bật bàn phím china mod v.v
 
-> **ZH-VN:** Thêm tiếng Việt và fix thông báo
+> **ZH-VN:** Thêm tiếng Việt
+
+- Để fix thông báo chiệt để hãy cài Modun `ZH-VN` và `VH-PT` và `VH-KE`
+
+  + Ở ZH-VN không cần chọn gì cũng fix thông báo
+
+  + Ở VH-PT nhớ chọn phần Mod tiết kiệm pin và bảo mật cẩn thận bị treo
+
+  + Ở VH-KE chọn china mod
 
 **Hỗ trợ mô-đun**
 ---
