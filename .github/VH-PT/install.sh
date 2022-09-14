@@ -209,7 +209,8 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 # giải nén file
 for vapk in $TMPDIR/Apk/*.*; do
 if [ "${vapk##*.}" == 'apk' ] || [ "${vapk##*.}" == 'jar' ];then
-ui_print "  Giải nén: ${vapk##*/}"
+PTd="$(cat ${vapk%.*}.txt)"
+ui_print "  Giải nén: ${PTd##*/}"
 ui_print
 mkdir -p ${vapk%.*}
 unzip -qo "$vapk" '*.dex' -d ${vapk%.*}
@@ -294,7 +295,8 @@ fi
 # Đóng gói apk
 for bapk in $TMPDIR/Apk/*.*; do
 if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ];then
-ui_print "  Đóng gói: ${bapk##*/}"
+PTb="$(cat ${bapk%.*}.txt)"
+ui_print "  Đóng gói: ${PTb##*/}"
 ui_print
 for bsmali in $(cat ${bapk%.*}/class | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f2 | sort | uniq); do
 rm -fr "$bsmali".dex
