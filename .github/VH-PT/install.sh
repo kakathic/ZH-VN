@@ -204,7 +204,7 @@ fi
 
 if [ "$tietkiem" == 1 ];then
 pm clear com.miui.powerkeeper >&2
-Listbm="com/miui/powerkeeper/customerpower
+Bebrb="com/miui/powerkeeper/customerpower
 com/miui/powerkeeper/feedbackcontrol
 com/miui/powerkeeper/powerchecker
 com/miui/powerkeeper/statemachine
@@ -215,9 +215,10 @@ com/miui/powerkeeper/millet
 com/miui/powerkeeper/ui
 com/miui/powerkeeper/utils"
 
-for vhjs in $Listbm; do
+for vhjs in $Bebrb; do
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.securitycenter/classes*/$vhjs/*.smali"
 done
+
 Vsmali ".method public static isFeatureOn()Z" \
 ".end method" \
 '.method public static isFeatureOn()Z
