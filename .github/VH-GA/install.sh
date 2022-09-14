@@ -83,7 +83,7 @@ if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Googl
 mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
 cp -rf /data/local/tmp/GooglePlayServicesUpdater $MODPATH/system/product/priv-app
-pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
+#pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
 FREEZE $MODPATH/system/product/priv-app/GooglePlayServicesUpdater
 fi
 
@@ -92,7 +92,7 @@ echo > $MODPATH/NO
 mkdir -p /data/local/tmp/GmsCore;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/GmsCore/GmsCore.apk;
 cp -rf /data/local/tmp/GmsCore $MODPATH/system/product/priv-app
-pm install -r /data/local/tmp/GmsCore/GmsCore.apk >&2
+#pm install -r /data/local/tmp/GmsCore/GmsCore.apk >&2
 FREEZE $MODPATH/system/product/priv-app/GmsCore
 fi
 
