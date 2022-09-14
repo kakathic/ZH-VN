@@ -1,7 +1,4 @@
 # Kakathic
-cp -rf $TMPDIR/Tools.sh $MODPATH
-chmod 777 $MODPATH/Tools.sh
-. $MODPATH/Tools.sh
 
 ## Leave true to ignore Mount system
 SKIPMOUNT=false
@@ -28,65 +25,19 @@ volkey1="! Sử dụng phím âm lượng"
 volkey2="! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
 volkey3="! Ấn nút nguồn để hủy."
 load="Tải"
-error="! Lỗi không tìm thấy hoặc lỗi mạng!
-"
+error="! Lỗi không tìm thấy hoặc lỗi mạng !"
+error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
+# Internet
+User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
+Viewonline(){
+[ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
+Viewonline "https://raw.githubusercontent.com/kakathic/Tools/Vip/Tools.sh" > $MODPATH/Tools.sh
+. $MODPATH/Tools.sh; [ "$TTvip" == 1 ] || abort "$error";
 
+[ "$API" -ge 31 ] && miuik='miui-'
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
-
-baksmali () {
-java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"
-}
-smali () {
-java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/smali.jar" "$@"
-}
-
-# Tìm kiếm
-Timkiem(){ find $TMPDIR/Apk/$2 -name "*.smali" -exec grep -l "$1" {} +; }
-
-Vsmali(){
-for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
-[ -e $Vka ] && Xan "MOD: $(echo "$1" | sed 's|\\||g')" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
-sed -i -e "/^$1/,/$2/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
-echo "$Vka" >> $TMPDIR/Apk/$(echo "$4" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
-done
-}
-
-Thaythe(){
-Xan "MOD: $RANDOM -> $2"
-for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
-[ -e "$Tt2" ] && sed -i "s|$1|$2|g" $Tt2 || Xan "- Lỗi: $1"
-echo "$Tt2" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
-done
-}
-
-Autoone(){
-Xan "MOD: $RANDOM -> $2"
-for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "sget-boolean .., $1" {} +); do
-echo "sed -i $(grep "sget-boolean .., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') ${vakkddhh//\$/\\\$}" | sh
-echo "$vakkddhh" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
-done
-}
-
-CPapk(){
-PTC="$(pm path "$1" | cut -d : -f2)"
-if [ "$(echo "$PTC" | grep -cm1 '/data/')" == 1 ];then
-cp -rf $PTC "/data/tools/apk/$1.apk"
-cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
-pm uninstall $1 >&2
-echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
-else
-[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(magisk --path)/.magisk/mirror/system_root$PTC" "$TMPDIR/Apk/$1.apk"
-echo "$PTC" > "$TMPDIR/Apk/$1.txt"
-fi
-}
-
-CPfile(){
-Pathfw="$(find /system* -type f -name ''$miuik''$1'.jar')"
-cp -f "$(magisk --path)/.magisk/mirror/system_root$Pathfw" "$TMPDIR/Apk"
-echo "$Pathfw" > $TMPDIR/Apk/''$miuik''$1'.txt'
-}
+[ "$ARCH" == "arm64" ] || abort "$error2"
 
 ## Introduce
 print_modname(){
@@ -207,18 +158,8 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 [ "$baomat" == 1 ] && CPapk com.miui.securitycenter
 
 # giải nén file
-for vapk in $TMPDIR/Apk/*.*; do
-if [ "${vapk##*.}" == 'apk' ] || [ "${vapk##*.}" == 'jar' ];then
-PTd="$(cat ${vapk%.*}.txt)"
-ui_print "  Giải nén: ${PTd##*/}"
-ui_print
-mkdir -p ${vapk%.*}
-unzip -qo "$vapk" '*.dex' -d ${vapk%.*}
-for vsmali in ${vapk%.*}/*.dex; do
-baksmali d --api $API $vsmali -o ${vsmali%.*}
-done
-fi
-done
+Giainen
+
 [ "$(echo ${#modk})" == 3248 ] || abort
 # Mod theme
 
@@ -293,38 +234,7 @@ Autoone "Lmiui/os/Build;->IS_STABLE_VERSION:Z" "0x1" "$TMPDIR/Apk/com.miui.secur
 fi
 
 # Đóng gói apk
-for bapk in $TMPDIR/Apk/*.*; do
-if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ];then
-PTb="$(cat ${bapk%.*}.txt)"
-ui_print "  Đóng gói: ${PTb##*/}"
-ui_print
-for bsmali in $(cat ${bapk%.*}/class | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f2 | sort | uniq); do
-rm -fr "$bsmali".dex
-smali a --api $API ${bapk%.*}/$bsmali -o "${bapk%.*}/$bsmali".dex
-done
-cd ${bapk%.*}
-zip -qr -0 $bapk '*.dex'
-zipalign -f 4 $bapk $TMPDIR/Apk/tmp/${bapk##*/} 
-cp -rf $TMPDIR/Apk/tmp/* $TMPDIR/Apk
-fi
-done
-
-for Capk in $TMPDIR/Apk/*.*; do
-if [ "${Capk##*.}" == 'apk' ];then
-Papkp="$(cat ${Capk%.*}.txt)"
-if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
-mkdir -p $MODPATH${Papkp%/*}/lib/$ARCH
-unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Papkp%/*}/lib/$ARCH
-fi
-mkdir -p $MODPATH${Papkp%/*}
-cp -rf $Capk "$MODPATH$Papkp"
-fi
-if [ "${Capk##*.}" == 'jar' ];then
-Papkp="$(cat ${Capk%.*}.txt)"
-mkdir -p "$MODPATH${Papkp%/*}"
-cp -rf $Capk "$MODPATH$Papkp"
-fi
-done
+Donggoi
 
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
