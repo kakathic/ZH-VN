@@ -1,7 +1,4 @@
 # Kakathic
-cp -rf $TMPDIR/Tools.sh $MODPATH
-chmod 777 $MODPATH/Tools.sh
-. $MODPATH/Tools.sh
 
 ## Leave true to ignore Mount system
 SKIPMOUNT=false
@@ -28,11 +25,19 @@ volkey1="! Sử dụng phím âm lượng"
 volkey2="! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
 volkey3="! Ấn nút nguồn để hủy."
 load="Tải"
-error="! Lỗi không tìm thấy hoặc lỗi mạng!
-"
+error="! Lỗi không tìm thấy hoặc lỗi mạng !"
+error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
+# Internet
+User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
+Viewonline(){
+[ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
+Viewonline "https://raw.githubusercontent.com/kakathic/Tools/Vip/Tools.sh" > $MODPATH/Tools.sh
+. $MODPATH/Tools.sh; [ "$TTvip" == 1 ] || abort "$error";
+
+[ "$API" -ge 31 ] && miuik='miui-'
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
+[ "$ARCH" == "arm64" ] || abort "$error2"
 
 ## Introduce
 print_modname(){
