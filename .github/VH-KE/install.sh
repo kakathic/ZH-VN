@@ -93,7 +93,7 @@ pm uninstall $1 >&2
 echo "$(pm path "$1" | cut -d : -f2)" > "$TMPDIR/Apk/$1.txt"
 else
 [ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$(magisk --path)/.magisk/mirror/system_root$PTC" "$TMPDIR/Apk/$1.apk"
-[ -e "$(magisk --path)/.magisk/mirror/system_root$PTC" ] || abort "- Lỗi không tìm thấy $1"
+[ -e "$(magisk --path)/.magisk/mirror/system_root$PTC" ] || abort "- Lỗi không tìm thấy $1, $(find $(magisk --path)/.magisk/mirror/*/* -type f -name "${PTC##*/}")"
 echo "$PTC" > "$TMPDIR/Apk/$1.txt"
 fi
 }
