@@ -46,6 +46,7 @@ sleep 2
 fi
 done
 
+cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
 #pm disable com.xiaomi.joyose
 #pm disable com.miui.powerkeeper/com.miui.powerkeeper.statemachine.PowerStateMachineService
