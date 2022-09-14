@@ -242,7 +242,7 @@ Vsmali ".method public static getRestrictNet()Z" \
     const/4 v0, 0x1
     return v0
 .end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali
+"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
 
 Vsmali ".method public static getBroadcastCancel()Z" \
 ".end method" \
