@@ -135,19 +135,9 @@ ui_print
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
-echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 
 Xu_install 7za
-Xu_install jre
-Xu_install smali 2.5.2
-Xu_install baksmali 2.3.4
-Xu_install zipalign
-Xu_install zip
-Xu_install toybox
 Xu_install jq
-
-sed(){ toybox sed "$@";}
-cut(){ toybox cut "$@";}
 
 $Test123 || abort
 if [ "$VHI" == 1 ];then
@@ -211,33 +201,6 @@ mkdir -p $MODPATH${Ptkkf%/*}
 cp -rf $Ptkkf $MODPATH${Ptkkf%/*}
 sed -i -e '/cn.google.services/d' -e '/services_updater/d' $MODPATH$Ptkkf
 fi
-
-# Copy file apk
-CPapk com.miui.powerkeeper
-
-# giải nén file
-Giainen
-
-pm clear com.miui.powerkeeper >&2
-Autoone "Lmiui/os/Build;->IS_STABLE_VERSION:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Vsmali ".method public static isFeatureOn()Z" \
-".end method" \
-'.method public static isFeatureOn()Z
-    .registers 3
-    const/4 v1, 0x0
-    return v1
-.end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-
-# Đóng gói apk
-Donggoi
-
-for Bala in product vendor system_ext; do
-[ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
-[ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
-done
 
 $Test123 || abort
 ui_print2 "$(End_time)"
