@@ -205,9 +205,20 @@ fi
 
 if [ "$tietkiem" == 1 ];then
 pm clear com.miui.powerkeeper >&2
-Autoone "Lmiui/os/Build;->IS_STABLE_VERSION:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+Listbm="com/miui/powerkeeper/customerpower
+com/miui/powerkeeper/feedbackcontrol
+com/miui/powerkeeper/powerchecker
+com/miui/powerkeeper/statemachine
+com/miui/powerkeeper/ai
+com/miui/powerkeeper/bucket
+com/miui/powerkeeper/cloudcontrol
+com/miui/powerkeeper/millet
+com/miui/powerkeeper/ui
+com/miui/powerkeeper/utils"
+
+for vhjs in $Listbm; do
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.securitycenter/classes*/$vhjs/*.smali"
+done
 Vsmali ".method public static isFeatureOn()Z" \
 ".end method" \
 '.method public static isFeatureOn()Z
@@ -216,6 +227,32 @@ Vsmali ".method public static isFeatureOn()Z" \
     return v1
 .end method' \
 "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+Vsmali ".method public static getRestrictAsyncBinder()Z" \
+".end method" \
+'.method public static getRestrictAsyncBinder()Z
+    .registers 1
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
+
+Vsmali ".method public static getRestrictNet()Z" \
+".end method" \
+'.method public static getRestrictNet()Z
+    .registers 1
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali
+
+Vsmali ".method public static getBroadcastCancel()Z" \
+".end method" \
+'.method public static getBroadcastCancel()Z
+    .registers 1
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
 
 fi
 
