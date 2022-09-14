@@ -4,4 +4,4 @@ ro.vi.tri=vn
 ro.khu.vuc.cn=CN
 ro.vi.tri.cn=cn
 ro.vendor.audio.sfx.harmankardon=1
-persist.sys.ai_preload_cloud=1
+persist.sys.ai_preload_cloud=2
