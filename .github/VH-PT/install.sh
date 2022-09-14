@@ -216,7 +216,7 @@ com/miui/powerkeeper/ui
 com/miui/powerkeeper/utils"
 
 for vhjs in $Bebrb; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.securitycenter/classes*/$vhjs/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/$vhjs/*.smali"
 done
 
 Vsmali ".method public static isFeatureOn()Z" \
