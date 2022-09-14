@@ -26,3 +26,8 @@ modbm=
 # 1 Bật
 # 2 Tắt
 thoitiet=
+
+# Mod ứng dụng Tiết kiệm pin
+# 1 Bật
+# 2 Tắt
+TKpin=
