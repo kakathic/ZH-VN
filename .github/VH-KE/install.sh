@@ -186,6 +186,15 @@ Vsmali ".method private checkAppSignature(\[Landroid\/content\/pm\/Signature;Lja
     return v0
 .end method' \
 ''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+
+Vsmali ".method private onPostNotification()V" \
+".end method" \
+'.method private onPostNotification()V
+    .locals 11
+	return-void
+.end method' \
+''$TMPDIR/Apk/$miuik'services/classes*'
+
 fi
 
 if [ "$chinann" == 2 ];then
