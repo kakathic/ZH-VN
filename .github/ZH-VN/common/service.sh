@@ -59,9 +59,13 @@ dumpsys deviceidle whitelist +$Ksksn
 am set-standby-bucket $Ksksn active
 cmd appops set $Ksksn 10008 allow
 cmd appops start $Ksksn 10008
+cmd appops set $Ksksn 10000 allow
+cmd appops start $Ksksn 10000
 cmd appops set $Ksksn START_FOREGROUND allow
 cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
+cmd appops start $Ksksn RUN_ANY_IN_BACKGROUND
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
+cmd appops start $Ksksn RUN_IN_BACKGROUND
 cmd appops set $Ksksn READ_CLIPBOARD allow
 cmd appops set $Ksksn WRITE_CLIPBOARD allow
 echo "$Ksksn" >> ${0%/*}/app.log
