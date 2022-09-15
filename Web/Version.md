@@ -6,23 +6,28 @@
 
 **Nhật ký thay đổi**
 ----
-1.5
+
+1.0
+
+- Phiên bản tách
+
+x.x
 
 + Sửa lại file VH
 
-1.4
+x.x
 
 + Fix thông báo
 
-1.3
+x.x
 
 - Fix trình cài đặt 
 
-1.2
+x.x
 
 - Fix
 
-1.0
+x.x
 
 + Chuyển đổi căn bản module
 
