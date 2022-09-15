@@ -64,8 +64,6 @@ cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 cmd appops start $Ksksn RUN_ANY_IN_BACKGROUND
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
 cmd appops start $Ksksn RUN_IN_BACKGROUND
-cmd appops set $Ksksn READ_CLIPBOARD allow
-cmd appops set $Ksksn WRITE_CLIPBOARD allow
 echo "$Ksksn" >> ${0%/*}/app.log
 done
 
