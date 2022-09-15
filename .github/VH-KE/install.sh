@@ -230,7 +230,14 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik's
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/am/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/*.smali'
 
-
+Vsmali ".method isSecureLocked()Z" \
+".end method" \
+'.method isSecureLocked()Z
+   .registers 5
+   const/4 v0, 0x0
+   return v0
+.end method' \
+''$TMPDIR/Apk/$miuik'services/classes*'
 
 elif [ "$chinann" -ge 3 ];then
 AutoTv(){
