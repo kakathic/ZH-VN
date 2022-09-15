@@ -17,7 +17,7 @@ Vscode=$(grep 'versionCode=' $TOME/.github/$1/module.prop | cut -d = -f2);
 echo '{
 "version": "'$Vs'",
 "versionCode": "'$Vscode'",
-"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/'$PHIENBAN'/'$1'-'$Vs'.Zip",
+"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/'$Vs'/'$1'-'$Vs'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cat $TOME/Web/Version.md > $TOME/Up/$1.md
