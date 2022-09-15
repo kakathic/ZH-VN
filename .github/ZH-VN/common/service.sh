@@ -3,11 +3,9 @@
 # Home module magisk
 MODPATH="${0%/*}"
 . $MODPATH/Tools.sh
-
 # Later in the booting process, the class late_start will be triggered, and Magisk “service” mode will be started. In this mode, service scripts are executed.
 
 # Code
-
 # Automatically turn off the module if 100 seconds wait at the logo
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
@@ -46,8 +44,6 @@ sleep 2
 fi
 done
 
-cmd settings put global GPUTUNER_SWITCH true
-pm disable com.miui.analytics
 #pm disable com.xiaomi.joyose
 #pm disable com.miui.powerkeeper/com.miui.powerkeeper.statemachine.PowerStateMachineService
 #pm disable com.google.android.gms/.chimera.GmsIntentOperationService
@@ -68,5 +64,8 @@ cmd appops set $Ksksn READ_CLIPBOARD allow
 cmd appops set $Ksksn WRITE_CLIPBOARD allow
 echo "$Ksksn" >> ${0%/*}/app.log
 done
+
+cmd settings put global GPUTUNER_SWITCH true
+pm disable com.miui.analytics
 
 [ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log 
