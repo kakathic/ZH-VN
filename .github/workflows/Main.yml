@@ -14,6 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Chạy Code
+        env:
+          PHIENBAN: 1.1
         run: |
           # kakathic
           . .github/Install.sh
@@ -29,7 +31,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
-          tag_name: 1.1
+          tag_name: ${PHIENBAN}
           files: Zip/*
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
