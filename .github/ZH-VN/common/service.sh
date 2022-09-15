@@ -59,8 +59,6 @@ dumpsys deviceidle whitelist +$Ksksn
 am set-standby-bucket $Ksksn active
 cmd appops set $Ksksn 10008 allow
 cmd appops start $Ksksn 10008
-cmd appops set $Ksksn 10000 allow
-cmd appops start $Ksksn 10000
 cmd appops set $Ksksn START_FOREGROUND allow
 cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 cmd appops start $Ksksn RUN_ANY_IN_BACKGROUND
