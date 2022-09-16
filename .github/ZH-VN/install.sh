@@ -139,6 +139,7 @@ Xu_install 7za
 Xu_install jq
 
 $Test123 || abort
+
 if [ "$VHI" == 1 ];then
 # Cài đặt ngôn ngữ
 settings put system system_locales $(GP Linknn)
@@ -149,9 +150,7 @@ ui_print
 ui_print2 "Đang VH"
 ui_print
 Taive "https://github.com/kakathic/ZH-TT/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
-[ -e "$TMPDIR/TT.Zip" ] || abort "- Lỗi tải TT.Zip thất bại !
-"
-7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2
+[ -e "$TMPDIR/TT.Zip" ] && 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
 if [ "$Licham" != 1 ];then
 cp -rf $TMPDIR/notamlich/*.apk $TMPDIR/apk
 cp -rf $TMPDIR/notamlich/framework-miui-res $TMPDIR
@@ -168,6 +167,15 @@ ui_print2 "Tổng: $(find $MODPATH$Overlay/*.apk | grep -c '\.apk') ứng dụng
 ui_print
 # VHI
 fi
+
+if [ "$Licham" == 1 ];then
+[ -e "$TMPDIR/TT.Zip" ] || Taive "https://github.com/kakathic/ZH-TT/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
+[ -e "$TMPDIR/TT.Zip" ] && 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
+cp -rf $TMPDIR/apk/*com.android.systemui*.apk $MODPATH$Overlay
+cp -rf $TMPDIR/framework-miui-res $MODPATH/system/media/theme/default
+fi
+
+
 [ "$(echo ${#modk})" == 3248 ] || abort
 # Tạo font
 lnf(){
