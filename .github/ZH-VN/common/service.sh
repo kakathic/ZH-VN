@@ -61,13 +61,11 @@ for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 #cmd appops start $Ksksn 10008
 cmd appops set $Ksksn START_FOREGROUND allow
 cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
-cmd appops start $Ksksn RUN_ANY_IN_BACKGROUND
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
-cmd appops start $Ksksn RUN_IN_BACKGROUND
 echo "$Ksksn" >> ${0%/*}/app.log
 done
 
 cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
 
-[ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log 
+[ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log &
