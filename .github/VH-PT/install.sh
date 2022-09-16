@@ -218,14 +218,7 @@ com/miui/powerkeeper/utils"
 for vhjs in $Bebrb; do
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/$vhjs/*.smali"
 done
-Vsmali ".method private isAllowAutoStart" \
-".end method" \
-'.method private isAllowAutoStart(Ljava/lang/String;I)Z
-    .registers 5
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
+
 Vsmali ".method public static isFeatureOn()Z" \
 ".end method" \
 '.method public static isFeatureOn()Z
