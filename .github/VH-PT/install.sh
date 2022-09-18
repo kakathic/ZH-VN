@@ -177,7 +177,6 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 # giải nén file
 Giainen
 
-[ "$(echo ${#modk})" == 3248 ] || abort
 # Mod theme
 
 if [ "$ttiet" == 1 ];then
@@ -312,7 +311,6 @@ for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
 done
 
-[ "$(echo ${#modk})" == 3248 ] || abort
 ui_print "  $(End_time)"
 ui_print
 ## end of code
