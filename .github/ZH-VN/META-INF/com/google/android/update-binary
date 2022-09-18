@@ -31,7 +31,7 @@ mount /data 2>/dev/null
 
 install_module
 
-$OPENMG && am start -W com.topjohnwu.magisk/.ui.MainActivity >&2
+$OPENMG && am start com.topjohnwu.magisk/.ui.MainActivity >&2
 
 ui_print
 ui_print
