@@ -152,7 +152,6 @@ fi
 # giải nén file
 Giainen
 
-[ "$(echo ${#modk})" == 3248 ] || abort
 # Mod install
 
 if [ "$gettttap" == 1 ];then
@@ -353,7 +352,6 @@ echo "echo > /data/adb/modules/safetynet-fix/disable" >> $TMPDIR/post-fs-data.sh
 fi
 fi
 
-[ "$(echo ${#modk})" == 3248 ] || abort
 ui_print "  $(End_time)"
 ui_print
 ## end of code
