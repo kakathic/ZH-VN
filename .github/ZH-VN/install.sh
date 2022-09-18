@@ -177,8 +177,6 @@ cp -rf $TMPDIR/apk/*com.android.systemui*.apk $MODPATH$Overlay
 cp -rf $TMPDIR/framework-miui-res $MODPATH/system/media/theme/default
 fi
 
-
-[ "$(echo ${#modk})" == 3248 ] || abort
 # Tạo font
 lnf(){
 cd $MODPATH/system/fonts
@@ -202,7 +200,7 @@ ui_print2 "Xoá Font"
 ui_print
 rm -fr $MODPATH/system/fonts
 fi
-[ "$(echo ${#modk})" == 3248 ] || abort
+
 # Dịch vụ gg
 Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
 if [ -e $Ptkkf ];then
