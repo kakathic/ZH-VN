@@ -2,10 +2,10 @@ name: "VH-MI"
 on:
   push:
     paths:
-      - '.github/VH-GA/module.prop'
-      - '.github/VH-KE/module.prop'
-      - '.github/VH-PT/module.prop'
-      - '.github/ZH-VN/module.prop'
+      - '.github/VH-GA'
+      - '.github/VH-KE'
+      - '.github/VH-PT'
+      - '.github/ZH-VN'
 jobs:
   build:
     name: 'Quá trình thực hiện'
