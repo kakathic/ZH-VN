@@ -1,11 +1,6 @@
 name: "VH-MI"
 on:
   push:
-    paths:
-      - '.github/VH-GA'
-      - '.github/VH-KE'
-      - '.github/VH-PT'
-      - '.github/ZH-VN'
 jobs:
   build:
     name: 'Quá trình thực hiện'
