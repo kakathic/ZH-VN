@@ -279,11 +279,17 @@ $MODPATH/system/media/theme/default"
 echo '<?xml version="1.0" encoding="utf-8"?>
 <MIUI_Theme_Values>
 <color name="input_bottom_background_color">#'$(cat /sdcard/VH-MI/color/Sáng.ini)'</color>
+<dimen name="input_bottom_height">45.599976dp</dimen>
+<dimen name="input_bottom_button_height">28.5dp</dimen>
+<dimen name="input_bottom_button_margin_top">2.5dp</dimen>
 </MIUI_Theme_Values>' > $TMPDIR/banphim/theme_values.xml
 # Tối
 echo '<?xml version="1.0" encoding="utf-8"?>
 <MIUI_Theme_Values>
 <color name="input_bottom_background_color">#'$(cat /sdcard/VH-MI/color/Tối.ini)'</color>
+<dimen name="input_bottom_height">45.599976dp</dimen>
+<dimen name="input_bottom_button_height">28.5dp</dimen>
+<dimen name="input_bottom_button_margin_top">2.5dp</dimen>
 </MIUI_Theme_Values>' > $TMPDIR/banphim/nightmode/theme_values.xml
 # Đóng gói 
 cd $TMPDIR/banphim
