@@ -65,7 +65,6 @@ ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
 
-if [ "$(GP VH)" ];then
 VHI=$(GP VH)
 ui_print
 ui_print2 "Chọn: $VHI"
@@ -93,7 +92,6 @@ ui_print
 ui_print2 "1"
 Vk 2
 Licham=$input
-fi
 fi
 
 ui_print "- Sử dụng Font chữ Việt hóa ?"
