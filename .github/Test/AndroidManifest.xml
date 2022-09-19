@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="Zz..Test.com.android" platformBuildVersionCode="28" platformBuildVersionName="4.0">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:compileSdkVersion="28"
+    android:compileSdkVersionCodename="9"
+    package="Zz..Test.com.android"
+    platformBuildVersionCode="28"
+    platformBuildVersionName="9">
     <application android:extractNativeLibs="false" />
-    <overlay android:priority="999" android:targetPackage="Test.com.android" android:isStatic="true" />
+    <overlay
+        android:isStatic="true"
+        android:priority="999"
+        android:targetPackage="Test.com.android" />
 </manifest>
