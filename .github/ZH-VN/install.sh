@@ -60,11 +60,13 @@ ui_print "! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
 ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
+
 ui_print "- Thêm ngôn ngữ Tiếng Việt vào Rom ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
 
+if [ "$(GP VH)" ];then
 VHI=$(GP VH)
 ui_print
 ui_print2 "Chọn: $VHI"
@@ -76,7 +78,7 @@ Vk 2
 VHI=$input
 fi
 
-if [ "$VHI" == 1 ];then
+
 ui_print "- Thêm lịch âm ?"
 ui_print
 ui_print2 "1. Có"
