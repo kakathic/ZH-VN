@@ -21,7 +21,6 @@ jobs:
           tag_name: Package
           files: Up/*
           prerelease: true
-          generate_release_notes: true
       - name: Upload VH-MI
         uses: softprops/action-gh-release@v1
         with:
