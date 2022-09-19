@@ -283,8 +283,6 @@
         <item quantity="other">Trong %d phút</item>
     </plurals>
 
-
-
     <string name="label">MIUI</string>
     <string name="send">Gửi</string>
     <string name="close">Đóng</string>
