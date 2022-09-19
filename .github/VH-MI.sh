@@ -4,7 +4,7 @@ TOME="$GITHUB_WORKSPACE"
 TOOLS="$TOME/.github/Tools"
 TEST="$TOME/.github/Test"
 
-apktool () { java -jar $TOOLS/kikfox.jar "$@"; }
+apktool () { java -jar $TOOLS/apktool-2.6.2.jar "$@"; }
 apksign () { java -jar $TOOLS/apksigner.jar sign --cert "$TOOLS/testkey.x509.pem" --key "$TOOLS/testkey.pk8" --out "$2" "$1"; }
 
 Autofix () {
