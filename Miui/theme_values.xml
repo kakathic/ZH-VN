@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
 <string-array name="detailed_am_pms">
 <item>Đêm</item>
 <item>Sáng</item>
