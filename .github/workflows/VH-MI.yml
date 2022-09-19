@@ -1,0 +1,30 @@
+name: VH-MI
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: 'See process...'
+    if: github.repository == 'kakathic/ZH-TT' && github.ref == 'refs/heads/Vip'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run script
+        run: |
+          chmod 777 .github/Install.sh
+          . .github/Install.sh
+      - name: Upload
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ github.token }}
+          name: T-T
+          tag_name: HH
+          files: Up/*
+          prerelease: true
+          generate_release_notes: true
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
