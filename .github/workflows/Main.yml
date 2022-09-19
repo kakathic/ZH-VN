@@ -1,6 +1,5 @@
 name: "ZH-VN"
 on:
-  push:
 jobs:
   build:
     name: 'Build Zip...'
