@@ -32,5 +32,5 @@ zip -qr "$TOME/Zip/$1-$Vs.Zip" *
 Taoup VH-PT
 Taoup VH-KE
 Taoup VH-GA
-Taoup ZH-VN
+Taoup VH-ZH
 
