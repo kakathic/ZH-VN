@@ -1,6 +1,7 @@
 name: "ZH-VN"
 on:
-  paths:
+  push:
+    paths:
       - 'VH-GA/**'
       - 'VH-KE/**'
       - 'VH-PT/**'
