@@ -4,7 +4,7 @@ on:
 jobs:
   build:
     name: 'See process...'
-    if: github.repository == 'kakathic/ZH-TT' && github.ref == 'refs/heads/Vip'
+    if: github.repository == 'kakathic/ZH-VN' && github.ref == 'refs/heads/ZH'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
