@@ -64,9 +64,9 @@ zip -qr $TOME/framework.zip *
 mv -f $TOME/framework.zip $TOME/framework-miui-res
 
 # Not âm lịch
-sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $TOME/Language/com.android.systemui.apk/res/values-vi/strings.xml $TOME/Miui/vi-VN/theme_values.xml
+sed -i -e 's|E, dd.MM - (e.N)|EEEE, dd/MM|g' $TOME/Language/com.android.systemui.apk/res/values-vi/strings.xml $TOME/Miui/theme_values.xml
 
-cd $TOME/Miui/vi-VN
+cd $TOME/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $TOME/framework2.zip *
 mv -f $TOME/framework2.zip $TOME/notamlich/framework-miui-res
