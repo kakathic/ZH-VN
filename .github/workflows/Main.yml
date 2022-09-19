@@ -3,12 +3,12 @@ on:
   push:
 jobs:
   build:
-    name: 'Quá trình thực hiện'
+    name: 'Build Zip...'
     if: github.repository == 'kakathic/ZH-VN' && github.ref == 'refs/heads/ZH'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Chạy Code
+      - name: Run Code
         env:
           VS: 1.2
         run: |
@@ -26,7 +26,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
-          tag_name: ${VS}
+          tag_name: ${{ env.VS }}
           files: Zip/*
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
