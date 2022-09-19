@@ -6,7 +6,7 @@ on:
       - 'Hpk/com.miui.weather2.apk'
 jobs:
   build:
-    name: 'Quá trình thực hiện'
+    name: 'See process...'
     if: github.repository == 'kakathic/ZH-VN' && github.ref == 'refs/heads/ZH'
     runs-on: ubuntu-latest
     steps:
