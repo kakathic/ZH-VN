@@ -7,6 +7,10 @@
 **Nhật ký thay đổi**
 ----
 
+1.3
+
+- Fix
+
 1.2
 
 - Thêm vài mod nhỏ ở cài đặt 
