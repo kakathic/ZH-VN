@@ -9,9 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Code
+        env:
+          VS: '1.2'
         run: |
           # kakathic
-          echo "VS=1.2" >> $GITHUB_ENV
           . .github/Install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
