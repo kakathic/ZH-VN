@@ -7,14 +7,15 @@ isFrameworkApk: false
 packageInfo:
   forcedPackageId: '127'
   renameManifestPackage: null
+sdkInfo: null
 sharedLibrary: false
-sparseResources: false
+sparseResources: true
 unknownFiles: {}
 usesFramework:
   ids:
   - 1
   tag: null
-version: 2.6.2-f3f199-SNAPSHOT
+version: 2.4.1
 versionInfo:
-  versionCode: '28'
-  versionName: '9'
+  versionCode: '1'
+  versionName: '1.0'
