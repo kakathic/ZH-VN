@@ -3,7 +3,7 @@
 id=VH-ZH
 name=VH MIUI
 description=Thêm Tiếng Việt và thêm font chữ, lịch âm v.v
-updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/ZH-VN.json
+updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-ZH.json
 author=kakathic
 
 # Thêm ngôn ngữ bạn muốn dịch (Ví dụ: vi-VN )
