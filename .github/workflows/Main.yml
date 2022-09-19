@@ -9,10 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Code
-        env:
-          VS: 1.2
         run: |
           # kakathic
+          echo "VS=1.2" >> $GITHUB_ENV
           . .github/Install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
@@ -26,7 +25,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
-          tag_name: ${{ env.VS }}
+          tag_name: ${{ env.vs }}
           files: Zip/*
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
