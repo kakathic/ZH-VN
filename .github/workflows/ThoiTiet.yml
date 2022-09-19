@@ -1,4 +1,4 @@
-name: "Mod Weather"
+name: "VH-WT"
 on:
   workflow_dispatch:
   push:
