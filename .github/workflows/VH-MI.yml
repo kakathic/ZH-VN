@@ -1,6 +1,10 @@
 name: VH-MI
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'Language/**'
+      - 'Miui/**'
 jobs:
   build:
     name: 'See process...'
