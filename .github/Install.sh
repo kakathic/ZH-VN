@@ -17,7 +17,7 @@ Vscode=${VS//./};
 echo "
 versionCode=$Vscode
 version=$Vs
-" >> $TOME/.github/$1/module.prop
+" >> $TOME/$1/module.prop
 echo '{
 "version": "'$Vs'",
 "versionCode": "'$Vscode'",
@@ -25,7 +25,7 @@ echo '{
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cat $TOME/Web/Version.md > $TOME/Up/$1.md
-cd $TOME/.github/$1
+cd $TOME/$1
 zip -qr "$TOME/Zip/$1-$Vs.Zip" *
 }
 
