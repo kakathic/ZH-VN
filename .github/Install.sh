@@ -12,8 +12,12 @@ TTM "Zip
 Up"
 
 Taoup(){
-Vs=$(grep 'version=' $TOME/.github/$1/module.prop | cut -d = -f2);
-Vscode=$(grep 'versionCode=' $TOME/.github/$1/module.prop | cut -d = -f2);
+Vs=$VS;
+Vscode=${VS//./};
+echo "
+versionCode=$Vscode
+version=$Vs
+" >> $TOME/.github/$1/module.prop
 echo '{
 "version": "'$Vs'",
 "versionCode": "'$Vscode'",
