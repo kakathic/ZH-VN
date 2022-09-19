@@ -7,6 +7,14 @@
 **Nhật ký thay đổi**
 ----
 
+1.2
+
+- Thêm vài mod nhỏ ở cài đặt 
+
+1.1
+
+- Tối ưu hóa 
+
 1.0
 
 - Phiên bản tách
