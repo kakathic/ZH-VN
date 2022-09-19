@@ -11,24 +11,11 @@ while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ] && [ "$API" -ge 30 ];then
 echo > $MODPATH/disable
-echo '
-[ -e /data/unencrypted/magisk_modules ] && Adb=/data/unencrypted/magisk_modules || Adb=/data/adb/modules
-while [ "$(getprop sys.boot_completed)" != "1" ]; do
-Auto=$(($Auto + 1))
-if [ "$Auto" == 100 ];then
-for sksb in $Adb/*; do
-echo > "$sksb/disable"
-done
-rm -fr /data/dalvik-cache/*/*framework* /data/system/package_cache/* /data/resource-cache/* /data/adb/service.d/Tol.sh
-reboot
-fi
-done
-' > /data/adb/service.d/Tol.sh
-chmod 777 /data/adb/service.d/Tol.sh
 reboot
 fi
 sleep 1
 done
+
 
 # Continues operation if the module is not disabled 
 # Code
