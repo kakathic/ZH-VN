@@ -172,7 +172,7 @@ fi
 
 if [ "$Licham" == 1 ];then
 [ -e "$TMPDIR/TT.Zip" ] || Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
-[ -e "$TMPDIR/apk" ] || 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2
+[ -e "$TMPDIR/TT.Zip" ] && 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2
 cp -rf $TMPDIR/apk/*com.android.systemui*.apk $MODPATH$Overlay
 cp -rf $TMPDIR/framework-miui-res $MODPATH/system/media/theme/default
 fi
