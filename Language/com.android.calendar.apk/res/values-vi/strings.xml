@@ -1766,4 +1766,10 @@ Bạn cũng có thể thêm nhắc nhở để không bỏ lỡ những điều 
     <string name="widget_normal_weekN">Tuần %d</string>
     <string name="widget_normal_new_event">Thêm sự kiện</string>
     <string name="date_view">Ngày</string>
+<string name="permission_management">Quyền</string>
+<string name="permission_description">Chi tiết quyền</string>
+<string name="privacy_and_permissions">Quyền riêng tư và quyền</string>
+<string name="calendar_data_sharing_instruction">Tuyên bố về việc chia sẻ dữ liệu với bên thứ ba</string>
+<string name="calendar_desc_withdraw_consent">Rút lại sự đồng ý đối với Chính sách Bảo mật của Lịch</string>
+<string name="calendar_privacy_related">Sự riêng tư</string>
 </resources>
