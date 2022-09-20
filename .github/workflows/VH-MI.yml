@@ -15,7 +15,7 @@ jobs:
       - name: Run script
         run: |
           # kakathic
-          . .github/VH-MI.sh
+          bash .github/VH-MI.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
