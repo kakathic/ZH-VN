@@ -5978,9 +5978,7 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 <string name="added_game_notification_title">%s hiện đã có trong Game Turbo</string>
 <string name="summary_result_screen_brightness_format">Đặt độ sáng màn hình thành %s</string>
 <string name="auto_task_set_exit_condition">Sử dụng các điều kiện hoàn thành</string>
-<string name="title_condition_disconnect_wlan">Tắt mạng WLAN</string>
-<string name="app_manager_system_mobile_disable">Tắt dữ liệu</string>
 <string name="task_summary_open_system_touch">Bật phản hồi xúc giác</string>
-<string name="task_summary_open_bluetooth">Bật Bluetooth</string>
 
 </resources>
+
