@@ -91,12 +91,12 @@ cat "$dbebh" | tr ' ' '\n' | grep 'displayTitle=' | cut -d '"' -f2 | awk '{print
 cat "$dbebh" | tr ' ' '\n' | grep 'des=' | cut -d '"' -f2 | awk '{print "="$0"="}' >> "${Lik%/*}/tmp/log2"
 while true; do
 evevg="$(grep -m1 '=' "${Lik%/*}/tmp/log2" | cut -d '=' -f2)"
-uevevg="$(grep -m1 '+' "${Lik%/*}/tmp/log2" | cut -d '+' -f2)"
+uevevg="$(grep -m1 '₹' "${Lik%/*}/tmp/log2" | cut -d '+' -f2)"
 if [ "$evevg" ] || [ "$uevevg" ];then
 #echo "- $uevevg > $(DICHVB $uevevg)"
 [ "$evevg" ] && sed -i -e "s|\"$evevg\"|\"$(DICHVB $evevg)\"|g" "$dbebh"
 [ "$uevevg" ] && sed -i -e "s|\>$uevevg\<|\>$(DICHVB $uevevg)\<|g" "$dbebh"
-sed -i -e "/=$evevg=/d" -e "/+$uevevg+/d" "${Lik%/*}/tmp/log2"
+sed -i -e "/=$evevg=/d" -e "/₹$uevevg₹/d" "${Lik%/*}/tmp/log2"
 else
 break
 fi
