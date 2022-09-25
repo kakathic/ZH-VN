@@ -5974,11 +5974,16 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 	<string name="click_to_set_personalized_reminder">Đặt cảnh báo</string>
 	<string name="bill_traffic_reminder_instruction_text">Phương pháp thanh toán và tiêu chuẩn tính toán dữ liệu của các nhà cung cấp dịch vụ khác nhau có thể khác nhau. Sự chậm trễ trong thanh toán cũng có thể xảy ra. Số liệu thống kê sử dụng được cung cấp ở đây chỉ để bạn tham khảo.</string>
 	<string name="bill_reminder_summary">Nhắc nạp tiền khi số dư thấp hơn %1s</string>
-<string name="added_game_notification_summary">Bắt đầu chơi ngay bây giờ</string>
-<string name="added_game_notification_title">%s hiện đã có trong Game Turbo</string>
-<string name="summary_result_screen_brightness_format">Đặt độ sáng màn hình thành %s</string>
-<string name="auto_task_set_exit_condition">Sử dụng các điều kiện hoàn thành</string>
-<string name="task_summary_open_system_touch">Bật phản hồi xúc giác</string>
-
+	<string name="added_game_notification_summary">Bắt đầu chơi ngay bây giờ</string>
+	<string name="added_game_notification_title">%s hiện đã có trong Game Turbo</string>
+	<string name="summary_result_screen_brightness_format">Đặt độ sáng màn hình thành %s</string>
+	<string name="auto_task_set_exit_condition">Sử dụng các điều kiện hoàn thành</string>
+	<string name="task_summary_open_system_touch">Bật phản hồi xúc giác</string>
+	<string name="system_app_permission_instruction">Ứng dụng này cần các quyền sau để cung cấp các dịch vụ hệ thống cơ bản. Việc quản lý quyền bị hạn chế đối với ứng dụng này, vì việc thay đổi trạng thái quyền sẽ dẫn đến hoạt động hệ thống bất thường.</string>
+	<string name="custom_define_permission_desc_android.permission.CALL_PHONE">Để sử dụng danh sách chặn và thực hiện cuộc gọi đến các số liên lạc khẩn cấp khi có cảnh báo động đất</string>
+	<string name="custom_define_permission_desc_android.permission.READ_CONTACTS">Để sử dụng danh sách chặn</string>
+	<string name="custom_define_permission_desc_android.permission.WRITE_CALL_LOG">Để xóa tin nhắn khỏi danh sách chặn của bạn</string>
+	<string name="custom_define_permission_desc_android.permission.READ_CALL_LOG">Để hiển thị các cuộc gọi bị chặn trong lịch sử cuộc gọi của bạn</string>
+	<string name="custom_define_permission_desc_android.permission_group.LOCATION">Để cung cấp các tính năng liên quan đến vị trí của bạn trong Trung tâm cảnh báo MIUI, SOS khẩn cấp, Trình tiết kiệm pin ứng dụng, máy quét bảo mật thanh toán và dịch vụ vị trí gần đúng</string>
 </resources>
 
