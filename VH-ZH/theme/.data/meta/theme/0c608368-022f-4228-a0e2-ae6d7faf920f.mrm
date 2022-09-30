@@ -1,0 +1,57 @@
+{
+  "localId": "0c608368-022f-4228-a0e2-ae6d7faf920f",
+  "onlineId": null,
+  "assemblyId": null,
+  "productId": null,
+  "hash": "237d3b37b6bf46f9e279cc8a8ca6e32277cc04de",
+  "platform": 1,
+  "size": 861507,
+  "updatedTime": 0,
+  "version": "2.0",
+  "authors": {
+    "fallback": "Sai"
+  },
+  "designers": {
+    "fallback": "Sai"
+  },
+  "titles": {
+    "fallback": "Bauhaus"
+  },
+  "descriptions": {},
+  "builtInThumbnails": {
+    "fallback": [
+      "preview_fonts_small_0.png",
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "builtInPreviews": {
+    "fallback": [
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "thumbnails": [],
+  "previews": [],
+  "parentResources": [],
+  "subResources": [
+    {
+      "localId": "3b0a09ea-2746-4c89-aa7f-3659b98fd3f9",
+      "resourceCode": "fonts",
+      "extraMeta": {},
+      "metaPath": null,
+      "contentPath": null
+    }
+  ],
+  "extraMeta": {},
+  "metaPath": null,
+  "contentPath": null,
+  "rightsPath": null,
+  "screenRatio": null,
+  "supportHomeSearchBar": false,
+  "packageVersion": null,
+  "iconsCount": null,
+  "fontWeight": null,
+  "price": -1,
+  "isBackUpVersion": false,
+  "themeType": 0,
+  "miuiAdapterVersion": null
+}

@@ -1,0 +1,57 @@
+{
+  "localId": "af1330df-293d-4048-9b40-ab74fabbaad4",
+  "onlineId": null,
+  "assemblyId": null,
+  "productId": null,
+  "hash": "95088a8811400dfea793b09e8e4e92f5a1b5e8f3",
+  "platform": 1,
+  "size": 625140,
+  "updatedTime": 0,
+  "version": "2.0",
+  "authors": {
+    "fallback": "VH-MI"
+  },
+  "designers": {
+    "fallback": "VH-MI"
+  },
+  "titles": {
+    "fallback": "Rounded"
+  },
+  "descriptions": {},
+  "builtInThumbnails": {
+    "fallback": [
+      "preview_fonts_small_0.png",
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "builtInPreviews": {
+    "fallback": [
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "thumbnails": [],
+  "previews": [],
+  "parentResources": [
+    {
+      "localId": "457081ac-1bce-45b0-88b2-44ccdfdcba14",
+      "resourceCode": "theme",
+      "extraMeta": {},
+      "metaPath": null,
+      "contentPath": null
+    }
+  ],
+  "subResources": [],
+  "extraMeta": {},
+  "metaPath": null,
+  "contentPath": null,
+  "rightsPath": null,
+  "screenRatio": null,
+  "supportHomeSearchBar": false,
+  "packageVersion": null,
+  "iconsCount": null,
+  "fontWeight": null,
+  "price": -1,
+  "isBackUpVersion": false,
+  "themeType": 0,
+  "miuiAdapterVersion": null
+}

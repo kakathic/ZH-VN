@@ -1,0 +1,57 @@
+{
+  "localId": "268e5a6d-3481-446d-bed4-546ae6f19bbb",
+  "onlineId": null,
+  "assemblyId": null,
+  "productId": null,
+  "hash": "b8c8f36feafca5df2391433e8058524b3e931c24",
+  "platform": 1,
+  "size": 736931,
+  "updatedTime": 0,
+  "version": "2.0",
+  "authors": {
+    "fallback": "Sai"
+  },
+  "designers": {
+    "fallback": "Sai"
+  },
+  "titles": {
+    "fallback": "IOS"
+  },
+  "descriptions": {},
+  "builtInThumbnails": {
+    "fallback": [
+      "preview_fonts_small_0.png",
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "builtInPreviews": {
+    "fallback": [
+      "preview_fonts_0.jpg"
+    ]
+  },
+  "thumbnails": [],
+  "previews": [],
+  "parentResources": [],
+  "subResources": [
+    {
+      "localId": "d34ee2d6-fe80-47ba-8a21-eeb5ff99520d",
+      "resourceCode": "fonts",
+      "extraMeta": {},
+      "metaPath": null,
+      "contentPath": null
+    }
+  ],
+  "extraMeta": {},
+  "metaPath": null,
+  "contentPath": null,
+  "rightsPath": null,
+  "screenRatio": null,
+  "supportHomeSearchBar": false,
+  "packageVersion": null,
+  "iconsCount": null,
+  "fontWeight": null,
+  "price": -1,
+  "isBackUpVersion": false,
+  "themeType": 0,
+  "miuiAdapterVersion": null
+}
