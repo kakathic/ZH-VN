@@ -131,12 +131,9 @@ ui_print2 "$unzip"
 ui_print
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 
-if [ ! -e /sdcard/Android/data/com.android.thememanager ];then
-unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
-else
-unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
 mkdir -p /sdcard/Android/data/com.android.thememanager/files/MIUI
-fi
+unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
+unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
 
 Xu_install 7za
 Xu_install jq
