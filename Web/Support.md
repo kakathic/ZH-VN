@@ -23,7 +23,7 @@
 
 **📧 Gửi đến**
 
-> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
+> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/Hieu.like.0210)
 
 - Hai ảnh ở dưới cho bạn biết tài khoản mi id và tên máy.
 
