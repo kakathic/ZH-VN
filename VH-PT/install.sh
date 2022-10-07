@@ -224,32 +224,6 @@ Vsmali ".method public static isFeatureOn()Z" \
     return v1
 .end method' \
 "$TMPDIR/Apk/com.miui.powerkeeper/classes*/*"
-Vsmali ".method public static getRestrictAsyncBinder()Z" \
-".end method" \
-'.method public static getRestrictAsyncBinder()Z
-    .registers 1
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
-
-Vsmali ".method public static getRestrictNet()Z" \
-".end method" \
-'.method public static getRestrictNet()Z
-    .registers 1
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
-
-Vsmali ".method public static getBroadcastCancel()Z" \
-".end method" \
-'.method public static getBroadcastCancel()Z
-    .registers 1
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/*.smali"
 
 fi
 
