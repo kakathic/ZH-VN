@@ -13,11 +13,9 @@
 
 **📨 Nội dung gửi**
 
-> Ví dụ
-
-+ Tên máy: raphael
-
-+ Xiaomi id: 152533xxxx
+> Ví dụ:
+>> Tên máy: raphael<br/>
+>> Xiaomi id: 152533xxxx
 
 - Nếu bạn dùng nhiều máy bạn sẽ phải ủng hộ nhiều hơn, 10k/1 thiết bị.
 
