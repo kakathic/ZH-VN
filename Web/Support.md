@@ -13,6 +13,8 @@
 
 **📨 Nội dung gửi**
 
+> Ví dụ
+
 + Tên máy: raphael
 
 + Xiaomi id: 152533xxxx
