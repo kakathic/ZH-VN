@@ -9,9 +9,9 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
   > **VH-GA:** Cài Gapps, thêm dịch vụ Google 
 
-  > **VH-PT:** Crack Miui, hack theme, cài app hệ thống v.v
+  > **VH-PT:** Crack Miui, hack theme, cài app hệ thống v.v, chưa hỗ trợ Android 13
 
-  > **VH-KE:** Các tính năng nâng cao, bật bàn phím china mod v.v
+  > **VH-KE:** Các tính năng nâng cao, bật bàn phím china mod v.v, chưa hỗ trợ Android 13
 
   > **VH-ZH:** Thêm tiếng Việt, Fix thông báo
 
