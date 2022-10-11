@@ -15,7 +15,7 @@
 
 + Tên máy: raphael
 
-+ Xiaomi id: 1525337373
++ Xiaomi id: 152533xxxx
 
 - Nếu bạn dùng nhiều máy bạn sẽ phải ủng hộ nhiều hơn, 10k/1 thiết bị.
 
