@@ -9,7 +9,7 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 **VH-GA**
 
-  > Thêm bổ sung dịch vụ Google, ch play, v.v
+  > Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
 **VH-PT**
 
