@@ -5,31 +5,31 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 **Hướng dẫn cài đặt**
 ---
 
-- Tải về [VH-MI](https://github.com/kakathic/ZH-VN/releases)
++ Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
-  > **VH-GA**
+**VH-GA**
 
-    + Thêm bổ sung dịch vụ Google, ch play, v.v 
+  > Thêm bổ sung dịch vụ Google, ch play, v.v
 
-  > **VH-PT**
+**VH-PT**
 
-    + Crack Miui, hack theme, cài app hệ thống v.v
+  > Crack Miui, hack theme, cài app hệ thống v.v
 
-    + Chưa hỗ trợ Android 13
+  > Chưa hỗ trợ Android 13
 
-  > **VH-KE**
+**VH-KE**
 
-    + Gỡ getapps, bật bàn phím china mod v.v
+  > Gỡ getapps, bật bàn phím china mod v.v
 
-    + Chưa hỗ trợ Android 13
+  > Chưa hỗ trợ Android 13
 
-  > **VH-ZH**
+**VH-ZH**
 
-    + Thêm tiếng Việt, Fix thông báo
+  > Thêm tiếng Việt, Fix thông báo
 
-    + Thêm Việt hóa widget
+  > Thêm Việt hóa widget
 
-    + Thêm lịch âm 
+  > Thêm lịch âm 
 
 **Hỗ trợ mô-đun**
 ---
