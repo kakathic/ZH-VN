@@ -17,7 +17,8 @@
 
 **📨 Nội dung gửi**
 
-> Ví dụ:
+- Ví dụ:
+
 >> Tên máy: raphael<br/>
 >> Xiaomi id: 152533xxxx
 
