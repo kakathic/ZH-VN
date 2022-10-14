@@ -7,6 +7,10 @@
 
 - Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
 
++ Sau khi ủng hộ bạn sẽ được sử dụng vĩnh viễn đối với tài khoản và thiết bị hiện tại.
+
++ Nếu như bạn thay đổi thiết bị hoặc tài khoản bạn sẽ phải ủng hộ lại.
+
 > Teckombank: `19034902604017`
 
 > Tên: NGUYEN MINH HIEU
