@@ -3681,4 +3681,9 @@ Bất cứ người dùng nào cũng có thể cập nhật ứng dụng cho ng�
     <string name="esim_inactive_notification_title_global">Tối ưu hóa mạng di động sim kép</string>
     <string name="nrca_need_reset">Vui lòng khởi động lại điện thoại để áp dụng.</string>
     <string name="preferred_network_type_pref_entries_3g_non_preferred_mx_at">3G/2G</string>
+	<string name="bh_app_name">Nhà cung cấp dịch vụ Mi</string>
+    <string name="bh_app_name_short">Nhà cung cấp dịch vụ</string>
+	<string name="bh_open_carrier_services_short">Nhà cung cấp dịch vụ Mi</string>
+    <string name="bh_open_carrier_services_short_reason">Bật nhà cung cấp dịch vụ Mi để có thể sử dụng tính năng này.</string>
+	<string name="bh_cancel">Huỷ</string>
 </resources>
