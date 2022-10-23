@@ -137,6 +137,7 @@ unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/
 
 Xu_install 7za
 Xu_install jq
+Xu_install toybox
 
 $Test123 || abort
 
