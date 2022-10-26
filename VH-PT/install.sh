@@ -104,7 +104,8 @@ baomat=$(GP modbm)
 ui_print
 ui_print2 "Chọn: $baomat"
 ui_print
-else
+#else
+
 ui_print
 ui_print2 "1"
 Vk 2
