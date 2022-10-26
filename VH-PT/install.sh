@@ -93,12 +93,13 @@ Vk 2
 apkcai=$input
 fi
 
+if [ "$(GP modbm2)" ];then
 ui_print "- Mod ứng dụng bảo mật tiện hơn ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
 
-if [ "$(GP modbm)" ];then
+
 baomat=$(GP modbm)
 ui_print
 ui_print2 "Chọn: $baomat"
