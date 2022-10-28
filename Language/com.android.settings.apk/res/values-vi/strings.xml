@@ -12335,4 +12335,5 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
     <string name="dark_mode_alert_dialog_cancel">Hủy</string>
     <string name="google_assistant_guide_title">Trợ lý Google</string>
     <string name="mi_wallet_desc">Ví Mi</string>
+	<string name="external_ram_intro">"Tạo thêm RAM bằng cách chiếm dung lượng lưu trữ. Chỉ sử dụng tính năng này khi có đủ dung lượng bộ nhớ trên thiết bị của bạn."</string>
 </resources>
