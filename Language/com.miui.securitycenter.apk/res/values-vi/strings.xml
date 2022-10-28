@@ -5986,5 +5986,11 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 	<string name="custom_define_permission_desc_android.permission.READ_CALL_LOG">Để hiển thị các cuộc gọi bị chặn trong lịch sử cuộc gọi của bạn</string>
 	<string name="custom_define_permission_desc_android.permission_group.LOCATION">Để cung cấp các tính năng liên quan đến vị trí của bạn trong Trung tâm cảnh báo MIUI, SOS khẩn cấp, Trình tiết kiệm pin ứng dụng, máy quét bảo mật thanh toán và dịch vụ vị trí gần đúng</string>
 	<string name="HIPS_Perm_External_READ_MEDIA_AUDIO_PIC_VIDEO_Desc">Truy cập và lưu hình ảnh, video và tệp âm thanh vào bộ nhớ trong</string>
+	<string name="HIPS_Perm_External_READ_FILES">Truy cập tệp và tài liệu</string>
+    <string name="HIPS_Perm_External_READ_FILES_Desc">Truy cập các tệp và tài liệu được lưu trữ trên thiết bị này</string>
+    <string name="HIPS_Perm_External_READ_MEDIA_AUDIO">Truy cập các tệp âm thanh</string>
+    <string name="HIPS_Perm_External_READ_MEDIA_AUDIO_Desc">Truy cập các bài hát và các tệp âm thanh khác được lưu trữ trên thiết bị này</string>
+	<string name="HIPS_Perm_External_READ_MEDIA_PIC_VIDEO">Truy cập ảnh và video</string>
+    <string name="HIPS_Perm_External_READ_MEDIA_PIC_VIDEO_Desc">Truy cập ảnh và video được lưu trữ trên thiết bị này</string>
 </resources>
 
