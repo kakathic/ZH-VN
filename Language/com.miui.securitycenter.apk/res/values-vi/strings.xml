@@ -5992,5 +5992,9 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
     <string name="HIPS_Perm_External_READ_MEDIA_AUDIO_Desc">Truy cập các bài hát và các tệp âm thanh khác được lưu trữ trên thiết bị này</string>
 	<string name="HIPS_Perm_External_READ_MEDIA_PIC_VIDEO">Truy cập ảnh và video</string>
     <string name="HIPS_Perm_External_READ_MEDIA_PIC_VIDEO_Desc">Truy cập ảnh và video được lưu trữ trên thiết bị này</string>
+	<string name="system_anti_fraud_dialog_image_txt">Bảo vệ chống gian lận</string>
+    <string name="system_anti_fraud_dialog_message">Bảo vệ chống gian lận</string>
+    <string name="system_anti_fraud_dialog_title">Cảnh báo chống gian lận</string>
+    <string name="system_anti_fraud_dialog_title2">Cảnh báo chống gian lận</string>
 </resources>
 

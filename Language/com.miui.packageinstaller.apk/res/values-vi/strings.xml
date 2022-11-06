@@ -782,4 +782,10 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
 	<string name="permission_des_read_external_storage">Để truy cập ảnh, tài liệu và các phương tiện khác được lưu trữ trên thiết bị</string>
 	<string name="permission_name_write_external_storage">Lưu các mục vào bộ nhớ thiết bị</string>
 	<string name="permission_des_write_external_storage">Để lưu ảnh, tài liệu và các phương tiện khác</string>
+	<string name="settings_security_mode_status_off_msg">Tắt</string>
+	<string name="security_mode_on_suggestion_msg">Bật</string>
+	<string name="open_to_pure_mode">Bật</string>
+	<string name="ettings_security_mode_open_security_mode">Bật</string>
+	<string name="open">Bật</string>
+	<string name="open_now">Bật</string>
 </resources>
