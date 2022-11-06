@@ -6022,7 +6022,7 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 	<string name="eletric_group_two_identification_risk_app">Cảnh báo về các giao dịch tài chính rủi ro</string>
 	<string name="eletric_group_title_one_identification_risk_app">Tự động hạn chế quyền</string>
     <string name="eletric_group_title_one_identification_risk_app_summary">Tự động hạn chế quyền khi phát hiện thấy rủi ro trong ứng dụng</string>
-	<string name="eletric_group_title_two_identification_risk_app">Receive warnings about financial risks</string>
-    <string name="eletric_group_title_two_identification_risk_app_summary">Receive warnings when financial transaction are made after suspicious calls or messages</string>
+	<string name="eletric_group_title_two_identification_risk_app">Nhận cảnh báo về rủi ro tài chính</string>
+    <string name="eletric_group_title_two_identification_risk_app_summary">Nhận cảnh báo khi giao dịch tài chính được thực hiện sau các cuộc gọi hoặc tin nhắn đáng ngờ</string>
 </resources>
 
