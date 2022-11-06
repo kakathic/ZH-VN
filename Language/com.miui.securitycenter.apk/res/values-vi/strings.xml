@@ -5996,5 +5996,6 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
     <string name="system_anti_fraud_dialog_message">Bảo vệ chống gian lận</string>
     <string name="system_anti_fraud_dialog_title">Cảnh báo chống gian lận</string>
     <string name="system_anti_fraud_dialog_title2">Cảnh báo chống gian lận</string>
+	<string name="privacy_apps_password_enable_summay">Bảo vệ các tệp riêng tư bằng khóa ứng dụng</string>
 </resources>
 
