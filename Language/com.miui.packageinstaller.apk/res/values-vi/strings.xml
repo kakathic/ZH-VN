@@ -759,7 +759,6 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
 	<string name="security_mode_feedback_multiple_choice">" (Chọn tất cả các câu phù hợp)"</string>
     <string name="security_mode_feedback_reason">Tại sao bạn lại tắt chế độ bảo mật?</string>
 	<string name="security_mode_feedback_commit">Gửi</string>
-	<string name="safe_mode_introduce_close_tip_des">Vì lý do bảo mật, vui lòng bật chế độ bảo vệ để bảo vệ an ninh thiết bị của bạn, bảo mật quyền riêng tư, bảo mật tài sản, v.v.。</string>
 	<string name="pure_guarding">Đã bật</string>
 	<string name="install_app_loading">Kiểm tra gói cài đặt…</string>
 	<string name="passed_security_test">Đã vượt qua các bài kiểm tra bảo mật của Xiaomi</string>
