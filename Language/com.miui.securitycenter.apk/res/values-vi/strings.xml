@@ -5997,5 +5997,25 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
     <string name="system_anti_fraud_dialog_title">Cảnh báo chống gian lận</string>
     <string name="system_anti_fraud_dialog_title2">Cảnh báo chống gian lận</string>
 	<string name="privacy_apps_password_enable_summay">Bảo vệ các tệp riêng tư bằng khóa ứng dụng</string>
+	<string name="system_anti_fraud_stayaway_from_risk">Tránh gian lận kỹ thuật số</string>
+	<string name="eletric_card_summary_1">Kiểm tra các cuộc gọi đến để tìm các rủi ro bảo mật</string>
+	<string name="eletric_card_one_identification_risk_mms">Phát hiện rủi ro trong các tin nhắn đến</string>
+	<string name="eletric_card_summary_2">Phát hiện rủi ro trong các tin nhắn đến</string>
+	<string name="eletric_card_one_identification_risk_app">Cảnh báo về các ứng dụng không đáng tin cậy</string>
+	<string name="eletric_card_summary_3">Cảnh báo về các ứng dụng không đáng tin cậy</string>
+	<string name="eletric_identification_unfamiliar_numbers_summary">Hiển thị các loại cuộc gọi cho các số không xác định dựa trên phản hồi của người dùng</string>
+	<string name="eletric_risk_call_identification_announcement">Nhận thông báo về những rủi ro có thể xảy ra khi nhận cuộc gọi từ các số không xác định</string>
+	<string name="eletric_card_one_identification_risk_mms_summary">"Kiểm tra các tin nhắn đến để tìm rủi ro dựa trên số điện thoại của người gửi và các URL đính kèm"</string>
+	<string name="eletric_card_two_identification_risk_mms">Cảnh báo về mã xác minh được chuyển tiếp</string>
+    <string name="eletric_card_two_identification_risk_mms_summary">Nhận cảnh báo khi mã xác minh được chuyển tiếp đến các ứng dụng mạng xã hội</string>
+	<string name="eletric_group_title_one_identification_risk_mms">Bảo vệ tin nhắn</string>
+	<string name="eletric_group_title_one_identification_risk_mms_summary">Nhận thông báo về các rủi ro có thể xảy ra trong các tin nhắn được gửi từ các số không xác định</string>
+	<string name="eletric_group_two_identification_risk_mms">Bảo vệ mã xác minh</string>
+	<string name="eletric_group_title_two_identification_risk_mms">Nhận cảnh báo khi mã xác minh được chuyển tiếp</string>
+    <string name="eletric_group_title_two_identification_risk_mms_summary">"Bạn sẽ nhận được cảnh báo khi mã xác minh từ tin nhắn của bạn được chuyển tiếp đến phương tiện truyền thông xã hội"</string>
+	<string name="eletric_card_one_identification_risk_app_summary">Nhận cảnh báo và hạn chế quyền tự động khi phát hiện rủi ro</string>
+	<string name="eletric_group_title_one_identification_risk_screen_summary">"Thông báo của bạn sẽ không được hiển thị trên màn hình bên ngoài khi truyền"</string>
+	<string name="eletric_group_title_two_identification_risk_screen">Ẩn các ứng dụng riêng tư</string>
+    <string name="eletric_group_title_two_identification_risk_screen_summary">Quá trình truyền sẽ bị tạm dừng nếu bạn chuyển sang Alipay, WeChat, Thư viện hoặc Nhắn tin</string>
 </resources>
 
