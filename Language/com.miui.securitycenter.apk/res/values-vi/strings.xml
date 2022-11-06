@@ -6017,5 +6017,10 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 	<string name="eletric_group_title_one_identification_risk_screen_summary">"Thông báo của bạn sẽ không được hiển thị trên màn hình bên ngoài khi truyền"</string>
 	<string name="eletric_group_title_two_identification_risk_screen">Ẩn các ứng dụng riêng tư</string>
     <string name="eletric_group_title_two_identification_risk_screen_summary">Quá trình truyền sẽ bị tạm dừng nếu bạn chuyển sang Alipay, WeChat, Thư viện hoặc Nhắn tin</string>
+	<string name="eletric_card_two_identification_risk_app">Cảnh báo về các giao dịch rủi ro</string>
+    <string name="eletric_card_two_identification_risk_app_summary">Nhận cảnh báo khi thực hiện các giao dịch tài chính sau các cuộc gọi hoặc tin nhắn đáng ngờ</string>
+	<string name="eletric_group_two_identification_risk_app">Cảnh báo về các giao dịch tài chính rủi ro</string>
+	<string name="eletric_group_title_one_identification_risk_app">Tự động hạn chế quyền</string>
+    <string name="eletric_group_title_one_identification_risk_app_summary">Tự động hạn chế quyền khi phát hiện thấy rủi ro trong ứng dụng</string>
 </resources>
 
