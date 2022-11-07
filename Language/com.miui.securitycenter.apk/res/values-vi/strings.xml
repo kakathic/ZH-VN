@@ -6024,5 +6024,12 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
     <string name="eletric_group_title_one_identification_risk_app_summary">Tự động hạn chế quyền khi phát hiện thấy rủi ro trong ứng dụng</string>
 	<string name="eletric_group_title_two_identification_risk_app">Nhận cảnh báo về rủi ro tài chính</string>
     <string name="eletric_group_title_two_identification_risk_app_summary">Nhận cảnh báo khi giao dịch tài chính được thực hiện sau các cuộc gọi hoặc tin nhắn đáng ngờ</string>
+	<string name="beauty_fc_assistant_summary_common">Sử dụng các tính năng bổ sung với camera trước</string>
+	<string name="privacy_recommend_category">Cá nhân hoá</string>
+    <string name="privacy_recommend_summary">Nhận đề xuất nội dung được cá nhân hóa</string>
+	<string name="privacy_revoke_dialog_content_cn">"Nếu bạn tiếp tục, bạn sẽ rút lại sự đồng ý của mình đối với Chính sách quyền riêng tư của %1$s. Chúng tôi sẽ ngừng thu thập thông tin cá nhân của bạn. Thông tin cá nhân đã được thu thập và lưu giữ sẽ bị xóa trong khoảng thời gian cụ thể theo luật và quy định hiện hành trừ khi có yêu cầu khác.
+Vì %2$s cung cấp các dịch vụ của mình dựa trên việc thu thập thông tin cá nhân cần thiết, việc rút lại sự đồng ý của bạn sẽ được coi là từ chối chấp nhận dịch vụ %3$s.
+Rút lại sự đồng ý ngay bây giờ?"</string>
+	<string name="privacy_revoke_dialog_positive_text_numbers">Thu hồi (%ds)</string>
 </resources>
 
