@@ -6031,5 +6031,6 @@ Ghi lại các trình tự và sử dụng chúng bất cứ lúc nào!"</string
 Vì %2$s cung cấp các dịch vụ của mình dựa trên việc thu thập thông tin cá nhân cần thiết, việc rút lại sự đồng ý của bạn sẽ được coi là từ chối chấp nhận dịch vụ %3$s.
 Rút lại sự đồng ý ngay bây giờ?"</string>
 	<string name="privacy_revoke_dialog_positive_text_numbers">Thu hồi (%ds)</string>
+	<string name="not_support_root_summary">Việc cho phép quyền truy cập root đối với các ứng dụng của bên thứ ba có thể gây ra rủi ro bảo mật và làm hỏng thiết bị của bạn. Do đó, chúng tôi không còn cung cấp các tùy chọn để quản lý quyền truy cập root.</string>
 </resources>
 
