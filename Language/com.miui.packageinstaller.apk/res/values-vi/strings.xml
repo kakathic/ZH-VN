@@ -788,4 +788,11 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
 	<string name="ettings_security_mode_open_security_mode">Bật</string>
 	<string name="open">Bật</string>
 	<string name="open_now">Bật</string>
+	<string name="do_not_show_again">"Không hiển thị lại"</string>
+	<string name="security_mode_guide_do_not_show_again">"Không hiển thị lại"</string>
+	<string name="authorize_to_install">Cho phép</string>
+	<string name="trust">Cho phép</string>
+	<string name="unknown_source_allow">Cho phép</string>
+	<string name="external_sources_settings_negative">Hạn chế</string>
+	<string name="unknown_source_forbidden">Hạn chế</string>
 </resources>
