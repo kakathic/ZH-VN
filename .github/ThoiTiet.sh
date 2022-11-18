@@ -27,7 +27,7 @@ done
 }
 
 modTT(){
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Le/h/a;->a:Z" "${1%.*}/smali*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Le/i/a;->a:Z" "${1%.*}/smali*"
 Thaythe "ro.miui.region" "ro.khu.vuc" "${1%.*}/smali*"
 Thaythe "ro.product.mod_device" "ro.product.vip" "${1%.*}/smali*"
 }
