@@ -83,6 +83,10 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /da
 cp -rf /data/local/tmp/GooglePlayServicesUpdater $MODPATH/system/product/priv-app
 #pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
 FREEZE $MODPATH/system/product/priv-app/GooglePlayServicesUpdater
+else
+mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
+pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
 fi
 
 if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GmsCore.apk')" ];then
