@@ -135,6 +135,7 @@ mkdir -p /sdcard/Android/data/com.android.thememanager/files/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
 
+Xu_install zip
 Xu_install 7za
 Xu_install jq
 Xu_install toybox
