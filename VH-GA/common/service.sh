@@ -35,3 +35,9 @@ module_exec add com.google.android.gms
 sleep 10
 module_exec rm com.google.android.gms
 fi
+
+if [ ! -e /data/adb/modules/VH-GA/ON ];then
+sleep 300
+am start com.google.android.apps.restore/com.google.android.apps.pixelmigrate.migrate.component.D2dWizardManager
+echo > /data/adb/modules/VH-GA/ON
+fi
