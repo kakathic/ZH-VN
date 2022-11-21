@@ -77,7 +77,7 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ] || [ "$(pm path "com.android.vending" | grep -cm1 '/data/')" != 1 ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
 mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
 cp -rf /data/local/tmp/GooglePlayServicesUpdater $MODPATH/system/product/priv-app
