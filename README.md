@@ -7,6 +7,8 @@ Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tín
 
 + Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
++ Module nếu chưa ủng hộ có thể dùng thử 1 ngày.
+
 **VH-GA**
 
   > Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
