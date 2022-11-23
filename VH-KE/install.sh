@@ -132,7 +132,7 @@ TTM "$TMPDIR/Apk/tmp
 /sdcard/VH-MI/color
 /data/tools/apk"
 
-if [ -e "/sdcard/VH-MI/color/Tối.ini" ];then
+if [ ! -e "/sdcard/VH-MI/color/Tối.ini" ];then
 if [ "$API" -ge 31 ];then
 cp -f $TMPDIR/12-Tối.ini /sdcard/VH-MI/color/Tối.ini
 cp -f $TMPDIR/12-Sáng.ini /sdcard/VH-MI/color/Sáng.ini
