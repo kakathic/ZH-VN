@@ -12339,4 +12339,10 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
 	<string name="interconnection">Kết nối</string>
 	<string name="connection_control">Quản lý kết nối</string>
 	<string name="complete_parameters_new">Thông tin chi tiết và thông số kỹ thuật</string>
+	<string name="network_acceleration">Tăng tốc mạng</string>
+	<string name="multi_network_acceleration_summery">Kết nối với nhiều mạng WLAN cùng lúc để tăng tốc độ</string>
+	<string name="network_auto_switch">Chuyển đổi giữa các mạng</string>
+	<string name="network_auto_switch_summery">"Chuyển sang dữ liệu di động khi tín hiệu mạng WLAN yếu hoặc không có mạng"</string>
+	<string name="data_acceleration_summery">Sử dụng cả mạng WLAN và dữ liệu di động để tăng tốc độ khi kết nối mạng WLAN kém</string>
+	<string name="wifi_primary">Mạng chính</string>
 </resources>

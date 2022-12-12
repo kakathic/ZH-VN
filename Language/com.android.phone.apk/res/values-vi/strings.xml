@@ -3681,4 +3681,6 @@ Bất cứ người dùng nào cũng có thể cập nhật ứng dụng cho ng�
     <string name="esim_inactive_notification_title_global">Tối ưu hóa mạng di động sim kép</string>
     <string name="nrca_need_reset">Vui lòng khởi động lại điện thoại để áp dụng.</string>
     <string name="preferred_network_type_pref_entries_3g_non_preferred_mx_at">3G/2G</string>
+	<string name="smart_switch_dual_sim_summary">Tự động chuyển đổi giữa các thẻ SIM dữ liệu dựa trên chất lượng kết nối mạng và trạng thái thiết bị</string>
+    <string name="smart_switch_dual_sim_title">Chuyển đổi giữa các thẻ SIM dữ liệu</string>
 </resources>
