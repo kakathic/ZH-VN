@@ -795,4 +795,15 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
 	<string name="unknown_source_allow">Cho phép</string>
 	<string name="external_sources_settings_negative">Hạn chế</string>
 	<string name="unknown_source_forbidden">Hạn chế</string>
+	<string name="confirm_install">Cài đặt</string>
+	<string name="dialog_install_confirm_default">Cài đặt</string>
+	<string name="start_install">Cài đặt</string>
+	<string name="verify_and_install">Cài đặt</string>
+	<string name="virus_install_confirm_install">Cài đặt</string>
+	<string name="cancel_install">Huỷ</string>
+	<string name="dialog_security_mode_guide_cancel">Huỷ</string>
+	<string name="virus_install_confirm_cancel">Huỷ</string>
+	<string name="risk_verification_des">Ứng dụng này được cài đặt quá thường xuyên. Vì lý do an toàn, vui lòng thực hiện xác minh rủi ro trước và bạn có thể tiếp tục cài đặt sau khi vượt qua。</string>
+	<string name="safe_guard_title_text">Vì mục đích an toàn, vui lòng bật bảo vệ an ninh</string>
+	
 </resources>
