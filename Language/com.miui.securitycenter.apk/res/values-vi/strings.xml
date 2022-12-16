@@ -6038,5 +6038,6 @@ Rút lại sự đồng ý ngay bây giờ?"</string>
 	<string name="bubble_mode_barrage_tips">Bong bóng hội thoại cho các ứng dụng được thu nhỏ sẽ hiển thị dưới dạng nhận xét trên màn hình</string>
 	<string name="bubble_notification">Bong bóng hội thoại</string>
 	<string name="bubble_notification_switch">Hiển thị bong bóng hội thoại</string>
+	<string name="bubble_notification_switch_desc">Khi ứng dụng nhắn tin trong cửa sổ nổi bị ẩn ở cạnh màn hình, hãy hiển thị tin nhắn đến trong bong bóng</string>
 </resources>
 
