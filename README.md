@@ -2,6 +2,8 @@
 
 Mô-Đun magisk thêm tiếng việt cho rom china gốc và mod một số tính năng hay.
 
+Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
+
 **Hướng dẫn cài đặt**
 ---
 
