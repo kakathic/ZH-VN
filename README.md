@@ -40,7 +40,7 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 - Để mô-đun hỗ trợ lâu dài mỗi thiết bị khi sử dụng phải ủng hộ 10k để sử dụng vĩnh viễn.
 
-- [Xem chi tiết](/Web/Support.md)
+- [Cách ủng hộ](/Web/Support.md)
 
 **Tính năng của VH-MI**
 ---
