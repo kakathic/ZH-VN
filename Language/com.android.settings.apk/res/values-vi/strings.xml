@@ -12352,4 +12352,27 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
     <string name="accept_new_connection_detail">Các kết nối mới đã bị hạn chế trong Trung tâm điều khiển</string>
 	<string name="assistance_category_title">Khả năng truy cập</string>
 	<string name="brightness_auto_summary">Điều chỉnh độ sáng theo ánh sáng xung quanh để tiết kiệm pin</string>
+	<string name="accessibility_button_intro_text">Truy cập nhanh các tính năng trợ năng từ bất kỳ màn hình nào</string>
+	<string name="accessibility_button_summary">Truy cập nhanh các tính năng trợ năng</string>
+	<string name="accessibility_button_opacity_title">Độ trong suốt khi không sử dụng</string>
+    <string name="accessibility_button_or_gesture_title">Sử dụng nút hoặc cử chỉ</string>
+	<string name="accessibility_button_description"><b>Để bắt đầu</b>"
+1. Chuyển đến cài đặt trợ năng
+2. Chọn một tính năng và nhấn vào phím tắt
+3. Chọn nút để truy cập tính năng"</string>
+    <string name="accessibility_button_fade_summary">Mất dần sau vài giây để bạn dễ nhìn màn hình hơn</string>
+    <string name="accessibility_button_fade_title">Làm mờ dần khi không sử dụng</string>
+    <string name="accessibility_button_gesture_about_title">Giới thiệu về nút trợ năng &amp; cử chỉ</string>
+    <string name="accessibility_button_gesture_description"><b>Để bắt đầu</b>"
+1. Chuyển đến cài đặt trợ năng
+2. Chọn một tính năng và nhấn vào phím tắt
+3. Chọn xem bạn muốn sử dụng nút hay cử chỉ để truy cập tính năng"</string>
+    <string name="accessibility_button_gesture_footer_learn_more_content_description">Tìm hiểu thêm về nút hỗ trợ tiếp cận &amp; cử chỉ</string>
+    <string name="accessibility_button_gesture_title">Nút trợ năng &amp; cử chỉ</string>
+	<string name="freeform_guide_vedio_description">Nhấn vào một ứng dụng trên sidebar để mở ứng dụng đó trong cửa sổ nổi</string>
+	<string name="miui_bubbles_notification">Bong bóng hội thoại</string>
+	<string name="freeform_guide_to_sidehide_summary">Kéo nhanh ứng dụng sang hai bên màn hình để ẩn đi</string>
+    <string name="freeform_guide_to_sidehide_title">Ẩn cửa sổ nổi</string>
+	<string name="freeform_guide_slide_to_small_freeform_summary_squarehot">"Nhấn và giữ phần dưới cùng của cửa sổ và kéo nó lên cạnh trên của màn hình.
+Tính năng này chỉ hoạt động khi điều hướng hệ thống được đặt thành cử chỉ."</string>
 </resources>

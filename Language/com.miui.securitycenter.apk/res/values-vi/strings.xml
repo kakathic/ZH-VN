@@ -6032,5 +6032,11 @@ Vì %2$s cung cấp các dịch vụ của mình dựa trên việc thu thập t
 Rút lại sự đồng ý ngay bây giờ?"</string>
 	<string name="privacy_revoke_dialog_positive_text_numbers">Thu hồi (%ds)</string>
 	<string name="not_support_root_summary">Việc cho phép quyền truy cập root đối với các ứng dụng của bên thứ ba có thể gây ra rủi ro bảo mật và làm hỏng thiết bị của bạn. Do đó, chúng tôi không còn cung cấp các tùy chọn để quản lý quyền truy cập root.</string>
+	<string name="bubble_app_empty_page">"Không thể tìm thấy ứng dụng hỗ trợ bong bóng hội thoại trên thiết bị này"</string>
+	<string name="bubble_app_manage">Quản lý bong bóng hội thoại</string>
+	<string name="bubble_mode_barrage_switch_tips">Bật để hiển thị bong bóng hội thoại cho các ứng dụng được thu nhỏ dưới dạng nhận xét trên màn hình</string>
+	<string name="bubble_mode_barrage_tips">Bong bóng hội thoại cho các ứng dụng được thu nhỏ sẽ hiển thị dưới dạng nhận xét trên màn hình</string>
+	<string name="bubble_notification">Bong bóng hội thoại</string>
+	<string name="bubble_notification_switch">Hiển thị bong bóng hội thoại</string>
 </resources>
 
