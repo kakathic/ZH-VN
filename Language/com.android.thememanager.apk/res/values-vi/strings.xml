@@ -1720,4 +1720,5 @@ Bạn sẽ thấy ảnh mới mỗi giờ."</string>
     <string name="toast_lockscreen_apply_failured_but_home_apply_success">Đã áp dụng thành công cho Màn hình chính. Không thể áp dụng cho Màn hình khóa.</string>
     <string name="toast_lockscreen_apply_success">Đã áp dụng thành công cho Màn hình khóa</string>
     <string name="toast_lockscreen_apply_success_but_home_apply_failured">Đã áp dụng thành công cho Màn hình khóa. Không thể áp dụng cho Màn hình chính.</string>
+	<string name="theme_component_title_large_icon">Siêu biểu tượng</string>
 </resources>

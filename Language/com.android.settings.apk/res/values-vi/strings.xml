@@ -12375,4 +12375,5 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
     <string name="freeform_guide_to_sidehide_title">Ẩn cửa sổ nổi</string>
 	<string name="freeform_guide_slide_to_small_freeform_summary_squarehot">"Nhấn và giữ phần dưới cùng của cửa sổ và kéo nó lên cạnh trên của màn hình.
 Tính năng này chỉ hoạt động khi điều hướng hệ thống được đặt thành cử chỉ."</string>
+	<string name="my_device_info_device_identifiers_category_title">Định danh thiết bị</string>
 </resources>
