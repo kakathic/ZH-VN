@@ -805,5 +805,12 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
 	<string name="virus_install_confirm_cancel">Huỷ</string>
 	<string name="risk_verification_des">Ứng dụng này được cài đặt quá thường xuyên. Vì lý do an toàn, vui lòng thực hiện xác minh rủi ro trước và bạn có thể tiếp tục cài đặt sau khi vượt qua。</string>
 	<string name="safe_guard_title_text">Vì mục đích an toàn, vui lòng bật bảo vệ an ninh</string>
-	
+	<string name="risk_app_install_item_des">Phiên bản: %1$s</string>
+        <string name="app_detail_other_version">Phiên bản: %1$s</string>
+        <string name="app_info_version">Phiên bản: %1$s</string>
+        <string name="app_info_version_replace">Phiên bản: %1$s -&gt; %2$s</string>
+        <string name="app_version_format">Phiên bản: %1$s</string>
+        <string name="install_version">Phiên bản: %1$s</string>
+        <string name="install_version_replace">Phiên bản: %1$s &gt; %2$s</string>
+        <string name="risk_app_install_item_des">Phiên bản: %1$s</string>
 </resources>
