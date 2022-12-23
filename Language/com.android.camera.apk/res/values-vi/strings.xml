@@ -2519,4 +2519,19 @@ Sau khi bật chức năng ghi nhiều camera, máy ảnh của điện thoại 
     <string name="beauty_makeups_danyan">Trắng mơ</string>
     <string name="beauty_makeups_subeffect_makeup">Trang điểm</string>
     <string name="beauty_makeups_subeffect_filter">Bộ lọc</string>
+	<string name="cvtype_item_btn_title1">Leica Chính hãng</string>
+	<string name="pref_cvwatermark_title">Tuỳ chỉnh dấu chìm phim</string>
+	<string name="pref_leica_title">Giao diện "LEICA"</string>
+	<string name="pref_leica_label">Bạn có thể tận hưởng thuật toán và chất lượng hình ảnh kép gốc của Leica. Sau khi đóng sẽ trở lại giao diện camera ban đầu khi vào camera lần sau.</string>
+	<string name="download_automatic_message">Tự động tải thêm tính năng khi thiết bị này được kết nối với Wi-Fi?</string>
+	<string name="download_automatic_message_cn">Tự động tải thêm tính năng khi thiết bị này được kết nối với Wi-Fi??</string>
+	<string name="download_automatic_summary">Tự động tải thêm tính năng qua Wi-Fi</string>
+	<string name="download_automatic_summary_cn">Tự động tải thêm tính năng qua Wi-Fi</string>
+	<string name="pref_10bit_label">Ở chế độ Video, khi sử dụng codec .265, nó buộc phải sử dụng 10-bit để có hiệu ứng hình ảnh tốt hơn.&#13;
+Lưu ý: Một số chế độ máy ảnh có thể không hoạt động bình thường.&#13;
+Nếu xảy ra lỗi, hãy chuyển codec sang .264 hoặc tắt tính năng này.</string>
+    <string name="pref_eis_title">Luôn bật EIS</string>
+    <string name="pref_eis_label">Nó có thể khiến một số tốc độ khung hình không khả dụng</string>
+	<string name="pref_camera_speech_default">Kích hoạt mặc định "Màn trập bằng giọng nói"</string>
+	<string name="pref_video_autoexposure_title">Tự động phơi sáng video</string>
 </resources>

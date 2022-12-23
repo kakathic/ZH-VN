@@ -3239,4 +3239,5 @@ Phiên dịch có thể mất một lúc khi bạn sử dụng tính năng này 
 	<string name="cleaner_size">Dọn thùng rác (%s)</string>
 	<string name="media_type_hd">Độ nét cao</string>
 	<string name="media_type_front_photo">Ảnh tự chụp</string>
+	<string name="sort_and_showmode">Sắp xếp và xem</string>
 </resources>
