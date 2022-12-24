@@ -12376,4 +12376,10 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
 	<string name="freeform_guide_slide_to_small_freeform_summary_squarehot">"Nhấn và giữ phần dưới cùng của cửa sổ và kéo nó lên cạnh trên của màn hình.
 Tính năng này chỉ hoạt động khi điều hướng hệ thống được đặt thành cử chỉ."</string>
 	<string name="my_device_info_device_identifiers_category_title">Định danh thiết bị</string>
+	<string name="auto_clean_summary_new">Phát một đoạn âm thanh %d-giây để làm sạch loa. Sử dụng tính năng này nhiều lần liên tiếp để xử lý lượng bụi bẩn đáng kể.</string>
+	<string name="progress_dialog_speaker_auto_clean_title">Đang làm sạch loa…</string>
+	<string name="auto_clean_description_pad">Thông tin về tính năng này
+- Chạy tính năng này một hoặc hai lần nếu bạn thấy rằng loa của mình bị bụi chặn nhẹ.
+- Nếu loa bị chặn nhiều, hãy chạy tính năng này %1$d-%2$d lần trong khi lắc thiết bị của bạn với mặt loa hướng xuống dưới.</string>
+	<string name="string_float_seconds">%f giây</string>
 </resources>
