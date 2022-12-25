@@ -77,25 +77,25 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
-mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
-cp -rf /data/local/tmp/GooglePlayServicesUpdater $MODPATH/system/product/priv-app
-#pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
-FREEZE $MODPATH/system/product/priv-app/GooglePlayServicesUpdater
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Phonesky.apk')" ];then
+mkdir -p /data/local/tmp/Phonesky;
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/Phonesky/Phonesky.apk;
+cp -rf /data/local/tmp/Phonesky $MODPATH/system/product/priv-app
+#pm install -r /data/local/tmp/Phonesky/Phonesky.apk >&2
+FREEZE /system/product/priv-app/Phonesky
 else
-mkdir -p /data/local/tmp/GooglePlayServicesUpdater;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk;
-pm install -r /data/local/tmp/GooglePlayServicesUpdater/GooglePlayServicesUpdater.apk >&2
+mkdir -p /data/local/tmp/Phonesky;
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/Phonesky/Phonesky.apk;
+pm install -r /data/local/tmp/Phonesky/Phonesky.apk >&2
 fi
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GmsCore.apk')" ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'PrebuiltGmsCoreRvc.apk')" ];then
 echo > $MODPATH/NO
-mkdir -p /data/local/tmp/GmsCore;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/GmsCore/GmsCore.apk;
-cp -rf /data/local/tmp/GmsCore $MODPATH/system/product/priv-app
-#pm install -r /data/local/tmp/GmsCore/GmsCore.apk >&2
-FREEZE $MODPATH/system/product/priv-app/GmsCore
+mkdir -p /data/local/tmp/PrebuiltGmsCoreRvc;
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/PrebuiltGmsCoreRvc/PrebuiltGmsCoreRvc.apk;
+cp -rf /data/local/tmp/PrebuiltGmsCoreRvc $MODPATH/system/product/priv-app
+#pm install -r /data/local/tmp/PrebuiltGmsCoreRvc/PrebuiltGmsCoreRvc.apk >&2
+FREEZE /system/product/priv-app/PrebuiltGmsCoreRvc
 fi
 
 if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Gboard.apk')" ];then
