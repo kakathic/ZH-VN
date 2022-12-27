@@ -77,7 +77,7 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Phonesky.apk')" ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
 mkdir -p /data/local/tmp/Phonesky;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/Phonesky/Phonesky.apk;
 cp -rf /data/local/tmp/Phonesky $MODPATH/system/product/priv-app
@@ -89,7 +89,7 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /da
 pm install -r /data/local/tmp/Phonesky/Phonesky.apk >&2
 fi
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'PrebuiltGmsCoreRvc.apk')" ];then
+if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GmsCore.apk')" ];then
 echo > $MODPATH/NO
 mkdir -p /data/local/tmp/PrebuiltGmsCoreRvc;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/PrebuiltGmsCoreRvc/PrebuiltGmsCoreRvc.apk;
