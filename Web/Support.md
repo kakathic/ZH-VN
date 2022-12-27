@@ -22,7 +22,10 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 - Ví dụ:
 
 >> Tên máy: raphael<br/>
->> Xiaomi id: 152533xxxx
+>> Xiaomi id: 152533xxxx<br/>
+>> Hoặc MEID: 24272427xxxxxx
+
+Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
 
 - Nếu bạn dùng nhiều máy bạn sẽ phải ủng hộ nhiều hơn, 10k/1 thiết bị.
 
@@ -32,10 +35,14 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 > [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/Hieu.like.0210)
 
-- Hai ảnh ở dưới cho bạn biết tài khoản mi id và tên máy.
+- Hình ảnh ở dưới cho bạn biết tài khoản mi id, tên mã máy (Tên rom bạn tải), và mã MEID.
+
+   + Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp0.jpg" height="auto" width="99%" />
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp1.jpg" height="auto" width="99%" /> 
+
+> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/imei.jpg" height="auto" width="99%" /> 
 
 ## 🎊 Cảm ơn bạn đã ủng hộ
