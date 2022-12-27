@@ -7,6 +7,10 @@
 **Nhật ký thay đổi**
 ----
 
+1.4
+
+Fix lỗi vh widget
+
 1.3
 
 - Fix
