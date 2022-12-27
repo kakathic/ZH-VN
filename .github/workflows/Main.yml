@@ -16,7 +16,7 @@ jobs:
       - name: Run Code
         run: |
           # kakathic
-          VS=1.3
+          VS=1.4
           echo "VS=$VS" >> $GITHUB_ENV
           . .github/Install.sh
       - name: Upload
