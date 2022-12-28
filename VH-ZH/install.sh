@@ -232,6 +232,13 @@ com.unionpay.tsmservice.mi
 com.xiaomi.payment
 com.xiaomi.aireco
 com.mobiletools.systemhelper
+com.xiaomi.shop
+com.miui.smarttravel
+com.xiaomi.jr
+com.xiaomi.youpin
+com.xiaomi.vipaccount
+com.miui.virtualsim
+
 "
 mrw
 Gappcn(){
