@@ -96,6 +96,23 @@ Vk 2
 Licham=$input
 fi
 
+ui_print "- Gỡ cài đặt ứng dụng China rác ?"
+ui_print
+ui_print2 "1. Có"
+ui_print2 "2. Không"
+
+if [ "$(GP Appchina)" ];then
+goappcn=$(GP Appchina)
+ui_print
+ui_print2 "Chọn: $goappcn"
+ui_print
+else
+ui_print
+ui_print2 "1"
+Vk 2
+goappcn=$input
+fi
+
 ui_print "- Sử dụng Font chữ Việt hóa ?"
 ui_print
 ui_print2 "1. Tắt"
@@ -199,6 +216,29 @@ else
 ui_print2 "Xoá Font"
 ui_print
 rm -fr $MODPATH/system/fonts
+fi
+
+# Gỡ cài đặt app
+if [ "$goappcn" == 1 ];then
+ui_print2 "Gỡ App rác"
+ui_print
+# Danh sách những app cần gỡ 
+Listappcn="com.mipay.wallet
+"
+mrw
+Gappcn(){
+ui_print2 "Gỡ: $1" >&2
+pm uninstall $1 >&2
+Pathappvcfgvchb="$(pm path "$1" | cut -d : -f2)"
+if [ "$Pathappvcfgvchb" ];then
+rm -fr $Pathappvcfgvchb
+[ -e "$(magisk --path)/.magisk/mirror$Pathappvcfgvchb" ] && FREEZE $Pathappvcfgvchb
+fi
+}
+for vakkkhddddv in $Listappcn; do
+Gappcn "$vakkkhddddv"
+done
+mro
 fi
 
 # Dịch vụ gg
