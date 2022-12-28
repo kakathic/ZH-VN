@@ -33,7 +33,7 @@ Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải
 
 **📧 Gửi đến**
 
-> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/Hieu.like.0210)
+> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
 
 - Hình ảnh ở dưới cho bạn biết tài khoản mi id, tên mã máy (Tên rom bạn tải), và mã MEID.
 
