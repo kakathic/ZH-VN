@@ -176,5 +176,7 @@ mv -f $linkw2/widget_2x2.zip $linkw2/widget_2x2
 rm -fr manifest.xml strings
 fi
 fi
+
+chmod -R 777 $Link1
 #killall com.miui.home
 killall com.miui.personalassistant 2>/dev/null
