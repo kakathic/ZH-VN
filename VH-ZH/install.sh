@@ -224,6 +224,12 @@ ui_print2 "Gỡ App rác"
 ui_print
 # Danh sách những app cần gỡ 
 Listappcn="com.mipay.wallet
+com.miui.analytics
+com.xiaomi.ab
+com.miui.voiceassist
+com.miui.voicetrigger
+com.unionpay.tsmservice.mi
+
 "
 mrw
 Gappcn(){
