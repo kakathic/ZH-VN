@@ -229,7 +229,9 @@ com.xiaomi.ab
 com.miui.voiceassist
 com.miui.voicetrigger
 com.unionpay.tsmservice.mi
-
+com.xiaomi.payment
+com.xiaomi.aireco
+com.mobiletools.systemhelper
 "
 mrw
 Gappcn(){
