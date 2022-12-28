@@ -159,6 +159,7 @@ sed -i -e "s|Tap to get weather info|Nhấn để nhận thông tin thời tiế
 cd "$linkw1"
 zip -qr -0 $linkw1/widget_2x2.zip strings/strings_vi_VN.xml
 mv -f $linkw1/widget_2x2.zip $linkw1/widget_2x2
+rm -fr strings
 fi
 
 linkw2="$Link0/a71db3f8-fc64-428c-8a80-5d11cf75be09"
@@ -172,6 +173,7 @@ sed -i -e "s|eqs(@lang,'ug_CN')|1|" $linkw2/manifest.xml
 cd "$linkw2"
 zip -qr -0 $linkw2/widget_2x2.zip manifest.xml strings/strings_vi_VN.xml
 mv -f $linkw2/widget_2x2.zip $linkw2/widget_2x2
+rm -fr manifest.xml strings
 fi
 fi
 #killall com.miui.home
