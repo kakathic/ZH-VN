@@ -150,8 +150,8 @@ echo "- Tổng kho $kakabs widget, đã dịch xong"
 # Dịch widget mặc định
 if [ -e $Link0/b8006e83-c497-4642-9815-f674b82842b0 ];then
 linkw1="$Link0/b8006e83-c497-4642-9815-f674b82842b0"
-if [ ! -e "$linkw1/Vip" ];then
-echo > $linkw1/Vip
+if [ ! -e "$Link1/Vip1" ];then
+echo > $Link1/Vip1
 mv $linkw1/widget_2x2 $linkw1/widget_2x2.zip
 unzip -qo $linkw1/widget_2x2.zip strings/strings_en_US.xml -d "$linkw1"
 mv $linkw1/strings/strings_en_US.xml $linkw1/strings/strings_vi_VN.xml
@@ -163,8 +163,8 @@ rm -fr strings
 fi
 
 linkw2="$Link0/a71db3f8-fc64-428c-8a80-5d11cf75be09"
-if [ ! -e "$linkw2/Vip" ];then
-echo > $linkw2/Vip
+if [ ! -e "$Link1/Vip2" ];then
+echo > $Link1/Vip2
 mv $linkw2/widget_2x2 $linkw2/widget_2x2.zip
 unzip -qo $linkw2/widget_2x2.zip manifest.xml strings/strings_en_US.xml -d "$linkw2"
 mv $linkw2/strings/strings_en_US.xml $linkw2/strings/strings_vi_VN.xml
