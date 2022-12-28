@@ -28,6 +28,12 @@ VH=
 Licham2=
 #-----------------------#
 
+# Gỡ bỏ các ứng dụng china không dùng
+# 1 Bật
+# 2 Tắt
+Appchina=
+#-----------------------#
+
 #-------#
 # Thêm font chữ tiếng Việt: 
 # 1 Tắt
