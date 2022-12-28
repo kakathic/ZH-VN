@@ -199,6 +199,25 @@ fi
 if [ "$apkcai" == 1 ];then
 VB="iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I"
 Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "com.miui.packageinstaller/classes*")"
+
+
+Vsmali ".method public static final c(Landroid\/content\/pm\/ApplicationInfo;)Z" \
+".end method" \
+'.method public static final c(Landroid\/content\/pm\/ApplicationInfo;)Z
+    .registers 3
+    const/4 v1, 0x1
+    return v1
+.end method' \
+"$TMPDIR/Apk/com.miui.packageinstaller/classes*"
+
+Vsmali ".method public static q(Landroid\/content\/pm\/ApplicationInfo;)Z" \
+".end method" \
+'.method public static q(Landroid\/content\/pm\/ApplicationInfo;)Z
+    .registers 3
+    const/4 v1, 0x1
+    return v1
+.end method' \
+"$TMPDIR/Apk/com.miui.packageinstaller/classes*"
 fi
 
 if [ "$tietkiem" == 1 ];then
