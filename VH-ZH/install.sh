@@ -241,6 +241,22 @@ done
 mro
 fi
 
+ui_print "- Thêm ứng dụng vào danh sách sửa lỗi thông báo"
+ui_print
+for Ksksn in $(pm list packages -3 | cut -d : -f2); do
+#cmd package compile -m speed $Ksksn
+dumpsys deviceidle whitelist +$Ksksn
+am set-standby-bucket $Ksksn active
+cmd appops set $Ksksn START_FOREGROUND allow
+cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
+cmd appops set $Ksksn RUN_IN_BACKGROUND allow
+cmd appops set $Ksksn 10008 allow
+cmd appops start $Ksksn 10008
+ui_print "  $Ksksn"
+sleep 1
+done
+ui_print
+
 # Dịch vụ gg
 Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
 if [ -e $Ptkkf ];then
