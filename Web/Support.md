@@ -5,7 +5,7 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - Vì để module hỗ trợ lâu dài bạn hãy ủng hộ ad để module được tiếp tục hỗ trợ.
 
-- ❌ Ủng hộ 10k chỉ có hiệu lực trong năm 2022
+- ❌ Gửi 10k chỉ có hiệu lực trong năm 2022
 
 - ✅ **Từ năm 2023 sẽ tăng giá thành 20k**
 
