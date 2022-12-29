@@ -7,6 +7,8 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - Ủng hộ 10k
 
++ Từ năm 2023 sẽ tăng giá thành 20k vì 10k còn k mua đk ổ bánh mì các bạn thông cảm.
+
 - Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
 
 + Sau khi ủng hộ bạn sẽ được sử dụng vĩnh viễn đối với tài khoản và thiết bị hiện tại.
