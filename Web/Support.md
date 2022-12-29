@@ -5,9 +5,9 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - Vì để module hỗ trợ lâu dài bạn hãy ủng hộ ad để module được tiếp tục hỗ trợ.
 
-- [ ] Ủng hộ 10k chỉ có hiệu lực trong năm 2022
+- ❌ Ủng hộ 10k chỉ có hiệu lực trong năm 2022
 
-- [x] **Từ năm 2023 sẽ tăng giá thành 20k vì 10k còn k mua đk ổ bánh mì các bạn thông cảm.**
+- ✅ **Từ năm 2023 sẽ tăng giá thành 20k**
 
 - Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
 
