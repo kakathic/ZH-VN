@@ -7,7 +7,9 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - ❌ Gửi 10k chỉ có hiệu lực trong năm 2022
 
-- ✅ **Từ năm 2023 sẽ tăng giá thành 20k**
+- ✅ **Từ năm 2023 sẽ tăng thành 20k**
+
+- Sau khi ủng hộ sẽ được sử dụng vĩnh viễn trên thiết bị đó, ủng hộ 1 lần sử dụng mãi mãi.
 
 - Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
 
