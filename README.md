@@ -41,7 +41,7 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 **Hỗ trợ mô-đun**
 ---
 
-- Để mô-đun hỗ trợ lâu dài mỗi thiết bị khi sử dụng phải ủng hộ 10k để sử dụng vĩnh viễn.
+- Để mô-đun hỗ trợ lâu dài hãy ủng hộ để sử dụng vĩnh viễn.
 
 - [Cách ủng hộ](/Web/Support.md)
 
