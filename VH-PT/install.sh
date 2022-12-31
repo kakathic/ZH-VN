@@ -129,17 +129,17 @@ Vk 2
 ttiet=$input
 fi
 
+if [ "$(GP TKpin2)" ];then
 ui_print "- Mod ứng dụng Tiết kiệm pin ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
 
-if [ "$(GP TKpin)" ];then
 tietkiem=$(GP TKpin)
 ui_print
 ui_print2 "Chọn: $tietkiem"
 ui_print
-else
+#else
 ui_print
 ui_print2 "1"
 Vk 2
