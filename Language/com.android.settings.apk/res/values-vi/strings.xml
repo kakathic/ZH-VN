@@ -12382,4 +12382,21 @@ Tính năng này chỉ hoạt động khi điều hướng hệ thống được
 - Chạy tính năng này một hoặc hai lần nếu bạn thấy rằng loa của mình bị bụi chặn nhẹ.
 - Nếu loa bị chặn nhiều, hãy chạy tính năng này %1$d-%2$d lần trong khi lắc thiết bị của bạn với mặt loa hướng xuống dưới.</string>
 	<string name="string_float_seconds">%f giây</string>
+	    <string name="permissions_usage_summary">Hiển thị các ứng dụng nào gần đây đã sử dụng quyền</string>
+    <string name="permissions_usage_title">Bảng điều khiển quyền riêng tư</string>
+    <string name="location_settings_footer_general">Các ứng dụng có quyền của thiết bị gần đó có thể xác định vị trí tương đối của các thiết bị được kết nối.</string>
+    <string name="location_settings_footer_location_off">Truy cập vị trí là TẮT cho các ứng dụng và dịch vụ. Vị trí thiết bị của bạn vẫn có thể được gửi đến người ứng cứu khẩn cấp khi bạn gọi hoặc nhắn tin cho số khẩn cấp.</string>
+
+    <string name="window_blurs">Cho phép làm mờ ở cấp độ cửa sổ</string>
+    <string name="enable_non_resizable_multi_window">Cho phép không thể thay đổi kích thước trong nhiều cửa sổ</string>
+    <string name="enable_non_resizable_multi_window_summary">Cho phép các ứng dụng không thể thay đổi kích thước nằm trong nhiều cửa sổ</string>
+    <string name="reset_importance_completed">Đặt lại thông báo Tầm quan trọng đã hoàn thành.</string>
+    <string name="asst_importance_reset_title">Đặt lại thông báo tầm quan trọng</string>
+    <string name="transcode_default">Giả sử các ứng dụng hỗ trợ các định dạng hiện đại</string>
+    <string name="transcode_disable_cache">Tắt bộ đệm chuyển mã</string>
+    <string name="transcode_enable_all">Bật chuyển mã</string>
+    <string name="transcode_notification">Hiển thị thông báo chuyển mã</string>
+    <string name="transcode_settings_title">Cài đặt chuyển mã phương tiện</string>
+    <string name="transcode_user_control">Ghi đè mặc định chuyển mã</string>
+    <string name="transition_animation_scale_title">Quy mô hoạt ảnh chuyển tiếp</string>
 </resources>
