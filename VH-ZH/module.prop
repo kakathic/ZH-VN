@@ -44,3 +44,13 @@ fontchu=
 # Ở bộ nhớ trong tìm thư mục VH-MI/fonts
 # Hãy để font trong thư mục đó.
 #-------#
+
+#-----------------------#
+# Danh sách các ứng dụng sẽ được fix thông báo
+# Eg: com.facebook.katana,com.facebook.orca,org.telegram.messenger
+# Phân cách bởi dấu -Phẩy-
+
+ListApp=
+#-----------------------#
+
+
