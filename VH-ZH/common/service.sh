@@ -40,31 +40,35 @@ sleep 20
 echo > ${0%/*}/app.log
 echo > ${0%/*}/widget.log
 
-for Ksksn in $(pm list packages -3 | cut -d : -f2); do
-#cmd package compile -m speed $Ksksn
-dumpsys deviceidle whitelist +$Ksksn
-am set-standby-bucket $Ksksn active
-#cmd appops start $Ksksn 10008
-cmd appops set $Ksksn START_FOREGROUND allow
-cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
-cmd appops set $Ksksn RUN_IN_BACKGROUND allow
-cmd appops set $Ksksn 10008 allow
-echo "$Ksksn" >> ${0%/*}/app.log
-done
-
 cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
 
 [ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log &
 
-for Ksksn in $(pm list packages -3 | cut -d : -f2); do
-#cmd package compile -m speed $Ksksn
+while true; do
+kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n')";
+[ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
+for Ksksn in $kncfgvv; do
+if [ "$(cmd appops get $Ksksn | grep -cm1 'MIUIOP(10008)')" == 0 ];then
+cmd appops start $Ksksn START_FOREGROUND
+cmd appops start $Ksksn RUN_ANY_IN_BACKGROUND
+cmd appops start $Ksksn RUN_IN_BACKGROUND
+cmd appops start $Ksksn 10008
+cmd appops start $Ksksn 10021
+echo "$(date) +$Ksksn" >> ${0%/*}/app.log
+sleep 1
+fi
+sleep 0.2
+if [ "$(cmd appops get $Ksksn | grep -m1 'MIUIOP(10008)' | grep -cm1 'allow')" == 0 ];then
 dumpsys deviceidle whitelist +$Ksksn
 am set-standby-bucket $Ksksn active
-#cmd appops start $Ksksn 10008
 cmd appops set $Ksksn START_FOREGROUND allow
 cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
 cmd appops set $Ksksn 10008 allow
-echo "$Ksksn" >> ${0%/*}/app.log
+cmd appops set $Ksksn 10021 allow
+echo "$(date) $Ksksn" >> ${0%/*}/app.log
+sleep 1
+fi
+done
 done
