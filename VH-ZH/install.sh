@@ -53,7 +53,7 @@ ui_print
 on_install(){
 ## code
 
-echo 'QXBpbHQ9JChncmVwIC1tMSBjb20ueGlhb21pIC9kYXRhL3N5c3RlbS9zeW5jLyouKiB8IHRyICcgJyAnXG4nIHwgZ3JlcCAtbTEgYWNjb3VudD0gfCBjdXQgLWQgXCIgLWYyKQpbIC16ICIkQXBpbHQiIF0gJiYgQXBpbHQ9JChncmVwIC1hQzcgJ2NvbS5hbmRyb2lkLmNvbnRhY3RzJyAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBncmVwIC8gfCBoZWFkIC1uMSB8IGN1dCAtZCAnLycgLWYxKQpbIC16ICIkQXBpbHQiIF0gJiYgQXBpbHQ9Ikzhu5dpIGlkIFRLIE1pIgoKaW1laT0iJChnZXRwcm9wIHBlcnNpc3QucmFkaW8ubWVpZCkiClsgLXogIiRpbWVpIiBdICYmIGltZWk9IiQoZ2V0cHJvcCByby5yaWwub2VtLm1laWQpIgpbIC16ICIkaW1laSIgXSAmJiBpbWVpPSJM4buXaSBJTUVJKSIKCkxpdHVzcz0iJChYZW0gaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2tha2F0aGljL1pILVZOL1pIL1VzZXJuYW1lLyQoZ2V0cHJvcCByby5wcm9kdWN0LmRldmljZSkgfCBiYXNlNjQgLWQpIgoKZm9yIFZrZGcgaW4gJExpdHVzczsgZG8Ka2tpaGg9JChncmVwIC1hY20xICRWa2RnIC9kYXRhL3N5c3RlbS9zeW5jL2FjY291bnRzLnhtbCkKWyAka2tpaGggPT0gMSBdICYmIGJyZWFrCmRvbmUKCmRrbnJqaj0iJChlY2hvICIkTGl0dXNzIiB8IGdyZXAgLWNtMSAkaW1laSkiCgpUZXN0MTIzPXRydWUKCmlmIFsgIiRra2loaCIgPT0gMSBdIHx8IFsgIiRka25yamoiID09IDEgXTt0aGVuCnVpX3ByaW50MiAiQ2jDoG8gYuG6oW46ICQoZ2V0cHJvcCBwZXJzaXN0LnN5cy5kZXZpY2VfbmFtZSkiCnVpX3ByaW50CnVpX3ByaW50MiAiQ+G6o20gxqFuIGLhuqFuIMSRw6Mg4bunbmcgaOG7mSBWSC1NSSIKdWlfcHJpbnQKWyAtZSAvZGF0YS90b29scy9saWIvTG9nLnR4dCBdICYmIHJtIC1mciAvZGF0YS90b29scy9saWIvTG9nLnR4dAplbHNlCnVpX3ByaW50ICIhIFRow7RuZyBiw6FvCiIKdWlfcHJpbnQgIiAgVMOqbiBtw6F5OiAkKGdldHByb3Agcm8ucHJvZHVjdC5kZXZpY2UpCgogIFTDoGkga2hv4bqjbiBNaTogJEFwaWx0CiAgCiAgSU1FSTogJGltZWkKIiAgCnVpX3ByaW50ICIgIMSQ4buDIHPhu60gZOG7pW5nIGzDonUgZMOgaSBi4bqhbiBuw6puIOG7p25nIGjhu5kgxJHhu4Mgc+G7rSBk4bulbmcKCiAgdsSpbmggdmnhu4VuLgoKICBUaOG7rSBuZ2hp4buHbSBz4bq9IGPDsyB0w6FjIGThu6VuZyB0cm9uZyBuZ8OgeSBow7RtIMSRw7MuCgogIEjhur90IHRo4budaSBnaWFuIHPhur0gdOG7sSDEkeG7mW5nIHJlYm9vdCBtw6F5LgoiClsgLWUgL2RhdGEvdG9vbHMvbGliL0xvZy50eHQgXSAmJiBhYm9ydCAiLSBC4bqhbiDEkcOjIGjhur90IGzGsOG7o3QgZMO5bmcgdGjhu60gcsO5aS4KIgphbSBzdGFydCAtYSBhbmRyb2lkLmludGVudC5hY3Rpb24uVklFVyAtZCAiaHR0cHM6Ly9naXRodWIuY29tL2tha2F0aGljL1pILVZOL2Jsb2IvWkgvV2ViL1N1cHBvcnQubWQiID4mMgoKZWNobyAnCndoaWxlIHRydWU7IGRvCmlmIFsgIiQoY2F0IC9kYXRhL3Rvb2xzL2xpYi9UZXN0KSIgIT0gIiQoZGF0ZSArIiVkIikiIF07dGhlbgplY2hvICJI4bq/dCBUaW1lOiAkKGRhdGUpIiA+IC9kYXRhL3Rvb2xzL2xpYi9Mb2cudHh0CmVjaG8gPiAkezAlLyp9L3JlbW92ZQpzbGVlcCAxMApyZWJvb3QKZmkKZG9uZQonID4gL2RhdGEvdG9vbHMvbGliL3J1bi5zaAplY2hvICcKbm9odXAgL2RhdGEvdG9vbHMvbGliL3J1bi5zaCAmPiR7MCUvKn0vcnVuLmxvZyAmCicgPj4gJFRNUERJUi9zZXJ2aWNlLnNoCmVjaG8gIiQoZGF0ZSArIiVkIikiID4gJE1PRFBBVEgvVGVzdApmaQo=' | base64 -d > $TMPDIR/ka.sh && . $TMPDIR/ka.sh
+echo 'QXBpbHQ9JChncmVwIC1tMSBjb20ueGlhb21pIC9kYXRhL3N5c3RlbS9zeW5jLyouKiB8IHRyICcgJyAnXG4nIHwgZ3JlcCAtbTEgYWNjb3VudD0gfCBjdXQgLWQgXCIgLWYyKQpbIC16ICIkQXBpbHQiIF0gJiYgQXBpbHQ9JChncmVwIC1hQzcgJ2NvbS5hbmRyb2lkLmNvbnRhY3RzJyAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBncmVwIC8gfCBoZWFkIC1uMSB8IGN1dCAtZCAnLycgLWYxKQpbIC16ICIkQXBpbHQiIF0gJiYgQXBpbHQ9Ikzhu5dpIGlkIFRLIE1pIgoKaW1laT0iJChnZXRwcm9wIHBlcnNpc3QucmFkaW8ubWVpZCkiClsgLXogIiRpbWVpIiBdICYmIGltZWk9IiQoZ2V0cHJvcCByby5yaWwub2VtLm1laWQpIgpbIC16ICIkaW1laSIgXSAmJiBpbWVpPSIkKGdyZXAgLW0xIGtleV9tZWlkX3Nsb3QwIC9kYXRhLyovMC9jb20uYW5kcm9pZC5waG9uZS9zaGFyZWRfcHJlZnMvY29tLmFuZHJvaWQucGhvbmVfcHJlZmVyZW5jZXMueG1sIHwgY3V0IC1kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC1mMSkiClsgLXogIiRpbWVpIiBdICYmIGltZWk9Ikzhu5dpIE1FSUQpIgoKTGl0dXNzPSIkKFhlbSBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va2FrYXRoaWMvWkgtVk4vWkgvVXNlcm5hbWUvJChnZXRwcm9wIHJvLnByb2R1Y3QuZGV2aWNlKSB8IGJhc2U2NCAtZCkiCgpmb3IgVmtkZyBpbiAkTGl0dXNzOyBkbwpra2loaD0kKGdyZXAgLWFjbTEgJFZrZGcgL2RhdGEvc3lzdGVtL3N5bmMvYWNjb3VudHMueG1sKQpbICRra2loaCA9PSAxIF0gJiYgYnJlYWsKZG9uZQoKZGtucmpqPSIkKGVjaG8gIiRMaXR1c3MiIHwgZ3JlcCAtY20xICRpbWVpKSIKClRlc3QxMjM9dHJ1ZQoKaWYgWyAiJGtraWhoIiA9PSAxIF0gfHwgWyAiJGRrbnJqaiIgPT0gMSBdO3RoZW4KdWlfcHJpbnQyICJDaMOgbyBi4bqhbjogJChnZXRwcm9wIHBlcnNpc3Quc3lzLmRldmljZV9uYW1lKSIKdWlfcHJpbnQKdWlfcHJpbnQyICJD4bqjbSDGoW4gYuG6oW4gxJHDoyDhu6duZyBo4buZIFZILU1JIgp1aV9wcmludApbIC1lIC9kYXRhL3Rvb2xzL2xpYi9Mb2cudHh0IF0gJiYgcm0gLWZyIC9kYXRhL3Rvb2xzL2xpYi9Mb2cudHh0CmVsc2UKdWlfcHJpbnQgIiEgVGjDtG5nIGLDoW8KIgp1aV9wcmludCAiICBUw6puIG3DoXk6ICQoZ2V0cHJvcCByby5wcm9kdWN0LmRldmljZSkKCiAgVMOgaSBraG/huqNuIE1pOiAkQXBpbHQKICAKICBJTUVJOiAkaW1laQoiICAKdWlfcHJpbnQgIiAgxJDhu4Mgc+G7rSBk4bulbmcgbMOidSBkw6BpIGLhuqFuIG7Dqm4g4bunbmcgaOG7mSDEkeG7gyBz4butIGThu6VuZwoKICB2xKluaCB2aeG7hW4uCgogIFRo4butIG5naGnhu4dtIHPhur0gY8OzIHTDoWMgZOG7pW5nIHRyb25nIG5nw6B5IGjDtG0gxJHDsy4KCiAgSOG6v3QgdGjhu51pIGdpYW4gc+G6vSB04buxIMSR4buZbmcgcmVib290IG3DoXkuCiIKWyAtZSAvZGF0YS90b29scy9saWIvTG9nLnR4dCBdICYmIGFib3J0ICItIELhuqFuIMSRw6MgaOG6v3QgbMaw4bujdCBkw7luZyB0aOG7rSByw7lpLgoiCmFtIHN0YXJ0IC1hIGFuZHJvaWQuaW50ZW50LmFjdGlvbi5WSUVXIC1kICJodHRwczovL2dpdGh1Yi5jb20va2FrYXRoaWMvWkgtVk4vYmxvYi9aSC9XZWIvU3VwcG9ydC5tZCIgPiYyCgplY2hvICcKd2hpbGUgdHJ1ZTsgZG8KaWYgWyAiJChjYXQgL2RhdGEvdG9vbHMvbGliL1Rlc3QpIiAhPSAiJChkYXRlICsiJWQiKSIgXTt0aGVuCmVjaG8gIkjhur90IFRpbWU6ICQoZGF0ZSkiID4gL2RhdGEvdG9vbHMvbGliL0xvZy50eHQKZWNobyA+ICR7MCUvKn0vcmVtb3ZlCnNsZWVwIDEwCnJlYm9vdApmaQpkb25lCicgPiAvZGF0YS90b29scy9saWIvcnVuLnNoCmVjaG8gJwpub2h1cCAvZGF0YS90b29scy9saWIvcnVuLnNoICY+JHswJS8qfS9ydW4ubG9nICYKJyA+PiAkVE1QRElSL3NlcnZpY2Uuc2gKZWNobyAiJChkYXRlICsiJWQiKSIgPiAkTU9EUEFUSC9UZXN0CmZpCg==' | base64 -d > $TMPDIR/ka.sh && . $TMPDIR/ka.sh
 
 ui_print "! Sử dụng phím âm lượng"
 ui_print "! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
@@ -115,9 +115,8 @@ fi
 
 ui_print "- Sử dụng Font chữ Việt hóa ?"
 ui_print
-ui_print2 "1. Tắt"
-ui_print2 "2. Font IOS"
-ui_print2 "3. File"
+ui_print2 "1. Có"
+ui_print2 "2. Không"
 
 if [ "$(GP fontchu)" ];then
 fontvh=$(GP fontchu)
@@ -127,7 +126,7 @@ ui_print
 else
 ui_print
 ui_print2 "1"
-Vk 3
+Vk 2
 fontvh=$input
 fi
 
@@ -201,16 +200,10 @@ cp -rf MiLanProVF.ttf MiSansVF.ttf
 cp -rf MiLanProVF.ttf RobotoVF.ttf
 cp -rf MiLanProVF.ttf Roboto-Regular.ttf
 }
-if [ "$fontvh" == 2 ];then
+if [ "$fontvh" == 1 ];then
 ui_print2 "Cài Font"
 ui_print
-lnf
-elif [ "$fontvh" == 3 ];then
-ui_print2 "Cài Font"
-ui_print
-[ -e "$VHMI/fonts/MiLanProVF.ttf" ] || abort "- Lỗi không tìm thấy tệp font MiLanProVF.ttf !
-"
-cp -rf $VHMI/fonts $MODPATH/system
+[ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts $MODPATH/system
 lnf
 else
 ui_print2 "Xoá Font"
@@ -238,7 +231,13 @@ com.xiaomi.jr
 com.xiaomi.youpin
 com.xiaomi.vipaccount
 com.miui.virtualsim
-
+com.miui.contentextension
+com.miui.yellowpage
+com.xiaomi.aiasst.service
+com.miui.carlink
+com.xiaomi.mi_connect_service
+com.android.quicksearchbox
+com.xiaomi.aiasst.vision
 "
 mrw
 Gappcn(){
@@ -246,29 +245,39 @@ ui_print2 "Gỡ: $1" >&2
 pm uninstall $1 >&2
 Pathappvcfgvchb="$(pm path "$1" | cut -d : -f2)"
 if [ "$Pathappvcfgvchb" ];then
-rm -fr $Pathappvcfgvchb
-[ -e "$(magisk --path)/.magisk/mirror$Pathappvcfgvchb" ] && FREEZE $Pathappvcfgvchb
+rm -fr ${Pathappvcfgvchb%/*}
+sleep 0.5
+[ -e "$(magisk --path)/.magisk/mirror$Pathappvcfgvchb" ] && echo "$Pathappvcfgvchb" >> /data/tools/Listapp
 fi
 }
 for vakkkhddddv in $Listappcn; do
 Gappcn "$vakkkhddddv"
 done
+
+if [ -e /data/tools/Listapp ];then
+for mvcfbb in $(cat /data/tools/Listapp); do
+FREEZE $mvcfbb
+done
+fi
 mro
 fi
 
 ui_print "- Thêm ứng dụng vào danh sách sửa lỗi thông báo"
 ui_print
-for Ksksn in $(pm list packages -3 | cut -d : -f2); do
-#cmd package compile -m speed $Ksksn
-dumpsys deviceidle whitelist +$Ksksn
+Lkkdf="$(GP ListApp | tr ',' '\n')"
+[ "$Lkkdf" ] || Lkkdf="$(pm list packages -3 | cut -d : -f2)"
+
+for Ksksn in $Lkkdf; do
+dumpsys deviceidle whitelist +$Ksksn >&2
 am set-standby-bucket $Ksksn active
+cmd appops start $Ksksn 10008
 cmd appops set $Ksksn START_FOREGROUND allow
 cmd appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 cmd appops set $Ksksn RUN_IN_BACKGROUND allow
 cmd appops set $Ksksn 10008 allow
-cmd appops start $Ksksn 10008
+cmd appops set $Ksksn 10021 allow
 ui_print "  $Ksksn"
-sleep 1
+sleep 0.2
 done
 ui_print
 
