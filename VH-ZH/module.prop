@@ -36,9 +36,8 @@ Appchina=
 
 #-------#
 # Thêm font chữ tiếng Việt: 
-# 1 Tắt
-# 2 Font IOS
-# 3 File
+# 1 Bật
+# 2 Tắt 
 fontchu=
 # Mục thứ 3
 # Ở bộ nhớ trong tìm thư mục VH-MI/fonts
