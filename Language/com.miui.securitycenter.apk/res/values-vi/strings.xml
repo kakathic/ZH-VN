@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<string name="show_system_app">Hiển thị ứng dụng hệ thống</string>
+ <string name="app_behavior_record_show_system">Hiển thị ứng dụng hệ thống</string>
     <string name="fw_blocked">Danh sách chặn</string>
     <string name="fw_oversea">Chặn cuộc gọi từ nước ngoài</string>
     <string name="fw_blocked_count">"Đã chặn "</string>
