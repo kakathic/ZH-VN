@@ -813,4 +813,26 @@ Ngoài ra, bạn có thể tắt Chế độ đơn giản và thử lại."</str
         <string name="install_version">Phiên bản: %1$s</string>
         <string name="install_version_replace">Phiên bản: %1$s &gt; %2$s</string>
         <string name="risk_app_install_item_des">Phiên bản: %1$s</string>
+    <string name="risk_app_install_manager">Ứng dụng có thể có rủi ro</string>
+    <string name="risk_app_install_empty_text">Chưa có mục nào ở đây</string>
+    <string name="risk_app_install_history">Lịch sử ủy quyền</string>
+    <string name="empty_app">Không có ứng dụng</string>
+    <string name="security_mode_open_notification_action_button">Tìm hiểu thêm</string>
+    <string name="secure_mode_authority_verification_type">Phương pháp xác minh ủy quyền</string>
+    <string name="safe_install_mode_settings_old">Chế độ an toàn</string>
+    <string name="safe_mode">Chế độ an toàn</string>
+    <string name="safe_mode_already_authorize">Cho phép</string>
+    <string name="safe_mode_authorize_name">Cài đặt gần đây: %1$s</string>
+    <string name="safe_mode_authorize_once_install">Cho phép một lần</string>
+    <string name="safe_mode_close_tip">Tắt chế độ Bảo mật</string>
+    <string name="general_mode_setting">Cài đặt chế độ chung</string>
+    <string name="general_mode_setting_subtitle">Bảo vệ các ứng dụng rủi ro và bảo vệ quyền riêng tư và bảo mật</string>
+    <string name="general_mode_subtitle">Bảo vệ các ứng dụng rủi ro và bảo vệ quyền riêng tư và bảo mật</string>
+    <string name="general_mode_title">Kiểu phổ biến</string>
+    <string name="detect_risk">Rủi ro được phát hiện</string>
+    <string name="security_mode_off_suggestion_msg">  Khuyến khích  </string>
+    <string name="settings_security_mode_service_list_title_off_msg">Vì mục đích an toàn, vui lòng bật nhân viên bảo vệ, nơi sẽ cung cấp cho bạn các dịch vụ sau</string>
+    <string name="safe_mode_introduce_close_tip">Dấu nhắc đóng</string>
+    <string name="safe_mode_introduce_close_tip_des">Vì lý do an toàn, vui lòng bật trình bảo vệ để bảo vệ an ninh thiết bị, bảo mật quyền riêng tư, bảo mật tài sản, v.v</string>
+    <string name="app_info_size">Kích thước: %1$s</string>
 </resources>
