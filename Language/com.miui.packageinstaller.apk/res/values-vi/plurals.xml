@@ -68,4 +68,32 @@
     <plurals name="miuix_appcompat_items_selected">
         <item quantity="other">%d mục đã chọn</item>
     </plurals>
+    <plurals name="pure_mode_guard_day">
+        <item quantity="one">Chế độ bảo mật đã được bật cho %d ngày</item>
+        <item quantity="other">Chế độ bảo mật đã được bật cho %d ngày</item>
+    </plurals>
+    <plurals name="settings_security_mode_protect_days">
+        <item quantity="one">Chế độ bảo mật đã được bật cho &lt;font color=#0D84FF&gt;%1$s&lt;/font&gt; ngày</item>
+        <item quantity="other">Chế độ bảo mật đã được bật cho &lt;font color=#0D84FF&gt;%1$s&lt;/font&gt; ngày</item>
+    </plurals>
+    <plurals name="settings_security_mode_title_on_msg">
+        <item quantity="one">Chế độ bảo mật đã được bật cho %1$s ngày</item>
+        <item quantity="other">Chế độ bảo mật đã được bật cho %1$s ngày</item>
+    </plurals>
+    <plurals name="settings_security_mode_enable_count">
+        <item quantity="one">Chế độ bảo mật đang hoạt động &lt;font color=#0D84FF&gt;%1$s&lt;/font&gt; thiết bị</item>
+        <item quantity="other">Chế độ bảo mật đang hoạt động &lt;font color=#0D84FF&gt;%1$s&lt;/font&gt; thiết bị</item>
+    </plurals>
+    <plurals name="app_info_permission_count">
+        <item quantity="one">%1$s quyền</item>
+        <item quantity="other">%1$s quyền</item>
+    </plurals>
+    <plurals name="app_info_permission_count_">
+        <item quantity="one">%1$s quyền,</item>
+        <item quantity="other">%1$s quyền,</item>
+    </plurals>
+    <plurals name="app_info_private_permission_count">
+        <item quantity="one">%1$s quyền riêng tư</item>
+        <item quantity="other">%1$s quyền riêng tư</item>
+    </plurals>
 </resources>
