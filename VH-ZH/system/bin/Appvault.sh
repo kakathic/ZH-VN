@@ -177,6 +177,6 @@ rm -fr manifest.xml strings
 fi
 fi
 
-chmod -R 777 $Link1
+chmod -R 777 $Link0
 #killall com.miui.home
 killall com.miui.personalassistant 2>/dev/null
