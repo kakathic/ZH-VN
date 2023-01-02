@@ -238,6 +238,7 @@ com.miui.carlink
 com.xiaomi.mi_connect_service
 com.android.quicksearchbox
 com.xiaomi.aiasst.vision
+com.miui.accessibility
 "
 mrw
 Gappcn(){
