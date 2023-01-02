@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="media_management_apps_title">Ứng dụng quản lý phương tiện truyền thông</string>
+    <string name="alarms_and_reminders_title">Báo Động &amp; nhắc nhở</string>
     <string name="gxzw_anim_metal">Kim loại</string>
     <string name="gxzw_anim_pulse">Mạch xung</string>
     <string name="gxzw_anim_rhythm">Nhịp điệu</string>
