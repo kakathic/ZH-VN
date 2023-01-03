@@ -49,6 +49,8 @@ kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n
 [ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
 
 for Ksksn in $kncfgvv; do
+[ "$(cmd appops get $Ksksn | grep -cm1 'MIUIOP(10020)' | grep -cm1 'allow')" == 0 ] && ( cmd appops start $Ksksn 10020; cmd appops set $Ksksn 10020 allow )
+[ "$(cmd appops get $Ksksn | grep -cm1 'MIUIOP(10023)' | grep -cm1 'allow')" == 0 ] && ( cmd appops start $Ksksn 10023; cmd appops set $Ksksn 10023 allow )
 [ "$(cmd appops get $Ksksn | grep -cm1 'MIUIOP(10021)' | grep -cm1 'allow')" == 0 ] && ( cmd appops start $Ksksn 10021; cmd appops set $Ksksn 10021 allow )
 [ "$(cmd appops get $Ksksn | grep -cm1 'MIUIOP(10008)' | grep -cm1 'allow')" == 0 ] && ( cmd appops start $Ksksn 10008; cmd appops set $Ksksn 10008 allow )
 [ "$(cmd appops get $Ksksn | grep -cm1 'START_FOREGROUND' | grep -cm1 'allow')" == 0 ] && ( cmd appops start $Ksksn START_FOREGROUND; cmd appops set $Ksksn START_FOREGROUND allow )
@@ -57,3 +59,4 @@ for Ksksn in $kncfgvv; do
 done
 
 done
+
