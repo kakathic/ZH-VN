@@ -103,6 +103,7 @@ mkdir -p /data/local/tmp/Gboard;
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gboard.apk" "/data/local/tmp/Gboard/Gboard.apk";
 pm install -r /data/local/tmp/Gboard/Gboard.apk >&2
 cp -rf /data/local/tmp/Gboard $MODPATH/system/product/priv-app
+[ "$(pm path "com.google.android.gsf" | cut -d : -f2)" ] && $MODPATH/system/product/priv-app/GoogleServicesFramework
 
 sleep 1
 ime enable com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
