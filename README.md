@@ -19,8 +19,6 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
   > Crack Miui, hack theme, cài app hệ thống v.v
 
-  > Chưa hỗ trợ Android 13
-
 **VH-KE**
 
   > Gỡ getapps, bật bàn phím china mod v.v
