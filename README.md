@@ -48,8 +48,9 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 **Tính năng của VH-MI**
 ---
 
-1. Thêm tiếng việt
+1. Thêm tiếng việt từng ứng dụng 
    + Để thêm tiếng việt từng ứng dụng hãy làm theo bước sau
+   + Lưu ý: Chỉ VH ứng dụng của miui
    + Tạo 1 file ở trong thư mục `/sdcard/VH-MI`
    + Tên là `XList.md`
    + Rồi thêm ứng dụng muốn việt hóa vào đó
