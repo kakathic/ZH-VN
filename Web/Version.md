@@ -9,7 +9,9 @@
 
 1.4
 
-Fix lỗi vh widget
+- Fix lỗi vh widget
+
+- Fix lỗi thông báo
 
 1.3
 
