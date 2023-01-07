@@ -9,7 +9,7 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 + Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
-+ Module nếu chưa ủng hộ có thể dùng thử 1 ngày.
++ Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
 
 **VH-GA**
 
