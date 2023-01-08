@@ -60,3 +60,19 @@ am set-standby-bucket $Ksksn active
 sleep 1
 done
 
+sleep 5
+
+for Ksksn in $kncfgvv; do
+appops set $Ksksn RUN_IN_BACKGROUND allow
+appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
+appops set $Ksksn START_FOREGROUND allow
+appops set $Ksksn 10008 allow
+appops set $Ksksn 10021 allow
+appops set $Ksksn 10023 allow
+appops set $Ksksn 10020 allow
+dumpsys deviceidle whitelist +$Ksksn
+am set-standby-bucket $Ksksn active
+sleep 1
+done
+
+
