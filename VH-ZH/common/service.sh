@@ -50,7 +50,6 @@ kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n
 dumpsys deviceidle disable
 for Ksksn in $kncfgvv; do
 appops set $Ksksn 10008 allow
-appops set $Ksksn 10020 allow
 appops set $Ksksn 10021 allow
 appops set $Ksksn RUN_IN_BACKGROUND allow
 appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
