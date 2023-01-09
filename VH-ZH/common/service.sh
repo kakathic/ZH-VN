@@ -31,7 +31,7 @@ sleep 2
 fi
 done
 
-sleep 15
+sleep 20
 
 #pm disable com.xiaomi.joyose
 #pm disable com.miui.powerkeeper/com.miui.powerkeeper.statemachine.PowerStateMachineService
