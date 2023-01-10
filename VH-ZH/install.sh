@@ -284,6 +284,11 @@ sleep 0.2
 done
 ui_print
 
+for Bala in product vendor system_ext; do
+[ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
+[ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
+done
+
 # Dịch vụ gg
 Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
 if [ -e $Ptkkf ];then
