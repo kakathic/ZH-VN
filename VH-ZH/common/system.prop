@@ -5,3 +5,7 @@ ro.khu.vuc.cn=CN
 ro.vi.tri.cn=cn
 ro.vendor.audio.sfx.harmankardon=1
 persist.sys.ai_preload_cloud=1
+ro.product.model=IN2023
+ro.product.system.model=IN2023
+ro.product.vendor.model=IN2023
+ro.product.odm.model=IN2023
