@@ -347,8 +347,9 @@ done
 if [ "$chinann" == 2 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
 # Hệ thống mount
 kssndh="$(find /system -name ''$miuik'services.jar')"
+kssndbd="/system/framework"
 mrw
-rm -fr ${kssndh%/*}/oat ${kssndh%/*}/arm64 ${kssndh%/*}/arm ${kssndh%/*}/*.vdex
+rm -fr ${kssndh%/*}/oat ${kssndh%/*}/arm64 ${kssndh%/*}/arm ${kssndh%/*}/*.vdex $kssndbd/oat $kssndbd/arm64 $kssndbd/arm $kssndbd/*.vdex
 mro
 
 if [ -e ${kssndh%/*}/oat ];then
