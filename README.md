@@ -13,6 +13,9 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 - [Xem cách ủng hộ](/Web/Support.md)
 
+**Xem chi tiết Mô-đun**
+---
+
 **VH-GA**
 
   > Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
