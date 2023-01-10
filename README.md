@@ -41,7 +41,7 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 - Lưu ý: Fix thông báo
    - Sau khi bạn cài module tất cả ứng dụng trước đó sẽ được thêm vào danh sách fix thông báo nếu như những ứng dụng nào cài sau khi bạn đã flash module thì khởi động lại máy nó sẽ tự động thêm ứng dụng vừa cài vào danh sách fix thông báo.
 
-**Tính năng của VH-MI**
+**Tính năng nâng cao**
 ---
 
 1. Thêm tiếng việt từng ứng dụng 
