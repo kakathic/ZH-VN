@@ -11,6 +11,8 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 + Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
 
+- [Xem cách ủng hộ](/Web/Support.md)
+
 **VH-GA**
 
   > Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
@@ -35,13 +37,6 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 - Lưu ý: Fix thông báo
    - Sau khi bạn cài module tất cả ứng dụng trước đó sẽ được thêm vào danh sách fix thông báo nếu như những ứng dụng nào cài sau khi bạn đã flash module thì khởi động lại máy nó sẽ tự động thêm ứng dụng vừa cài vào danh sách fix thông báo.
-
-**Hỗ trợ mô-đun**
----
-
-- Để mô-đun hỗ trợ lâu dài hãy ủng hộ để sử dụng vĩnh viễn.
-
-- [Cách ủng hộ](/Web/Support.md)
 
 **Tính năng của VH-MI**
 ---
