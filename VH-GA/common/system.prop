@@ -1,1 +1,4 @@
 ro.control_privapp_permissions=log
+ro.product.model=Pixel
+ro.product.brand=Google
+ro.product.manufacturer=Google
