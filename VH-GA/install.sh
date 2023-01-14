@@ -74,7 +74,9 @@ sed -i -e '/cn.google.services/d' -e '/services_updater/d' $MODPATH$Ptkkf
 fi
 ui_print "  Tải về & Cài đặt"
 ui_print
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API.zip" $TMPDIR/Gapp.zip
+
+[ "$API" -ge 33 ] && API2=33 || API2=$API
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API2.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
 if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
