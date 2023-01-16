@@ -22,17 +22,17 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
 **VH-PT**
 
-  > Crack Miui, hack theme, cài app hệ thống v.v
+  > Crack Miui, hack theme, cài app hệ thống, thời tiết bản global 
 
 **VH-KE**
 
-  > Gỡ getapps, bật bàn phím china mod v.v
+  > Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm.
 
   > Chưa hỗ trợ Android 13
 
 **VH-ZH**
 
-  > Thêm Việt hóa widget
+  > Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget 
 
   > Thêm lịch âm 
 
