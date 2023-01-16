@@ -28,7 +28,7 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 
   > Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm.
 
-  > Chưa hỗ trợ Android 13
+  - Chưa hỗ trợ Android 13
 
 **VH-ZH**
 
