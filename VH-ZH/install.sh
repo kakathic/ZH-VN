@@ -152,7 +152,6 @@ unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
 
 Xu_install zip
-Xu_install 7za
 Xu_install jq
 Xu_install toybox
 
@@ -168,7 +167,7 @@ ui_print
 ui_print2 "Đang VH"
 ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
-[ -e "$TMPDIR/TT.Zip" ] && 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
+[ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
 if [ "$Licham" != 1 ];then
 cp -rf $TMPDIR/notamlich/*.apk $TMPDIR/apk
 cp -rf $TMPDIR/notamlich/framework-miui-res $TMPDIR
@@ -188,7 +187,7 @@ fi
 
 if [ "$Licham" == 1 ];then
 [ -e "$TMPDIR/TT.Zip" ] || Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
-[ -e "$TMPDIR/TT.Zip" ] && 7za x -tzip -y "$TMPDIR/TT.Zip" -p2 -o$TMPDIR >&2
+[ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2
 cp -rf $TMPDIR/apk/*com.android.systemui*.apk $MODPATH$Overlay
 cp -rf $TMPDIR/framework-miui-res $MODPATH/system/media/theme/default
 fi
