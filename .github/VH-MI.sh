@@ -76,5 +76,4 @@ Xdauto "com.android.systemui.apk" "$TOME/notamlich/Zz.com.android.systemui.apk"
 
 # Nén lại
 cd $TOME
-zip -qr --password 2 $TOME/Up/TT.Zip apk/* notamlich/* framework-miui-res
-zip -qr $TOME/Up/TZ.Zip apk/* notamlich/* framework-miui-res
+zip -qr $TOME/Up/TT.Zip apk/* notamlich/* framework-miui-res
