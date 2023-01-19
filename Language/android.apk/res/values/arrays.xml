@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="special_locale_names">
         <item>العربية</item>
         <item>中文 (简体)</item>
