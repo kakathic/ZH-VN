@@ -2534,4 +2534,5 @@ Nếu xảy ra lỗi, hãy chuyển codec sang .264 hoặc tắt tính năng nà
     <string name="pref_eis_label">Nó có thể khiến một số tốc độ khung hình không khả dụng</string>
 	<string name="pref_camera_speech_default">Kích hoạt mặc định "Màn trập bằng giọng nói"</string>
 	<string name="pref_video_autoexposure_title">Tự động phơi sáng video</string>
+	<string name="camera_newcta_other_message">"Để cung cấp cho bạn các dịch vụ bổ sung trong khi bạn đang sử dụng ứng dụng, chúng tôi có thể cần có quyền truy cập vị trí của bạn."</string>
 </resources>
