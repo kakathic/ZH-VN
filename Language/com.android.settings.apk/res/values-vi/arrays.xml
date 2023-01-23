@@ -1771,25 +1771,32 @@ Ghi chú: Chỉ cho phiên bản Ubuntu 8.04!"</item>
         <item>Mỗi ba giây</item>
         <item>Mỗi năm giây</item>
     </string-array>
-<string-array name="long_press_timeout_selector_titles">
-<item>Siêu ngắn</item>
-<item>Tương đối ngắn</item>
-<item>Hơi ngắn</item>
-<item>Ngắn</item>
-<item>Trung bình</item>
-<item>Dài vừa phải</item>
-<item>Dài</item>
-<item>Siêu dài</item>
-</string-array>
-
-<string-array name="long_press_timeout_selector_values">
-<item>120</item>
-<item>195</item>
-<item>280</item>
-<item>400</item>
-<item>800</item>
-<item>1000</item>
-<item>1500</item>
-<item>2000</item>
-</string-array>
+	<string-array name="long_press_timeout_selector_titles">
+		<item>Siêu ngắn</item>
+		<item>Tương đối ngắn</item>
+		<item>Hơi ngắn</item>
+		<item>Ngắn</item>
+		<item>Trung bình</item>
+		<item>Dài vừa phải</item>
+		<item>Dài</item>
+		<item>Siêu dài</item>
+	</string-array>
+	<string-array name="long_press_timeout_selector_values">
+		<item>120</item>
+		<item>195</item>
+		<item>280</item>
+		<item>400</item>
+		<item>800</item>
+		<item>1000</item>
+		<item>1500</item>
+		<item>2000</item>
+	</string-array>
+    <string-array name="accessibility_button_gesture_selector_titles">
+		<item>Nút</item>
+        <item>Cử chỉ</item>
+	</string-array>
+	<string-array name="accessibility_button_size_selector_titles">
+        <item>Nhỏ</item>
+        <item>Lớn</item>
+    </string-array>
 </resources>

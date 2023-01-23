@@ -6045,4 +6045,5 @@ Rút lại sự đồng ý ngay bây giờ?"</string>
 	<string name="na_query_and_correction">Kiểm tra và hiệu chỉnh số dư</string>
     <string name="na_query_and_correction_msg">"Bạn có thể kiểm tra và hiệu chỉnh số dư tài khoản và số liệu thống kê dữ liệu di động của mình bằng cách gửi SMS miễn phí đến nhà cung cấp dịch vụ của bạn. Những tin nhắn này được mã hóa. Tin nhắn truy vấn số dư không được lưu trữ trong Tin nhắn và sẽ không được hiển thị. Bạn có thể tắt tùy chọn \"Tự động điều chỉnh số liệu thống kê sử dụng dữ liệu\" bất cứ lúc nào."</string>
 	<string name="system_permission_declare_optional">"Để cung cấp cho bạn các dịch vụ bổ sung trong khi bạn đang sử dụng ứng dụng, chúng tôi có thể cần các quyền sau: %s. Bạn luôn có thể điều chỉnh tùy chọn quyền của mình trong Cài đặt."</string>
+	<string name="no_privacy_permission">Đồng ý với Chính sách bảo mật không bắt buộc</string>
 </resources>

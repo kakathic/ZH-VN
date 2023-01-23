@@ -658,4 +658,8 @@
     <plurals name="mtrl_badge_content_description">
         <item quantity="other">%d thông báo mới</item>
     </plurals>
+	    <plurals name="clean_time">
+        <item quantity="other">%d giây</item>
+        <item quantity="one">%d giây</item>
+    </plurals>
 </resources>

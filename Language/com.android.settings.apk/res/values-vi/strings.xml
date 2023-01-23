@@ -12401,4 +12401,6 @@ Tính năng này chỉ hoạt động khi điều hướng hệ thống được
     <string name="transcode_settings_title">Cài đặt chuyển mã phương tiện</string>
     <string name="transcode_user_control">Ghi đè mặc định chuyển mã</string>
     <string name="transition_animation_scale_title">Quy mô hoạt ảnh chuyển tiếp</string>
+	<string name="allow_ongoing_title">Cho phép thông báo vĩnh viễn</string>
+	<string name="dialog_speaker_auto_clean_content_new">"Bạn sắp phát âm thanh làm sạch loa. Điều chỉnh âm lượng ở mức tối đa để có hiệu quả tốt nhất."</string>
 </resources>
