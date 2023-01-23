@@ -1721,4 +1721,17 @@ Bạn sẽ thấy ảnh mới mỗi giờ."</string>
     <string name="toast_lockscreen_apply_success">Đã áp dụng thành công cho Màn hình khóa</string>
     <string name="toast_lockscreen_apply_success_but_home_apply_failured">Đã áp dụng thành công cho Màn hình khóa. Không thể áp dụng cho Màn hình chính.</string>
 	<string name="theme_component_title_large_icon">Siêu biểu tượng</string>
+	<string name="system_cta_runtime_perm_desc_storage_above_eleven">Để thay đổi tùy chọn cá nhân hóa</string>
+	<string name="app_name_pad">Cá nhân hóa</string>
+	<string name="personalize">Cá nhân hóa</string>
+	<string name="local_mode">Chế độ ngoại tuyến</string>
+    <string name="local_mode_close">Tắt chế độ ngoại tuyến?</string>
+    <string name="local_mode_close_desc">Tắt chế độ ngoại tuyến nếu bạn muốn sử dụng các dịch vụ trực tuyến. Tắt ngay bây giờ?</string>
+    <string name="local_mode_desc">"Chế độ ngoại tuyến chỉ sử dụng nội dung cục bộ và không sử dụng các dịch vụ trực tuyến"</string>
+    <string name="local_mode_hint">"Bạn đang sử dụng chế độ ngoại tuyến. Nhấn để tắt."</string>
+    <string name="local_mode_open">Chế độ ngoại tuyến</string>
+	<string name="privacy_confirm_logoff_and_exit">Hủy dịch vụ</string>
+	<string name="privacy_logoff_services_title">Hủy dịch vụ</string>
+	<string name="privacy_phone_logoff_service_content">Hủy dịch vụ Chủ đề</string>
+	<string name="component_title_widget_suit">Tiện ích</string>
 </resources>

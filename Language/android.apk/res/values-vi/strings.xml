@@ -2719,4 +2719,5 @@ Bạn có thể thay đổi lối tắt này sang tính năng khác trong Cài �
     <string name="kilobyteShort">KB</string>
     <string name="resolver_cross_profile_blocked">Tác vụ này không được cho phép</string>
     <string name="nas_upgrade_notification_title">Trợ lý Thông báo</string>
+	<string name="notification_channel_abusive_bg_apps">Hoạt động nền</string>
 </resources>
