@@ -91,7 +91,7 @@
         <item quantity="other">Xóa %1$d mục?</item>
     </plurals>
     <plurals name="dc_item_summary_uninstall_app">
-        <item quantity="other">&lt;Data>Bạn có thể gỡ cài đặt &lt;font color=#0097FF>%d&lt;/font> ứng dụng không thường dùng&lt;/Data></item>
+        <item quantity="other">&lt;Data>Bạn có thể gỡ bỏ &lt;font color=#0097FF>%d&lt;/font> ứng dụng không thường dùng&lt;/Data></item>
     </plurals>
     <plurals name="dc_item_summary_app_data">
         <item quantity="other">&lt;Data>Bạn có thể xóa dữ liệu của &lt;font color=#0097FF>%d&lt;/font> ứng dụng&lt;/Data></item>
