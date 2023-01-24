@@ -2985,4 +2985,5 @@ Vui lòng gửi mã này cho nhân viên kỹ thuật."</string>
 	<string name="pa_picker_tab_title_fun">Khám phá</string>
 	<string name="pa_setting_personalized_recommenddation_swicth_summary">Nhận đề xuất tiện ích dựa trên sở thích của bạn</string>
     <string name="pa_setting_personalized_recommenddation_swicth_title">Đề xuất được cá nhân hóa</string>
+	<string name="pa_cta_dialog_all_purpose">Chào mừng bạn đến với App vault! Ứng dụng này là điểm duy nhất cho các dịch vụ liên quan đến công việc, lối sống và du lịch.</string>
 </resources>
