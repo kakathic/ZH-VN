@@ -2,10 +2,10 @@ name: "ZH-VN"
 on:
   push:
     paths:
-      - 'VH-GA/**'
-      - 'VH-KE/**'
-      - 'VH-PT/**'
-      - 'VH-ZH/**'
+      - 'FL-GA/**'
+      - 'FL-KE/**'
+      - 'FL-PT/**'
+      - 'FL-ZH/**'
       - 'Language/**'
       - 'Miui/**'
 jobs:
