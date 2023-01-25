@@ -12403,4 +12403,5 @@ Tính năng này chỉ hoạt động khi điều hướng hệ thống được
     <string name="transition_animation_scale_title">Quy mô hoạt ảnh chuyển tiếp</string>
 	<string name="allow_ongoing_title">Cho phép thông báo vĩnh viễn</string>
 	<string name="dialog_speaker_auto_clean_content_new">"Bạn sắp phát âm thanh làm sạch loa. Điều chỉnh âm lượng ở mức tối đa để có hiệu quả tốt nhất."</string>
+	<string name="location_time_zone_detection_toggle_title">Sử dụng vị trí để đặt múi giờ</string>
 </resources>
