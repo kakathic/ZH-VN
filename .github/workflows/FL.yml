@@ -8,6 +8,7 @@ on:
       - 'FL-ZH/**'
       - 'Language/**'
       - 'Miui/**'
+      - '.github/workflows/FL.yml'
 jobs:
   build:
     name: 'Build Zip...'
@@ -20,7 +21,7 @@ jobs:
           # kakathic
           VS=1.4
           echo "VS=$VS" >> $GITHUB_ENV
-          . .github/FL.sh
+          bash .github/FL.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
