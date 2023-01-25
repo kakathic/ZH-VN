@@ -21,7 +21,7 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - Ví dụ:
 
->> Tên máy: raphael<br/>
+>> Tên mã máy: raphael<br/>
 >> Xiaomi id: 152533xxxx<br/>
 >> Hoặc MEID: 24272427xxxxxx
 
