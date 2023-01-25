@@ -1,0 +1,43 @@
+name: "ZH-VN"
+on:
+  push:
+    paths:
+      - 'VH-GA/**'
+      - 'VH-KE/**'
+      - 'VH-PT/**'
+      - 'VH-ZH/**'
+      - 'Language/**'
+      - 'Miui/**'
+jobs:
+  build:
+    name: 'Build Zip...'
+    if: github.repository == 'kakathic/ZH-VN' && github.ref == 'refs/heads/ZH'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Code
+        run: |
+          # kakathic
+          VS=1.4
+          echo "VS=$VS" >> $GITHUB_ENV
+          . .github/FL.sh
+      - name: Upload
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Tool
+          tag_name: Package
+          files: Up/*
+          prerelease: true
+      - name: Upload VH-MI
+        uses: softprops/action-gh-release@v1
+        with:
+          name: VH-MI
+          tag_name: ${{ env.VS }}
+          files: Zip/*
+      - name: Delete workflow runs
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          retain_days: 0
+          keep_minimum_runs: 0
