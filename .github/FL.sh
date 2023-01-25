@@ -106,13 +106,6 @@ cp -rf $TOME/framework-miui-res $TOME/$1/lib
 cp -rf $TOME/notamlich $TOME/$1/lib
 fi
 
-if [ "$1" == "FL-GA" ];then
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-29.zip" $TOME/$1/lib/FL-29.zip
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-30.zip" $TOME/$1/lib/FL-30.zip
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-31.zip" $TOME/$1/lib/FL-31.zip
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-33.zip" $TOME/$1/lib/FL-33.zip
-fi
-
 cd $TOME/$1
 zip -qr "$TOME/Zip/$1-$Vs.zip" *
 }
@@ -122,13 +115,21 @@ Taoup FL-KE
 Taoup FL-GA
 Taoup FL-ZH
 
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-29.zip" $TOME/FL-GA/lib/FL-29.zip
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-30.zip" $TOME/FL-GA/lib/FL-30.zip
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-31.zip" $TOME/FL-GA/lib/FL-31.zip
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-33.zip" $TOME/FL-GA/lib/FL-33.zip
+
+
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-10-$Vs.zip"
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-11-$Vs.zip"
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-12-$Vs.zip"
 mv -f "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-13-$Vs.zip"
 
-zip -s "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-33.zip
-zip -s "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -d lib/FL-29.zip lib/FL-31.zip lib/FL-33.zip
-zip -s "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -d lib/FL-30.zip lib/FL-29.zip lib/FL-33.zip
-zip -s "$TOME/Zip/FL-GA-Android-13-$Vs.zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-29.zip
+cd $TOME/FL-GA/lib
+zip -s "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -u lib/FL-29.zip
+zip -s "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -u lib/FL-30.zip
+zip -s "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -u lib/FL-31.zip
+zip -s "$TOME/Zip/FL-GA-Android-13-$Vs.zip" -u lib/FL-33.zip
 
+zip --help
