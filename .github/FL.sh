@@ -122,13 +122,13 @@ Taoup FL-KE
 Taoup FL-GA
 Taoup FL-ZH
 
-cp -rf "$TOME/Zip/FL-GA-$Vs.Zip" "$TOME/Zip/FL-GA-Android-10-$Vs.Zip"
-cp -rf "$TOME/Zip/FL-GA-$Vs.Zip" "$TOME/Zip/FL-GA-Android-11-$Vs.Zip"
-cp -rf "$TOME/Zip/FL-GA-$Vs.Zip" "$TOME/Zip/FL-GA-Android-12-$Vs.Zip"
-mv -rf "$TOME/Zip/FL-GA-$Vs.Zip" "$TOME/Zip/FL-GA-Android-13-$Vs.Zip"
+cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-10-$Vs.zip"
+cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-11-$Vs.zip"
+cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-12-$Vs.zip"
+mv -f "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-13-$Vs.zip"
 
-zip -sr "$TOME/Zip/FL-GA-Android-10-$Vs.Zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-33.zip
-zip -sr "$TOME/Zip/FL-GA-Android-11-$Vs.Zip" -d lib/FL-29.zip lib/FL-31.zip lib/FL-33.zip
-zip -sr "$TOME/Zip/FL-GA-Android-12-$Vs.Zip" -d lib/FL-30.zip lib/FL-29.zip lib/FL-33.zip
-zip -sr "$TOME/Zip/FL-GA-Android-13-$Vs.Zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-29.zip
+zip -sr "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-33.zip
+zip -sr "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -d lib/FL-29.zip lib/FL-31.zip lib/FL-33.zip
+zip -sr "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -d lib/FL-30.zip lib/FL-29.zip lib/FL-33.zip
+zip -sr "$TOME/Zip/FL-GA-Android-13-$Vs.zip" -d lib/FL-30.zip lib/FL-31.zip lib/FL-29.zip
 
