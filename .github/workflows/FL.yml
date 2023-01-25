@@ -19,8 +19,6 @@ jobs:
       - name: Run Code
         run: |
           # kakathic
-          VS=1.4
-          echo "VS=$VS" >> $GITHUB_ENV
           bash .github/FL.sh
       - name: Upload VH-MI
         uses: softprops/action-gh-release@v1
