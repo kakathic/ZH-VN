@@ -1,4 +1,6 @@
 # kakathic
+VS=1.4
+
 TOME="$GITHUB_WORKSPACE"
 TOOLS="$TOME/.github/Tools"
 
