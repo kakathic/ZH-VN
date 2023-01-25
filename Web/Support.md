@@ -23,7 +23,7 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 >> Tên mã máy: raphael<br/>
 >> Xiaomi id: 152533xxxx<br/>
->> Hoặc MEID: 24272427xxxxxx
+>> MEID: 24272427xxxxxx
 
 - **Số tiền gửi là 20k/1 thiết bị**
 
