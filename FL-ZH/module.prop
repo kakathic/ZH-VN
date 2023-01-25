@@ -1,0 +1,58 @@
+# kakathic
+ 
+id=VH-ZH
+name=VH MIUI
+description=Thêm Tiếng Việt và thêm font chữ, lịch âm v.v
+author=kakathic
+
+# Thêm ngôn ngữ bạn muốn dịch (Ví dụ: vi-VN )
+Linknn=vi-VN
+
+# Tên ngôn ngữ: (Tiếng Việt)
+LinkTn=Tiếng Việt
+
+# Khu vực có thể chỉnh sửa 
+# Để trống là nó sẽ hiện chọn bằng phím âm lượng trong quá trình cài đặt
+# Tùy chọn tự động
+
+#-----------------------#
+# Bật tắt dịch ngôn ngữ: 
+# 1 Bật
+# 2 Tắt
+VH=
+
+# Thêm lịch âm vào màn hình khóa và thanh thông báo 
+# 1 Bật
+# 2 Tắt
+Licham2=
+#-----------------------#
+
+# Gỡ bỏ các ứng dụng china không dùng
+# 1 Bật
+# 2 Tắt
+Appchina=
+#-----------------------#
+
+#-------#
+# Thêm font chữ tiếng Việt: 
+# 1 Bật
+# 2 Tắt 
+fontchu=
+# Mục thứ 3
+# Ở bộ nhớ trong tìm thư mục VH-MI/fonts
+# Hãy để font trong thư mục đó.
+#-------#
+
+#-----------------------#
+# Danh sách các ứng dụng sẽ được fix thông báo
+# Eg: com.facebook.katana,com.facebook.orca,org.telegram.messenger
+# Phân cách bởi dấu -Phẩy-
+
+ListApp=
+#-----------------------#
+
+
+
+versionCode=14
+version=1.4
+
