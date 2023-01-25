@@ -1,0 +1,25 @@
+# kakathic
+
+id=VH-KE
+name=Advanced MIUI
+description=Tổ hợp 3 tính năng, xoá getapps, mod miui, bật bàn phím
+author=kakathic
+ 
+# Tính năng china mod
+# 1 Bật
+# 2 Tắt
+global=
+
+# Xoá bỏ ứng dụng GetApps mà không bị treo logo:
+# 1 Bật
+# 2 Tắt
+gettapp=
+
+# Hiện thị bàn phím nâng cao:
+# 1 Bật
+# 2 Tắt
+banphim=
+
+versionCode=14
+version=1.4
+
