@@ -5,8 +5,6 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
 - Vì để module hỗ trợ lâu dài bạn hãy ủng hộ ad để module được tiếp tục hỗ trợ.
 
-- **Ủng hộ 20k**
-
 - Sau khi ủng hộ sẽ được sử dụng vĩnh viễn trên thiết bị đó, ủng hộ 1 lần sử dụng mãi mãi.
 
 - Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
@@ -26,6 +24,8 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 >> Tên máy: raphael<br/>
 >> Xiaomi id: 152533xxxx<br/>
 >> Hoặc MEID: 24272427xxxxxx
+
+- **Số tiền gửi là 20k**
 
 Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
 
