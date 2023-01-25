@@ -18,7 +18,7 @@ jobs:
           # kakathic
           VS=1.4
           echo "VS=$VS" >> $GITHUB_ENV
-          . .github/Install.sh
+          bash .github/Install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
