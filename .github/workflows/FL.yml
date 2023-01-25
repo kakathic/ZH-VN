@@ -9,6 +9,7 @@ on:
       - 'Language/**'
       - 'Miui/**'
       - '.github/workflows/FL.yml'
+      - '.github/FL.sh'
 jobs:
   build:
     name: 'Build Zip...'
