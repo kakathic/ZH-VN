@@ -25,11 +25,9 @@ Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 >> Xiaomi id: 152533xxxx<br/>
 >> Hoặc MEID: 24272427xxxxxx
 
-- **Số tiền gửi là 20k**
+- **Số tiền gửi là 20k/1 thiết bị**
 
 Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
-
-- Nếu bạn dùng nhiều máy bạn sẽ phải ủng hộ nhiều hơn, 10k/1 thiết bị.
 
 - Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
 
