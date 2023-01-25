@@ -12404,4 +12404,7 @@ Tính năng này chỉ hoạt động khi điều hướng hệ thống được
 	<string name="allow_ongoing_title">Cho phép thông báo vĩnh viễn</string>
 	<string name="dialog_speaker_auto_clean_content_new">"Bạn sắp phát âm thanh làm sạch loa. Điều chỉnh âm lượng ở mức tối đa để có hiệu quả tốt nhất."</string>
 	<string name="location_time_zone_detection_toggle_title">Sử dụng vị trí để đặt múi giờ</string>
+	<string name="wifi_tether_enabled_nosecurity_summary">%1$s không được mã hoá</string>
+	<string name="external_ram_dialog_icon_info">Hệ thống sẽ mở rộng RAM thêm %1$s %2$s.</string>
+	<string name="external_ram_dialog_icon_title">Phần mở rộng bộ nhớ đang bật</string>
 </resources>
