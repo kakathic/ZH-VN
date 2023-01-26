@@ -289,11 +289,19 @@ for Bala in product vendor system_ext; do
 done
 
 # Dịch vụ gg
-Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
+Ptkkf=$(find /*/*/etc/permissions/*cn.google*.xml /*/etc/permissions/*cn.google*.xml | head -n1)
 if [ -e $Ptkkf ];then
 mkdir -p $MODPATH${Ptkkf%/*}
 cp -rf $Ptkkf $MODPATH${Ptkkf%/*}
 sed -i -e '/cn.google.services/d' -e '/services_updater/d' $MODPATH$Ptkkf
+fi
+
+# Fix dc
+Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head -n1)"
+if [ -e "$Ksdjn" ] && [ "$(getprop ro.product.system.device)" == "raphael" ];then
+mkdir -p $MODPATH${Ksdjn%/*}
+cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
+sed -i 's|<bool name="support_dc_backlight">true</bool>|<bool name="support_dc_backlight">false</bool>|' "$MODPATH$Ksdjn"
 fi
 
 $Test123 || abort
