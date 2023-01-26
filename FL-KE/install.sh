@@ -187,6 +187,12 @@ invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 const-string v1, "com.tencent.mm"
 '
 sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
+
+cdhcfgv='<wl n="'$bbddkkk'" />
+</config>'
+
+sed -i 's|</config>|'"$cdhcfgv"'|' /data/system/deviceidle.xml
+
 done
 fi
 
