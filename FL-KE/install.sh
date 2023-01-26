@@ -67,6 +67,8 @@ chmod -R 755 $TMPI $TBIN/java
 # Copy file & apk
 [ "$keyyyy" == 1 ] && Fapk com.miui.phrase MIUIFrequentPhrase.apk
 [ "$chinann" == 1 ] && Fapk com.android.systemui MiuiSystemUI.apk
+[ "$chinann" == 1 ] && Fapk com.miui.powerkeeper PowerKeeper.apk
+
 if [ "$keyyyy" == 1 ] || [ "$chinann" == 1 ];then
 Fapk com.android.settings Settings.apk
 Fjar ''$miuik'framework'
