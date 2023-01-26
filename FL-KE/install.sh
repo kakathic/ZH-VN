@@ -177,6 +177,8 @@ Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/cla
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
+
+rm -fr /data/system/appops.xml /data/system/appops
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
 if [ "$(grep -cm1 "bin.mt.plus" assets/ai_preload_conf) != 1 ];then
