@@ -7,7 +7,7 @@ Hỗ trợ cả root và không root
 **Hướng dẫn cài đặt**
 ---
 
-+ Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
++ Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/1.4)
 
 + Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
 
