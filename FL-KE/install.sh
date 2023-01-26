@@ -190,7 +190,7 @@ sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
 done
 fi
 
-rm -fr /data/system/appops.xml /data/system/appops
+rm -fr /data/system/appops.xml
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
 if [ "$(grep -cm1 "bin.mt.plus" $TMPI/assets/ai_preload_conf)" == 1 ];then
