@@ -161,6 +161,21 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'service
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/notification/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/am/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+
+echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
 Vsmali ".method isSecureLocked()Z" \
 ".end method" \
