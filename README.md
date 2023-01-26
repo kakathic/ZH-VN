@@ -9,7 +9,11 @@ Hỗ trợ cả root và không root
 
 + Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
-+ Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
++ Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
+
++ Recovery: Module này ủng hộ trước mới dùng được.
+
++ Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì phải gửi gấp đôi. Thanks 
 
 - [Xem cách ủng hộ](/Web/Support.md)
 
