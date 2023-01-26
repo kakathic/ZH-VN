@@ -178,8 +178,12 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/cla
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
 kkhddbff="$(echo $TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
-if [ -e $kkhddbff ];then
+kkgwmw="$(echo "$TAPK/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
+
+if [ -e $kkhddbff ] || [ -e $kkgwmw ];then
 echo "$kkhddbff" >> $TAPK/com.miui.powerkeeper/class
+echo "$kkgwmw" >> "$TAPK/$miuik"services/class
+
 for bbddkkk in $(GP ListApp | tr ',' '\n'); do
 awggnw='
 const-string v1, "'$bbddkkk'"
@@ -188,6 +192,7 @@ invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 const-string v1, "com.tencent.mm"
 '
 sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
+sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkgwmw
 
 cdhcfgv='<wl n="'$bbddkkk'" />
 </config>'
