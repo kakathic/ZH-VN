@@ -183,6 +183,7 @@ for bbddkkk in $(GP ListApp | tr ',' '\n'); do
 awggnw='
 const-string v1, "'$bbddkkk'"
 invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
 const-string v1, "com.tencent.mm"
 '
 sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
@@ -192,7 +193,7 @@ fi
 rm -fr /data/system/appops.xml /data/system/appops
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
-if [ "$(grep -cm1 "bin.mt.plus" assets/ai_preload_conf)" != 1 ];then
+if [ "$(grep -cm1 "bin.mt.plus" $TMPI/assets/ai_preload_conf)" == 1 ];then
 listai='      "com.android.settings": ".MainSettings",
       "com.android.systemui": ".recents.RecentsActivity",
       "com.android.contacts": ".activities.PeopleActivity",
