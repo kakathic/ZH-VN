@@ -197,7 +197,6 @@ lnf(){
 cd $MODPATH/system/fonts
 cp -rf MiLanProVF.ttf MiSansVF.ttf
 cp -rf MiLanProVF.ttf RobotoVF.ttf
-cp -rf MiLanProVF.ttf Roboto-Regular.ttf
 }
 if [ "$fontvh" == 1 ];then
 ui_print2 "Cài Font"
