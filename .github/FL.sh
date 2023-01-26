@@ -120,13 +120,12 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-30.zip" $TOM
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-31.zip" $TOME/FL-GA/lib/FL-31.zip
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-33.zip" $TOME/FL-GA/lib/FL-33.zip
 
-
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-10-$Vs.zip"
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-11-$Vs.zip"
 cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-12-$Vs.zip"
 mv -f "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-13-$Vs.zip"
 
-cd $TOME/FL-GA/lib
+cd $TOME/FL-GA
 zip -r "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -u lib/FL-29.zip
 zip -r "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -u lib/FL-30.zip
 zip -r "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -u lib/FL-31.zip
