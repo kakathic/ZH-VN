@@ -6,7 +6,7 @@ on:
       - 'VH-KE/**'
       - 'VH-PT/**'
       - 'VH-ZH/**'
-      - '.github/workflows/main.yml'
+      - '.github/workflows/Main.yml'
       - '.github/install.sh'
 jobs:
   build:
