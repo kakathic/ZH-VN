@@ -1,8 +1,8 @@
 # ZH-VN
 
-Mô-Đun magisk thêm tiếng việt cho rom MIUI và mod một số tính năng hay.
+Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
-Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
+Hỗ trợ cả root và không root
 
 **Hướng dẫn cài đặt**
 ---
@@ -16,31 +16,30 @@ Lưu ý: Điện thoại phải root và dùng magisk để sử dụng module.
 **Xem chi tiết Mô-đun**
 ---
 
-**VH-GA**
+**Các gói dành cho Magisk**
 
-  > Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
+> **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
-**VH-PT**
+> **VH-PT**: Crack Miui, hack theme, cài app hệ thống, thời tiết bản global 
 
-  > Crack Miui, hack theme, cài app hệ thống, thời tiết bản global 
+> **VH-KE**: Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm.
 
-**VH-KE**
+- Chưa hỗ trợ Android 13
 
-  > Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm.
-
-  - Chưa hỗ trợ Android 13
-
-**VH-ZH**
-
-  > Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget 
-
-  > Thêm lịch âm 
-
-  > Thêm tiếng Việt, Fix thông báo
+> **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
 
 - Lưu ý: Fix thông báo
 
 - Sau khi bạn cài module tất cả ứng dụng trước đó sẽ được thêm vào danh sách fix thông báo nếu như những ứng dụng nào cài sau khi bạn đã flash module thì khởi động lại máy nó sẽ tự động thêm ứng dụng vừa cài vào danh sách fix thông báo.
+
+**Các gói dành cho recovery**
+
+- Sử dụng: TWRP, FOX v.v để cài module
+
+> **FL-GA**: Gói Gapps thêm đầy đủ dịch vụ Google cơ bản, Có ghi rõ hỗ trợ cho Android khi tải lưu ý, lên cài module này sau khi đã cài module FL-ZH nhớ chọn yes phần xóa app china rác để có nhiều không gian trống tránh lỗi đầy bộ nhớ.
+> **FL-PT**: Crack theme, Mod Cài app hệ thống
+> **FL-KE**: Gỡ bỏ Getapps, Hiện bàn phím nâng cao cho Gboard, Fix thông báo ở phần china mod, giữ đa nhiệm v.v
+> **FL-ZH**: Thêm Tiếng Việt, Font Việt Hóa, Xoá App china rác, Lên cài module này đầu tiên vì nó sẽ xóa app có nhiều không gian trống để thêm những app khác của Google
 
 **Tính năng nâng cao**
 ---
