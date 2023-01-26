@@ -177,6 +177,35 @@ Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/cla
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
+unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
+
+listai='      "com.android.settings": ".MainSettings",
+      "com.android.systemui": ".recents.RecentsActivity",
+      "com.android.contacts": ".activities.PeopleActivity",
+      "com.android.deskclock": ".DeskClockTabActivity",
+      "com.android.vending": "com.google.android.finsky.activities.MainActivity",
+      "bin.mt.plus.canary": "bin.mt.plus.Main",
+      "bin.mt.plus": ".Main",
+      "org.telegram.messenger": "org.telegram.ui.LaunchActivity",
+      "com.android.contacts": ".activities.PeopleActivity",
+      "com.miui.home.launcher": ".Launcher",
+      "com.android.thememanager": ".ThemeResourceTabActivity",
+      "com.miui.gallery.activity": ".HomePageActivity",
+      "com.facebook.lite": ".MainActivity",
+      "com.facebook.messenger": ".neue.MainActivity",
+      "com.facebook.katana": ".app.mainactivity.FbMainActivity",
+      "com.zing.zalo": ".ui.ZaloLauncherActivity",
+      "com.google.android.youtube": "com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity",
+      "com.android.calendar": ".homepage.AllInOneActivity",
+      "com.android.fileexplorer": ".MainActivity",
+      "com.android.camera": ".Camera",
+      "com.miui.notes": ".ui.NotesListActivity",
+      "com.miui.securitycenter": "com.miui.securityscan.MainActivity"'
+
+sed -i 's|      "com.android.settings": ".MainSettings"|'"$listai"'|' $TMPI/assets/ai_preload_conf
+cd $TMPI
+zip -qr $TAPK/com.miui.powerkeeper.apk assets/ai_preload_còn
+
 Vsmali ".method isSecureLocked()Z" \
 ".end method" \
 '.method isSecureLocked()Z
