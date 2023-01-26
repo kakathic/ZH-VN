@@ -32,7 +32,7 @@ fi
 done
 
 
-rm -fr /data/system/appops.xml /data/system/appops
+rm -fr /data/system/appops.xml
 sleep 20
 
 #pm disable com.xiaomi.joyose
