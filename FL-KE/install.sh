@@ -196,7 +196,6 @@ sed -i 's|</config>|'"$cdhcfgv"'|' /data/system/deviceidle.xml
 done
 fi
 
-rm -fr /data/system/appops.xml
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
 if [ "$(grep -cm1 "bin.mt.plus" $TMPI/assets/ai_preload_conf)" != 1 ];then
