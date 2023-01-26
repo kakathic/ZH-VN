@@ -25,7 +25,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
-          tag_name: ${{ env.VS }}
+          tag_name: 1.4
           files: Zip/*
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@v2
