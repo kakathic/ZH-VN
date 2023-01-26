@@ -127,9 +127,7 @@ cp -rf "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-12-$Vs.zip"
 mv -f "$TOME/Zip/FL-GA-$Vs.zip" "$TOME/Zip/FL-GA-Android-13-$Vs.zip"
 
 cd $TOME/FL-GA/lib
-zip -s "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -u lib/FL-29.zip
-zip -s "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -u lib/FL-30.zip
-zip -s "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -u lib/FL-31.zip
-zip -s "$TOME/Zip/FL-GA-Android-13-$Vs.zip" -u lib/FL-33.zip
-
-zip --help
+zip -r "$TOME/Zip/FL-GA-Android-10-$Vs.zip" -u lib/FL-29.zip
+zip -r "$TOME/Zip/FL-GA-Android-11-$Vs.zip" -u lib/FL-30.zip
+zip -r "$TOME/Zip/FL-GA-Android-12-$Vs.zip" -u lib/FL-31.zip
+zip -r "$TOME/Zip/FL-GA-Android-13-$Vs.zip" -u lib/FL-33.zip
