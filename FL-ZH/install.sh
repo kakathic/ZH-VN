@@ -127,7 +127,7 @@ rm -fr /system/fonts/$iki
 done
 cp -rf $TMPI/fonts/* /system/fonts
 cd /system/fonts
-for iki in MiSansVF.ttf RobotoVF.ttf Roboto-Regular.ttf; do
+for iki in MiSansVF.ttf RobotoVF.ttf; do
 ln -sf MiLanProVF.ttf $iki
 done
 cd /
