@@ -6,6 +6,8 @@ on:
       - 'VH-KE/**'
       - 'VH-PT/**'
       - 'VH-ZH/**'
+      - '.github/workflows/main.yml'
+      - '.github/install.sh'
 jobs:
   build:
     name: 'Build Zip...'
