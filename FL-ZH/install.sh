@@ -136,6 +136,6 @@ fi
 # Fix dc
 Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head -n1)"
 if [ -e "$Ksdjn" ] && [ "$(GB ro.product.system.device)" == "raphael" ];then
-sed -i 's|<bool name="support_dc_backlight_dimming">false</bool>|<bool name="support_dc_backlight_dimming">true</bool>|' "$Ksdjn"
+sed -i 's|<bool name="support_dc_backlight">true</bool>|<bool name="support_dc_backlight">false</bool>|' "$Ksdjn"
 fi
 
