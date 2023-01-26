@@ -177,11 +177,22 @@ Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/cla
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
+kkhddbff="$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali"
+if [ -e $kkhddbff ];then
+for bbddkkk in $(GP ListApp | tr ',' '\n'); do
+awggnw='
+const-string v1, "'$bbddkkk'"
+invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+const-string v1, "com.tencent.mm"
+'
+sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
+done
+fi
 
 rm -fr /data/system/appops.xml /data/system/appops
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
-if [ "$(grep -cm1 "bin.mt.plus" assets/ai_preload_conf) != 1 ];then
+if [ "$(grep -cm1 "bin.mt.plus" assets/ai_preload_conf)" != 1 ];then
 listai='      "com.android.settings": ".MainSettings",
       "com.android.systemui": ".recents.RecentsActivity",
       "com.android.contacts": ".activities.PeopleActivity",
@@ -207,7 +218,7 @@ listai='      "com.android.settings": ".MainSettings",
 
 sed -i 's|      "com.android.settings": ".MainSettings"|'"$listai"'|' $TMPI/assets/ai_preload_conf
 cd $TMPI
-zip -qr $TAPK/com.miui.powerkeeper.apk assets/ai_preload_còn
+zip -qr $TAPK/com.miui.powerkeeper.apk assets/ai_preload_conf
 fi
 
 Vsmali ".method isSecureLocked()Z" \
