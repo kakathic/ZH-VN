@@ -47,8 +47,10 @@ pm disable com.miui.analytics
 kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n')";
 [ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
 
-dumpsys deviceidle disable
+
+
 for Ksksn in $kncfgvv; do
+dumpsys deviceidle whitelist +$Ksksn
 appops set $Ksksn 10008 allow
 appops set $Ksksn 10021 allow
 appops set $Ksksn RUN_IN_BACKGROUND allow
