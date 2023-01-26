@@ -161,23 +161,23 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'service
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/notification/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/am/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TAPK/$miuik'services/classes*/com/android/server/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
 Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
 Autoone "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
-kkhddbff="$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali"
+kkhddbff="$(echo $TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
 if [ -e $kkhddbff ];then
 for bbddkkk in $(GP ListApp | tr ',' '\n'); do
 awggnw='
@@ -193,7 +193,7 @@ fi
 rm -fr /data/system/appops.xml
 unzip -qo $TAPK/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPI
 
-if [ "$(grep -cm1 "bin.mt.plus" $TMPI/assets/ai_preload_conf)" == 1 ];then
+if [ "$(grep -cm1 "bin.mt.plus" $TMPI/assets/ai_preload_conf)" != 1 ];then
 listai='      "com.android.settings": ".MainSettings",
       "com.android.systemui": ".recents.RecentsActivity",
       "com.android.contacts": ".activities.PeopleActivity",
