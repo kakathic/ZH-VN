@@ -32,9 +32,9 @@ Hỗ trợ cả root và không root
 
 - Sử dụng: TWRP, FOX v.v để cài module
 
-- Lưu ý: Rom của bạn phải đã RW, mới có thể dùng được module 
+- Lưu ý: Rom của bạn phải đã R/W, mới có thể dùng được module 
 
-- RW cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống thì không cần RW vì rom đã RW sẵn, còn hầu hết các máy mới android 12 trở nên đều phải RW hệ thống mới cho phép sửa file hệ thống.
+- R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống thì không cần R/W vì rom đã R/W sẵn, còn hầu hết các máy mới android 12 trở nên đều phải R/W hệ thống mới cho phép sửa file hệ thống.
 
 > **FL-GA**: Gói Gapps thêm đầy đủ dịch vụ Google cơ bản, Có ghi rõ hỗ trợ cho Android khi tải lưu ý, lên cài module này sau khi đã cài module FL-ZH nhớ chọn yes phần xóa app china rác để có nhiều không gian trống tránh lỗi đầy bộ nhớ.
 
