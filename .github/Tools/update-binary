@@ -100,7 +100,7 @@ Kgg
 }
 
 # Getprop
-GB() { grep -m1 "$1=" /system/build.prop | cut -d '=' -f2; }
+GB() { find /product /system /vendor /system_ext -name "build.prop" -exec grep -m1 "$1=" {} + | cut -d = -f2 | head -n1; }
 
 # Unpack
 unzip -o "$ZIP" 'module.prop' 'install.sh' 'system.prop' -d /tmp
