@@ -148,7 +148,8 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
 [ "$chinann" == 2 ] && CPapk com.android.systemui
 [ "$chinann" == 4 ] && CPapk com.miui.home
-if [ "$keyyyy" == 1 ] || [ "$chinann" == 2 ];then
+[ "$chinann" == 1 ] && CPapk com.miui.powerkeeper
+if [ "$keyyyy" == 2 ] || [ "$chinann" == 2 ];then
 CPapk com.android.settings
 CPfile ''$miuik'framework'
 fi
@@ -235,6 +236,71 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik's
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/notification/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/am/*.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/*.smali'
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+
+echo "ro.product.vip=$(getprop ro.product.system.device)_global" >> $TMPDIR/system.prop
+
+kkhddbff="$(echo $TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
+kkgwmw="$(echo "$TMPDIR/Apk/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
+
+if [ -e $kkhddbff ] || [ -e $kkgwmw ];then
+echo "$kkhddbff" >> $TMPDIR/Apk/com.miui.powerkeeper/class
+echo "$kkgwmw" >> "$TMPDIR/Apk/$miuik"services/class
+
+for bbddkkk in $(getprop ListApp | tr ',' '\n'); do
+awggnw='
+const-string v1, "'$bbddkkk'"
+invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+const-string v1, "com.tencent.mm"
+'
+sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
+sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkgwmw
+dumpsys deviceidle whitelist +$bbddkkk >&2
+done
+fi
+
+unzip -qo $TMPDIR/Apk/com.miui.powerkeeper.apk 'assets/ai_preload_conf' -d $TMPDIR
+
+if [ "$(grep -cm1 "bin.mt.plus" $TMPDIR/assets/ai_preload_conf)" != 1 ];then
+listai='      "com.android.settings": ".MainSettings",
+      "com.android.systemui": ".recents.RecentsActivity",
+      "com.android.contacts": ".activities.PeopleActivity",
+      "com.android.deskclock": ".DeskClockTabActivity",
+      "com.android.vending": "com.google.android.finsky.activities.MainActivity",
+      "bin.mt.plus.canary": "bin.mt.plus.Main",
+      "bin.mt.plus": ".Main",
+      "org.telegram.messenger": "org.telegram.ui.LaunchActivity",
+      "com.android.contacts": ".activities.PeopleActivity",
+      "com.miui.home.launcher": ".Launcher",
+      "com.android.thememanager": ".ThemeResourceTabActivity",
+      "com.miui.gallery.activity": ".HomePageActivity",
+      "com.facebook.lite": ".MainActivity",
+      "com.facebook.messenger": ".neue.MainActivity",
+      "com.facebook.katana": ".app.mainactivity.FbMainActivity",
+      "com.zing.zalo": ".ui.ZaloLauncherActivity",
+      "com.google.android.youtube": "com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity",
+      "com.android.calendar": ".homepage.AllInOneActivity",
+      "com.android.fileexplorer": ".MainActivity",
+      "com.android.camera": ".Camera",
+      "com.miui.notes": ".ui.NotesListActivity",
+      "com.miui.securitycenter": "com.miui.securityscan.MainActivity"'
+
+sed -i 's|      "com.android.settings": ".MainSettings"|'"$listai"'|' $TMPDIR/assets/ai_preload_conf
+cd $TMPDIR
+zip -qr $TMPDIR/Apk/com.miui.powerkeeper.apk assets/ai_preload_conf
+fi
 
 Vsmali ".method isSecureLocked()Z" \
 ".end method" \
