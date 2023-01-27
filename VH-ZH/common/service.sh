@@ -56,7 +56,6 @@ appops set $Ksksn 10021 allow
 appops set $Ksksn RUN_IN_BACKGROUND allow
 appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 appops set $Ksksn START_FOREGROUND allow
-appops set $Ksksn WAKE_LOCK allow
 sleep 2
 done
 sleep 120
