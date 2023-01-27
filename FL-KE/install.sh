@@ -174,6 +174,7 @@ Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z"
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
 Thaythe "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
 Thaythe "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Thaythe "force-idle" "unforce" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/DeviceIdlePolicyHelper.smali"
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
