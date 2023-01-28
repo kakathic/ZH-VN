@@ -37,11 +37,11 @@ Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
-Sử dụng: TWRP, FOX v.v để cài module
++ Sử dụng: TWRP, FOX v.v để cài module
 
-Trước khi flash thì ở điện thoại ấn *#06# hoặc nhớ thêm tài khoản mi để xác nhận.
++ Trước khi flash thì ở điện thoại ấn *#06# hoặc nhớ thêm tài khoản mi để xác nhận.
 
-Lưu ý: Rom của bạn phải đã R/W, mới có thể dùng được module 
++ Lưu ý: Rom của bạn phải đã R/W, mới có thể dùng được module 
 
 > **FL-GA**: Gói Gapps thêm đầy đủ dịch vụ Google cơ bản, Có ghi rõ hỗ trợ cho Android khi tải lưu ý, lên cài module này sau khi đã cài module FL-ZH nhớ chọn yes phần xóa app china rác để có nhiều không gian trống tránh lỗi đầy bộ nhớ.
 
