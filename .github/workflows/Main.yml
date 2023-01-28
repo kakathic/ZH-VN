@@ -15,24 +15,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run Code
+      - name: Process
         run: |
           # kakathic
+          export VA="$(grep V: $GITHUB_WORKSPACE/Web/Version.md | awk '{print $2}')"
+          echo "VS=$VA" >> $GITHUB_ENV
           bash .github/Install.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
           name: Tool
-          tag_name: Package
+          tag_name: Notes
           files: Up/*
           prerelease: true
       - name: Upload VH-MI
         uses: softprops/action-gh-release@v1
         with:
           name: VH-MI
-          tag_name: 1.4
+          tag_name: ${{ env.VS }}
           files: Zip/*
-      - name: Delete workflow runs
+      - name: Delete
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ github.token }}
