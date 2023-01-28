@@ -174,7 +174,7 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
 [ "$apkcai" == 1 ] && CPapk com.miui.packageinstaller
 [ "$baomat" == 1 ] && CPapk com.miui.securitycenter
-[ "$tietkiem" == 1 ] && CPapk com.miui.powerkeeper
+[ "$Teme" == 1 ] && CPapk com.miui.system
 
 # giải nén file
 Giainen
@@ -299,6 +299,22 @@ Thaythe "ro.miui.region" "ro.khu.vuc.cn" "$TMPDIR/Apk/com.android.thememanager/c
 Thaythe "ro.product.mod_device" "ro.product.modcn" "$TMPDIR/Apk/com.android.thememanager/classes*"
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$TMPDIR/Apk/com.android.thememanager/classes*"
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x0" "$TMPDIR/Apk/com.android.thememanager/classes*/*"
+
+if [ "$(grep -cm1 'DRM_SUCCESS' $TMPDIR/Apk/com.miui.system/classes*/miui/drm/DrmManager.smali)" == 1 ];then
+Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightObject;)Z" \
+".end method" \
+'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
+    .registers 5
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TMPDIR/Apk/com.miui.system/classes*/miui/drm/DrmManager.smali"
+
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$TMPDIR/Apk/com.miui.system/classes*/miui/drm/DrmManager.smali"
+else
+rm -fr "$TMPDIR/Apk/com.miui.system*"
+fi
+
 fi
 
 if [ "$baomat" == 1 ];then
