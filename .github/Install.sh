@@ -1,4 +1,6 @@
 # kakathic
+echo "$VA-$VS"
+
 VS=1.4
 
 TOME="$GITHUB_WORKSPACE"
