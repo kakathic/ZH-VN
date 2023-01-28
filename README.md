@@ -30,7 +30,7 @@ Hỗ trợ cả root và không root
 
 > **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
 
-**Các gói dành cho recovery**
+**Các gói dành cho Recovery**
 
 - Tải xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
