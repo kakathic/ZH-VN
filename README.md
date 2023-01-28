@@ -15,6 +15,8 @@ Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì p
 
 [Xem cách ủng hộ](/Web/Support.md)
 
+[Xem lịch sử](/Web/Version.md)
+
 **Xem chi tiết Magisk**
 ---
 
