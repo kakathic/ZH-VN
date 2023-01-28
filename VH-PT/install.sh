@@ -312,7 +312,7 @@ Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightOb
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$TMPDIR/Apk/com.miui.system/classes*/miui/drm/DrmManager.smali"
 else
-rm -fr "$TMPDIR/Apk/com.miui.system*"
+rm -fr $TMPDIR/Apk/com.miui.system*
 fi
 
 fi
