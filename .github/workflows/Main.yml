@@ -25,7 +25,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           name: Tool
-          tag_name: Notes
+          tag_name: Package
           files: Up/*
           prerelease: true
       - name: Upload VH-MI
