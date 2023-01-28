@@ -185,6 +185,18 @@ Thaythe "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/cla
 Thaythe "ro.product.mod_device" "ro.product.vip" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
 Thaythe "force-idle" "unforce" "$TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/DeviceIdlePolicyHelper.smali"
 
+# Theme
+Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightObject;)Z" \
+".end method" \
+'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
+    .registers 5
+    const/4 v0, 0x1
+    return v0
+.end method' \
+''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
+
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
+
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
 kkhddbff="$(echo $TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
