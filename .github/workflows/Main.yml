@@ -28,11 +28,11 @@ jobs:
           tag_name: Package
           files: Up/*
           prerelease: true
-      - name: Upload VH-MI
+      - name: Upload
         uses: softprops/action-gh-release@v1
         with:
-          name: VH-MI
-          tag_name: ${{ env.VS }}
+          name: MS-VH
+          tag_name: MS-${{ env.VS }}
           files: Zip/*
       - name: Delete
         uses: Mattraks/delete-workflow-runs@v2
