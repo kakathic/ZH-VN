@@ -15,12 +15,10 @@ Hỗ trợ cả root và không root
 
 - [Xem cách ủng hộ](/Web/Support.md)
 
-**Xem chi tiết Mô-đun**
+**Xem chi tiết Magisk**
 ---
 
-**Các gói dành cho Magisk**
-
-- Tải xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
+- Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
@@ -30,9 +28,10 @@ Hỗ trợ cả root và không root
 
 > **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
 
-**Các gói dành cho Recovery**
+**Xem chi tiết Recovery**
+---
 
-- Tải xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
+- Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 - Sử dụng: TWRP, FOX v.v để cài module
 
