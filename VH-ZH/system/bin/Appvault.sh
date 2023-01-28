@@ -26,7 +26,7 @@ cut () { /data/tools/bin/toybox cut "$@"; }
 DICHVB(){
 Tekk="$(echo "$@" | sed -z -e 's|\n||g' -e "s|'||g" -e "s|&amp;|&|g" -e "s|&#10;|;;|g")"
 if [ "$Tekk" == "zh" ] || [ "$Tekk" == "zh_CN" ] || [ "$Tekk" == "M月d日" ] || [ "$Tekk" == "M月d日 Eaa" ] || [ "$Tekk" == "M月d日 E" ] || [ "$Tekk" == "Eaa" ] || [ "$Tekk" == "'aah:mm'" ] || [ "$Tekk" == "小时" ] || [ "$Tekk" == "时" ] || [ "$Tekk" == "分钟" ] || [ "$Tekk" == "分" ];then
-echo "$@" | sed -e "s|zh_CN|vi_VN|g" -e "s|zh|vi|g" -e "s|M月d日 Eaa|aa E, dd/MM|g" -e "s|M月d日 E|E, dd/MM|g" -e "s|M月d日|dd/MM|g" -e "s|'aah:mm'|'aa h:mm'|g" -e "s|Eaa|aa E|g" -e "s|Eaa|aa E|g" -e "s|aah:mm|'aa h:mm'|g" -e "s|小时|h |g" -e "s|时|h |g" -e "s|分钟|m |g" -e "s|分|m |g"
+echo "$@" | sed -e "s|zh_CN|vi_VN|g" -e "s|zh|vi|g" -e "s|M月d日 Eaa|aa E, dd/MM|g" -e "s|M月d日 E|E, dd/MM|g" -e "s|M月d日|dd/MM|g" -e "s|'aah:mm'|'aa h:mm'|g" -e "s|Eaa|aa E|g" -e "s|Eaa|aa E|g" -e "s|aah:mm|'aa h:mm'|g" -e "s|小时|h |g" -e "s|时|h |g" -e "s|分钟|m|g" -e "s|分|m|g" -e "s|預計SLOT充滿|Dự kiến SLOT đầy|g" -e "s|可用時長SLOT|Khả dụng SLOT|g" -e "s|亮螢幕可用時長SLOT|Khả dụng SLOT|g"
 
 else
 Trann="$(/system/bin/curl -s -k -G -L --connect-timeout 20 "https://translate.google.com/m?sl=auto&tl=vi&op=translate" --data-urlencode "q=$Tekk" 2>/dev/null | tr '<' '\n' | grep -m1 'class="result-container">' | cut -d '>' -f2)"
@@ -50,12 +50,12 @@ for Lik in $(find $Link2/*/meta.json 2>/dev/null); do
 #[ -e $Link2/060fd4b1-8f58-4af2-a735-75c33090066a ] && echo > ${Lik%/*}/Vip
 kakabs=$(($kakabs + 1))
 if [ ! -e "${Lik%/*}/Vip" ];then
-version="$(cat "$Lik" | jq -r .versionCode | sed -z 's|\n|\\\\n|g')"
+version="$(cat "$Lik" | jq -r .versionCode)"
 id="$(cat "$Lik" | jq -r .id)"
-desc="$(cat "$Lik" | jq -r .descMap.fallback | sed -z 's|\n|\\\\n|g')"
-title="$(cat "$Lik" | jq -r .titleMap.fallback | sed -z 's|\n|\\\\n|g')"
-author="$(cat "$Lik" | jq -r .authorMap.fallback | sed -z 's|\n|\\\\n|g')"
-designer="$(cat "$Lik" | jq -r .designerMap.fallback | sed -z 's|\n|\\\\n|g')"
+desc="$(cat "$Lik" | jq -r .descMap.fallback)"
+title="$(cat "$Lik" | jq -r .titleMap.fallback)"
+author="$(cat "$Lik" | jq -r .authorMap.fallback)"
+designer="$(cat "$Lik" | jq -r .designerMap.fallback)"
 
 desc2="$(DICHVB "$desc")"
 title2="$(DICHVB "$title")"
@@ -70,7 +70,8 @@ echo "+ Tiêu đề: $title2
 "
 echo "- Tiến hành dịch..."
 
-sed -i -e "s|zh_CN|vi_VN|g" -e "s|$desc|$desc2|g" -e "s|$title|$title2|g" -e "s|$designer|$designer2|g" -e "s|$author|$author2|g" "${Lik%/*}/meta.json" "${Lik%/*}/description.xml"
+sed -i -e "s|zh_CN|vi_VN|g" -e "s|$desc|$desc2|g" -e "s|$title|$title2|g" -e "s|$designer|$designer2|g" -e "s|$author|$author2|g" "${Lik%/*}/description.xml" "${Lik%/*}/meta.json"
+
 for qhqtnq in "${Lik%/*}"/widget*; do
 mkdir -p "${Lik%/*}/tmp/${qhqtnq##*/}"
 unzip -qo "$qhqtnq" strings/* var_config.xml manifest*.xml -d "${Lik%/*}/tmp/${qhqtnq##*/}"
@@ -145,6 +146,7 @@ fi
 fi
 
 done
+
 echo "- Tổng kho $kakabs widget, đã dịch xong"
 
 # Dịch widget mặc định
@@ -177,6 +179,7 @@ rm -fr manifest.xml strings
 fi
 fi
 
+cp -rf $Link2/* $Link1
 chmod -R 777 $Link0
 #killall com.miui.home
 killall com.miui.personalassistant 2>/dev/null
