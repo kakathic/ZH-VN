@@ -201,6 +201,15 @@ Vsmali ".method private onPostNotification()V" \
 .end method' \
 ''$TMPDIR/Apk/$miuik'services/classes*'
 
+Vsmali ".method private static compareSignatures" \
+".end method" \
+'.method private static compareSignatures([Landroid/content/pm/Signature;[Landroid/content/pm/Signature;)I
+    .registers 9
+    const/4 v0, 0x0
+    return v0
+.end method' \
+''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+
 fi
 
 if [ "$chinann" == 2 ];then
