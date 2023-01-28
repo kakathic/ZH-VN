@@ -44,19 +44,3 @@ pm disable com.miui.analytics
 
 [ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log &
 
-while true; do
-
-kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n')";
-[ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
-
-for Ksksn in $kncfgvv; do
-dumpsys deviceidle whitelist +$Ksksn >/dev/null
-appops set $Ksksn 10008 allow
-appops set $Ksksn 10021 allow
-appops set $Ksksn RUN_IN_BACKGROUND allow
-appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
-appops set $Ksksn START_FOREGROUND allow
-sleep 2
-done
-sleep 120
-done
