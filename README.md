@@ -13,11 +13,11 @@ Recovery: Module này ủng hộ trước mới dùng được.
 
 Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì phải gửi gấp đôi. Thanks 
 
-[Xem cách ủng hộ](/Web/Support.md)
+[Xem cách ủng hộ](/Support.md)
 
 Nhật ký thay đổi các phiên bản
 
-[Xem lịch sử](/Web/Version.md)
+[Xem lịch sử](/Version.md)
 
 **Xem chi tiết Magisk**
 ---
