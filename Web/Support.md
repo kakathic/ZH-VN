@@ -1,8 +1,6 @@
 **💵 Hướng dẫn ủng hộ**
 ----
 
-Tải xuống Module: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/1.4)
-
 - Vì để module hỗ trợ lâu dài bạn hãy ủng hộ ad để module được tiếp tục hỗ trợ.
 
 - Sau khi ủng hộ sẽ được sử dụng vĩnh viễn trên thiết bị đó, ủng hộ 1 lần sử dụng mãi mãi.
