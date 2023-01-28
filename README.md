@@ -20,7 +20,7 @@ Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì p
 **Xem chi tiết Magisk**
 ---
 
-Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
+Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
@@ -33,7 +33,7 @@ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 **Xem chi tiết Recovery**
 ---
 
-Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
+Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 Sử dụng: TWRP, FOX v.v để cài module
 
