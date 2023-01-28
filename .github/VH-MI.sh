@@ -65,10 +65,10 @@ for vad in *.apk; do
 
 cp -rf $TEST13/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
-Xdauto "$vad" "$TOME/apk/Zz.$vad"
+Xdauto "$vad" "$TOME/apk/Zz.13.$vad"
 spt=$(($spt + 1))
 
-if [ -s "$TOME/apk/Zz.$vad" ];then
+if [ -s "$TOME/apk/Zz.13.$vad" ];then
 echo "$spt $vad" 
 else
 if [ "$(grep -cm1 'is already defined.' $TOME/log)" == 1 ];then
@@ -83,7 +83,7 @@ done
 Autofix
 fi
 
-[ -s "$TOME/apk/Zz.$vad" ] && echo "$spt $vad" || echo "Error: $vad
+[ -s "$TOME/apk/Zz.13.$vad" ] && echo "$spt $vad" || echo "Error: $vad
 
 $(cat $TOME/log)
 "
