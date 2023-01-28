@@ -6,7 +6,7 @@ on:
       - 'FL-KE/**'
       - 'FL-PT/**'
       - 'FL-ZH/**'
-      - 'FLuname/**'
+      - 'FLuna/**'
       - 'Language/**'
       - 'Miui/**'
       - '.github/workflows/FLuna.yml'
@@ -21,7 +21,7 @@ jobs:
       - name: Process 
         run: |
           # kakathic
-          export VA="$(grep V: $GITHUB_WORKSPACE/Web/Version.md | awk '{print $2}')"
+          export VA="$(grep Version: $GITHUB_WORKSPACE/Web/Version.md | awk '{print $2}')"
           echo "VS=$VA" >> $GITHUB_ENV
           bash .github/FLuna.sh
       - name: Upload
