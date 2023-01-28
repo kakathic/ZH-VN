@@ -59,6 +59,9 @@ ui_print "  Chinh sua apk"
 ui_print " "
 
 if [ "$Teme" == 1 ];then
+chmod 0731 /data/system/theme
+sed -i 's|chmod 0775 /data/system/theme|chmod 0731 /data/system/theme|' /init.miui.rc
+
 Vsmali ".method public isVideoAd()Z" \
 ".end method" \
 '.method public isVideoAd()Z
@@ -120,7 +123,6 @@ VB="iget p0, p0, Landroid\/content\/pm\/ApplicationInfo;->uid:I"
 Thaythe "$VB" "$VB 
 const/4 v1, 0x1 
 return v1" "$(Timkiem "$VB" "com.miui.packageinstaller/classes*")"
-
 
 Vsmali ".method public static final c(Landroid\/content\/pm\/ApplicationInfo;)Z" \
 ".end method" \
