@@ -133,6 +133,7 @@ ZHex(){ $TBIN/toybox xxd -r -p "$@"; }
 # Check API ABI
 API=$(GB ro.build.version.sdk)
 ABI=$(GB ro.product.cpu.abi)
+[ "$ABI" ] || ABI=$(GB ro.vendor.product.cpu.abilist64)
 
 # Check arm
 if [ "$ABI" = "x86" ]; then
