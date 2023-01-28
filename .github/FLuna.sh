@@ -20,7 +20,7 @@ mkdir -p $TOME/$1/META-INF/com/google/android $TOME/$1/bin $TOME/$1/lib
 cp -rf $TOME/.github/Tools/busybox $TOME/$1/bin
 cp -rf $TOME/.github/Tools/toybox $TOME/$1/bin
 cp -rf $TOME/.github/Tools/update* $TOME/$1/META-INF/com/google/android
-cp -rf $TOME/FLuname $TOME/$1/lib
+cp -rf $TOME/FLuna $TOME/$1/lib
 
 if [ "$1" == "FL-PT" ] || [ "$1" == "FL-KE" ];then
 cp -rf $TOME/.github/Tools/zip* $TOME/$1/bin
