@@ -77,6 +77,33 @@ Vsmali ".method private static isAdValid" \
 .end method' \
 "$TAPK/com.android.thememanager/classes*"
 
+Vsmali ".method public isAuthorizedResource()Z" \
+".end method" \
+'.method public isAuthorizedResource()Z
+    .registers 2
+     const/4 v0, 0x1
+    return v0
+.end method' \
+"$TAPK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
+
+Vsmali ".method public isCanNotPlay()Z" \
+".end method" \
+'.method public isCanNotPlay()Z
+    .registers 4
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TAPK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
+
+Vsmali ".method public isProductBought()Z" \
+".end method" \
+'.method public isProductBought()Z
+    .registers 2
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TAPK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
+
 VA="iget-boolean v1, v0, Lcom\/android\/thememanager\/detail\/theme\/model\/OnlineResourceDetail;->bought:Z"
 Thaythe "$VA" "$VA 
 const/4 v0, 0x1
