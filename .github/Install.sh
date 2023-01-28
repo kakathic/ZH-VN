@@ -1,7 +1,4 @@
 # kakathic
-echo "$VA-$VS"
-
-VS=1.4
 
 TOME="$GITHUB_WORKSPACE"
 TOOLS="$TOME/.github/Tools"
@@ -16,20 +13,19 @@ TTM "Zip
 Up"
 
 Taoup(){
-Vs=$VS;
-Vscode=${VS//./};
+Vscode=${VA//./};
 echo "
 versionCode=$Vscode
-version=$Vs
+version=$VA
 " >> $TOME/$1/module.prop
 echo '{
-"version": "'$Vs'",
+"version": "'$VA'",
 "versionCode": "'$Vscode'",
-"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/'$Vs'/'$1'-'$Vs'.Zip",
+"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/'$VA'/'$1'-'$VA'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cd $TOME/$1
-zip -qr "$TOME/Zip/$1-$Vs.Zip" *
+zip -qr "$TOME/Zip/$1-$VA.Zip" *
 }
 
 Taoup VH-PT
