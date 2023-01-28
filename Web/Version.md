@@ -1,13 +1,7 @@
-**Xem thêm thông tin**
-----
-+ [Tổng hợp các phiên bản VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/Download)
-
-+ [Trang chủ](https://github.com/kakathic/ZH-VN)
-
 **Nhật ký thay đổi**
 ----
 
-V: 1.5
+Version: 1.5
 
 - Fix thông báo android 13
 
