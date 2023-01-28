@@ -37,7 +37,7 @@ Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải
 
 - Hình ảnh ở dưới cho bạn biết tài khoản mi id, tên mã máy (Tên rom bạn tải), và mã MEID.
 
-   + Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
+- Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp0.jpg" height="auto" width="99%" />
 
