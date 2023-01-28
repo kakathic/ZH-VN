@@ -47,6 +47,7 @@ ui_print " "
 tar -xJf $TMPI/Jre.tar.xz -C /tmp
 chmod -R 755 $TMPI $TBIN/java $TBIN/keytool
 
+[ "$Teme" == 1 ] && Fapk com.miui.system miuisystem.apk
 [ "$Teme" == 1 ] && Fapk com.android.thememanager MIUIThemeManager.apk
 [ "$apkcai" == 1 ] && Fapk com.miui.packageinstaller MIUIPackageInstaller.apk
 
