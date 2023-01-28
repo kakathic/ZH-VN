@@ -6,6 +6,7 @@ on:
       - 'FL-KE/**'
       - 'FL-PT/**'
       - 'FL-ZH/**'
+      - 'FLuname/**'
       - 'Language/**'
       - 'Miui/**'
       - '.github/workflows/FL.yml'
