@@ -130,6 +130,23 @@ Vk 2
 fontvh=$input
 fi
 
+ui_print "- Sửa chữa thông báo ứng dụng ?"
+ui_print
+ui_print2 "1. Có"
+ui_print2 "2. Không"
+
+if [ "$(GP fixtbhr)" ];then
+fixtb=$(GP fixtbhr)
+ui_print
+ui_print2 "Chọn: $fixtb"
+ui_print
+else
+ui_print
+ui_print2 "1"
+Vk 2
+fixtb=$input
+fi
+
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 [ -e /system/product/overlay ] && Overlay=/system/product/overlay || Overlay=/system/vendor/overlay
@@ -263,6 +280,8 @@ fi
 mro
 fi
 
+if [ "$fixtb" == 1 ];then
+
 ui_print "- Thêm ứng dụng vào danh sách sửa lỗi thông báo"
 ui_print
 Lkkdf="$(GP ListApp | tr ',' '\n')"
@@ -281,6 +300,25 @@ ui_print "  $Ksksn"
 sleep 0.2
 done
 ui_print
+
+echo 'while true; do
+
+kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr "," "\n")";
+[ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
+
+for Ksksn in $kncfgvv; do
+dumpsys deviceidle whitelist +$Ksksn >/dev/null
+appops set $Ksksn 10008 allow
+appops set $Ksksn 10021 allow
+appops set $Ksksn RUN_IN_BACKGROUND allow
+appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
+appops set $Ksksn START_FOREGROUND allow
+sleep 2
+done
+sleep 120
+done' >> $TMPDIR/service.sh
+
+fi
 
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
@@ -314,3 +352,4 @@ set_permissions(){
 set_perm_recursive $MODPATH 0 0 0755 0644 2>/dev/null
 set_perm_recursive $MODPATH/system/bin 0 2000 0755 0755 2>/dev/null
 }
+
