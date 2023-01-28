@@ -39,6 +39,8 @@ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 Sử dụng: TWRP, FOX v.v để cài module
 
+Trước khi flash thì ở điện thoại ấn *#06# hoặc nhớ thêm tài khoản mi để xác nhận.
+
 Lưu ý: Rom của bạn phải đã R/W, mới có thể dùng được module 
 
 R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống thì không cần R/W vì rom đã R/W sẵn, còn hầu hết các máy mới android 12 trở nên đều phải R/W hệ thống mới cho phép sửa file hệ thống.
