@@ -9,8 +9,8 @@ on:
       - 'FLuname/**'
       - 'Language/**'
       - 'Miui/**'
-      - '.github/workflows/FL.yml'
-      - '.github/FL.sh'
+      - '.github/workflows/FLuna.yml'
+      - '.github/FLuna.sh'
 jobs:
   build:
     name: 'Build Zip...'
@@ -23,7 +23,7 @@ jobs:
           # kakathic
           export VA="$(grep V: $GITHUB_WORKSPACE/Web/Version.md | awk '{print $2}')"
           echo "VS=$VA" >> $GITHUB_ENV
-          bash .github/FL.sh
+          bash .github/FLuna.sh
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
