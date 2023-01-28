@@ -7,6 +7,12 @@
 **Nhật ký thay đổi**
 ----
 
+V: 1.5
+
+- Fix thông báo android 13
+
+- Cập nhật Tiếng Việt
+
 1.4
 
 - Fix lỗi vh widget
