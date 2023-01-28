@@ -7,8 +7,6 @@ Hỗ trợ cả root và không root
 **Hướng dẫn cài đặt**
 ---
 
-+ Tải về: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/1.4)
-
 + Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
 
 + Recovery: Module này ủng hộ trước mới dùng được.
@@ -22,17 +20,19 @@ Hỗ trợ cả root và không root
 
 **Các gói dành cho Magisk**
 
+- Tải xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
+
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
 > **VH-PT**: Crack Miui, hack theme, cài app hệ thống, thời tiết bản global 
 
 > **VH-KE**: Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm.
 
-- Chưa hỗ trợ Android 13
-
 > **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
 
 **Các gói dành cho recovery**
+
+- Tải xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 - Sử dụng: TWRP, FOX v.v để cài module
 
