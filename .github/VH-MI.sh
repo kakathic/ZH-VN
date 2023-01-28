@@ -3,6 +3,7 @@
 TOME="$GITHUB_WORKSPACE"
 TOOLS="$TOME/.github/Tools"
 TEST="$TOME/.github/Test"
+TEST13="$TOME/.github/TV13"
 
 apktool () { java -jar $TOOLS/apktool-2.6.2.jar "$@"; }
 apksign () { java -jar $TOOLS/apksigner.jar sign --cert "$TOOLS/testkey.x509.pem" --key "$TOOLS/testkey.pk8" --out "$2" "$1"; }
@@ -32,6 +33,37 @@ cd $TOME/Language
 for vad in *.apk; do
 
 cp -rf $TEST/* $vad
+sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
+Xdauto "$vad" "$TOME/apk/Zz.$vad"
+spt=$(($spt + 1))
+
+if [ -s "$TOME/apk/Zz.$vad" ];then
+echo "$spt $vad" 
+else
+if [ "$(grep -cm1 'is already defined.' $TOME/log)" == 1 ];then
+while true; do
+Linktk=$(grep -m1 'is already defined.' $TOME/log | cut -d : -f2)
+Vbtk=$(grep -m1 'is already defined.' $TOME/log | awk '{print $6}')
+sotk=$(grep -nm1 "$Vbtk" $Linktk | cut -d : -f1)
+sed -i ''$sotk'd' $Linktk
+sed -i '/'$Vbtk'/d' $TOME/log
+[ "$(grep -cm1 'is already defined.' $TOME/log)" == 0 ] && break
+done
+Autofix
+fi
+
+[ -s "$TOME/apk/Zz.$vad" ] && echo "$spt $vad" || echo "Error: $vad
+
+$(cat $TOME/log)
+"
+fi
+done
+
+cd $TOME/Lang13
+
+for vad in *.apk; do
+
+cp -rf $TEST13/* $vad
 sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
 Xdauto "$vad" "$TOME/apk/Zz.$vad"
 spt=$(($spt + 1))
