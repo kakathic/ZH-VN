@@ -62,6 +62,21 @@ if [ "$Teme" == 1 ];then
 chmod 0731 /data/system/theme
 sed -i 's|chmod 0775 /data/system/theme|chmod 0731 /data/system/theme|' /init.miui.rc
 
+if [ "$(grep -cm1 'DRM_SUCCESS' $TAPK/com.miui.system/classes*/miui/drm/DrmManager.smali)" == 1 ];then
+Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightObject;)Z" \
+".end method" \
+'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
+    .registers 5
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$TAPK/com.miui.system/classes*/miui/drm/DrmManager.smali"
+
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$TAPK/com.miui.system/classes*/miui/drm/DrmManager.smali"
+else
+rm -fr "$TAPK/com.miui.system*"
+fi
+
 Vsmali ".method public isVideoAd()Z" \
 ".end method" \
 '.method public isVideoAd()Z
