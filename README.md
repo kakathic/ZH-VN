@@ -4,8 +4,7 @@ Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
 Hỗ trợ cả root và không root
 
-**Hướng dẫn cài đặt**
----
+## Hướng dẫn cài đặt
 
 Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
 
@@ -19,8 +18,7 @@ Nhật ký thay đổi các phiên bản
 
 [Xem lịch sử](/Version.md)
 
-**Xem chi tiết Magisk**
----
+## Xem chi tiết Magisk
 
 Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
@@ -32,8 +30,7 @@ Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 > **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
 
-**Xem chi tiết Recovery**
----
+## Xem chi tiết Recovery
 
 Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
