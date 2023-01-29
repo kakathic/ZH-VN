@@ -75,9 +75,7 @@ Fjar ''$miuik'framework'
 fi
 if [ "$chinann" == 1 ] || [ "$keyyyy" == 1 ] || [ "$gettttap" == 1 ];then
 Fjar ''$miuik'services'
-kssndh="$(find /system -name ''$miuik'services.jar')"
-kssndbd="/system/framework"
-rm -fr ${kssndh%/*}/oat ${kssndh%/*}/arm64 ${kssndh%/*}/arm ${kssndh%/*}/*.vdex $kssndbd/oat $kssndbd/arm64 $kssndbd/arm $kssndbd/*.vdex
+rm -fr /*/framework/oat /*/framework/arm64 /*/framework/arm /*/framework/*.vdex /*/*/framework/oat /*/*/framework/arm64 /*/*/framework/arm /*/*/framework/*.vdex
 fi
 
 ui_print "  Giai nen apk"
