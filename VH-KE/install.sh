@@ -235,6 +235,15 @@ Vsmali '.method public static supportPaperEyeCare()Z' \
 .end method' \
 "$TMPDIR/Apk/com.android.settings/classes*/*"
 
+Vsmali '.method public static isNotSupported()Z' \
+'.end method' \
+'.method public static isNotSupported()Z
+    .registers 2
+    const/4 v1, 0x0
+    return v1
+.end method' \
+"$TMPDIR/Apk/com.android.settings/classes*/com/android/settings/lab/*"
+
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/systemui/navigationbar/*.smali"
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/systemui/qs"
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/settingslib/inputmethod/*.smali"
