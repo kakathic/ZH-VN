@@ -100,7 +100,7 @@ Kgg
 }
 
 # Getprop
-GB() { cat /*/build.prop /*/*/etc/build.prop | grep -m1 "$1=" | cut -d = -f2; }
+GB() { getprop "$1"; }
 
 # Unpack
 unzip -o "$ZIP" 'module.prop' 'install.sh' 'system.prop' -d /tmp
