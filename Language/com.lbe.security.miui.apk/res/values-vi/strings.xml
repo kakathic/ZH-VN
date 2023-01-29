@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Quản lý Quyền</string>
-    <string name="Generic_Copyright">Việt hóa bởi ๖ۣۜßεℓ™ - MIUI.VN</string>
+    <string name="Generic_Copyright">Bản quyền chung</string>
     <string name="Generic_Version">Phiên bản: %1$s</string>
     <string name="Generic_Configuration">Cài đặt</string>
     <string name="Generic_UserApp">Đã tải xuống (%d)</string>
@@ -765,7 +765,32 @@ Bạn cần phải cài đặt phiên bản MIUI của nhà phát triển để 
     <string name="fmt_time">T</string>
     <string name="fmt_date_numeric_day">D</string>
     <string name="fmt_date_day">D</string>
-	<string name="HIPS_Perm_NEARBY_DEVICES">Kết nối với các thiết bị lân cận</string>
-	<string name="HIPS_Perm_NEARBY_DEVICES_Desc">Phát hiện và kết nối với các thiết bị lân cận</string>
+    <string name="HIPS_Perm_NEARBY_DEVICES">Kết nối với các thiết bị lân cận</string>
+    <string name="HIPS_Perm_NEARBY_DEVICES_Desc">Phát hiện và kết nối với các thiết bị lân cận</string>
     <string name="perm_educate_post_notification">Thông báo có thể đi kèm với âm thanh và rung khi chúng xuất hiện trong ngăn Thông báo và trên các biểu tượng Màn hình chính. Bạn có thể thay đổi tùy chọn thông báo của mình trong Cài đặt.</string>
+    <string name="permgroupdesc_recognition">Truy cập sức khỏe &amp; dữ liệu hoạt động</string>
+    <string name="permgroupdesc_microphone">Truy cập trực tiếp micro để ghi âm.</string>
+    <string name="permgroupdesc_sms">Gửi và xem tin nhắn SMS</string>
+    <string name="permgroupdesc_camera">Chụp ảnh và quay video</string>
+    <string name="permgroupdesc_phone">Thực hiện và quản lý cuộc gọi điện thoại</string>
+    <string name="permgroupdesc_calendar">Truy cập lịch của bạn</string>
+    <string name="permgroupdesc_contacts">Truy cập vào danh bạ của bạn</string>
+    <string name="permgroupdesc_sensors">Truy cập dữ liệu cảm biến về dấu hiệu sinh tồn của bạn</string>
+    <string name="permgroupdesc_storage">Truy cập ảnh, phương tiện và tệp trên thiết bị của bạn</string>
+    <string name="permgroupdesc_location">Giám sát vị trí vật lý.</string>
+    <string name="permgroupdesc_calllog">Đọc và ghi nhật ký cuộc gọi điện thoại</string>
+
+    <string name="permdesc_write_storage">Truy cập và lưu ảnh và tệp tin trên thiết bị</string>
+    <string name="permdesc_read_storage">Truy cập ảnh và tệp tin lưu trữ trên thiết bị</string>
+    <string name="permdesc_write_calendar">Truy cập và thêm sự kiện lịch</string>
+    <string name="permdesc_sensors">Truy cập dữ liệu cảm biến cơ thể</string>
+
+    <string name="permdesc_read_calendar">Truy cập sự kiện lịch</string>
+    <string name="permdesc_microphone">Ghi âm cuộc gọi và âm thanh</string>
+    
+    <string name="permdesc_location">Truy cập thông tin vị trí</string>
+
+    <string name="permdesc_camera">Chụp ảnh và quay phim.</string>
+    <string name="permdesc_location_background">Truy cập vị trí dưới nền</string>
 </resources>
+
