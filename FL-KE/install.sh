@@ -88,7 +88,7 @@ ui_print " "
 
 
 if [ "$gettttap" == 1 ];then
-rm -fr "$(echo /*/*app/*SuperMarket*)"
+rm -fr "$(find /*/*app/*SuperMarket* /*/*/*app/*SuperMarket* /*/*/*/*app/*SuperMarket* 2>/dev/null | head -n1)"
 rm -fr $(find /data/app/* -name "*com.xiaomi.market-*")
 Vsmali ".method private checkSystemSelfProtection(Z)V" \
 ".end method" \
@@ -207,7 +207,7 @@ Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightOb
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
 
-echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
+echo "ro.product.vip=$(getprop ro.product.system.device)_global" >> /tmp/system.prop
 
 kkhddbff="$(echo $TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
 kkgwmw="$(echo "$TAPK/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
@@ -266,12 +266,18 @@ echo '<?xml version="1.0" encoding="utf-8"?>
 # Đóng gói 
 cd $TMPI/banphim
 zip -qr $TMPI/com.miui.phrase.zip *
-cp -rf $TMPI/com.miui.phrase.zip "$(echo /*/media/theme/default)"/com.miui.phrase
+cp -rf $TMPI/com.miui.phrase.zip ${Themes%/*}/default/com.miui.phrase
 
-Thaythe "com.sohu.inputmethod.sogou.xiaomi" "com.google.android.inputmethod.latin" "$TAPK/com.android.settings/classes*/com/android/settings/inputmethod/*"
-Thaythe "com.sohu.inputmethod.sogou.xiaomi" "com.google.android.inputmethod.latin" "$TAPK/com.miui.phrase/classes*/com/miui/inputmethod/*"
-Thaythe "com.sohu.inputmethod.sogou.xiaomi" "com.google.android.inputmethod.latin" ''$TAPK/$miuik'services/classes*/com/android/server/*'
-Thaythe "com.sohu.inputmethod.sogou.xiaomi" "com.google.android.inputmethod.latin" ''$TAPK/$miuik'framework/classes*/android/*input*/*'
+3banphim(){
+Thaythe "$1" "$2" "$TAPK/com.android.settings/classes*/com/android/settings/inputmethod/*"
+Thaythe "$1" "$2" "$TAPK/com.miui.phrase/classes*/com/miui/inputmethod/*"
+Thaythe "$1" "$2" ''$TAPK/$miuik'services/classes*/com/android/server/*'
+Thaythe "$1" "$2" ''$TAPK/$miuik'framework/classes*/android/*input*/*'
+}
+
+3banphim com.sohu.inputmethod.sogou.xiaomi com.google.android.inputmethod.latin
+3banphim com.baidu.input_mi com.vng.inputmethod.labankey
+3banphim com.iflytek.inputmethod.miui com.touchtype.swiftkey
 
 Vsmali '.method public static isMiuiImeBottomSupport()Z' \
 '.end method' \
