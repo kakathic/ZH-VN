@@ -99,16 +99,14 @@ else Kgg; fi; }
 Kgg
 }
 
-# Getprop
-GB() { getprop "$1"; }
-
 # Unpack
 unzip -o "$ZIP" 'module.prop' 'install.sh' 'system.prop' -d /tmp
 chmod 777 /tmp/install.sh
 TMPI="/tmp/lib"
 TBIN="/tmp/bin"
 VHMI="/sdcard/VH-MI"
-Overlay="/system/product/overlay"
+Overlay="$(find /product /*/product /*/*/product -name overlay 2>/dev/null | head -n1)"
+Buildprop="$(find /system_root/system /system -name 'build.prop' 2>/dev/null | head -n1)"
 TAPK="/tmp/lapk"
 
 # Tạo TM
@@ -131,9 +129,9 @@ XHex(){ $TBIN/toybox xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ $TBIN/toybox xxd -r -p "$@"; }
 
 # Check API ABI
-API=$(GB ro.build.version.sdk)
-ABI=$(GB ro.product.cpu.abi)
-[ "$ABI" ] || ABI=$(GB ro.vendor.product.cpu.abilist64)
+API=$(getprop ro.build.version.sdk)
+ABI=$(getprop ro.product.cpu.abi)
+[ "$ABI" ] || ABI=$(getprop ro.vendor.product.cpu.abilist64)
 
 # Check arm
 if [ "$ABI" = "x86" ]; then
@@ -182,7 +180,7 @@ done
 }
 
 # Tim apk path
-Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app)"
+Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app /*/*/*/framework /*/*/*/priv-app)"
 
 Fapk(){
 TdataApp="$(find /data/app/* -name "*$1-*")"
@@ -261,7 +259,7 @@ ui_print "  Ten: $(GP name) $(GP version)"
 ui_print " "
 ui_print "  Tac gia: $(GP author)"
 ui_print " "
-ui_print "  Thong tin: $(GB ro.product.system.device), $API, $ARCH"
+ui_print "  Thong tin: $(getprop ro.product.system.device), $API, $ARCH"
 ui_print " "
 
 echo 'WyAiJEFQSSIgLWxlIDMwIF0gJiYgaWR0a21pPSIkKGdyZXAgLW0xICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCB0ciAnICcgJ1xuJyB8IGdyZXAgLW0xIGFjY291bnQgfCBjdXQgLWQgXCIgLWYyKSIKWyAiJEFQSSIgLWdlIDMxIF0gJiYgaWR0a21pPSIkKGdyZXAgLWEgLUEyICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBoZWFkIC1uMiB8IHRhaWwgLW4xIHwgY3V0IC1kICcvJyAtZjEpIgppZGltZWk9IiQoZ3JlcCAtbTEgImtleV9tZWlkX3Nsb3QwIiAvZGF0YS8qLyovY29tLmFuZHJvaWQucGhvbmUvc2hhcmVkX3ByZWZzLyoueG1sIHwgY3V0IC1kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC1mMSkiClRra2c9MQpnd3dnbnJqPSIkKHVuemlwIC1wICIkWklQIiAibGliL0ZMdW5hLyQoR0Igcm8ucHJvZHVjdC5zeXN0ZW0uZGV2aWNlKSIgfCBiYXNlNjQgLWQpIgoKZm9yIHd5d20gaW4gJGd3d2ducmo7IGRvCmtraWhoPSQoZ3JlcCAtYWNtMSAkd3l3bSAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwpClsgJGtraWhoID09IDEgXSAmJiBicmVhawppZiBbICIkaWRpbWVpIiA9PSAiJHd5d20iIF07dGhlbgpra2loaD0iMSIKYnJlYWsKZmkKZG9uZQoKaWYgWyAiJGtraWhoIiA9PSAxIF07dGhlbgp1aV9wcmludCAiICBIZWxsbzogJGlkdGttaSIKdWlfcHJpbnQgIiAiCmVsc2UKdWlfcHJpbnQgIiAgSURNSTogJGlkdGttaSIKdWlfcHJpbnQgIiAiCnVpX3ByaW50ICIgIE1FSUQ6ICRpZGltZWkiCnVpX3ByaW50ICIgIgp1aV9wcmludCAiICBUYWkga2hvYW4gY3VhIGJhbiBraG9uZyBjbyB0cm9uZyBkYW5oIHNhY2giCnVpX3ByaW50ICIgIgp1aV9wcmludCAiICBIYXkgdW5nIGhvIChEb25hdGUpIGRlIGR1b2MgdGhlbSB2YW8gZGFuaCBzYWNoIgp1aV9wcmludCAiICIKYWJvcnQgIiAgUXVhIHRyaW5oIGNhaSBkYXQgZGEgYmkgaHV5ICEKLiIKZmk=' | base64 -d > /tmp/innnn.sh
@@ -273,8 +271,8 @@ chmod 777 /tmp/innnn.sh
 
 # Thêm vào build.prop
 for kkabs in $(grep = /tmp/system.prop); do
-[ "$(grep -cm1 "$(echo $kkabs | cut -d = -f1)=" /system/build.prop)" == 1 ] && sed -i "/$(echo $kkabs | cut -d = -f1)=/d" /system/build.prop
-echo "$kkabs" >> /system/build.prop
+[ "$(grep -cm1 "$(echo $kkabs | cut -d = -f1)=" $Buildprop)" == 1 ] && sed -i "/$(echo $kkabs | cut -d = -f1)=/d" $Buildprop
+echo "$kkabs" >> $Buildprop
 done
 
 # Dọn dẹp
