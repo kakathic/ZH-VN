@@ -1,5 +1,6 @@
-
 VHMI="/sdcard/VH-MI"
+
+Testg() {
 
 while true; do
 kkTest="$(/system/bin/curl -s -k -G -L --connect-timeout 20 "https://github.com/kakathic/Tool-Shells/releases/download/View/Test")"
@@ -25,8 +26,8 @@ cut () { /data/tools/bin/toybox cut "$@"; }
 
 DICHVB(){
 Tekk="$(echo "$@" | sed -z -e 's|\n||g' -e "s|'||g" -e "s|&amp;|&|g" -e "s|&#10;|;;|g")"
-if [ "$Tekk" == "zh" ] || [ "$Tekk" == "zh_CN" ] || [ "$Tekk" == "M月d日" ] || [ "$Tekk" == "M月d日 Eaa" ] || [ "$Tekk" == "M月d日 E" ] || [ "$Tekk" == "Eaa" ] || [ "$Tekk" == "'aah:mm'" ] || [ "$Tekk" == "小时" ] || [ "$Tekk" == "时" ] || [ "$Tekk" == "分钟" ] || [ "$Tekk" == "分" ];then
-echo "$@" | sed -e "s|zh_CN|vi_VN|g" -e "s|zh|vi|g" -e "s|M月d日 Eaa|aa E, dd/MM|g" -e "s|M月d日 E|E, dd/MM|g" -e "s|M月d日|dd/MM|g" -e "s|'aah:mm'|'aa h:mm'|g" -e "s|Eaa|aa E|g" -e "s|Eaa|aa E|g" -e "s|aah:mm|'aa h:mm'|g" -e "s|小时|h |g" -e "s|时|h |g" -e "s|分钟|m|g" -e "s|分|m|g" -e "s|預計SLOT充滿|Dự kiến SLOT đầy|g" -e "s|可用時長SLOT|Khả dụng SLOT|g" -e "s|亮螢幕可用時長SLOT|Khả dụng SLOT|g"
+if [ "$Tekk" == "zh" ] || [ "$Tekk" == "zh_CN" ] || [ "$Tekk" == "M月d日" ] || [ "$Tekk" == "M月d日 Eaa" ] || [ "$Tekk" == "M月d日 E" ] || [ "$Tekk" == "Eaa" ] || [ "$Tekk" == "'aah:mm'" ] || [ "$Tekk" == "小时" ] || [ "$Tekk" == "时" ] || [ "$Tekk" == "分钟" ] || [ "$Tekk" == "分" ] || [ "$Tekk" == "亮屏可用时长SLOT" ] || [ "$Tekk" == "可用时长SLOT" ] || [ "$Tekk" == "预计SLOT充满" ];then
+echo "$@" | sed -e "s|zh_CN|vi_VN|g" -e "s|zh|vi|g" -e "s|M月d日 Eaa|aa E, dd/MM|g" -e "s|M月d日 E|E, dd/MM|g" -e "s|M月d日|dd/MM|g" -e "s|'aah:mm'|'aa h:mm'|g" -e "s|Eaa|aa E|g" -e "s|Eaa|aa E|g" -e "s|aah:mm|'aa h:mm'|g" -e "s|预计SLOT充满|Sạc đầy sau SLOT|g" -e "s|亮屏可用时长SLOT|Còn lại SLOT màn hình sáng|g" -e "s|可用时长SLOT|Còn lại SLOT|g" -e "s|小时| giờ |g" -e "s|时| giờ |g" -e "s|分钟| phút|g" -e "s|分| phút|g"
 
 else
 Trann="$(/system/bin/curl -s -k -G -L --connect-timeout 20 "https://translate.google.com/m?sl=auto&tl=vi&op=translate" --data-urlencode "q=$Tekk" 2>/dev/null | tr '<' '\n' | grep -m1 'class="result-container">' | cut -d '>' -f2)"
@@ -183,3 +184,7 @@ cp -rf $Link2/* $Link1
 chmod -R 777 $Link0
 #killall com.miui.home
 killall com.miui.personalassistant 2>/dev/null
+
+}
+
+Testg | tee $VHMI/Widget.txt
