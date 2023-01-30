@@ -98,7 +98,7 @@ if [ "$Licham" != 1 ];then
 cp -rf $TMPI/notamlich/*.apk $TMPI/apk
 cp -rf $TMPI/notamlich/framework-miui-res $TMPI
 fi
-[ -e $TMPI/framework-miui-res ] && cp -f $TMPI/framework-miui-res /*/media/theme/default
+[ -e $TMPI/framework-miui-res ] && cp -f $TMPI/framework-miui-res ${Themes%/*}/default
 if [ -e "$VHMI/XList.md" ];then
 for vahdbff in $(cat "$VHMI/XList.md"); do
 cp -f "$TMPI/apk/Zz.$vahdbff.apk" $Overlay
@@ -114,7 +114,7 @@ if [ "$Licham" == 1 ];then
 ui_print "  Cai lich am"
 ui_print " "
 cp -rf $TMPI/apk/*com.android.systemui*.apk $Overlay
-cp -rf $TMPI/framework-miui-res /*/media/theme/default
+cp -rf $TMPI/framework-miui-res ${Themes%/*}/default
 fi
 
 # font
@@ -123,19 +123,12 @@ ui_print "  Cai Font"
 ui_print " "
 [ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts/* $TMPI/fonts
 for iki in MiLanProVF.ttf MiSansVF.ttf RobotoVF.ttf Roboto-Regular.ttf; do
-rm -fr /system/fonts/$iki
+rm -fr ${Buildprop%/*}/fonts/$iki
 done
-cp -rf $TMPI/fonts/* /system/fonts
-cd /system/fonts
+cp -rf $TMPI/fonts/* ${Buildprop%/*}/fonts
+cd ${Buildprop%/*}/fonts
 for iki in MiSansVF.ttf RobotoVF.ttf; do
 ln -sf MiLanProVF.ttf $iki
 done
 cd /
 fi
-
-# Fix dc
-Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head -n1)"
-if [ -e "$Ksdjn" ] && [ "$(GB ro.product.system.device)" == "raphael" ];then
-sed -i 's|<bool name="support_dc_backlight">true</bool>|<bool name="support_dc_backlight">false</bool>|' "$Ksdjn"
-fi
-
