@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">CaptivePortalLogin</string>
-    <string name="action_use_network">Sử dụng mạng này</string>
-    <string name="action_do_not_use_network">Không sử dụng mạng này</string>
     <string name="action_bar_label">Đăng nhập vào mạng</string>
-    <string name="ssl_error_warning">Mạng mà bạn đang cố gắng tham gia có vấn đề về bảo mật.</string>
-    <string name="ssl_error_example">Ví dụ, trang đăng nhập có thể không thuộc về tổ chức được hiển thị.</string>
-    <string name="ssl_error_continue">Vẫn tiếp tục qua trình duyệt</string>
     <string name="action_bar_title">Đăng nhập vào %1$s</string>
+    <string name="action_do_not_use_network">Không sử dụng mạng này</string>
+    <string name="action_use_network">Sử dụng mạng này như là</string>
+    <string name="app_name">Captiveportallogin</string>
+    <string name="channel_description_download_progress">Thông báo hiển thị tiến trình tải xuống tệp</string>
+    <string name="channel_description_downloads">Thông báo hiển thị các bản tải xuống đã hoàn thành hoặc hủy bỏ</string>
+    <string name="channel_name_download_progress">Tiến độ tải xuống</string>
+    <string name="channel_name_downloads">Tải xuống</string>
+    <string name="custom_scheme_example">Ví dụ: trang đăng nhập có thể yêu cầu một ứng dụng cụ thể để xác thực</string>
+    <string name="custom_scheme_warning">Mạng bạn đang cố gắng tham gia là yêu cầu mở một ứng dụng khác.</string>
+    <string name="download_completed">Tải hoàn tất</string>
+    <string name="downloading_paramfile">Đang tải xuống %1$s</string>
+    <string name="error_continue_via_browser">Tiếp tục bằng mọi cách thông qua trình duyệt</string>
+    <string name="error_downloading_paramfile">Không thể tải xuống %1$s</string>
+    <string name="no_bypass_error_vpnwarning">Ngoài ra, không thể bỏ qua lỗi này vì thiết bị hiện đang chạy VPN.</string>
+    <string name="ok">OK</string>
+    <string name="page_info">Thông tin trang</string>
+    <string name="page_info_address">Địa chỉ nhà:</string>
+    <string name="ssl_error_date_invalid">Giấy chứng nhận này có một ngày không hợp lệ.</string>
+    <string name="ssl_error_example">Ví dụ: trang đăng nhập có thể không thuộc về tổ chức được hiển thị.</string>
+    <string name="ssl_error_expired">Giấy chứng nhận này đã hết hạn.</string>
+    <string name="ssl_error_invalid">Giấy chứng nhận này không hợp lệ.</string>
+    <string name="ssl_error_mismatch">Tên của trang web không khớp với tên trên chứng chỉ.</string>
+    <string name="ssl_error_not_yet_valid">Giấy chứng nhận này chưa hợp lệ.</string>
+    <string name="ssl_error_unknown">Lỗi chứng chỉ không xác định.</string>
+    <string name="ssl_error_untrusted">Giấy chứng nhận này không phải từ một cơ quan đáng tin cậy.</string>
+    <string name="ssl_error_view_certificate">Xem chứng chỉ</string>
+    <string name="ssl_error_warning">Mạng bạn đang cố gắng tham gia có vấn đề bảo mật.</string>
+    <string name="ssl_security_warning_title">Cảnh báo an ninh</string>
 </resources>
