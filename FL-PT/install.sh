@@ -61,7 +61,10 @@ ui_print " "
 
 if [ "$Teme" == 1 ];then
 chmod 0731 /data/system/theme
-sed -i 's|chmod 0775 /data/system/theme|chmod 0731 /data/system/theme|' /init.miui.rc
+
+Rcjffhv="$(find /init.miui.rc /*/init.miui.rc /*/*/init.miui.rc /*/etc/init/init.miui.ext.rc /*/*/etc/init/init.miui.ext.rc 2>/dev/null | head -n1)"
+sovcf="$(grep -nm1 "chmod .... /data/system/theme" "$Rcjffhv" | cut -d : -f1)"
+sed -i ''$sovcf'c\chmod 0731 /data/system/theme' $Rcjffhv
 
 if [ "$(grep -cm1 'DRM_SUCCESS' $TAPK/com.miui.system/classes*/miui/drm/DrmManager.smali)" == 1 ];then
 Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightObject;)Z" \
