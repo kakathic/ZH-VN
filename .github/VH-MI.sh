@@ -59,7 +59,7 @@ $(cat $TOME/log)
 fi
 done
 
-cd $TOME/Lang13
+cd $TOME/Split_lang
 
 for vad in *.apk; do
 
