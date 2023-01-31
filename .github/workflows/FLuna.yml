@@ -8,6 +8,7 @@ on:
       - 'FL-ZH/**'
       - 'FLuna/**'
       - 'Language/**'
+      - 'Split_lang/**'
       - 'Miui/**'
       - '.github/workflows/FLuna.yml'
       - '.github/FLuna.sh'
