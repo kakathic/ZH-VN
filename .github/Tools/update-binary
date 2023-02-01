@@ -184,9 +184,9 @@ done
 Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app /*/*/*/framework /*/*/*/priv-app)"
 
 Fapk(){
-TdataApp="$(find -type f /data/app/* -name "*$1-*")"
-[ -e "$TdataApp" ] && PTapk="$(find -type f $TdataApp -name base.apk | head -n1)"
-STapk="$(find -type f $Papkhhjg -name "$2" -not -path "*/data/*" | head -n1)"
+TdataApp="$(find /data/app/* -type f -name "*$1-*")"
+[ -e "$TdataApp" ] && PTapk="$(find $TdataApp -type f -name base.apk | head -n1)"
+STapk="$(find $Papkhhjg -type f -name "$2" -not -path "*/data/*" | head -n1)"
 echo "$STapk" | tee "$TAPK/$1.txt"
 if [ "$PTapk" ];then
 cp -rf "$PTapk" "$TAPK/$1.apk"
@@ -196,7 +196,7 @@ else
 fi; }
 
 Fjar(){
-STjar="$(find -type f $Papkhhjg -name "$1".jar -not -path "*/data/*" | head -n1)"
+STjar="$(find $Papkhhjg -type f -name "$1".jar -not -path "*/data/*" | head -n1)"
 [ -e "$STjar" ] && cp -rf "$STjar" "$TAPK" || abort "- Loi: $1"
 echo "$STjar" | tee "$TAPK/$1.txt"; }
 
