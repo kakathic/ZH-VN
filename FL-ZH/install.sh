@@ -122,7 +122,7 @@ if [ "$fontvh" == 1 ];then
 ui_print "  Cai Font"
 ui_print " "
 [ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts/* $TMPI/fonts
-for iki in MiLanProVF.ttf MiSansVF.ttf RobotoVF.ttf Roboto-Regular.ttf; do
+for iki in MiLanProVF.ttf MiSansVF.ttf RobotoVF.ttf; do
 rm -fr ${Buildprop%/*}/fonts/$iki
 done
 cp -rf $TMPI/fonts/* ${Buildprop%/*}/fonts
@@ -130,5 +130,4 @@ cd ${Buildprop%/*}/fonts
 for iki in MiSansVF.ttf RobotoVF.ttf; do
 ln -sf MiLanProVF.ttf $iki
 done
-cd /
 fi
