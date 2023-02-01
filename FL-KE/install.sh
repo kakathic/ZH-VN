@@ -207,7 +207,7 @@ Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightOb
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
 
-echo "ro.product.vip=$(getprop ro.product.system.device)_global" >> /tmp/system.prop
+echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
 kkhddbff="$(echo $TAPK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
 kkgwmw="$(echo "$TAPK/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
