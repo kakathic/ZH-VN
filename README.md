@@ -28,7 +28,7 @@ Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 > **VH-KE**: Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm, china global chuyển nền china sang global, china global mod giống như china global nhưng cửa hàng theme là china và widget china.
 
-> **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo
+> **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo, Xoá app china không dùng được ở Việt Nam 
 
 ## Xem chi tiết Recovery
 
