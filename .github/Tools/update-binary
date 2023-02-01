@@ -107,7 +107,7 @@ TBIN="/tmp/bin"
 VHMI="/sdcard/VH-MI"
 Overlay="$(find -type f /product /*/product /*/*/product -name overlay 2>/dev/null | head -n1)"
 Buildprop="$(find -type f /system_root/system /system -name 'build.prop' 2>/dev/null | head -n1)"
-Themes="$(find -type f /*/media/theme /*/*/media/theme /*/*/*/media/theme -name default.mtz 2>/dev/null | head -n1)
+Themes="$(find -type f /*/media/theme /*/*/media/theme /*/*/*/media/theme -name default.mtz 2>/dev/null | head -n1)"
 TAPK="/tmp/lapk"
 
 # Tạo TM
