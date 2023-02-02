@@ -19,7 +19,7 @@ cp -rf $TMPI/product/* ${Overlay%/*}
 fi
 
 if [ -e $TMPI/system_ext ];then
-cp -rf $TMPI/system_ext/* $(find /system_ext /*/system_ext /*/*/system_ext -type f 2>/dev/null | head -n1)
+cp -rf $TMPI/system_ext/* $(find /system_ext /system_root/system_ext /system_root/system/system_ext -type f 2>/dev/null | head -n1)
 fi
 
 # Dịch vụ gg
