@@ -108,7 +108,7 @@ TMPI="/tmp/lib"
 TBIN="/tmp/bin"
 VHMI="/sdcard/VH-MI"
 Overlay="$(find /product /*/product /*/*/product -type d -name "overlay" 2>/dev/null | head -n1)"
-Buildprop="$(find /system /system_root/system -type f -name 'build.prop' 2>/dev/null | head -n1)"
+Buildprop="$(find /system/build.prop /system_root/system/build.prop -type f 2>/dev/null | head -n1)"
 Themes="$(find /*/media/theme /*/*/media/theme /*/*/*/media/theme -type f -name default.mtz 2>/dev/null | head -n1)"
 TAPK="/tmp/lapk"
 
