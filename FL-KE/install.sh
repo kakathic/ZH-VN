@@ -203,9 +203,9 @@ Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightOb
     const/4 v0, 0x1
     return v0
 .end method' \
-''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
+''$TAPK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TAPK/$miuik'services/classes*/miui/drm/DrmManager.smali'
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TAPK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
 echo "ro.product.vip=$(GB ro.product.system.device)_global" >> /tmp/system.prop
 
