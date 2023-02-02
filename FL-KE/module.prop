@@ -25,7 +25,7 @@ banphim=
 # Eg: com.facebook.katana,com.facebook.orca,org.telegram.messenger
 # Phân cách bởi dấu -Phẩy-
 
-ListApp=com.facebook.katana,com.facebook.lite,com.facebook.orca,com.zing.zalo,org.telegram.messenger,com.google.android.gm,com.facebook.mlite,com.google.android.youtube
+ListApp=com.facebook.katana,com.facebook.lite,com.facebook.orca,com.zing.zalo,org.telegram.messenger,com.google.android.gm,com.facebook.mlite,com.github.kr328.clash,com.google.android.youtube
 #-----------------------#
 
 
