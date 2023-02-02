@@ -88,8 +88,8 @@ ui_print " "
 
 
 if [ "$gettttap" == 1 ];then
-rm -fr "$(find -type f /*/*app/*SuperMarket* /*/*/*app/*SuperMarket* /*/*/*/*app/*SuperMarket* 2>/dev/null | head -n1)"
-rm -fr $(find -type f /data/app/* -name "*com.xiaomi.market-*")
+rm -fr "$(find /*/*app/*SuperMarket* /*/*/*app/*SuperMarket* /*/*/*/*app/*SuperMarket* -type f 2>/dev/null | head -n1)"
+rm -fr $(find /data/app/* -type f -name "*com.xiaomi.market-*")
 Vsmali ".method private checkSystemSelfProtection(Z)V" \
 ".end method" \
 '.method private checkSystemSelfProtection(Z)V
