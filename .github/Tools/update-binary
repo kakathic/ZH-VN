@@ -187,7 +187,7 @@ Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/pr
 
 Fapk(){
 TdataApp="$(find /data/app/* -name "*$1-*")"
-[ -e "$TdataApp" ] && PTapk="$(find $TdataApp -name base.apk | head -n1)"
+[ -e "$TdataApp" ] && PTapk="$(find $TdataApp -name "base.apk" | head -n1)"
 STapk="$(find $Papkhhjg -type f -name "$2" -not -path "*/data/*" | head -n1)"
 echo "$TdataApp-$PTapk"
 echo "$STapk" | tee "$TAPK/$1.txt"
