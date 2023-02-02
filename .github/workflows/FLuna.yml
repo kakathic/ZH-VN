@@ -11,6 +11,7 @@ on:
       - 'Split_lang/**'
       - 'Miui/**'
       - '.github/workflows/FLuna.yml'
+      - '.github/Tools/**'
       - '.github/FLuna.sh'
 jobs:
   build:
