@@ -107,7 +107,7 @@ chmod 777 /tmp/install.sh
 TMPI="/tmp/lib"
 TBIN="/tmp/bin"
 VHMI="/sdcard/VH-MI"
-Overlay="$(find /product /*/product /*/*/product -type d -name "overlay" 2>/dev/null | head -n1)"
+Overlay="$(find /product/overlay /*/product/overlay /*/*/product/overlay -type d 2>/dev/null | head -n1)"
 Buildprop="$(find /system/build.prop /system_root/system/build.prop -type f 2>/dev/null | head -n1)"
 Themes="$(find /*/media/theme /*/*/media/theme /*/*/*/media/theme -type f -name default.mtz 2>/dev/null | head -n1)"
 TAPK="/tmp/lapk"
@@ -186,11 +186,12 @@ done
 Papkhhjg="$(echo /*/app /*/framework /*/priv-app /*/*/app /*/*/framework /*/*/priv-app /*/*/*/framework /*/*/*/priv-app)"
 
 Fapk(){
-TdataApp="$(find /data/app/* -type f -name "*$1-*")"
-[ -e "$TdataApp" ] && PTapk="$(find $TdataApp -type f -name base.apk | head -n1)"
+TdataApp="$(find /data/app/* -name "*$1-*")"
+[ -e "$TdataApp" ] && PTapk="$(find $TdataApp -name base.apk | head -n1)"
 STapk="$(find $Papkhhjg -type f -name "$2" -not -path "*/data/*" | head -n1)"
+echo "$TdataApp-$PTapk"
 echo "$STapk" | tee "$TAPK/$1.txt"
-if [ "$PTapk" ];then
+if [ -e "$PTapk" ];then
 cp -rf "$PTapk" "$TAPK/$1.apk"
 rm -fr $TdataApp
 else
