@@ -90,14 +90,14 @@ Timkiem(){ find $TMPDIR/Apk/$2 -name "*.smali" -exec grep -l "$1" {} +; }
 
 Vsmali(){
 for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
-[ -e $Vka ] && ui_print "MOD: $RANDOM" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
+[ -e $Vka ] && ui_print2 "MOD: $RANDOM" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^$1/,/$2/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 [ -e $Vka ] && echo "$Vka" >> $TMPDIR/Apk/$(echo "$4" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
 done
 }
 
 Thaythe(){
-ui_print "MOD: $RANDOM -> $RANDOM"
+ui_print2 "MOD: $RANDOM -> $RANDOM"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|$1|$2|g" $Tt2 || Xan "- Lỗi: $1"
 [ -e "$Tt2" ] && echo "$Tt2" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
@@ -105,7 +105,7 @@ done
 }
 
 Autoone(){
-ui_print "MOD: $RANDOM -> $RANDOM"
+ui_print2 "MOD: $RANDOM -> $RANDOM"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
 echo "$vakkddhh" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
