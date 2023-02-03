@@ -153,7 +153,7 @@ done
 Donggoi(){
 # Đóng gói apk
 for bapk in $TMPDIR/Apk/*.*; do
-if [ -e "${bapk%.*}/class" ];then
+if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ] && [ -e "${bapk%.*}/class" ];then
 PTb="$(cat ${bapk%.*}.txt)"
 ui_print "  Đóng gói: ${PTb##*/}"
 ui_print
