@@ -292,7 +292,7 @@ kkhddbff="$(echo $TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/
 kkgwmw="$(echo "$TMPDIR/Apk/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
 
 if [ -e $kkhddbff ] || [ -e $kkgwmw ];then
-echo "$kkhddbff" >> $TMPDIR/Apk/com.miui.powerkeeper/class
+#echo "$kkhddbff" >> $TMPDIR/Apk/com.miui.powerkeeper/class
 echo "$kkgwmw" >> "$TMPDIR/Apk/$miuik"services/class
 
 for bbddkkk in $(getprop ListApp | tr ',' '\n'); do
@@ -301,7 +301,7 @@ const-string v1, "'$bbddkkk'"
 invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 const-string v1, "com.tencent.mm"
 '
-sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
+#sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
 sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkgwmw
 dumpsys deviceidle whitelist +$bbddkkk >&2
 done
