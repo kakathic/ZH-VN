@@ -169,6 +169,7 @@ cp -rf $TMPDIR/Apk/tmp/* $TMPDIR/Apk
 else
 rm -fr ${bapk%.*}*
 fi
+fi
 done
 
 for Capk in $TMPDIR/Apk/*.*; do
