@@ -32,7 +32,7 @@ error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Viewonline(){
 [ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
-Viewonline "https://raw.githubusercontent.com/kakathic/Tools/Vip/Tools.sh" > $MODPATH/Tools.sh
+Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Tools.sh" > $MODPATH/Tools.sh
 . $MODPATH/Tools.sh; [ "$TTvip" == 1 ] || abort "$error";
 
 ## Check the system devices
