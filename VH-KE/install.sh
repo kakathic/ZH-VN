@@ -45,7 +45,7 @@ ui_print "  $name: $(GP name) $(GP version)"
 ui_print
 ui_print "  $author: $(GP author)"
 ui_print
-ui_print "  $Information: $(getprop ro.product.model), $(getprop ro.product.device), $API, $ARCH"
+ui_print "  $Information: $(getprop ro.product.device), $API, $ARCH"
 ui_print
 }
 
