@@ -148,7 +148,7 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
 [ "$chinann" == 2 ] && CPapk com.android.systemui
 [ "$chinann" == 4 ] && CPapk com.miui.home
-[ "$chinann" == 2 ] && CPapk com.miui.powerkeeper
+#[ "$chinann" == 2 ] && CPapk com.miui.powerkeeper
 if [ "$keyyyy" == 2 ] || [ "$chinann" == 2 ];then
 CPapk com.android.settings
 CPfile ''$miuik'framework'
