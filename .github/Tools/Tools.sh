@@ -157,7 +157,7 @@ if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ];then
 PTb="$(cat ${bapk%.*}.txt)"
 ui_print "  Đóng gói: ${PTb##*/}"
 ui_print
-for bsmali in $(cat ${bapk%.*}/class | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f2 | sort | uniq); do
+for bsmali in $(cat ${bapk%.*}/class 2>/dev/null | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f2 | sort | uniq); do
 rm -fr "$bsmali".dex
 smali a --api $API ${bapk%.*}/$bsmali -o "${bapk%.*}/$bsmali".dex
 done
@@ -169,7 +169,7 @@ fi
 done
 
 for Capk in $TMPDIR/Apk/*.*; do
-if [ "${Capk##*.}" == 'apk' ] && [ -e "${Capk%.*}.txt" ];then
+if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
 mkdir -p $MODPATH${Papkp%/*}/lib/$ARCH
