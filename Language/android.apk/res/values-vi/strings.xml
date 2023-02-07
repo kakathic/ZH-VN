@@ -2721,4 +2721,6 @@ Bạn có thể thay đổi lối tắt này sang tính năng khác trong Cài �
     <string name="nas_upgrade_notification_title">Trợ lý Thông báo</string>
 	<string name="notification_channel_abusive_bg_apps">Hoạt động nền</string>
 	<string name="fc_dialog_body">Gửi báo cáo lỗi cho Mi để phân tích? Báo cáo này có thể chứa Thông tin nhận dạng cá nhân. Báo cáo của bạn sẽ được sử dụng để giúp khắc phục lỗi này và sẽ không bao giờ được chia sẻ trong bất kỳ bối cảnh thương mại nào.</string>
+	<string name="config_defaultAutofillService">com.google.android.gms/com.google.android.gms.autofill.service.AutofillService</string>
+
 </resources>
