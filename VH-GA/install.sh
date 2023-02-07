@@ -108,6 +108,8 @@ cp -rf /data/local/tmp/Gboard $MODPATH/system/product/priv-app
 [ "$(pm path "com.google.android.gsf" | cut -d : -f2)" ] && rm -fr $MODPATH/system/product/priv-app/GoogleServicesFramework
 
 sleep 1
+
+settings put secure autofill_service 'com.google.android.gms/com.google.android.gms.autofill.service.AutofillService'
 ime enable com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
 ime set com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
 fi
