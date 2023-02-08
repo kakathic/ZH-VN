@@ -272,7 +272,7 @@ Tất cả dữ liệu trước đó của bạn sẽ được giữ lại."</st
     <string name="dlg_app_replacement_statement_with_version">%1$s (%2$s) sẽ thay thế phiên bản hiện đang được cài đặt (%3$s). Tất cả dữ liệu của ứng dụng sẽ được lưu lại.</string>
     <string name="miui_clear_apks">Xóa gói cài đặt và dữ liệu còn lại (%s)</string>
     <string name="miui_message_staging_0">Đang dàn dựng ứng dụng   </string>
-    <string name="untrusted_external_source_always_click">Luôn hiển thị</string>
+    <string name="untrusted_external_source_always_click">Luôn cho phép</string>
     <string name="app_not_found_dlg_title">Không tìm thấy ứng dụng</string>
     <string name="install_confirm_question_update">Bạn có muốn cài đặt bản cập nhật cho ứng dụng đã có? Dữ liệu đã có sẽ không bị mất. Ứng dụng được cập nhật sẽ truy cập vào:</string>
     <string name="miui_app_detail">Chi tiết</string>
