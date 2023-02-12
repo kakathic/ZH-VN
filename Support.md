@@ -22,7 +22,7 @@
 >> Tên mã máy: raphael<br/>
 >> Xiaomi id: 152533xxxx<br/>
 >> MEID: 24272427xxxxxx
-
+>> Magisk hoặc Recovery 
 - **Số tiền gửi là 20k/1 thiết bị**
 
 Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
