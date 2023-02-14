@@ -255,6 +255,9 @@ com.xiaomi.aiasst.vision
 com.miui.accessibility
 com.miui.tsmclient
 com.miui.nextpay
+com.sohu.inputmethod.sogou.xiaomi
+com.iflytek.inputmethod.miui
+com.baidu.input_mi
 "
 mrw
 Gappcn(){
