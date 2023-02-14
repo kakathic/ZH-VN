@@ -117,6 +117,7 @@ ui_print
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 
 ## code
+Xu_install busybox
 Xu_install jre
 Xu_install smali 2.5.2
 Xu_install baksmali 2.3.4
