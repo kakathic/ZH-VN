@@ -23,7 +23,9 @@
 >> Xiaomi id: 152533xxxx<br/>
 >> MEID: 24272427xxxxxx
 
-- **Số tiền gửi là 20k/1 thiết bị, 1 trong 2 phiên bản Magisk hoặc Recovery **
++ **Số tiền gửi là 20k/1 thiết bị**
+
++ **Nhận bản Magisk hoặc Recovery**
 
 Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
 
