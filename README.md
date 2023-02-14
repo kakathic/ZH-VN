@@ -20,7 +20,7 @@ Nhật ký thay đổi các phiên bản
 
 ## Xem chi tiết Magisk
 
-Tải Xuống: [MS-VH](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
+Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
