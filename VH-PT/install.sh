@@ -109,7 +109,7 @@ ui_print
 ui_print2 "1"
 Vk 2
 baomat=$input
-fi
+
 
 ui_print "- Thời tiết mod cho nền china?"
 ui_print
@@ -126,6 +126,7 @@ ui_print
 ui_print2 "1"
 Vk 2
 ttiet=$input
+fi
 fi
 
 if [ "$(GP TKpin2)" ];then
