@@ -19,7 +19,7 @@
 
 - Ví dụ:
 
->> Tên mã máy: raphael<br/>
+>> Code mã máy: raphaelxx<br/>
 >> Xiaomi id: 152533xxxx<br/>
 >> MEID: 24272427xxxxxx
 >> Magisk hoặc Recovery 
