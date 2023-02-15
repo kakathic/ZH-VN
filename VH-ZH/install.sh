@@ -258,6 +258,7 @@ com.miui.nextpay
 com.sohu.inputmethod.sogou.xiaomi
 com.iflytek.inputmethod.miui
 com.baidu.input_mi
+com.android.browser
 "
 mrw
 Gappcn(){
