@@ -323,11 +323,6 @@ done' >> $TMPDIR/service.sh
 
 fi
 
-for Bala in product vendor system_ext; do
-[ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
-[ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
-done
-
 # Dịch vụ gg
 Ptkkf=$(find /*/*/etc/permissions/*cn.google*.xml /*/etc/permissions/*cn.google*.xml | head -n1)
 if [ -e $Ptkkf ];then
@@ -343,6 +338,11 @@ mkdir -p $MODPATH${Ksdjn%/*}
 cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
 sed -i 's|<bool name="support_dc_backlight">true</bool>|<bool name="support_dc_backlight">false</bool>|' "$MODPATH$Ksdjn"
 fi
+
+for Bala in product vendor system_ext; do
+[ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
+[ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
+done
 
 $Test123 || abort
 ui_print2 "$(End_time)"
