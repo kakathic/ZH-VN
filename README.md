@@ -4,6 +4,8 @@ Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
 Hỗ trợ cả root và không root
 
+Hỗ trợ từ miui 12.5 đến MIUI mới nhất
+
 ## Hướng dẫn cài đặt
 
 Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
