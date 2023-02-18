@@ -41,6 +41,3 @@ echo > ${0%/*}/widget.log
 
 cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
-
-[ -e /data/data/com.miui.personalassistant/files/maml/res/0 ] && Appvault.sh >> ${0%/*}/widget.log &
-
