@@ -16,17 +16,8 @@ theme=
 # 2 Tắt
 caiapk=
 
-# Chỉnh sửa lại ứng dụng bảo mật
-# 1 Bật
-# 2 Tắt
-#modbm=
+# Chạy ứng dụng trên nền global ?
+# Mặc định: com.miui.weather2
+# Thêm ứng dụng khác hãy thêm dấu phẩy, để ngăn cách ứng dụng.
+mglobal=com.miui.weather2
 
-# Cài đặt thời tiết Mod cho nền china
-# 1 Bật
-# 2 Tắt
-#thoitiet=
-
-# Mod ứng dụng Tiết kiệm pin
-# 1 Bật
-# 2 Tắt
-#TKpin=
