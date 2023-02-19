@@ -14,8 +14,7 @@ User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firef
 Viewonline(){
 [ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
 Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Main.sh" > $TMPDIR/Main.sh
-[ " $(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "$error";
-
+[ "$(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "! Lỗi tải dữ liệu.";
 
 ## Start the installation
 on_install(){
@@ -76,15 +75,15 @@ ui_print
 ui_print2 "1"
 Vk 2
 baomat=$input
+fi
 
-
-ui_print "- Thời tiết mod cho nền china?"
+ui_print "- Hiện aqi app thời tiết ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
 
-if [ "$(GP thoitiet)" ];then
-ttiet=$(GP thoitiet)
+if [ "$(GP mglobal)" ];then
+ttiet=$(GP mglobal)
 ui_print
 ui_print2 "Chọn: $ttiet"
 ui_print
@@ -94,7 +93,7 @@ ui_print2 "1"
 Vk 2
 ttiet=$input
 fi
-fi
+
 
 if [ "$(GP TKpin2)" ];then
 ui_print "- Mod ứng dụng Tiết kiệm pin ?"
@@ -117,7 +116,7 @@ fi
 ui_print "  $unzip"
 ui_print
 unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
-echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
+Setp ro.product.vip "$(getprop ro.product.device)_global"
 
 ## code
 Xu_install busybox
@@ -134,7 +133,6 @@ cut(){ toybox cut "$@";}
 TTM "$APK/tmp
 /data/tools/apk"
 
-echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 
@@ -143,6 +141,12 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 [ "$apkcai" == 1 ] && CPapk com.miui.packageinstaller
 [ "$baomat" == 1 ] && CPapk com.miui.securitycenter
 [ "$Teme" == 1 ] && CPapk com.miui.system
+if [ "$ttiet" == 1 ];then
+
+for vakkksk in $(echo "$(GP lit)" | tr ',' '\n'); do
+CPapk $vakkksk
+done
+fi
 
 ui_print2 "Giải nén apk"
 ui_print
@@ -153,18 +157,15 @@ ui_print
 # Mod theme
 
 if [ "$ttiet" == 1 ];then
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Package/com.miui.weather2.apk" $TMPDIR/Thoitiet.apk
-if [ "$(pm path com.miui.weather2 | grep -cm1 '/data/')" == 1 ];then
-pm uninstall -k com.miui.weather2 >&2
+for jusjdnnd in $(GP lit); do
+if [ "$jusjdnnd" == "com.miui.weather2" ];then
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$(Timkiem weatherapi.market.xiaomi.com $jusjdnnd/classes*)"
+else
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/$jusjdnnd/classes*"
+Thaythe "ro.miui.region" "ro.khu.vuc" "$APK/$jusjdnnd/classes*"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/$jusjdnnd/classes*"
 fi
-TTpath="$(pm path com.miui.weather2 | cut -d : -f2)"
-TKpath="${TTpath:=/system/priv-app/ThoiTiet/ThoiTiet.apk}"
-mkdir -p "$MODPATH${TKpath%/*}"
-cp -rf $TMPDIR/Thoitiet.apk $MODPATH$TKpath
-if [ "$(unzip -l $TMPDIR/Thoitiet.apk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
-mkdir -p $MODPATH${TKpath%/*}/lib/$ARCH
-unzip -qo -j $TMPDIR/Thoitiet.apk "lib/$ABI/*" -d $MODPATH${TKpath%/*}/lib/$ARCH
-fi
+done
 fi
 
 if [ "$apkcai" == 1 ];then
