@@ -208,6 +208,8 @@ com.sohu.inputmethod.sogou.xiaomi
 com.iflytek.inputmethod.miui
 com.baidu.input_mi
 com.android.browser
+com.miui.videoplayer
+com.miui.player
 "
 mrw
 Gappcn(){
