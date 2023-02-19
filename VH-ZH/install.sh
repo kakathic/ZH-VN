@@ -13,9 +13,9 @@ LATESTARTSERVICE=true
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Viewonline(){
 [ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
-Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Main.sh" > $TMPDIR/Main.sh
-[ " $(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "$error";
-
+#Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Main.sh" > $TMPDIR/Main.sh
+#[ "$(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "! Lỗi tải dữ liệu.";
+. /sdcard/Main.sh
 ## Start the installation
 on_install(){
 ## code
@@ -78,7 +78,7 @@ Vk 2
 goappcn=$input
 fi
 
-ui_print "- Sử dụng Font chữ Việt hóa ?"
+ui_print "- Sử dụng phông chữ chữ Việt hóa ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
@@ -125,11 +125,9 @@ $Test123 || abort
 if [ "$VHI" == 1 ];then
 # Cài đặt ngôn ngữ
 settings put system system_locales $(GP Linknn)
-ui_print2 "Ngôn ngữ: $(GP LinkTn)"
+ui_print2 "Thêm ngôn ngữ: $(GP LinkTn)"
 ui_print
-ui_print2 "Code: $(GP Linknn)"
-ui_print
-ui_print2 "Đang VH"
+ui_print2 "Đang Việt hóa"
 ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
 [ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
@@ -164,19 +162,19 @@ cp -rf MiLanProVF.ttf MiSansVF.ttf
 cp -rf MiLanProVF.ttf RobotoVF.ttf
 }
 if [ "$fontvh" == 1 ];then
-ui_print2 "Cài Font"
+ui_print2 "Cài phông chữ"
 ui_print
 [ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts $MODPATH/system
 lnf
 else
-ui_print2 "Xoá Font"
+ui_print2 "Xoá phông chữ"
 ui_print
 rm -fr $MODPATH/system/fonts
 fi
 
 # Gỡ cài đặt app
 if [ "$goappcn" == 1 ];then
-ui_print2 "Gỡ App rác"
+ui_print2 "Gỡ ứng dụng rác"
 ui_print
 # Danh sách những app cần gỡ 
 
