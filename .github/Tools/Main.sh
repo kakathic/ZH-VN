@@ -254,6 +254,7 @@ unset mklist
 
 export PATH="/data/tools/bin:$PATH"
 export HOME="/data/tools"
+export APK="$TMPDIR/Apk"
 
 print_modname(){
 
