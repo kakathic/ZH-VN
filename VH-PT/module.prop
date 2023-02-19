@@ -19,5 +19,8 @@ caiapk=
 # Chạy ứng dụng trên nền global ?
 # Mặc định: com.miui.weather2
 # Thêm ứng dụng khác hãy thêm dấu phẩy, để ngăn cách ứng dụng.
-mglobal=com.miui.weather2
+lit=com.miui.weather2
 
+# Dòng dưới là bật tắt auto chạy
+# 1 Bật, 2 Tắt
+mglobal=
