@@ -43,41 +43,30 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API2.zip" $TMPDIR/Gapp.zip
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GooglePlayServicesUpdater.apk')" ];then
-mkdir -p /data/local/tmp/Phonesky;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/Phonesky/Phonesky.apk;
-cp -rf /data/local/tmp/Phonesky $MODPATH/system/product/priv-app
-#pm install -r /data/local/tmp/Phonesky/Phonesky.apk >&2
-FREEZE /system/product/priv-app/Phonesky
+Checkapp(){pm path "$1" | cut -d : -f2}
+
+if [ "$(Checkapp com.android.vending) ];then
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" $TMPDIR/Phonesky.apk;
+chcon u:object_r:apk_data_file:s0 $TMPDIR/Phonesky.apk;
+pm install -r $TMPDIR/Phonesky.apk >&2
 else
-mkdir -p /data/local/tmp/Phonesky;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" /data/local/tmp/Phonesky/Phonesky.apk;
-pm install -r /data/local/tmp/Phonesky/Phonesky.apk >&2
+abort "- Lỗi tải CH Play"
 fi
 
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'GmsCore.apk')" ];then
-echo > $MODPATH/NO
-mkdir -p /data/local/tmp/PrebuiltGmsCoreRvc;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gms.apk" /data/local/tmp/PrebuiltGmsCoreRvc/PrebuiltGmsCoreRvc.apk;
-cp -rf /data/local/tmp/PrebuiltGmsCoreRvc $MODPATH/system/product/priv-app
-#pm install -r /data/local/tmp/PrebuiltGmsCoreRvc/PrebuiltGmsCoreRvc.apk >&2
-FREEZE /system/product/priv-app/PrebuiltGmsCoreRvc
-fi
-
-if [ -z "$(find $(magisk --path)/.magisk/mirror/system_root -type f -name 'Gboard.apk')" ];then
-mkdir -p /data/local/tmp/Gboard;
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gboard.apk" "/data/local/tmp/Gboard/Gboard.apk";
-pm install -r /data/local/tmp/Gboard/Gboard.apk >&2
-cp -rf /data/local/tmp/Gboard $MODPATH/system/product/priv-app
-[ "$(pm path "com.google.android.gsf" | cut -d : -f2)" ] && rm -fr $MODPATH/system/product/priv-app/GoogleServicesFramework
-
-sleep 1
+if [ "$(Checkapp com.google.android.inputmethod.latin) ];then
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gboard.apk" $TMPDIR/Gboard.apk;
+chmod 777 $TMPDIR/Gboard.apk
+chcon u:object_r:apk_data_file:s0 $TMPDIR/Gboard.apk;
+pm install -r $TMPDIR/Gboard.apk >&2
+mkdir -p $MODPATH/system/product/app/Gboard
+cp -rf $TMPDIR/Gboard.apk $MODPATH/system/product/app/Gboard
 
 settings put secure autofill_service 'com.google.android.gms/com.google.android.gms.autofill.service.AutofillService'
 ime enable com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
 ime set com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
+else
+abort "- Lỗi tải bàn phím"
 fi
-rm -fr /data/local/tmp/*
 
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
