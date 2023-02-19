@@ -428,7 +428,7 @@ rm -fr /*/framework/arm64 /*/framework/arm /*/*/framework/arm64 /*/*/framework/a
 mro
 
 if [ -e ${kssndh%/*}/arm ];then
-${kssndh%/*}/arm64
+FREEZE "${kssndh%/*}/arm64
 ${kssndh%/*}/arm"
 
 ui_print2 "Cảnh báo!"
