@@ -1,0 +1,3 @@
+# kakathic
+Dtime=2099-01-01
+[ "$(date +%Y%m%d%)" -ge "${Dtime//-/}" ] && echo 1
