@@ -1,6 +1,12 @@
 **Nhật ký thay đổi**
 ----
 
+Version: 1.6
+
+- Thêm 1 số tính năng mới
+
+- Fix
+
 Version: 1.5
 
 - Fix thông báo android 13
