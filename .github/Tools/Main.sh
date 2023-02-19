@@ -103,13 +103,13 @@ baksmali () { java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/baksmali.jar" "
 smali () { java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
-Timkiem(){ find $TMPDIR/Apk/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
+Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
 
 Vsmali(){
 for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e $Vka ] && ui_print2 "MOD: $RANDOM" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
-[ -e $Vka ] && echo "$Vka" >> $TMPDIR/Apk/$(echo "$4" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
+[ -e $Vka ] && echo "$Vka" >> $APK/$(echo "$4" | sed "s|$APK/||g" | cut -d '/' -f1)/class
 done
 }
 
@@ -117,7 +117,7 @@ Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
-[ -e "$Tt2" ] && echo "$Tt2" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
+[ -e "$Tt2" ] && echo "$Tt2" >> $APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class
 done
 }
 
@@ -125,7 +125,7 @@ Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
-echo "$vakkddhh" >> $TMPDIR/Apk/$(echo "$3" | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f1)/class
+echo "$vakkddhh" >> $APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class
 done
 }
 
@@ -133,27 +133,23 @@ CPapk(){
 PTC="$(pm path "$1" | cut -d : -f2)"
 if [ "$(echo "$PTC" | grep -cm1 '/data/')" == 1 ];then
 cp -rf $PTC "/data/tools/apk/$1.apk"
-cp -rf "$PTC" "$TMPDIR/Apk/$1.apk"
+cp -rf "$PTC" "$APK/$1.apk"
 pm uninstall $1 >&2
 else
-Pathfw2="$(find /*/app /*/*/app /*/priv-app /*/*/priv-app /*/framework /*/*/framework -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
-Padddj="$(find $(magisk --path)/.magisk/mirror -type f -name "${PTC##*/}" -not -path "*/data/*" | head -n1)"
-#cp -rf $PTC "/data/tools/apk/$1.apk"
-[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$TMPDIR/Apk/$1.apk" || cp -rf "$Padddj" "$TMPDIR/Apk/$1.apk"
+[ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$APK/$1.apk" || cp -rf "$PTC" "$APK/$1.apk"
 fi
-echo "$(pm path "$1" | cut -d : -f2)" | tee "$TMPDIR/Apk/$1.txt" >&2
+echo "$(pm path "$1" | cut -d : -f2)" | tee "$APK/$1.txt" >&2
 }
 
 CPfile(){
-Pathfw="$(find /*/app /*/*/app /*/priv-app /*/*/priv-app /*/framework /*/*/framework -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
-Padddjfn="$(find $(magisk --path)/.magisk/mirror -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
-cp -rf "$Padddjfn" "$TMPDIR/Apk"
-echo "$Pathfw" | tee "$TMPDIR/Apk/$1.txt" >&2
+Pathfw="$(find /*/framework /*/*/framework -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
+cp -rf "$Pathfw" "$APK"
+echo "$Pathfw" | tee "$APK/$1.txt" >&2
 }
 
 # giải nén file
 Giainen(){
-for vapk in $TMPDIR/Apk/*.*; do
+for vapk in $APK/*.*; do
 if [ "${vapk##*.}" == 'apk' ] || [ "${vapk##*.}" == 'jar' ];then
 PTd="$(cat ${vapk%.*}.txt)"
 [ -e "$vapk" ] && ui_print "  Giải nén: ${PTd##*/}" || abort "- Lỗi không tìm thấy file! ${PTd##*/}"
@@ -169,27 +165,27 @@ done
 
 Donggoi(){
 # Đóng gói apk
-for bapk in $TMPDIR/Apk/*.*; do
+for bapk in $APK/*.*; do
 if [ "${bapk##*.}" == 'apk' ] || [ "${bapk##*.}" == 'jar' ];then
 if [ -e "${bapk%.*}/class" ];then
 PTb="$(cat ${bapk%.*}.txt)"
 ui_print "  Đóng gói: ${PTb##*/}"
 ui_print
-for bsmali in $(cat ${bapk%.*}/class 2>/dev/null | sed "s|$TMPDIR/Apk/||g" | cut -d '/' -f2 | sort | uniq); do
+for bsmali in $(cat ${bapk%.*}/class 2>/dev/null | sed "s|$APK/||g" | cut -d '/' -f2 | sort | uniq); do
 rm -fr "$bsmali".dex
 smali a --api $API ${bapk%.*}/$bsmali -o "${bapk%.*}/$bsmali".dex
 done
 cd ${bapk%.*}
 zip -qr -0 $bapk '*.dex'
-zipalign -f 4 $bapk $TMPDIR/Apk/tmp/${bapk##*/} 
-cp -rf $TMPDIR/Apk/tmp/* $TMPDIR/Apk
+zipalign -f 4 $bapk $APK/tmp/${bapk##*/} 
+cp -rf $APK/tmp/* $APK
 else
 rm -fr ${bapk%.*}*
 fi
 fi
 done
 
-for Capk in $TMPDIR/Apk/*.*; do
+for Capk in $APK/*.*; do
 if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
@@ -240,21 +236,20 @@ for vah in $1; do
 done
 }
 
+export PATH="/data/tools/bin:$PATH"
+export HOME="/data/tools"
+export APK="$TMPDIR/Apk"
+[ "$API" -ge 31 ] && miuik='miui-'
+
 TTM "/data/tools/bin
-$TMPDIR/Apk/tmp
+$APK/tmp
 /data/tools/ck
 /data/tools/tmp
 /data/tools/apk
 /data/tools/lib/Tools"
 
-[ "$API" -ge 31 ] && miuik='miui-'
-
 unset vah
 unset mklist
-
-export PATH="/data/tools/bin:$PATH"
-export HOME="/data/tools"
-export APK="$TMPDIR/Apk"
 
 print_modname(){
 
