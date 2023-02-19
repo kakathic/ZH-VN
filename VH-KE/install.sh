@@ -8,51 +8,16 @@ PROPFILE=true
 POSTFSDATA=true
 ## Set to true for service.sh to be used
 LATESTARTSERVICE=true
-## After installing the module, it will open the magisk application if you are in another application 
-OPENMG=true
-
-## Language text
-chon="Chọn"
-time="Tổng thời gian"
-h="giờ"
-m="phút"
-s="giây"
-Information="Thông tin"
-author="Tác giả"
-name="Tên"
-unzip="Đang xử lý..."
-volkey1="! Sử dụng phím âm lượng"
-volkey2="! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
-volkey3="! Ấn nút nguồn để hủy."
-load="Tải"
-error="! Lỗi không tìm thấy hoặc lỗi mạng !"
-error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
 # Internet
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 Viewonline(){
 [ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
-Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Tools.sh" > $MODPATH/Tools.sh
-. $MODPATH/Tools.sh; [ "$TTvip" == 1 ] || abort "$error";
-
-## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "$error2"
-
-## Introduce
-print_modname(){
-ui_print
-ui_print "  $name: $(GP name) $(GP version)"
-ui_print
-ui_print "  $author: $(GP author)"
-ui_print
-ui_print "  $Information: $(getprop ro.product.device), $API, $ARCH"
-ui_print
-}
+Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Main.sh" > $TMPDIR/Main.sh
+[ " $(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "$error";
 
 ## Start the installation
 on_install(){
-
-echo 'I0FwaWx0PSQoZ3JlcCAtbTEgY29tLnhpYW9taSAvZGF0YS9zeXN0ZW0vc3luYy8qLiogfCB0ciAnICcgJ1xuJyB8IGdyZXAgLW0xIGFjY291bnQ9IHwgY3V0IC1kIFwiIC1mMikKI1sgLXogIiRBcGlsdCIgXSAmJiBBcGlsdD0kKGdyZXAgLWFDNyAnY29tLmFuZHJvaWQuY29udGFjdHMnIC9kYXRhL3N5c3RlbS9zeW5jL2FjY291bnRzLnhtbCB8IGdyZXAgLyB8IGhlYWQgLW4xIHwgY3V0IC1kICcvJyAtZjEpCgpbICIkQVBJIiAtbGUgMzAgXSAmJiBBcGlsdD0iJChncmVwIC1tMSAiY29tLnhpYW9taSIgL2RhdGEvc3lzdGVtL3N5bmMvYWNjb3VudHMueG1sIHwgdHIgJyAnICdcbicgfCBncmVwIC1tMSBhY2NvdW50IHwgY3V0IC1kIFwiIC1mMikiClsgIiRBUEkiIC1nZSAzMSBdICYmIEFwaWx0PSIkKGdyZXAgLWEgLUEyICJjb20ueGlhb21pIiAvZGF0YS9zeXN0ZW0vc3luYy9hY2NvdW50cy54bWwgfCBoZWFkIC1uMiB8IHRhaWwgLW4xIHwgY3V0IC1kICcvJyAtZjEpIgpbIC16ICIkQXBpbHQiIF0gJiYgQXBpbHQ9Ikzhu5dpIFRLIE1pIgoKaW1laT0iJChnZXRwcm9wIHBlcnNpc3QucmFkaW8ubWVpZCkiClsgLXogIiRpbWVpIiBdICYmIGltZWk9IiQoZ2V0cHJvcCByby5yaWwub2VtLm1laWQpIgpbIC16ICIkaW1laSIgXSAmJiBpbWVpPSIkKGdyZXAgLW0xIGtleV9tZWlkX3Nsb3QwIC9kYXRhLyovMC9jb20uYW5kcm9pZC5waG9uZS9zaGFyZWRfcHJlZnMvY29tLmFuZHJvaWQucGhvbmVfcHJlZmVyZW5jZXMueG1sIHwgY3V0IC1kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC1mMSkiClsgLXogIiRpbWVpIiBdICYmIGltZWk9Ikzhu5dpIE1FSUQpIgoKTGl0dXNzPSIkKFhlbSBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va2FrYXRoaWMvWkgtVk4vWkgvVXNlcm5hbWUvJChnZXRwcm9wIHJvLnByb2R1Y3QuZGV2aWNlKSB8IGJhc2U2NCAtZCkiCgpmb3IgVmtkZyBpbiAkTGl0dXNzOyBkbwpra2loaD0kKGdyZXAgLWFjbTEgJFZrZGcgL2RhdGEvc3lzdGVtL3N5bmMvYWNjb3VudHMueG1sKQpbICRra2loaCA9PSAxIF0gJiYgYnJlYWsKZG9uZQoKZGtucmpqPSIkKGVjaG8gIiRMaXR1c3MiIHwgZ3JlcCAtY20xICRpbWVpKSIKClRlc3QxMjM9dHJ1ZQoKaWYgWyAiJGtraWhoIiA9PSAxIF0gfHwgWyAiJGRrbnJqaiIgPT0gMSBdO3RoZW4KdWlfcHJpbnQyICJDaMOgbyBi4bqhbjogJEFwaWx0Igp1aV9wcmludAoKWyAtZSAvZGF0YS90b29scy9saWIvTG9nLnR4dCBdICYmIHJtIC1mciAvZGF0YS90b29scy9saWIvTG9nLnR4dAplbHNlCnVpX3ByaW50ICIhIFRow7RuZyBiw6FvCiIKdWlfcHJpbnQgIiAgVMOqbiBtw6F5OiAkKGdldHByb3Agcm8ucHJvZHVjdC5kZXZpY2UpCgogIFTDoGkga2hv4bqjbiBNaTogJEFwaWx0CiAgCiAgSU1FSTogJGltZWkKIiAgCnVpX3ByaW50ICIgIMSQ4buDIHPhu60gZOG7pW5nIGzDonUgZMOgaSBi4bqhbiBuw6puIOG7p25nIGjhu5kgxJHhu4Mgc+G7rSBk4bulbmcKCiAgdsSpbmggdmnhu4VuLgoKICBUaOG7rSBuZ2hp4buHbSBz4bq9IGPDsyB0w6FjIGThu6VuZyB0cm9uZyBuZ8OgeSBow7RtIMSRw7MuCgogIEjhur90IHRo4budaSBnaWFuIHPhur0gdOG7sSDEkeG7mW5nIHJlYm9vdCBtw6F5LgoiClsgLWUgL2RhdGEvdG9vbHMvbGliL0xvZy50eHQgXSAmJiBhYm9ydCAiLSBC4bqhbiDEkcOjIGjhur90IGzGsOG7o3QgZMO5bmcgdGjhu60gcsO5aS4KIgphbSBzdGFydCAtYSBhbmRyb2lkLmludGVudC5hY3Rpb24uVklFVyAtZCAiaHR0cHM6Ly9rYWthdGhpYy5naXRodWIuaW8vWkgtVk4vU3VwcG9ydC5odG1sIiA+JjIKCmVjaG8gJwp3aGlsZSB0cnVlOyBkbwppZiBbICIkKGNhdCAvZGF0YS90b29scy9saWIvVGVzdCkiICE9ICIkKGRhdGUgKyIlZCIpIiBdO3RoZW4KZWNobyAiSOG6v3QgVGltZTogJChkYXRlKSIgPiAvZGF0YS90b29scy9saWIvTG9nLnR4dAplY2hvID4gJHswJS8qfS9yZW1vdmUKc2xlZXAgMTAKcmVib290CmZpCmRvbmUKJyA+IC9kYXRhL3Rvb2xzL2xpYi9ydW4uc2gKZWNobyAnCm5vaHVwIC9kYXRhL3Rvb2xzL2xpYi9ydW4uc2ggJj4kezAlLyp9L3J1bi5sb2cgJgonID4+ICRUTVBESVIvc2VydmljZS5zaAplY2hvICIkKGRhdGUgKyIlZCIpIiA+ICRNT0RQQVRIL1Rlc3QKZmk=' | base64 -d > $TMPDIR/ka.sh && . $TMPDIR/ka.sh
 
 ui_print "! Sử dụng phím âm lượng"
 ui_print "! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
@@ -76,12 +41,10 @@ Vk 2
 gettttap=$input
 fi
 
-ui_print "- Tính năng Mod nâng cao ?"
+ui_print "- Bật tính năng China mod ?"
 ui_print
-ui_print2 "1. Tắt"
-ui_print2 "2. China Mod"
-ui_print2 "3. China > Global"
-ui_print2 "4. China > Global Mod"
+ui_print2 "1. Có"
+ui_print2 "2. Không"
 
 if [ "$(GP global)" ];then
 chinann=$(GP global)
@@ -91,7 +54,7 @@ ui_print
 else
 ui_print
 ui_print2 "1"
-Vk 4
+Vk 2
 chinann=$input
 fi
 
@@ -129,7 +92,7 @@ Xu_install toybox
 sed(){ toybox sed "$@";}
 cut(){ toybox cut "$@";}
 
-TTM "$TMPDIR/Apk/tmp
+TTM "$APK/tmp
 /sdcard/VH-MI/color
 /data/tools/apk"
 
@@ -148,15 +111,17 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 
 # Copy file & apk
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
-[ "$chinann" == 2 ] && CPapk com.android.systemui
+[ "$chinann" == 1 ] && CPapk com.android.systemui
 [ "$chinann" == 4 ] && CPapk com.miui.home
-#[ "$chinann" == 2 ] && CPapk com.miui.powerkeeper
-if [ "$keyyyy" == 2 ] || [ "$chinann" == 2 ];then
+#[ "$chinann" == 1 ] && CPapk com.miui.powerkeeper
+if [ "$keyyyy" == 2 ] || [ "$chinann" == 1 ];then
 CPapk com.android.settings
 CPfile ''$miuik'framework'
+CPfile 'framework'
+CPfile 'services'
 fi
 [ "$chinann" == 4 ] && CPfile ''$miuik'framework'
-if [ "$chinann" == 2 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ] || [ "$gettttap" == 1 ];then
+if [ "$chinann" == 1 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ] || [ "$gettttap" == 1 ];then
 CPfile ''$miuik'services'
 fi
 
@@ -178,7 +143,7 @@ Vsmali ".method private checkSystemSelfProtection(Z)V" \
     .locals 1
     return-void
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+''$APK/$miuik'services/classes*/com/miui/server/*'
 
 Vsmali ".method private checkSysAppCrack()Z" \
 ".end method" \
@@ -187,16 +152,16 @@ Vsmali ".method private checkSysAppCrack()Z" \
     const/4 v0, 0x1
     return v0
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+''$APK/$miuik'services/classes*/com/miui/server/*'
 
-Vsmali ".method private checkAppSignature(\[Landroid\/content\/pm\/Signature;Ljava\/lang\/String;Z)Z" \
+Vsmali ".method private checkAppSignature([Landroid/content/pm/Signature;Ljava/lang/String;Z)Z" \
 ".end method" \
 '.method private checkAppSignature([Landroid/content/pm/Signature;Ljava/lang/String;Z)Z
     .registers 5
     const/4 v0, 0x1
     return v0
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+''$APK/$miuik'services/classes*/com/miui/server/*'
 
 Vsmali ".method private onPostNotification()V" \
 ".end method" \
@@ -204,7 +169,7 @@ Vsmali ".method private onPostNotification()V" \
     .locals 11
 	return-void
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*'
+''$APK/$miuik'services/classes*'
 
 Vsmali ".method private static compareSignatures" \
 ".end method" \
@@ -213,14 +178,14 @@ Vsmali ".method private static compareSignatures" \
     const/4 v0, 0x0
     return v0
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*/com/miui/server/*'
+''$APK/$miuik'services/classes*/com/miui/server/*'
 
 fi
 
-if [ "$chinann" == 2 ];then
-sjwg="$(echo $TMPDIR/Apk/com.android.settings/classes*/com/android/settings/MiuiSettings.smali)"
+if [ "$chinann" == 1 ];then
+sjwg="$(echo $APK/com.android.settings/classes*/com/android/settings/MiuiSettings.smali)"
 sed -i -e '/Lcom\/android\/settings\/R$id;->security_center_settings:I/a\ const/4 v10, 0x1' -e '/Lcom\/android\/settings\/R$id;->security_status:I/a\ const/4 v10, 0x1' -e '/Lcom\/android\/settings\/R$id;->location_settings:I/a\ const/4 v10, 0x1' -e '/Lcom\/android\/settings\/R$id;->privacy_settings:I/a\ const/4 v10, 0x1' -e 's|sget-boolean v1, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z|const/4 v1, 0x1|' $sjwg
-echo "$sjwg" >> $TMPDIR/Apk/com.android.settings/class
+echo "$sjwg" >> $APK/com.android.settings/class
 
 Vsmali '.method public static supportPartialScreenShot()Z' \
 '.end method' \
@@ -229,7 +194,7 @@ Vsmali '.method public static supportPartialScreenShot()Z' \
     const/4 v1, 0x1
     return v1
 .end method' \
-"$TMPDIR/Apk/com.android.settings/classes*/*"
+"$APK/com.android.settings/classes*/*"
 
 Vsmali '.method public static supportPaperEyeCare()Z' \
 '.end method' \
@@ -238,7 +203,7 @@ Vsmali '.method public static supportPaperEyeCare()Z' \
     const/4 v0, 0x1
     return v0
 .end method' \
-"$TMPDIR/Apk/com.android.settings/classes*/*"
+"$APK/com.android.settings/classes*/*"
 
 Vsmali '.method public static isNotSupported()Z' \
 '.end method' \
@@ -247,70 +212,51 @@ Vsmali '.method public static isNotSupported()Z' \
     const/4 v1, 0x0
     return v1
 .end method' \
-"$TMPDIR/Apk/com.android.settings/classes*/com/android/settings/lab/*"
+"$APK/com.android.settings/classes*/com/android/settings/lab/*"
 
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/pm/PackageManagerServiceImpl.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/pm/SettingsImpl.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'framework/classes*/miui/securityspace/XSpaceConstant.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/systemui/navigationbar/*.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/systemui/qs"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.systemui/classes*/com/android/settingslib/inputmethod/*.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$TMPDIR/Apk/com.android.settings/classes*/com/android/settings/SettingsActivity.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'framework/classes*/miui/security/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'framework/classes*/android/miui/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/clipboard/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/notification/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/am/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/pm/PackageManagerServiceImpl.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/pm/SettingsImpl.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/miui/securityspace/XSpaceConstant.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/navigationbar/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/settingslib/inputmethod/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.settings/classes*/com/android/settings/SettingsActivity.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/miui/security/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/android/miui/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/clipboard/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/notification/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/am/*.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/*.smali'
 
 if [ "$ksjd" ];then
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
-Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
-Thaythe "ro.product.mod_device" "ro.product.vip" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
-Thaythe "force-idle" "unforce" "$TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/DeviceIdlePolicyHelper.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ai/AppPredict.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/bucket/InferAppBucketManager.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/scenario"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/powerchecker"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/gamepreload"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/ui"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/statemachine"
+Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/feedbackcontrol"
+Thaythe "force-idle" "unforce" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/DeviceIdlePolicyHelper.smali"
 fi
 
-Vsmali ".method private static isPermanentRights(Lmiui\/drm\/DrmManager\$RightObject;)Z" \
+Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObject;)Z" \
 ".end method" \
 '.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
     .registers 5
     const/4 v0, 0x1
     return v0
 .end method' \
-''$TMPDIR/Apk/$miuik'framework/classes*/miui/drm/DrmManager.smali'
+''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$TMPDIR/Apk/$miuik'framework/classes*/miui/drm/DrmManager.smali'
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
 echo "ro.product.vip=$(getprop ro.product.system.device)_global" >> $TMPDIR/system.prop
-
-kkhddbff="$(echo $TMPDIR/Apk/com.miui.powerkeeper/classes*/com/miui/powerkeeper/uft/UFTUtils.smali)"
-kkgwmw="$(echo "$TMPDIR/Apk/$miuik"services/classes*/com/miui/server/util/UFTUtils.smali)"
-
-if [ -e $kkhddbff ] || [ -e $kkgwmw ];then
-#echo "$kkhddbff" >> $TMPDIR/Apk/com.miui.powerkeeper/class
-echo "$kkgwmw" >> "$TMPDIR/Apk/$miuik"services/class
-
-for bbddkkk in $(getprop ListApp | tr ',' '\n'); do
-awggnw='
-const-string v1, "'$bbddkkk'"
-invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-const-string v1, "com.tencent.mm"
-'
-#sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkhddbff
-sed -i 's|const-string v1, "com.tencent.mm"|'"$awggnw"'|' $kkgwmw
-dumpsys deviceidle whitelist +$bbddkkk >&2
-done
-fi
 
 Vsmali ".method isSecureLocked()Z" \
 ".end method" \
@@ -319,41 +265,8 @@ Vsmali ".method isSecureLocked()Z" \
    const/4 v0, 0x0
    return v0
 .end method' \
-''$TMPDIR/Apk/$miuik'services/classes*'
+''$APK/$miuik'services/classes*'
 
-elif [ "$chinann" -ge 3 ];then
-AutoTv(){
-[ "$(pm path $1 | grep -cm1 '/data/')" == 1 ] && pm uninstall $1 >&2
-bmmmm="$(pm path "$1" | cut -d : -f2)"
-mkdir -p "$MODPATH${bmmmm%/*}"
-Taive "$2" $TMPDIR/$1.apk
-if [ "$bmmmm" ];then
-cp -rf $TMPDIR/$1.apk "$MODPATH$bmmmm"
-if [ "$(unzip -l $TMPDIR/$1.apk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
-mkdir -p $MODPATH${bmmmm%/*}/lib/$ARCH
-unzip -qo -j $TMPDIR/$1.apk "lib/$ABI/*" -d $MODPATH${bmmmm%/*}/lib/$ARCH
-fi
-else
-pm install -r $TMPDIR/$1.apk >&2
-fi
-}
-
-echo > $MODPATH/Global.txt
-AutoTv com.miui.securitycenter "https://github.com/kakathic/ZH-VN/releases/download/Apk/com.miui.securitycenter.apk"
-AutoTv com.xiaomi.discover "https://github.com/kakathic/ZH-VN/releases/download/Apk/com.xiaomi.discover.apk"
-if [ "$chinann" == 4 ];then
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x0" ''$TMPDIR/Apk/$miuik'framework/classes*/android/content/pm/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x0" ''$TMPDIR/Apk/$miuik'framework/classes*/android/app/*.smali'
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x0" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/policy/*.smali'
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z" "$TMPDIR/Apk/com.miui.home/classes*/*"
-Thaythe "ro.product.mod_device" "ro.product.modcn" "$TMPDIR/Apk/com.miui.home/classes*"
-else
-AutoTv com.android.thememanager "https://github.com/kakathic/ZH-VN/releases/download/Apk/com.android.thememanager.apk"
-rm -fr $NVBASE/*/VH-ZH/system/etc/precust_theme
-fi
-echo "ro.product.mod_device=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
-else
-sleep 1
 fi
 
 if [ "$keyyyy" == 1 ];then
@@ -393,10 +306,10 @@ Dso1=$(($Dso1 + 1))
 [ "$Dso1" == 4 ] && Keyk=com.android.cts.mockime
 
 if [ "$Dso1" -le 4 ];then
-Thaythe "$Keyk" "$Vaki" "$TMPDIR/Apk/com.android.settings/classes*/com/android/settings/inputmethod/*"
-Thaythe "$Keyk" "$Vaki" "$TMPDIR/Apk/com.miui.phrase/classes*/com/miui/inputmethod/*"
-Thaythe "$Keyk" "$Vaki" ''$TMPDIR/Apk/$miuik'services/classes*/com/android/server/*'
-Thaythe "$Keyk" "$Vaki" ''$TMPDIR/Apk/$miuik'framework/classes*/android/*inputmethod*/*'
+Thaythe "$Keyk" "$Vaki" "$APK/com.android.settings/classes*/com/android/settings/inputmethod/*"
+Thaythe "$Keyk" "$Vaki" "$APK/com.miui.phrase/classes*/com/miui/inputmethod/*"
+Thaythe "$Keyk" "$Vaki" ''$APK/$miuik'services/classes*/com/android/server/*'
+Thaythe "$Keyk" "$Vaki" ''$APK/$miuik'framework/classes*/android/*inputmethod*/*'
 fi
 
 done
@@ -408,7 +321,7 @@ Vsmali '.method public static isMiuiImeBottomSupport()Z' \
     const/4 v0, 0x1
     return v0
 .end method' \
-"$TMPDIR/Apk/com.android.settings/classes*/*"
+"$APK/com.android.settings/classes*/*"
 fi
 ui_print
 ui_print2 "Đóng gói apk"
@@ -421,7 +334,7 @@ for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
 done
 
-if [ "$chinann" == 2 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
+if [ "$chinann" == 1 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
 # Hệ thống mount
 mrw
 rm -fr /*/framework/arm64 /*/framework/arm /*/*/framework/arm64 /*/*/framework/arm 2>/dev/null
