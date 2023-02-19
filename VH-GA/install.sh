@@ -46,7 +46,7 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API2.zip" 
 
 Checkapp(){pm path "$1" | cut -d : -f2}
 
-if [ "$(Checkapp com.android.vending) ];then
+if [ "$(Checkapp com.android.vending)" ];then
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" $TMPDIR/Phonesky.apk;
 chcon u:object_r:apk_data_file:s0 $TMPDIR/Phonesky.apk;
 pm install -r $TMPDIR/Phonesky.apk >&2
@@ -54,7 +54,7 @@ else
 abort "- Lỗi tải CH Play"
 fi
 
-if [ "$(Checkapp com.google.android.inputmethod.latin) ];then
+if [ ! "$(Checkapp com.google.android.inputmethod.latin)" ];then
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gboard.apk" $TMPDIR/Gboard.apk;
 chmod 777 $TMPDIR/Gboard.apk
 chcon u:object_r:apk_data_file:s0 $TMPDIR/Gboard.apk;
@@ -65,9 +65,12 @@ cp -rf $TMPDIR/Gboard.apk $MODPATH/system/product/app/Gboard
 settings put secure autofill_service 'com.google.android.gms/com.google.android.gms.autofill.service.AutofillService'
 ime enable com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
 ime set com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME >&2
-else
-abort "- Lỗi tải bàn phím"
 fi
+
+Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/calculator.apk" $TMPDIR/calculator.apk;
+chcon u:object_r:apk_data_file:s0 $TMPDIR/calculator.apk;
+pm uninstall -k com.miui.calculator >&2
+pm install -r $TMPDIR/calculator.apk >&2
 
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
