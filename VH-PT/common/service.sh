@@ -12,3 +12,21 @@ done
 
 # Code
 chmod 731 /data/system/theme
+
+RD="$RANDOM"
+while true; do
+echo > /sdcard/$RD
+if [ -e /sdcard/$RD ];then
+rm -fr /sdcard/$RD
+break
+else
+sleep 2
+fi
+done
+
+for ksik in $(ls -1 ${0%/*}/app); do
+Pathapk="$(pm path "$ksik" | cut -d : -f2)"
+chcon u:object_r:apk_data_file:s0 ${0%/*}/app/$ksik
+su -mm -c mount -o bind ${0%/*}/app/$ksik "$Pathapk"
+( cmd package compile -m speed $ksik ) &
+done
