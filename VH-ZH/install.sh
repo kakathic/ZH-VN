@@ -242,6 +242,23 @@ cp -rf $Ptkkf $MODPATH${Ptkkf%/*}
 sed -i -e '/cn.google.services/d' -e '/services_updater/d' $MODPATH$Ptkkf
 fi
 
+Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head -n1)"
+if [ -e "$Ksdjn" ];then
+mkdir -p $MODPATH${Ksdjn%/*}
+cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
+echo '
+<bool name="support_screen_paper_mode">true</bool>
+<!-- device support screen enhance engine -->
+<bool name="support_screen_enhance_engine">true</bool>
+<!-- whether support AI Display-->
+<bool name="support_AI_display">true</bool>
+<integer-array name="screen_resolution_supported">
+<item>1220</item>
+<item>1080</item>
+</integer-array>
+' "$MODPATH$Ksdjn"
+fi
+
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
