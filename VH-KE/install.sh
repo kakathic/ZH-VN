@@ -58,6 +58,27 @@ Vk 2
 chinann=$input
 fi
 
+if [ "$chinann" == 1 ];then
+ui_print "- Giữ đa nhiệm sẽ tốn pin hơn"
+ui_print
+ui_print2 "1. Có"
+ui_print2 "2. Không"
+
+if [ "$(GP ram)" ];then
+Vipno=$(GP ram)
+ui_print
+ui_print2 "Chọn: $Vipno"
+ui_print
+else
+ui_print
+ui_print2 "1"
+Vk 2
+Vipno=$input
+fi
+else
+Vipno=0
+fi
+
 ui_print "- Bật tính năng bàn phím nâng cao ?"
 ui_print
 ui_print2 "1. Có"
@@ -437,8 +458,19 @@ miui/telephony/TelephonyManager
 miuix/springback/view/SpringBackLayout
 "
 for ykhke in $yentj; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.miui.powerkeeper/classes*/$ykhke.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/$ykhke.smali"
 done
+
+if [ "$Vipno" == 1 ];then
+Vsmali ".method public isForegroundService()Z" \
+".end method" \
+'.method hasForegroundServices()Z
+    .registers 2
+    const/4 v0, 0x1
+    return v0
+.end method' \
+"$APK/services/classes*/com/android/server/am/ProcessServiceRecord.smali"
+fi
 
 fi
 
