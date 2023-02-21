@@ -1,16 +1,14 @@
 # kakathic
 
 id=VH-KE
-name=Advanced MIUI
+name=MOD MIUI
 description=Tổ hợp 3 tính năng, xoá getapps, mod miui, bật bàn phím
 updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-KE.json
 author=kakathic
  
-# Tính năng nâng cao 
-# 1 Tắt
-# 2 China mod
-# 3 Global 
-# 4 Global Mod
+# Tính năng nâng cao mod miui
+# 1 Bật
+# 2 Tắt
 global=
 
 # Xoá bỏ ứng dụng GetApps mà không bị treo logo:
