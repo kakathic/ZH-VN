@@ -22,7 +22,7 @@ Nhật ký thay đổi các phiên bản
 
 [Xem lịch sử](/Version.md)
 
-## Xem chi tiết Magisk
+## Mô-Đun Magisk
 
 <details>
 <br/>
@@ -39,7 +39,7 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 </details>
 
-## Xem chi tiết Recovery
+## Mô-Đun Recovery
 
 Tạm thời dừng hoạt động 
 
