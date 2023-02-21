@@ -101,8 +101,8 @@ for i in / /system_root /system /system_ext /vendor /product; do
 done
 }
 
-baksmali () { java -Xms150m -Xmx250m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"; }
-smali () { java -Xms150m -Xmx250m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
+baksmali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"; }
+smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
 Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
