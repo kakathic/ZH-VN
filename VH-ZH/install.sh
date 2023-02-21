@@ -178,7 +178,6 @@ ui_print2 "Gỡ ứng dụng rác"
 ui_print
 # Danh sách những app cần gỡ 
 
-
 [ -e $VHMI/App_rac.txt ] Listappcn="cat $VH-MI/App_rac.txt" || Listappcn="com.mipay.wallet
 com.miui.analytics
 com.xiaomi.ab
@@ -272,7 +271,7 @@ ui_print
 codean="'{print $3}'"
 echo '
 Fixmodun(){
-Key="$(timeout 10 getevent -qlc 1 | awk '$codean')"
+Key="$(timeout 5 getevent -qlc 1 | awk '$codean')"
 if [ "$Key" == "KEY_VOLUMEUP" ];then
 [ "$input" -ge 3 ] && am start com.topjohnwu.magisk/.ui.MainActivity
 input=$(($input + 1))
