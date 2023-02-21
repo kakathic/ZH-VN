@@ -54,7 +54,6 @@ cp -rf "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-12-$VA.zip"
 mv -f "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-13-$VA.zip"
 
 cd $TOME/FL-GA
-zip -r "$TOME/Zip/FL-GA-Android-10-$VA.zip" -u lib/FL-29.zip
 zip -r "$TOME/Zip/FL-GA-Android-11-$VA.zip" -u lib/FL-30.zip
 zip -r "$TOME/Zip/FL-GA-Android-12-$VA.zip" -u lib/FL-31.zip
 zip -r "$TOME/Zip/FL-GA-Android-13-$VA.zip" -u lib/FL-33.zip
