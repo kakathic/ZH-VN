@@ -254,7 +254,7 @@ echo '
 <item>1220</item>
 <item>1080</item>
 </integer-array>
-' > "$MODPATH$Ksdjn"
+' >> "$MODPATH$Ksdjn"
 fi
 
 for Bala in product vendor system_ext; do
