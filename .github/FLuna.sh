@@ -43,12 +43,10 @@ Taoup FL-KE
 Taoup FL-GA
 Taoup FL-ZH
 
-Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-29.zip" $TOME/FL-GA/lib/FL-29.zip
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-30.zip" $TOME/FL-GA/lib/FL-30.zip
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-31.zip" $TOME/FL-GA/lib/FL-31.zip
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/FL-33.zip" $TOME/FL-GA/lib/FL-33.zip
 
-cp -rf "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-10-$VA.zip"
 cp -rf "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-11-$VA.zip"
 cp -rf "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-12-$VA.zip"
 mv -f "$TOME/Zip/FL-GA-$VA.zip" "$TOME/Zip/FL-GA-Android-13-$VA.zip"
