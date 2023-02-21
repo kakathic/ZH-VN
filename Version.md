@@ -3,7 +3,25 @@
 
 Version: 1.6
 
-- Thêm 1 số tính năng mới
+- Các tài khoản cũ sẽ được chuyển thành thời gian sử dụng còn lại là 5 năm
+
+- Thêm các tính năng:
+
+   + Google photo không giới hạn sao lưu ảnh
+
+   + 1 số game sẽ mở fps cao hơn như tốc chiến, pupg v.v
+
+   + Mod Cài đặt hiện thông tin chỉ số điện thoại
+
+   + Bổ sung tiếng việt
+
+   + Fix thông báo sẽ được cài ở Mod china VH-KE
+
+   + MOD đa nhiệm bất tử
+
+- Thêm các tính năng cứu hộ khi gặp lỗi có thể đọc ở web
+
+- Lưu ý: không nên cập nhật các phiên bản cũ từ 1.5 lên 1.6 mà hãy gỡ bỏ 1.5 rùi khởi động lại máy, rùi có thể cài 1.6 vì 1.6 thay đổi khá nhiều.
 
 - Fix
 
