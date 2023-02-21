@@ -166,6 +166,7 @@ for vsmali in ${vapk%.*}/*.dex; do
 baksmali d --api $API $vsmali -o ${vsmali%.*}
 done
 fi
+sleep 2
 done
 }
 
@@ -189,6 +190,7 @@ else
 rm -fr ${bapk%.*}*
 fi
 fi
+sleep 5
 done
 
 for Capk in $APK/*.*; do
