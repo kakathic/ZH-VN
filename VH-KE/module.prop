@@ -11,12 +11,17 @@ author=kakathic
 # 2 Tắt
 global=
 
+# Mod đa nhiệm mạnh mẽ nhưng tốn pin 
+# 1 Bật
+# 2 Tắt
+ram=
+
 # Xoá bỏ ứng dụng GetApps mà không bị treo logo:
 # 1 Bật
 # 2 Tắt
 gettapp=
 
-# Hiện thị bàn phím nâng cao:
+# Hiện thị bàn phím nâng cao
 # 1 Bật
 # 2 Tắt
 banphim=
