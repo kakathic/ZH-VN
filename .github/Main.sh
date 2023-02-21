@@ -149,7 +149,8 @@ echo "/app/$1.apk" | tee "$APK/$1.txt" >&2
 
 CPfile(){
 Pathfw="$(find /*/framework /*/*/framework -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
-cp -rf "$Pathfw" "$APK"
+[ -e "/data/tools/apk/$1.jar" ] || cp -rf $Pathfw "/data/tools/apk/$1.jar"
+[ -e "/data/tools/apk/$1.jar" ] && cp -rf "/data/tools/apk/$1.jar" "$APK" || cp -rf "$Pathfw" "$APK"
 echo "$Pathfw" | tee "$APK/$1.txt" >&2
 }
 
