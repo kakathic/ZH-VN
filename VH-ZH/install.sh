@@ -246,6 +246,7 @@ if [ -e "$Ksdjn" ];then
 mkdir -p $MODPATH${Ksdjn%/*}
 cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
 echo '
+<bool name="support_screen_paper_mode">true</bool>
 <!-- device support screen enhance engine -->
 <bool name="support_screen_enhance_engine">true</bool>
 <!-- whether support AI Display-->
