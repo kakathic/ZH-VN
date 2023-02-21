@@ -21,7 +21,7 @@ version=$VA
 echo '{
 "version": "'$VA'",
 "versionCode": "'$Vscode'",
-"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/'$VA'/'$1'-'$VA'.Zip",
+"zipUrl": "https://github.com/kakathic/ZH-VN/releases/download/MS-'$VA'/'$1'-'$VA'.Zip",
 "changelog": "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Web/Version.md"
 }' > $TOME/Up/$1.json
 cd $TOME/$1
