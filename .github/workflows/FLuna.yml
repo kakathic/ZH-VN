@@ -23,7 +23,7 @@ jobs:
       - name: Process 
         run: |
           # kakathic
-          export VA="$(grep Version: $GITHUB_WORKSPACE/Version.md | awk '{print $2}')"
+          export VA="$(grep -m1 Version: $GITHUB_WORKSPACE/Version.md | awk '{print $2}')"
           echo "VS=$VA" >> $GITHUB_ENV
           bash .github/FLuna.sh
       - name: Upload
