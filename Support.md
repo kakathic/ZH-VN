@@ -31,7 +31,7 @@ Mức giá ủng hộ:
 
 > [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
 
-- Hình ảnh ở dưới cho bạn biết tài khoản mi id, tên mã máy (Tên rom bạn tải), và mã MEID.
+- Hình ảnh ở dưới cho bạn biết tài khoản mi id, tên mã máy (Tên rom bạn tải: miui_`ALIOTH`_V14.0.5.0.TKHCNXM_d0c1d5fd5f_13.0, ALIOTH là mã máy mình cần), và mã MEID.
 
 - Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
