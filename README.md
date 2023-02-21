@@ -27,7 +27,6 @@ Nhật ký thay đổi các phiên bản
 Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
 <details>
-<br/>
 
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
