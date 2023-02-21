@@ -300,6 +300,7 @@ Fixmodun
 Fixmodun
 ' > /data/adb/service.d/rescue.sh
 chmod 777 /data/adb/service.d/rescue.sh
+settings put secure show_rotation_suggestions 0
 }
 
 ## Grant permission
