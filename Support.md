@@ -1,15 +1,7 @@
 **💵 Hướng dẫn ủng hộ**
 ----
 
-- Vì để module hỗ trợ lâu dài bạn hãy ủng hộ ad để module được tiếp tục hỗ trợ.
-
-- Sau khi ủng hộ sẽ được sử dụng vĩnh viễn trên thiết bị đó, ủng hộ 1 lần sử dụng mãi mãi.
-
-- Bạn có thể ủng hộ nhiều hơn để mình có thêm động lực phát triển, cảm ơn.
-
-+ Sau khi ủng hộ bạn sẽ được sử dụng vĩnh viễn đối với tài khoản và thiết bị hiện tại.
-
-+ Nếu như bạn thay đổi thiết bị hoặc tài khoản bạn sẽ phải ủng hộ lại.
+Hãy làm theo các bước sau 
 
 > Teckombank: `19034902604017`
 
@@ -23,11 +15,15 @@
 >> Xiaomi id: 152533xxxx<br/>
 >> MEID: 24272427xxxxxx
 
-+ **Số tiền gửi là 20k/1 thiết bị, 1 phiên bản**
-
-+ **Magisk hoặc Recovery**
-
 Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải gửi cả hai.
+
+Mức giá ủng hộ:
+
++ Tối thiểu 20k 2 năm sử dụng
+
++ Tăng 10k sẽ + 1 năm
+
+Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
 
 - Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
 
