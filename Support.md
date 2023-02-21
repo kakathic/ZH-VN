@@ -23,7 +23,7 @@ Mức giá ủng hộ:
 
 + Tăng 10k sẽ + 1 năm
 
-Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
++ Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
 
 - Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
 
