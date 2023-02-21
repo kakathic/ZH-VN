@@ -2,15 +2,11 @@
 
 Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
-Hỗ trợ cả root và không root
-
-Hỗ trợ Android 11 trở nên
-
-Hỗ trợ từ miui 12.5 đến MIUI mới nhất
+> Hỗ trợ cả root và không root, Android 11 trở nên, miui 12.5 đến MIUI mới nhất
 
 ## Hướng dẫn cài đặt
 
-Magisk: Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt` 24 giờ.
+Magisk: Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt (VH-ZH)` 24 giờ.
 
 Recovery: Sắp ra mắt đang thử nghiệm.
 
