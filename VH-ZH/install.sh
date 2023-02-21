@@ -245,6 +245,7 @@ Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head
 if [ -e "$Ksdjn" ];then
 mkdir -p $MODPATH${Ksdjn%/*}
 cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
+sed -i "s|</features>||" $MODPATH$Ksdjn
 echo '
 <bool name="support_screen_paper_mode">true</bool>
 <!-- device support screen enhance engine -->
@@ -255,6 +256,7 @@ echo '
 <item>1220</item>
 <item>1080</item>
 </integer-array>
+</features>
 ' >> "$MODPATH$Ksdjn"
 fi
 
