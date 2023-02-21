@@ -201,9 +201,11 @@ cp -rf $Capk "$MODPATH${Papkp%/*}/$(echo -n "${wyj2%.*}" | base64 -w0)"
 echo 'rm -fr /data/tools/apk/'$wyj2'' >> $TMPDIR/uninstall.sh
 fi
 if [ "${Capk##*.}" == 'jar' ];then
-Papkp="$(cat ${Capk%.*}.txt)"
-mkdir -p "$MODPATH${Papkp%/*}"
-cp -rf $Capk "$MODPATH$Papkp"
+Papk9="$(cat ${Capk%.*}.txt)"
+mkdir -p "$MODPATH${Papk9%/*}"
+wyj3="${Papk9##*/}"
+cp -rf $Capk "$MODPATH$Papk9"
+echo 'rm -fr /data/tools/apk/'$wyj3'' >> $TMPDIR/uninstall.sh
 fi
 done
 }
