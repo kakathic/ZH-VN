@@ -20,10 +20,10 @@ Nhật ký thay đổi các phiên bản
 
 ## Mô-Đun Magisk
 
+Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
+
 <details>
 <br/>
-
-Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v<br/>
 
@@ -39,10 +39,10 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 Tạm thời dừng hoạt động 
 
+Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.6)
+
 <details>
 <br/>
-
-Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.6)
 
 + Sử dụng: TWRP, FOX v.v để cài module
 
