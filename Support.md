@@ -41,4 +41,4 @@ Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụ
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/imei.jpg" height="auto" width="99%" /> 
 
-## 🎊 Cảm ơn bạn đã ủng hộ
+## 🎊 Cảm ơn bạn đã ủng hộ 🎉
