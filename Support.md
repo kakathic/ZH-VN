@@ -21,7 +21,7 @@ Mức giá ủng hộ:
 
 + Tối thiểu `20k` +2 năm sử dụng
 
-+ Tăng `10k` sẽ + 1 năm
++ Tăng `10k` sẽ +1 năm
 
 + Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
 
