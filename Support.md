@@ -19,7 +19,7 @@ Bạn có thể gửi id tài khoản mi hoặc MEID không cần thiết phải
 
 Mức giá ủng hộ:
 
-+ Tối thiểu 20k 2 năm sử dụng
++ Tối thiểu 20k +2 năm sử dụng
 
 + Tăng 10k sẽ + 1 năm
 
