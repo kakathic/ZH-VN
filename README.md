@@ -26,17 +26,27 @@ Nhật ký thay đổi các phiên bản
 
 Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.5)
 
+<details>
+<br/>
+
 > **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v
 
-> **VH-PT**: Crack Miui, hack theme, cài app hệ thống, thời tiết bản global 
+> **VH-PT**: Crack Miui, hack theme, thời tiết bản global 
 
-> **VH-KE**: Gỡ getapps, bật bàn phím, china mod giữ đa nhiệm, china global chuyển nền china sang global, china global mod giống như china global nhưng cửa hàng theme là china và widget china.
+> **VH-KE**: Cho phép gỡ cài đặt getapps, bật bàn phím, mod miui con lai giữa nền global và china vô số tiện ích hay, fix thông báo, mod tính năng Google photo không giới hạn sau lưu ảnh, 1 số game hỗ trợ fps max 90 120 v.v pupg, tốc chiến v.v
 
-> **VH-ZH**: Thêm Việt hóa widget có thể vh không đủ 100% 1 số widget, Thêm lịch âm , Thêm tiếng Việt, Fix thông báo, Xoá app china không dùng được ở Việt Nam 
+> **VH-ZH**: Thêm lịch âm , Thêm tiếng Việt, Xoá app china không dùng được ở Việt Nam 
+
+</details>
 
 ## Xem chi tiết Recovery
 
+Tạm thời dừng hoạt động 
+
 Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
+
+<details>
+<br/>
 
 + Sử dụng: TWRP, FOX v.v để cài module
 
@@ -54,10 +64,16 @@ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống thì không cần R/W vì rom đã R/W sẵn, còn hầu hết các máy mới android 12 trở nên đều phải R/W hệ thống mới cho phép sửa file hệ thống.
 
+</details>
+
 **Tính năng nâng cao**
 ---
 
-Thêm tiếng việt từng ứng dụng 
+Thêm tiếng việt từng ứng dụng miui
+
+<details>
+<br/>
+
    + Để thêm tiếng việt từng ứng dụng hãy làm theo bước sau
    + Lưu ý: Chỉ VH ứng dụng của miui
    + Tạo 1 file ở trong thư mục `/sdcard/VH-MI`
@@ -66,29 +82,57 @@ Thêm tiếng việt từng ứng dụng
    + Ví dụ: `com.android.systemui` nó sẽ việt hóa ứng dụng Giao diện hệ thống
    + `com.android.systemui` là tên gói của ứng dụng đó
 
+</details>
+
 Thêm font đã việt hóa
+
+<details>
+<br/>
+
    + Bạn cũng có thể tự thêm font của mình bằng cách vào thư mục sau
    + `/storage/emulated/0/VH-MI/fonts` hoặc `/sdcard/VH-MI/fonts`
    + Hãy đổi tên file font của bạn thành `MiLanProVF.ttf`
    + Module nó sẽ tự nhận diện font
    + Bạn cũng có thể để những file font khác vào thư mục đó.
 
+</details>
+
 Chỉnh màu bàn phím nâng cao
+
+<details>
+<br/>
 
    + Vào thư mục sau
    + `/storage/emulated/0/VH-MI/color` hoặc `/sdcard/VH-MI/color`
    + Hãy sửa lại mã màu sáng và tối cho cùng màu với bàn phím 
 
-Việt hóa Widget
+</details>
 
-   + Hãy lôi widget ra App vault và sử dụng lệnh `su -c Appvault.sh`
-   + Nó sẽ tự động việt hóa khi bạn khởi động lại máy nhưng phải bật mạng nha
-   + Gõ lệnh như trên thì nó sẽ việt hóa luôn.
-   + Sử dụng lệnh ở ứng dụng Termux hoặc bất kỳ ứng dụng cho phép gõ lệnh shell.
+Cứu hộ module, hãy cài module Thêm tiếng việt để sử dụng tính năng này
+
+<details>
+<br/>
+
+   + Sau khi khởi động lại nếu nó bị đơ
+   + Hẫy ấn 3 lần hoặc nhiều hơn cho đến khi hành động được thực hiện
+   + Tăng âm lượng +3 mở ứng dụng magisk
+   + Giảm âm lượng +3 Tắt toàn bộ module và reboot lại máy
+   + Tính năng này sẽ tự hủy nếu bạn vuốt vào màn hình 4 5 lần tùy ý nó sẽ tự tắt 
+   + Lưu ý: Nếu bị đơ ít nên chạm vào màn hình mà hãy thực hiện hành động ấn âm lượng như trên để tính năng không bị tắt
+   + Nếu bị tắt bạn có thể khởi động lại máy = cách dí phím nguồn và thực hiện lại các hành động bên trên
+
+</details>
+
+Chúc các bạn cài đặt thành công
 
 **Xem ảnh demo**
 ---
 
+<details>
+<br/>
+
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo0.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo1.jpg" height="auto" width="49%" />
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo2.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo3.jpg" height="auto" width="49%" />
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo4.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo5.jpg" height="auto" width="49%" />
+
+</details>
