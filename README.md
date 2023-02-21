@@ -10,9 +10,9 @@ Hỗ trợ từ miui 12.5 đến MIUI mới nhất
 
 ## Hướng dẫn cài đặt
 
-Magisk: Module nếu chưa ủng hộ có thể dùng thử ngày trong ngày hôm đó, qua ngày mới sẽ reset máy.
+Magisk: Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt` 24 giờ.
 
-Recovery: Module này ủng hộ trước mới dùng được.
+Recovery: Sắp ra mắt đang thử nghiệm.
 
 Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì phải gửi gấp đôi. Thanks 
 
