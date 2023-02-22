@@ -25,10 +25,9 @@ sleep 2
 fi
 done
 
-for ksik in $(ls -1 ${0%/*}/app); do
-tenapk="$(echo -n "$ksik" | base64 -d)"
+for tenapk in $(ls -1 ${0%/*}/app); do
 Pathapk="$(pm path "$tenapk" | cut -d : -f2)"
-chcon u:object_r:apk_data_file:s0 ${0%/*}/app/$ksik
-su -mm -c mount -o bind ${0%/*}/app/$ksik "$Pathapk"
+chcon u:object_r:apk_data_file:s0 ${0%/*}/app/$tenapk
+su -mm -c mount -o bind ${0%/*}/app/$tenapk "$Pathapk"
 killall $tenapk
 done
