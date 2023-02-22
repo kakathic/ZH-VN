@@ -7,14 +7,13 @@
 # static fields
 .field private static mMiuiApplicationThread:Lmiui/process/IMiuiApplicationThread;
 
-
 # direct methods
 .method static constructor <clinit>()V
     .registers 1
 
     const/4 v0, 0x0
 
-    sput-object v0, Landroid/app/ApplicationInjector;->mMiuiApplicationThread:Lmiui/process/IMiuiApplicationThread;
+    sput-object v0, Landroid/app/ApplicationStub;->mMiuiApplicationThread:Lmiui/process/IMiuiApplicationThread;
 
     return-void
 .end method
