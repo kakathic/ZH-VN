@@ -40,6 +40,11 @@ ui_print
 ui_print "  $chon: $input"
 ui_print
 sleep 0.3
+elif [ "$Key" == "BTN_TOUCH" ];then
+ui_print
+ui_print "  $chon: $input"
+ui_print
+sleep 0.4
 else Kgg; fi; }
 Kgg
 }
