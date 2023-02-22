@@ -204,7 +204,11 @@ if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 if [ "$(pm path $Papkp | grep -cm1 '/data/')" == 1 ];then
 mkdir -p $MODPATH/app
+Ehehdb2="$(pm path $Papkp | cut -d : -f2)"
 cp -rf $Capk "$MODPATH/app/$Papkp"
+chcon u:object_r:apk_data_file:s0 "$MODPATH/app/$Papkp"
+su -mm -c mount -o bind "$MODPATH/app/$Papkp" "$Ehehdb2"
+killall $Papkp
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
 else
 Ehehdb="$(pm path $Papkp | cut -d : -f2)"
