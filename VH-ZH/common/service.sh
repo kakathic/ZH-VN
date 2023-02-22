@@ -2,6 +2,7 @@
 
 # Code
 # Automatically turn off the module if 100 seconds wait at the logo
+MODPATH="${0%/*}"
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ];then
