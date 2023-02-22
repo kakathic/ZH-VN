@@ -204,16 +204,16 @@ fi
 
 #mod 2
 if [ "$chinann" == 1 ];then
-if [ -e "$(echo $APK/framework/classes*/android/app/ApplicationStub.smali)" ];then
-cp -rf $TMPDIR/Test.smali $(echo $APK/framework/classes*/android/app/ApplicationStub.smali)
-echo $APK/framework/classes*/android/app/ApplicationStub.smali >> $APK/framework/class
-elif [ -e "$(echo $APK/framework/classes*/android/app/ApplicationInjector.smali)" ];then
-cp -rf $TMPDIR/Test.smali $(echo $APK/framework/classes*/android/app/ApplicationInjector.smali)
-sed -i "s|android/app/ApplicationStub|android/app/ApplicationInjector|g" $(echo $APK/framework/classes*/android/app/ApplicationInjector.smali)
-echo $APK/framework/classes*/android/app/ApplicationInjector.smali >> $APK/framework/class
-else
-Xan "! không tìm thấy file Để mod"
-fi
+
+Vsmali '.method public onCreate()V' \
+'.end method' \
+'.method public onCreate()V
+    .registers 1
+    invoke-static {p0}, Landroid/app/ApplicationStub;->onCreate(Landroid/app/Application;)V
+    return-void
+.end method' \
+"$APK/com.android.settings/classes*/android/app/Application.smali"
+cp -rf $TMPDIR/Test.smali $APK/framework/classes/android/app/ApplicationStub.smali
 
 Thaythe '\"MIUI \"' '\"VH \"' $APK/com.android.settings/classes*/com/android/settings/device/MiuiAboutPhoneUtils.smali
 
