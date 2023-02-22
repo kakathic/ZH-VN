@@ -40,7 +40,7 @@ ui_print
 ui_print "  $chon: $input"
 ui_print
 sleep 0.3
-elif [ "$Key" == "BTN_TOUCH" ];then
+elif [ "$Key" == "ABS_MT_TRACKING_ID" ];then
 ui_print
 ui_print "  $chon: $input"
 ui_print
