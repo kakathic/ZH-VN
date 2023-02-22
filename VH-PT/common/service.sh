@@ -30,5 +30,5 @@ tenapk="$(echo -n "$ksik" | base64 -d)"
 Pathapk="$(pm path "$tenapk" | cut -d : -f2)"
 chcon u:object_r:apk_data_file:s0 ${0%/*}/app/$ksik
 su -mm -c mount -o bind ${0%/*}/app/$ksik "$Pathapk"
-am force-stop $tenapk
+killall $tenapk
 done
