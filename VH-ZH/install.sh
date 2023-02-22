@@ -178,7 +178,7 @@ ui_print2 "Gỡ ứng dụng rác"
 ui_print
 # Danh sách những app cần gỡ 
 
-[ -e $VHMI/App_rac.txt ] Listappcn="cat $VH-MI/App_rac.txt" || Listappcn="com.mipay.wallet
+[ -e $VHMI/App_rac.txt ] && Listappcn="cat $VH-MI/App_rac.txt" || Listappcn="com.mipay.wallet
 com.miui.analytics
 com.xiaomi.ab
 com.miui.voiceassist
