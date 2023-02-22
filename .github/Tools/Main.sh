@@ -333,6 +333,11 @@ ui_print
 rm -fr /data/tools/lib/run.sh
 rm -fr /data/adb/service.d/VK.sh
 
+if [ "$(GP id)" == "VH-KE" ];then
+abort "! Module này đang bị lỗi !
+"
+fi
+
 elif [ "$Pro" == 1 ];then
 ui_print "  Chào bạn: $tkid"
 ui_print
