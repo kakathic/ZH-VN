@@ -9,6 +9,7 @@ echo > $MODPATH/disable
 rm -fr /data/dalvik-cache/*
 rm -fr /data/system/package_cache/*
 rm -fr /data/resource-cache/*
+sleep 5
 reboot
 fi
 sleep 1
