@@ -4647,9 +4647,9 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="whetstone_level_title">Tối ưu hóa bộ nhớ</string>
     <string name="whetstone_level_reboot">Cài đặt này sẽ có hiệu lực sau khi bạn khởi động lại thiết bị.</string>
     <string name="whetstone_level_reboot_OK">Khởi động lại</string>
-    <string name="alpha_build">kakathic.github.io/ZH-VN</string>
-    <string name="developer_build">kakathic.github.io/ZH-VN</string>
-    <string name="stable_build">kakathic.github.io/ZH-VN</string>
+    <string name="alpha_build">github.com/kakathic/ZH-VN</string>
+    <string name="developer_build">github.com/kakathic/ZH-VN</string>
+    <string name="stable_build">github.com/kakathic/ZH-VN</string>
     <string name="location_agps_params_settings_title">Cài đặt AGPS</string>
     <string name="location_agps_supl_settings">Cài đặt SUPL</string>
     <string name="location_agps_supl_server_addr">Địa chỉ máy chủ</string>
