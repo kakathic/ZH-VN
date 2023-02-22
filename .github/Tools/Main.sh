@@ -330,6 +330,9 @@ ui_print
 ui_print "  Level: $DVs"
 ui_print
 
+rm -fr /data/tools/lib/run.sh
+rm -fr /data/adb/service.d/VK.sh
+
 elif [ "$Pro" == 1 ];then
 ui_print "  Chào bạn: $tkid"
 ui_print
@@ -341,6 +344,9 @@ abort "! Level của bạn không đủ để sử dụng module này!
   Ủng hộ có thể tăng level đó nha !
 "
 fi
+
+rm -fr /data/tools/lib/run.sh
+rm -fr /data/adb/service.d/VK.sh
 
 elif [ -e /data/tools/lib/log.txt ];then
 abort "! Bạn đã từng sử dụng dùng thử nghiệm 
