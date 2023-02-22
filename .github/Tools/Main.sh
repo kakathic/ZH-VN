@@ -144,7 +144,7 @@ else
 [ -e "/data/tools/apk/$1.apk" ] || cp -rf "$PTC" "/data/tools/apk/$1.apk"
 [ -e "/data/tools/apk/$1.apk" ] && cp -rf "/data/tools/apk/$1.apk" "$APK/$1.apk" || cp -rf "$PTC" "$APK/$1.apk"
 fi
-echo "/app/$1.apk" | tee "$APK/$1.txt" >&2
+echo "$1" | tee "$APK/$1.txt" >&2
 }
 
 CPfile(){
@@ -196,10 +196,14 @@ done
 for Capk in $APK/*.*; do
 if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
-mkdir -p $MODPATH${Papkp%/*}
-wyj2="${Papkp##*/}"
-cp -rf $Capk "$MODPATH${Papkp%/*}/$(echo -n "${wyj2%.*}" | base64 -w0)"
-echo 'rm -fr /data/tools/apk/'$wyj2'' >> $TMPDIR/uninstall.sh
+if [ "$(pm path $Papkp | grep -cm1 '/data/')" == 1 ];then
+mkdir -p $MODPATH/app
+cp -rf $Capk "$MODPATH/app/$(echo -n "$Papkp" | base64 -w0)"
+echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
+else
+Ehehdb="$(pm path $Papkp | cut -d : -f2)"
+mkdir -p "$MODPATH${Ehehdb%/*}"
+cp -rf $Capk "$MODPATH$Ehehdb"
 fi
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
