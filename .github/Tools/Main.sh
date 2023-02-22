@@ -154,7 +154,8 @@ echo "$1" | tee "$APK/$1.txt" >&2
 
 CPfile(){
 Pathfw="$(find /*/framework /*/*/framework -type f -name "$1.jar" -not -path "*/data/*" | head -n1)"
-cp -rf "$Pathfw" "$APK"
+[ -e "/data/tools/apk/$1.jar" ] || cp -rf $Pathfw "/data/tools/apk/$1.jar"
+[ -e "/data/tools/apk/$1.jar" ] && cp -rf "/data/tools/apk/$1.jar" "$APK" || cp -rf "$Pathfw" "$APK"
 echo "$Pathfw" | tee "$APK/$1.txt" >&2
 }
 
@@ -217,6 +218,7 @@ fi
 fi
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
+echo 'rm -fr /data/tools/apk/'$Papkp.jar'' >> $TMPDIR/uninstall.sh
 mkdir -p "$MODPATH${Papkp%/*}"
 cp -rf $Capk "$MODPATH$Papkp"
 fi
