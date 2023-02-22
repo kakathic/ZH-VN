@@ -19,8 +19,8 @@ Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Ma
 ## Start the installation
 on_install(){
 
-ui_print "! Sử dụng phím âm lượng"
-ui_print "! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
+ui_print "! Vol+ = Chuyển đổi số."
+ui_print "! Để chọn số hiện tại ấn Vol- hoặc +1 chạm."
 ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
