@@ -21,7 +21,7 @@ on_install(){
 ## code
 
 ui_print "! Vol+ = Chuyển đổi số."
-ui_print "! Để chọn số hiện tại ấn Vol- hoặc +1 chạm MH."
+ui_print "! Để chọn số hiện tại ấn Vol- hoặc +1 chạm."
 ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
