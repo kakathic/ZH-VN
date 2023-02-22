@@ -310,8 +310,8 @@ thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driv
 fi
 
 if [ "$(echo $thoigian1 | grep -cm1 'HSD=')" == 1 ];then
-Tgg1=$(echo echo $thoigian1 | grep -m1 'HSD=' | cut -d = -f2)
-Tvs1=$(echo echo $thoigian1 | grep -m1 'Ver-Max=' | cut -d = -f2)
+Tgg1=$(echo $thoigian1 | grep -m1 'HSD=' | cut -d = -f2)
+Tvs1=$(echo $thoigian1 | grep -m1 'Ver-Max=' | cut -d = -f2)
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
@@ -395,8 +395,8 @@ thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driv
 fi
 
 if [ "$(echo $thoigian1 | grep -cm1 "HSD=")" == 1 ];then
-Tgg1=$(echo echo $thoigian1 | grep -m1 "HSD=" | cut -d = -f2)
-Tvs1=$(echo echo $thoigian1 | grep -m1 "Ver-Max=" | cut -d = -f2)
+Tgg1=$(echo $thoigian1 | grep -m1 "HSD=" | cut -d = -f2)
+Tvs1=$(echo $thoigian1 | grep -m1 "Ver-Max=" | cut -d = -f2)
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
