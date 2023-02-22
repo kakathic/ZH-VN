@@ -256,15 +256,6 @@ Vsmali '.method public static supportPaperEyeCare()Z' \
 .end method' \
 "$APK/com.android.settings/classes*/*"
 
-Vsmali '.method public static isNotSupported()Z' \
-'.end method' \
-'.method public static isNotSupported()Z
-    .registers 2
-    const/4 v1, 0x0
-    return v1
-.end method' \
-"$APK/com.android.settings/classes*/com/android/settings/lab/*"
-
 Vsmali '.method public static isSupportUninstallSysApp(Landroid/content/Context;)Z' \
 '.end method' \
 '.method public static isSupportUninstallSysApp(Landroid/content/Context;)Z
@@ -407,6 +398,16 @@ done
 
 
 Tats(){
+
+Vsmali '.method public static isNotSupported()Z' \
+'.end method' \
+'.method public static isNotSupported()Z
+    .registers 2
+    const/4 v1, 0x0
+    return v1
+.end method' \
+"$APK/com.android.settings/classes*/com/android/settings/lab/*"
+
 Vsmali ".method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z" \
 ".end method" \
 '.method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z
