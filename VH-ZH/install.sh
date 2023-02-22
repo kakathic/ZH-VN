@@ -292,7 +292,7 @@ sleep 0.3
 Fixmodun
 else
 input3=$(($input3 + 1))
-[ "$input3" -ge 60 ] && exit
+[ "$input3" -ge 50 ] && exit
 Fixmodun
 fi
 Fixmodun
