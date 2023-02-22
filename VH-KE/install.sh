@@ -19,8 +19,8 @@ Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Ma
 ## Start the installation
 on_install(){
 
-ui_print "! Vol+ = Chuyển đổi số."
-ui_print "! Để chọn số hiện tại ấn Vol- hoặc +1 chạm."
+ui_print "! Sử dụng phím âm lượng"
+ui_print "! Vol- = Chọn số hiện tại, Vol+ = Chuyển đổi số."
 ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
@@ -348,6 +348,7 @@ Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObje
 ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
+Thaythe "com.android.packageinstaller" "t.me.kakathic" ''$APK/$miuik'services/classes*/com/android/server/pm/PackageManagerServiceImpl.smali'
 
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/ApplicationPackageManager.smali"
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/DownloadManager.smali"
@@ -365,9 +366,8 @@ Vsmali ".method isSecureLocked()Z" \
 ''$APK/$miuik'services/classes*'
 
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/controlcenter/policy/GoogleController.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/navigationbar/*.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/settingslib/inputmethod/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs/tiles/DriveModeTile.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs/MiuiNotificationHeaderView.smali"
 
 ekyl3="
 com/android/server/AppOpsServiceState
@@ -381,7 +381,6 @@ com/android/server/net/MiuiNetworkPolicyAppBuckets
 com/android/server/net/MiuiNetworkPolicyManagerService
 com/android/server/net/MiuiNetworkPolicyQosUtils
 com/android/server/notification/NotificationManagerServiceImpl
-com/android/server/pm/MiuiDefaultPermissionGrantPolicy
 "
 for bffdb in $ekyl3; do
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/'$bffdb'.smali'
