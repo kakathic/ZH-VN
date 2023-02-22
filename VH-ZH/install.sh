@@ -270,7 +270,7 @@ ui_print2 "$(End_time)"
 ui_print
 ## end of code
 
-codean="'{print $3}'"
+codean="'{print \$3}'"
 echo '
 Fixmodun(){
 Key="$(timeout 5 getevent -qlc 1 | awk '$codean')"
