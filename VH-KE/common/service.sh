@@ -5,7 +5,9 @@ while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ];then
 echo > $MODPATH/disable
-rm -fr /data/system/package_cache/* /data/resource-cache/* /data/dalvik-cache/*/*framework*
+rm -fr /data/dalvik-cache/*
+rm -fr /data/system/package_cache/*
+rm -fr /data/resource-cache/*
 reboot
 fi
 sleep 1
