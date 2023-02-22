@@ -312,7 +312,9 @@
     <string name="privacy_authorize_revoke_time">Hủy (%1$d giây)</string>
     <string name="privacy_authorize_title">Đang cấp ủy quyền</string>
     <string name="privacy_authorize_privacy_policy">Chính sách Riêng tư</string>
-    <string name="privacy_authorize_dialog_message"><Data>Để sử dụng các tính năng cơ bản của dịch vụ Xiaomi Cloud, bạn phải đồng ý để Xiaomi thu thập, xử lý, và sử dụng dữ liệu cá nhân của bạn. Tham khảo Chính sách Riêng tư của chúng tôi để tìm hiểu cách chúng tôi thu thập và xử lý dữ liệu cá nhân. Chọn Đồng ý có nghĩa là bạn đã đọc và đồng ý với chúng tôi &lt;a href=\"http://www.miui.com/res/doc/privacy.html?region=%1$s&amp;lang=%2$s\">Chính sách Riêng tư&lt;/a> và &lt;a href=\"http://www.miui.com/res/doc/eula.html?region=%3$s&amp;lang=%4$s\">Thỏa thuận Người dùng&lt;/a>.​</Data></string>
+    <string name="privacy_authorize_dialog_message">
+        <Data>Để sử dụng các tính năng cơ bản của dịch vụ Xiaomi Cloud, bạn phải đồng ý để Xiaomi thu thập, xử lý, và sử dụng dữ liệu cá nhân của bạn. Tham khảo Chính sách Riêng tư của chúng tôi để tìm hiểu cách chúng tôi thu thập và xử lý dữ liệu cá nhân. Chọn Đồng ý có nghĩa là bạn đã đọc và đồng ý với chúng tôi &lt;a href=\"http://www.miui.com/res/doc/privacy.html?region=%1$s&amp;lang=%2$s\">Chính sách Riêng tư&lt;/a> và &lt;a href=\"http://www.miui.com/res/doc/eula.html?region=%3$s&amp;lang=%4$s\">Thỏa thuận Người dùng&lt;/a>.​</Data>
+    </string>
     <string name="privacy_authorize_dialog_exit">Thoát</string>
     <string name="privacy_authorize_dialog_agree">Đồng ý</string>
     <string name="privacy_authorize_network_error">Kết nối mạng và thử lại.</string>
@@ -797,7 +799,8 @@ Cài đặt này ảnh hưởng đến tất cả người dùng trên điện t
     <string name="security_settings_fingerprint_enroll_introduction_title">Mở khóa bằng vân tay</string>
     <string name="security_settings_fingerprint_enroll_introduction_message">"Chỉ cần chạm vào cảm biến vân tay để mở khóa điện thoại của bạn, ủy quyền mua hàng hoặc đăng nhập vào ứng dụng. Hãy cẩn trọng với vân tay mà bạn thêm. Thậm chí một vân tay được thêm cũng có thể làm tất cả những việc này.
 
-Lưu ý: Vân tay của bạn có thể kém an toàn hơn so với hình mở khóa hoặc mã PIN mạnh. "<annotation id="url">Tìm hiểu thêm</annotation></string>
+Lưu ý: Vân tay của bạn có thể kém an toàn hơn so với hình mở khóa hoặc mã PIN mạnh. "<annotation id="url">Tìm hiểu thêm</annotation>
+    </string>
     <string name="security_settings_fingerprint_enroll_introduction_cancel">Hủy</string>
     <string name="security_settings_fingerprint_enroll_introduction_continue">Tiếp tục</string>
     <string name="security_settings_fingerprint_enroll_introduction_cancel_setup">Bỏ qua</string>
@@ -830,10 +833,12 @@ Lưu ý: Vân tay của bạn có thể kém an toàn hơn so với hình mở k
     <string name="security_settings_fingerprint_enroll_error_generic_dialog_message">Đăng ký dấu vân tay không hoạt động. Hãy thử lại hoặc sử dụng ngón tay khác.</string>
     <string name="fingerprint_enroll_button_add">Thêm khác</string>
     <string name="fingerprint_enroll_button_next">Tiếp theo</string>
-    <string name="security_settings_fingerprint_enroll_disclaimer">Ngoài việc mở khóa điện thoại, bạn còn có thể sử dụng vân tay của mình để ủy quyền mua và truy cập ứng dụng. <annotation id="url">Tìm hiểu thêm</annotation></string>
+    <string name="security_settings_fingerprint_enroll_disclaimer">Ngoài việc mở khóa điện thoại, bạn còn có thể sử dụng vân tay của mình để ủy quyền mua và truy cập ứng dụng. <annotation id="url">Tìm hiểu thêm</annotation>
+    </string>
     <string name="security_settings_fingerprint_enroll_disclaimer_lockscreen_disabled">Tùy chọn khóa màn hình đã bị tắt. Hãy liên hệ với quản trị viên của tổ chức bạn để tìm hiểu thêm. <annotation id="admin_details">Thông tin chi tiết khác</annotation>"
 
-Bạn vẫn có thể sử dụng vân tay của mình để ủy quyền mua hàng và truy cập ứng dụng. "<annotation id="url">Tìm hiểu thêm</annotation></string>
+Bạn vẫn có thể sử dụng vân tay của mình để ủy quyền mua hàng và truy cập ứng dụng. "<annotation id="url">Tìm hiểu thêm</annotation>
+    </string>
     <string name="security_settings_fingerprint_enroll_lift_touch_again">Nhấc ngón tay, sau đó chạm lại vào cảm biến</string>
     <string name="setup_fingerprint_enroll_finish_message">Chỉ cần chạm vào cảm biến dấu vân tay để đánh thức và mở khóa thiết bị của bạn.</string>
     <string name="setup_fingerprint_enroll_finish_secondary_message">Để thay đổi cài đặt, hãy chuyển tới Cài đặt > Bảo mật > Vân tay.</string>
@@ -1194,7 +1199,8 @@ Cho phép cài đặt này đối với tất cả ứng dụng muốn quét?"</
 
 "<li>Bạn sẽ không nhận được bản cập nhật phần mềm cho đến khi kết nối với Internet.</li>"
 
-"<li>Tại thời điểm này, bạn không thể kích hoạt tính năng bảo vệ thiết bị.</li></string>
+"<li>Tại thời điểm này, bạn không thể kích hoạt tính năng bảo vệ thiết bị.</li>
+    </string>
     <string name="wifi_saved_access_points_titlebar">Mạng đã lưu</string>
     <string name="wifi_advanced_titlebar">Wi-Fi nâng cao</string>
     <string name="wifi_configure_titlebar">Định cấu hình Wi‑Fi</string>
@@ -1475,7 +1481,10 @@ Có thể mã PIN không đúng."</string>
     <string name="storage_internal_title">Bộ nhớ của thiết bị</string>
     <string name="storage_external_title">Bộ nhớ di động</string>
     <string name="storage_volume_summary">Đã sử dụng %1$s trong tổng số %2$s</string>
-    <string name="storage_size_large">^1<small><small> ^2</small></small></string>
+    <string name="storage_size_large">^1<small>
+            <small> ^2</small>
+        </small>
+    </string>
     <string name="storage_volume_used">Đã sử dụng %1$s</string>
     <string name="storage_volume_used_total">Đã sử dụng tổng số %1$s</string>
     <string name="storage_mount_success">%1$s đã được gắn</string>
@@ -1503,7 +1512,8 @@ Di chuyển tệp phương tiện sang bộ nhớ khác trên thiết bị này 
 
 "<b>Sao lưu ứng dụng</b>" 
 Tất cả ứng dụng được lưu trữ trên ^1 này sẽ bị gỡ bỏ và dữ liệu ứng dụng sẽ bị xóa. Để lưu giữ các ứng dụng này, hãy di chuyển chúng sang bộ nhớ khác trên thiết bị này."</string>
-    <string name="storage_internal_unmount_details"><b>Khi bạn tháo ^1 này, các ứng dụng được lưu trữ trên đó sẽ ngừng hoạt động, đồng thời các tệp phương tiện được lưu trữ trên đó sẽ không khả dụng cho tới khi lắp lại.</b>" 
+    <string name="storage_internal_unmount_details">
+        <b>Khi bạn tháo ^1 này, các ứng dụng được lưu trữ trên đó sẽ ngừng hoạt động, đồng thời các tệp phương tiện được lưu trữ trên đó sẽ không khả dụng cho tới khi lắp lại.</b>" 
 
 ^1 này được định dạng để chỉ hoạt động trên thiết bị này. Nó sẽ không hoạt động trên bất kỳ thiết bị nào khác."</string>
     <string name="storage_internal_forget_details">"Để sử dụng ứng dụng, ảnh hoặc dữ liệu có trong ^1 này, hãy cắm lại thiết bị đó. 
@@ -1551,7 +1561,9 @@ Việc di chuyển này mất khoảng ^2 và sẽ giải phóng ^3 trên bộ n
     <string name="storage_wizard_migrate_now">Di chuyển ngay bây giờ</string>
     <string name="storage_wizard_migrate_later">Di chuyển sau</string>
     <string name="storage_wizard_migrate_confirm_title">Di chuyển dữ liệu ngay bây giờ</string>
-    <string name="storage_wizard_migrate_confirm_body"><b>Quá trình di chuyển mất khoảng ^1. Quá trình này sẽ giải phóng ^2 trên ^3.</b></string>
+    <string name="storage_wizard_migrate_confirm_body">
+        <b>Quá trình di chuyển mất khoảng ^1. Quá trình này sẽ giải phóng ^2 trên ^3.</b>
+    </string>
     <string name="storage_wizard_migrate_confirm_next">Di chuyển</string>
     <string name="storage_wizard_migrate_progress_title">Đang di chuyển dữ liệu…</string>
     <string name="storage_wizard_migrate_details">"Trong khi di chuyển: 
@@ -1624,7 +1636,8 @@ Hãy xem xét sử dụng ^1 nhanh hơn để đạt được hiệu suất tố
 
 "<li>Wi‑Fi</li>"
 "<li>Dữ liệu di động</li>"
-"<li>Bluetooth</li></string>
+"<li>Bluetooth</li>
+    </string>
     <string name="reset_network_button_text">Đặt lại cài đặt</string>
     <string name="reset_network_final_desc">Đặt lại tất cả cài đặt mạng? Điều này có thể mất vài giây. Bạn không thể hoàn tác thao tác này!</string>
     <string name="reset_network_final_button_text">Đặt lại cài đặt</string>
@@ -1637,7 +1650,8 @@ Hãy xem xét sử dụng ^1 nhanh hơn để đạt được hiệu suất tố
 
 "<li>Tài khoản Google của bạn</li>"
 "<li>Dữ liệu và cài đặt hệ thống và ứng dụng</li>"
-"<li>Ứng dụng đã tải xuống</li></string>
+"<li>Ứng dụng đã tải xuống</li>
+    </string>
     <string name="master_clear_accounts">"
 
 Bạn hiện đã đăng nhập vào các tài khoản sau đây:
@@ -1646,9 +1660,11 @@ Bạn hiện đã đăng nhập vào các tài khoản sau đây:
 
 Có người dùng khác trên thiết bị này.
 "</string>
-    <string name="master_clear_desc_also_erases_external"><li>Nhạc</li>"
+    <string name="master_clear_desc_also_erases_external">
+        <li>Nhạc</li>"
 "<li>Ảnh</li>"
-"<li>Dữ liệu người dùng khác</li></string>
+"<li>Dữ liệu người dùng khác</li>
+    </string>
     <string name="master_clear_desc_erase_external_storage">"
 
 Để xóa nhạc, hình ảnh và dữ liệu người dùng khác, cần xóa "<b>bộ lưu trữ USB</b>.</string>
@@ -2091,8 +2107,11 @@ Chạm dấu cộng để thêm từ."</string>
     <string name="accessibility_screen_magnification_summary">"Khi tính năng này được bật, bạn có thể phóng to và thu nhỏ bằng cách chạm ba lần vào màn hình.
 
 Trong khi phóng to, bạn có thể:
-"<ul><li>"Xoay: Kéo hai hoặc nhiều ngón tay qua màn hình.
-"<li>Điều chỉnh mức thu phóng: Chụm hai hoặc nhiều ngón tay với nhau hoặc tách chúng ra.</li></li></ul>"
+"<ul>
+            <li>"Xoay: Kéo hai hoặc nhiều ngón tay qua màn hình.
+"<li>Điều chỉnh mức thu phóng: Chụm hai hoặc nhiều ngón tay với nhau hoặc tách chúng ra.</li>
+            </li>
+        </ul>"
 
 Bạn cũng có thể tạm thời thu phóng các mục bên dưới ngón tay bạn bằng cách nhấn ba lần và giữ. Ở trạng thái thu phóng này, bạn có thể kéo ngón tay để khám phá các phần khác nhau của màn hình. Thả ngón tay để trở về trạng thái trước.
 
@@ -2493,7 +2512,8 @@ Chạm "<b>Quay lại</b> để kết nối với mạng Wi-Fi khác.</string>
     <string name="sync_gmail">Gmail</string>
     <string name="sync_calendar">Lịch</string>
     <string name="sync_contacts">Danh bạ</string>
-    <string name="sync_plug"><font fgcolor="#ffffffff">Chào mừng bạn đến với Google sync!</font>"
+    <string name="sync_plug">
+        <font fgcolor="#ffffffff">Chào mừng bạn đến với Google sync!</font>"
 Một giải pháp đồng bộ hóa dữ liệu của Google cho phép quyền truy cập danh bạ, các cuộc hẹn và hơn thế nữa cho dù bạn ở đâu."</string>
     <string name="header_application_sync_settings">Cài đặt đồng bộ hóa ứng dụng</string>
     <string name="header_data_and_synchronization">Dữ liệu &amp; đồng bộ hóa</string>
@@ -2600,10 +2620,16 @@ Vì mức sử dụng dữ liệu do điện thoại của bạn tính và nhà 
     <string name="data_usage_restrict_background_multiuser">"Nếu bạn hạn chế dữ liệu di động nền thì một số ứng dụng và dịch vụ sẽ không hoạt động trừ khi bạn kết nối với Wi-Fi.
 
 Cài đặt này ảnh hưởng đến tất cả người dùng trên điện thoại này."</string>
-    <string name="data_usage_sweep_warning"><font size="18">^1</font> <font size="9">^2</font>"
-"<font size="12">cảnh báo</font></string>
-    <string name="data_usage_sweep_limit"><font size="18">^1</font> <font size="9">^2</font>"
-"<font size="12">giới hạn</font></string>
+    <string name="data_usage_sweep_warning">
+        <font size="18">^1</font>
+        <font size="9">^2</font>"
+"<font size="12">cảnh báo</font>
+    </string>
+    <string name="data_usage_sweep_limit">
+        <font size="18">^1</font>
+        <font size="9">^2</font>"
+"<font size="12">giới hạn</font>
+    </string>
     <string name="data_usage_received_sent">Đã nhận %1$s, đã gửi %2$s</string>
     <string name="data_usage_total_during_range">%2$s: khoảng %1$s đã được sử dụng.</string>
     <string name="data_usage_total_during_range_mobile">%2$s: khoảng %1$s đã được sử dụng, giá trị này được điện thoại của bạn đo. Việc tính mức sử dụng dữ liệu của nhà cung cấp dịch vụ của bạn có thể khác nhau.</string>
@@ -3178,7 +3204,9 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="unknown_app">Ứng dụng không xác định</string>
     <string name="app_permissions">Giấy phép ứng dụng</string>
     <string name="app_permissions_summary">Ứng dụng đang sử dụng %1$s</string>
-    <string name="app_permissions_group_summary" formatted="false">Đã cho phép %d trong số %d ứng dụng</string>
+    <string
+        name="app_permissions_group_summary"
+        formatted="false">Đã cho phép %d trong số %d ứng dụng</string>
     <string name="tap_to_wake">Nhấn để đánh thức</string>
     <string name="tap_to_wake_summary">Nhấn đúp vào vị trí bất kỳ trên màn hình để đánh thức thiết bị</string>
     <string name="domain_urls_title">Mở liên kết</string>
@@ -4092,8 +4120,10 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="button_text_ok_timer">OK(%d)</string>
     <string name="button_text_cancel">Hủy</string>
     <string name="master_clear_apply_title">Chú ý</string>
-    <string name="master_clear_apply_step_1"><b>Đặt lại về dữ liệu gốc sẽ xóa tất cả dữ liệu trên điện thoại</b>, bao gồm cả hình ảnh, bài hát, ghi chú và dữ liệu cá nhân khác. Hãy chắc chắn rằng bạn đã sao lưu tất cả các mục quan trọng vào máy tính.</string>
-    <string name="master_clear_apply_step_2">Hãy chắc chắn rằng tất cả các mục quan trọng đã được sao lưu vào máy tính. Tất cả dữ liệu trên thiết bị này sẽ bị xóa khi đặt lại. <b>Bạn sẽ không thể khôi phục lại các mục mà bạn chưa sao lưu.</b></string>
+    <string name="master_clear_apply_step_1">
+        <b>Đặt lại về dữ liệu gốc sẽ xóa tất cả dữ liệu trên điện thoại</b>, bao gồm cả hình ảnh, bài hát, ghi chú và dữ liệu cá nhân khác. Hãy chắc chắn rằng bạn đã sao lưu tất cả các mục quan trọng vào máy tính.</string>
+    <string name="master_clear_apply_step_2">Hãy chắc chắn rằng tất cả các mục quan trọng đã được sao lưu vào máy tính. Tất cả dữ liệu trên thiết bị này sẽ bị xóa khi đặt lại. <b>Bạn sẽ không thể khôi phục lại các mục mà bạn chưa sao lưu.</b>
+    </string>
     <string name="master_clear_erase_application_progress">Đang xóa ứng dụng…</string>
     <string name="erase_internal_storage">Xóa bộ nhớ máy</string>
     <string name="erase_internal_storage_description">Xóa nhạc, ảnh, video và dữ liệu người dùng khác</string>
@@ -4647,9 +4677,12 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="whetstone_level_title">Tối ưu hóa bộ nhớ</string>
     <string name="whetstone_level_reboot">Cài đặt này sẽ có hiệu lực sau khi bạn khởi động lại thiết bị.</string>
     <string name="whetstone_level_reboot_OK">Khởi động lại</string>
-    <string name="alpha_build">github.com/kakathic/ZH-VN</string>
-    <string name="developer_build">github.com/kakathic/ZH-VN</string>
-    <string name="stable_build">github.com/kakathic/ZH-VN</string>
+    <string name="alpha_build">github.com/
+    kakathic/ZH-VN</string>
+    <string name="developer_build">github.com/
+    kakathic/ZH-VN</string>
+    <string name="stable_build">github.com/
+    kakathic/ZH-VN</string>
     <string name="location_agps_params_settings_title">Cài đặt AGPS</string>
     <string name="location_agps_supl_settings">Cài đặt SUPL</string>
     <string name="location_agps_supl_server_addr">Địa chỉ máy chủ</string>
@@ -4844,7 +4877,9 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="lock_settings_with_fingerprint">Màn hình khóa &amp; mật khẩu</string>
     <string name="master_clear_summary">Bộ nhớ trong và tất cả các dữ liệu sẽ được đặt lại</string>
     <string name="onekey_migrate">Mi Mover</string>
-    <string name="forget_password_button_text"><u>Quên mật khẩu</u></string>
+    <string name="forget_password_button_text">
+        <u>Quên mật khẩu</u>
+    </string>
     <string name="storage_usb">Lưu trữ USB</string>
     <string name="usb_eject">Gỡ lưu trữ USB</string>
     <string name="usb_eject_summary">Gỡ lưu trữ USB để ngắt kết nối thiết bị an toàn</string>
@@ -5121,7 +5156,9 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="fingerprint_for_keyguard_disabled">Vân tay đã bị vô hiệu hóa bởi cài đặt bảo mật.</string>
     <string name="fingerprint_lock_second">Mở khóa Không gian thứ hai</string>
     <string name="fingerprint_lock_first">Mở khóa Không gian thứ nhất</string>
-    <string name="forget_pattern"><u>Quên hình mở khóa?</u></string>
+    <string name="forget_pattern">
+        <u>Quên hình mở khóa?</u>
+    </string>
     <string name="lockpattern_too_many_failed_confirmation_attempts_header">Quá nhiều lần thử không thành công</string>
     <string name="privacy_password_title">Mật khẩu bảo vệ Cá nhân</string>
     <string name="privacy_password_settings">Sử dụng mật khẩu bảo vệ Cá nhân</string>
@@ -5287,12 +5324,18 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="accessibility_screen_magnification_navbar_summary">"Khi tính năng phóng đại được bật, sử dụng nút Trợ năng ở cuối màn hình để phóng đại nhanh.
 
 "<b>Để thu phóng</b>", nhấn vào nút Trợ năng, sau đó nhấn bất kỳ chỗ nào trên màn hình.
-"<ul><li>"Kéo 2 hoặc nhiều ngón tay để cuộn
-"<li>Chụm 2 hoặc nhiều ngón tay để điều chỉnh mức thu phóng</li></li></ul>"
+"<ul>
+            <li>"Kéo 2 hoặc nhiều ngón tay để cuộn
+"<li>Chụm 2 hoặc nhiều ngón tay để điều chỉnh mức thu phóng</li>
+            </li>
+        </ul>"
 
 "<b>Để thu phóng tạm thời</b>", nhấn vào nút Trợ năng, sau đó chạm và giữ bất kỳ chỗ nào trên màn hình.
-"<ul><li>"Kéo để di chuyển quanh màn hình
-"<li>Nhấc ngón tay để thu nhỏ</li></li></ul>"
+"<ul>
+            <li>"Kéo để di chuyển quanh màn hình
+"<li>Nhấc ngón tay để thu nhỏ</li>
+            </li>
+        </ul>"
 
 Bạn không thể phóng to trên bàn phím hoặc thanh điều hướng."</string>
     <string name="accessibility_screen_magnification_navbar_title">Phóng đại bằng nút</string>
@@ -6385,12 +6428,24 @@ Quản trị viên của bạn có thể giám sát hoạt động mạng của 
     <string name="start_vip_mode">Bật chế độ VIP</string>
     <string name="vip_mode_info">Trong Chế độ Im lặng, danh sách liên hệ VIP trong cuộc gọi hoặc tin nhắn vẫn đổ chuông nhắc nhở</string>
     <string name="wifi_eap_info_reconnect">Xác thực thất bại, vui lòng kiểm lại!</string>
-    <string name="setup_choose_unlock_mixed_password_color_normal"><Data>&lt;font color=#000000>Mật khẩu&lt;/font></Data></string>
-    <string name="setup_choose_unlock_mixed_password_color_pressed"><Data>&lt;font color=#009dff>Mật khẩu&lt;/font></Data></string>
-    <string name="setup_choose_unlock_password_color_normal"><Data>&lt;font color=#000000>PIN&lt;/font></Data></string>
-    <string name="setup_choose_unlock_password_color_pressed"><Data>&lt;font color=#009dff>PIN&lt;/font></Data></string>
-    <string name="setup_choose_unlock_pattern_color_normal"><Data>&lt;font color=#000000>Hình mở khóa&lt;/font></Data></string>
-    <string name="setup_choose_unlock_pattern_color_pressed"><Data>&lt;font color=#009dff>Hình mở khóa&lt;/font></Data></string>
+    <string name="setup_choose_unlock_mixed_password_color_normal">
+        <Data>&lt;font color=#000000>Mật khẩu&lt;/font></Data>
+    </string>
+    <string name="setup_choose_unlock_mixed_password_color_pressed">
+        <Data>&lt;font color=#009dff>Mật khẩu&lt;/font></Data>
+    </string>
+    <string name="setup_choose_unlock_password_color_normal">
+        <Data>&lt;font color=#000000>PIN&lt;/font></Data>
+    </string>
+    <string name="setup_choose_unlock_password_color_pressed">
+        <Data>&lt;font color=#009dff>PIN&lt;/font></Data>
+    </string>
+    <string name="setup_choose_unlock_pattern_color_normal">
+        <Data>&lt;font color=#000000>Hình mở khóa&lt;/font></Data>
+    </string>
+    <string name="setup_choose_unlock_pattern_color_pressed">
+        <Data>&lt;font color=#009dff>Hình mở khóa&lt;/font></Data>
+    </string>
     <string name="title_jeejen">Màn hình chính Jeejen</string>
     <string name="use_media_format_desc">Xóa Lưu trữ USB? <b>Tất cả</b> tập tin sẽ bị xóa vĩnh viễn.</string>
     <string name="usb_dlg_confirm_unmount_title">Ngắt kết nối lưu trữ USB?</string>
@@ -6508,7 +6563,9 @@ Tính năng này có thể tắt trong [Cài đặt]"</string>
     <string name="data_saving_title">Đang lưu dữ liệu</string>
     <string name="data_usage_menu_cellular_data_control">Kiểm soát dữ liệu di động</string>
     <string name="datausage_overview_mobile_title">DI ĐỘNG</string>
-    <string name="datausage_overview_mobile_usage" formatted="false">%s trong %s</string>
+    <string
+        name="datausage_overview_mobile_usage"
+        formatted="false">%s trong %s</string>
     <string name="datausage_overview_mobile_usage_warning">Quá giới hạn %s</string>
     <string name="datausage_overview_tab">Tổng quan</string>
     <string name="datausage_overview_wifi_today">Hôm nay</string>
@@ -6533,7 +6590,9 @@ Tính năng này có thể tắt trong [Cài đặt]"</string>
     <string name="font_setting_title">Kiểu chữ</string>
     <string name="forget_password_dialog_button_text">Quay lại</string>
     <string name="forget_password_dialog_content_four">2. Chọn [Wipe data], và chờ đến khi thiết bị khởi động lại.</string>
-    <string name="forget_password_dialog_content_one"><Data>Nếu bạn quên mật khẩu, bạn sẽ không thể khôi phục. Tuy nhiên, bạn có thể đặt lại mật khẩu sau khi bạn &lt;font color=#ec2700>xóa tất cả dữ liệu trên thiết bị&lt;/font> (bao gồm ảnh, liên hệ v.v...). Sao lưu tất cả dữ liệu quan trọng trước khi thực hiện điều này.</Data></string>
+    <string name="forget_password_dialog_content_one">
+        <Data>Nếu bạn quên mật khẩu, bạn sẽ không thể khôi phục. Tuy nhiên, bạn có thể đặt lại mật khẩu sau khi bạn &lt;font color=#ec2700>xóa tất cả dữ liệu trên thiết bị&lt;/font> (bao gồm ảnh, liên hệ v.v...). Sao lưu tất cả dữ liệu quan trọng trước khi thực hiện điều này.</Data>
+    </string>
     <string name="forget_password_dialog_content_three">1. Tắt thiết bị. Bấm nút [Nguồn] và [Âm lượng+] đồng thời, giữ đến khi bạn nhìn thấy biểu tượng *</string>
     <string name="forget_password_dialog_content_two">Thực hiện theo các bước sau để xóa dữ liệu:</string>
     <string name="forget_password_dialog_title">Thiết lập lại mật khẩu</string>
@@ -7340,7 +7399,8 @@ Những ứng dụng sử dụng pin hàng đầu:"</string>
     <string name="prevent_ringing_option_vibrate">Rung</string>
     <string name="prevent_ringing_option_vibrate_summary">Bật (rung)</string>
     <string name="print_configuring_state_title_template">Đang cấu hình %1$s</string>
-    <string name="private_dns_help_message"><annotation id="url">Tìm hiểu thêm</annotation> về tính năng DNS riêng tư</string>
+    <string name="private_dns_help_message">
+        <annotation id="url">Tìm hiểu thêm</annotation> về tính năng DNS riêng tư</string>
     <string name="private_dns_mode_off">Tắt</string>
     <string name="private_dns_mode_opportunistic">Tự động</string>
     <string name="private_dns_mode_provider">Hostname nhà cung cấp DNS riêng tư</string>
@@ -7444,8 +7504,10 @@ Những ứng dụng sử dụng pin hàng đầu:"</string>
     <string name="storage_wizard_migrate_v2_title">Chuyển nội dung tới ^1?</string>
     <string name="storage_wizard_move_unlock">Để chuyển dữ liệu bạn cần mở khóa người dùng ^1.</string>
     <string name="storage_wizard_ready_v2_external_body">Bạn có thể chuyển nội dung đến ^1</string>
-    <string name="storage_wizard_ready_v2_internal_body">Để chuyển nội dung đến ^1, vào <b>Cài đặt > Bộ nhớ </b></string>
-    <string name="storage_wizard_ready_v2_internal_moved_body">Nội dung của bạn đã chuyển đến ^1. Để quản lý ^2, vào <b>Cài đặt > Lưu trữ</b></string>
+    <string name="storage_wizard_ready_v2_internal_body">Để chuyển nội dung đến ^1, vào <b>Cài đặt > Bộ nhớ </b>
+    </string>
+    <string name="storage_wizard_ready_v2_internal_moved_body">Nội dung của bạn đã chuyển đến ^1. Để quản lý ^2, vào <b>Cài đặt > Lưu trữ</b>
+    </string>
     <string name="storage_wizard_slow_v2_body">Bạn vẫn có thể sử dụng ^1 này, nhưng nó có thể chậm. Các ứng dụng lưu trữ trên ^2 có thể hoạt động không bình thường, và thời gian chuyển nội dung sẽ lâu. Thử sử dụng ^3 nhanh hơn, hoặc sử dụng ^4 này làm bộ nhớ di động.</string>
     <string name="storage_wizard_slow_v2_continue">Tiếp tục</string>
     <string name="storage_wizard_slow_v2_start_over">Bắt đầu lại</string>
@@ -11007,7 +11069,9 @@ Chức năng này chỉ nhận được địa chỉ MAC Wi-Fi của bạn để
     <string name="save_battery_mode">Tiết kiệm pin với WQHD+</string>
     <string name="screen_enhance_engine_ai_title">Tăng cường hình ảnh AI</string>
     <string name="headset_remove_message">Bạn có muốn xóa thiết bị này khỏi tài khoản của bạn</string>
-    <string name="resolution_fhd_summary" formatted="false">%d×%d (tiết kiệm pin)</string>
+    <string
+        name="resolution_fhd_summary"
+        formatted="false">%d×%d (tiết kiệm pin)</string>
     <string name="screen_enhance_engine_ai_pic_summary">Nhận diện đối tượng (v.d. cây cối, động vật, tòa nhà) và điều chỉnh động hiệu ứng hiển thị. Tính năng này làm tăng nhẹ lượng pin tiêu thụ.</string>
     <string name="aod_notification_style">Hiệu ứng thông báo</string>
     <string name="miheadet_up_music">Bên trên</string>
@@ -11047,7 +11111,9 @@ Chức năng này chỉ nhận được địa chỉ MAC Wi-Fi của bạn để
     <string name="miheadset_last_version">Firmware đã được cập nhật</string>
     <string name="miheadset_double_click_left">Chạm hai lần vào tai nghe bên trái</string>
     <string name="screen_enhance_engine_sr_for_pic">Tăng cường hình ảnh</string>
-    <string name="resolution_qhd_summary" formatted="false">%d×%d (rõ ràng hơn)</string>
+    <string
+        name="resolution_qhd_summary"
+        formatted="false">%d×%d (rõ ràng hơn)</string>
     <string name="miheadset_audio_mode_normal">Chế độ bình thường</string>
     <string name="personalize_title">Hình nền &amp; cá nhân hóa</string>
     <string name="miheadset_double_click_key_mode_summary">Thay đổi bản đồ phím nhấn đúp</string>
@@ -12337,54 +12403,56 @@ Bật tính năng này và chạm vào nút Trợ năng ở cuối màn hình đ
     <string name="dark_mode_alert_dialog_cancel">Hủy</string>
     <string name="google_assistant_guide_title">Trợ lý Google</string>
     <string name="mi_wallet_desc">Ví Mi</string>
-	<string name="external_ram_intro">"Tạo thêm RAM bằng cách chiếm dung lượng lưu trữ. Chỉ sử dụng tính năng này khi có đủ dung lượng bộ nhớ trên thiết bị của bạn."</string>
-	<string name="interconnection">Kết nối</string>
-	<string name="connection_control">Quản lý kết nối</string>
-	<string name="complete_parameters_new">Tất cả thông số</string>
-	<string name="network_acceleration">Tăng tốc mạng</string>
-	<string name="multi_network_acceleration_summery">Kết nối với nhiều mạng WLAN cùng lúc để tăng tốc độ</string>
-	<string name="network_auto_switch">Chuyển đổi giữa các mạng</string>
-	<string name="network_auto_switch_summery">"Chuyển sang dữ liệu di động khi tín hiệu mạng WLAN yếu hoặc không có mạng"</string>
-	<string name="data_acceleration_summery">Sử dụng cả mạng WLAN và dữ liệu di động để tăng tốc độ khi kết nối mạng WLAN kém</string>
-	<string name="wifi_primary">Mạng chính</string>
-	<string name="card_holder_header_title">Ví thanh toán</string>
-	<string name="keywords_wallet">Ví</string>
-	<string name="bt_always_show_icon">Luôn hiển thị biểu tượng trên thanh trạng thái</string>
-	<string name="accept_new_connection">Cho phép kết nối với các thiết bị mới</string>
+    <string name="external_ram_intro">"Tạo thêm RAM bằng cách chiếm dung lượng lưu trữ. Chỉ sử dụng tính năng này khi có đủ dung lượng bộ nhớ trên thiết bị của bạn."</string>
+    <string name="interconnection">Kết nối</string>
+    <string name="connection_control">Quản lý kết nối</string>
+    <string name="complete_parameters_new">Tất cả thông số</string>
+    <string name="network_acceleration">Tăng tốc mạng</string>
+    <string name="multi_network_acceleration_summery">Kết nối với nhiều mạng WLAN cùng lúc để tăng tốc độ</string>
+    <string name="network_auto_switch">Chuyển đổi giữa các mạng</string>
+    <string name="network_auto_switch_summery">"Chuyển sang dữ liệu di động khi tín hiệu mạng WLAN yếu hoặc không có mạng"</string>
+    <string name="data_acceleration_summery">Sử dụng cả mạng WLAN và dữ liệu di động để tăng tốc độ khi kết nối mạng WLAN kém</string>
+    <string name="wifi_primary">Mạng chính</string>
+    <string name="card_holder_header_title">Ví thanh toán</string>
+    <string name="keywords_wallet">Ví</string>
+    <string name="bt_always_show_icon">Luôn hiển thị biểu tượng trên thanh trạng thái</string>
+    <string name="accept_new_connection">Cho phép kết nối với các thiết bị mới</string>
     <string name="accept_new_connection_detail">Các kết nối mới đã bị hạn chế trong Trung tâm điều khiển</string>
-	<string name="assistance_category_title">Khả năng truy cập</string>
-	<string name="brightness_auto_summary">Điều chỉnh độ sáng theo ánh sáng xung quanh để tiết kiệm pin</string>
-	<string name="accessibility_button_intro_text">Truy cập nhanh các tính năng trợ năng từ bất kỳ màn hình nào</string>
-	<string name="accessibility_button_summary">Truy cập nhanh các tính năng trợ năng</string>
-	<string name="accessibility_button_opacity_title">Độ trong suốt khi không sử dụng</string>
+    <string name="assistance_category_title">Khả năng truy cập</string>
+    <string name="brightness_auto_summary">Điều chỉnh độ sáng theo ánh sáng xung quanh để tiết kiệm pin</string>
+    <string name="accessibility_button_intro_text">Truy cập nhanh các tính năng trợ năng từ bất kỳ màn hình nào</string>
+    <string name="accessibility_button_summary">Truy cập nhanh các tính năng trợ năng</string>
+    <string name="accessibility_button_opacity_title">Độ trong suốt khi không sử dụng</string>
     <string name="accessibility_button_or_gesture_title">Sử dụng nút hoặc cử chỉ</string>
-	<string name="accessibility_button_description"><b>Để bắt đầu</b>"
+    <string name="accessibility_button_description">
+        <b>Để bắt đầu</b>"
 1. Chuyển đến cài đặt trợ năng
 2. Chọn một tính năng và nhấn vào phím tắt
 3. Chọn nút để truy cập tính năng"</string>
     <string name="accessibility_button_fade_summary">Mất dần sau vài giây để bạn dễ nhìn màn hình hơn</string>
     <string name="accessibility_button_fade_title">Làm mờ dần khi không sử dụng</string>
     <string name="accessibility_button_gesture_about_title">Giới thiệu về nút trợ năng &amp; cử chỉ</string>
-    <string name="accessibility_button_gesture_description"><b>Để bắt đầu</b>"
+    <string name="accessibility_button_gesture_description">
+        <b>Để bắt đầu</b>"
 1. Chuyển đến cài đặt trợ năng
 2. Chọn một tính năng và nhấn vào phím tắt
 3. Chọn xem bạn muốn sử dụng nút hay cử chỉ để truy cập tính năng"</string>
     <string name="accessibility_button_gesture_footer_learn_more_content_description">Tìm hiểu thêm về nút hỗ trợ tiếp cận &amp; cử chỉ</string>
     <string name="accessibility_button_gesture_title">Nút trợ năng &amp; cử chỉ</string>
-	<string name="freeform_guide_vedio_description">Nhấn vào một ứng dụng trên sidebar để mở ứng dụng đó trong cửa sổ nổi</string>
-	<string name="miui_bubbles_notification">Bong bóng hội thoại</string>
-	<string name="freeform_guide_to_sidehide_summary">Kéo nhanh ứng dụng sang hai bên màn hình để ẩn đi</string>
+    <string name="freeform_guide_vedio_description">Nhấn vào một ứng dụng trên sidebar để mở ứng dụng đó trong cửa sổ nổi</string>
+    <string name="miui_bubbles_notification">Bong bóng hội thoại</string>
+    <string name="freeform_guide_to_sidehide_summary">Kéo nhanh ứng dụng sang hai bên màn hình để ẩn đi</string>
     <string name="freeform_guide_to_sidehide_title">Ẩn cửa sổ nổi</string>
-	<string name="freeform_guide_slide_to_small_freeform_summary_squarehot">"Nhấn và giữ phần dưới cùng của cửa sổ và kéo nó lên cạnh trên của màn hình.
+    <string name="freeform_guide_slide_to_small_freeform_summary_squarehot">"Nhấn và giữ phần dưới cùng của cửa sổ và kéo nó lên cạnh trên của màn hình.
 Tính năng này chỉ hoạt động khi điều hướng hệ thống được đặt thành cử chỉ."</string>
-	<string name="my_device_info_device_identifiers_category_title">Định danh thiết bị</string>
-	<string name="auto_clean_summary_new">Phát một đoạn âm thanh %d-giây để làm sạch loa. Sử dụng tính năng này nhiều lần liên tiếp để xử lý lượng bụi bẩn đáng kể.</string>
-	<string name="progress_dialog_speaker_auto_clean_title">Đang làm sạch loa…</string>
-	<string name="auto_clean_description_pad">Thông tin về tính năng này
+    <string name="my_device_info_device_identifiers_category_title">Định danh thiết bị</string>
+    <string name="auto_clean_summary_new">Phát một đoạn âm thanh %d-giây để làm sạch loa. Sử dụng tính năng này nhiều lần liên tiếp để xử lý lượng bụi bẩn đáng kể.</string>
+    <string name="progress_dialog_speaker_auto_clean_title">Đang làm sạch loa…</string>
+    <string name="auto_clean_description_pad">Thông tin về tính năng này
 - Chạy tính năng này một hoặc hai lần nếu bạn thấy rằng loa của mình bị bụi chặn nhẹ.
 - Nếu loa bị chặn nhiều, hãy chạy tính năng này %1$d-%2$d lần trong khi lắc thiết bị của bạn với mặt loa hướng xuống dưới.</string>
-	<string name="string_float_seconds">%f giây</string>
-	    <string name="permissions_usage_summary">Hiển thị các ứng dụng nào gần đây đã sử dụng quyền</string>
+    <string name="string_float_seconds">%f giây</string>
+    <string name="permissions_usage_summary">Hiển thị các ứng dụng nào gần đây đã sử dụng quyền</string>
     <string name="permissions_usage_title">Bảng điều khiển quyền riêng tư</string>
     <string name="location_settings_footer_general">Các ứng dụng có quyền của thiết bị gần đó có thể xác định vị trí tương đối của các thiết bị được kết nối.</string>
     <string name="location_settings_footer_location_off">Truy cập vị trí là TẮT cho các ứng dụng và dịch vụ. Vị trí thiết bị của bạn vẫn có thể được gửi đến người ứng cứu khẩn cấp khi bạn gọi hoặc nhắn tin cho số khẩn cấp.</string>
@@ -12400,11 +12468,24 @@ Tính năng này chỉ hoạt động khi điều hướng hệ thống được
     <string name="transcode_notification">Hiển thị thông báo chuyển mã</string>
     <string name="transcode_settings_title">Cài đặt chuyển mã phương tiện</string>
     <string name="transcode_user_control">Ghi đè mặc định chuyển mã</string>
-    <string name="transition_animation_scale_title">Quy mô hoạt ảnh chuyển tiếp</string>
-	<string name="allow_ongoing_title">Cho phép thông báo vĩnh viễn</string>
-	<string name="dialog_speaker_auto_clean_content_new">"Bạn sắp phát âm thanh làm sạch loa. Điều chỉnh âm lượng ở mức tối đa để có hiệu quả tốt nhất."</string>
-	<string name="location_time_zone_detection_toggle_title">Sử dụng vị trí để đặt múi giờ</string>
-	<string name="wifi_tether_enabled_nosecurity_summary">%1$s không được mã hoá</string>
-	<string name="external_ram_dialog_icon_info">Hệ thống sẽ mở rộng RAM thêm %1$s %2$s.</string>
-	<string name="external_ram_dialog_icon_title">Phần mở rộng bộ nhớ đang bật</string>
+    <string name="allow_ongoing_title">Cho phép thông báo vĩnh viễn</string>
+    <string name="dialog_speaker_auto_clean_content_new">"Bạn sắp phát âm thanh làm sạch loa. Điều chỉnh âm lượng ở mức tối đa để có hiệu quả tốt nhất."</string>
+    <string name="location_time_zone_detection_toggle_title">Sử dụng vị trí để đặt múi giờ</string>
+    <string name="wifi_tether_enabled_nosecurity_summary">%1$s không được mã hoá</string>
+    <string name="external_ram_dialog_icon_info">Hệ thống sẽ mở rộng RAM thêm %1$s %2$s.</string>
+    <string name="external_ram_dialog_icon_title">Phần mở rộng bộ nhớ đang bật</string>
+    <string name="emergency_settings_preference_title">An toàn &amp; khẩn cấp</string>
+    <string name="emergency_dashboard_summary">SOS khẩn cấp, thông tin y tế, cảnh báo</string>
+    <string name="emergency_gesture_call_for_help_dialog_title">Số để gọi trợ giúp</string>
+    <string name="emergency_gesture_call_for_help_summary">%1$s. Nhấn để thay đổi</string>
+    <string name="emergency_gesture_call_for_help_title">Gọi giúp đỡ</string>
+    <string name="emergency_gesture_category_call_for_help_title">Thông báo để được trợ giúp</string>
+    <string name="emergency_gesture_entrypoint_summary">Được quản lý bởi %1$s</string>
+    <string name="emergency_gesture_number_override_notes">Nếu bạn nhập một số không khẩn cấp:
+• Thiết bị của bạn phải được mở khóa để sử dụng Khẩn cấp SÓ
+• Cuộc gọi của bạn có thể không được trả lời</string>
+    <string name="emergency_gesture_screen_summary">Nhấn nhanh nút Nguồn 5 lần trở lên để bắt đầu các thao tác bên dưới</string>
+    <string name="emergency_gesture_sound_setting_summary">Phát âm thanh lớn khi Khẩn cấp SOS đang bắt đầu</string>
+    <string name="emergency_gesture_sound_setting_title">Phát báo thức đếm ngược</string>
+    <string name="emergency_gesture_switchbar_title">Sử dụng SOS khẩn cấp</string>
 </resources>
