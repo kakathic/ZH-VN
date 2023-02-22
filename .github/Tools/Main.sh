@@ -202,6 +202,10 @@ cp -rf $Capk "$MODPATH/app/$Papkp"
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
 else
 Ehehdb="$(pm path $Papkp | cut -d : -f2)"
+if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
+mkdir -p $MODPATH${Ehehdb%/*}/lib/$ARCH
+unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Ehehdb%/*}/lib/$ARCH
+fi
 mkdir -p "$MODPATH${Ehehdb%/*}"
 cp -rf $Capk "$MODPATH$Ehehdb"
 fi
