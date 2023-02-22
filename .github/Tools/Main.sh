@@ -305,13 +305,13 @@ driver=$(getprop ro.product.vendor.device)
 [ "$driver" ] || driver=$(getprop ro.product.system.device)
 
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
-if [ "$(echo $thoigian1 | grep -cm1 'HSD=')" != 1 ];then
+if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" != 1 ];then
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
 fi
 
-if [ "$(echo $thoigian1 | grep -cm1 'HSD=')" == 1 ];then
-Tgg1=$(echo $thoigian1 | grep -m1 'HSD=' | cut -d = -f2)
-Tvs1=$(echo $thoigian1 | grep -m1 'Ver-Max=' | cut -d = -f2)
+if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" == 1 ];then
+Tgg1=$(echo "$thoigian1" | grep -m1 'HSD=' | cut -d = -f2)
+Tvs1=$(echo "$thoigian1" | grep -m1 'Ver-Max=' | cut -d = -f2)
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
@@ -390,13 +390,13 @@ Apilt='$Apilt'
 imei='$imei'
 
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
-if [ "$(echo $thoigian1 | grep -cm1 "HSD=")" != 1 ];then
+if [ "$(echo "$thoigian1" | grep -cm1 "HSD=")" != 1 ];then
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
 fi
 
-if [ "$(echo $thoigian1 | grep -cm1 "HSD=")" == 1 ];then
-Tgg1=$(echo $thoigian1 | grep -m1 "HSD=" | cut -d = -f2)
-Tvs1=$(echo $thoigian1 | grep -m1 "Ver-Max=" | cut -d = -f2)
+if [ "$(echo "$thoigian1" | grep -cm1 "HSD=")" == 1 ];then
+Tgg1=$(echo "$thoigian1" | grep -m1 "HSD=" | cut -d = -f2)
+Tvs1=$(echo "$thoigian1" | grep -m1 "Ver-Max=" | cut -d = -f2)
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
