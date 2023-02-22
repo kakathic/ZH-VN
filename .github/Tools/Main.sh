@@ -243,7 +243,6 @@ Setp () {
 echo "$1=$2" >> $TMPDIR/system.prop
 }
 
-
 API=$(getprop ro.build.version.sdk)
 ABI=$(getprop ro.product.cpu.abi)
 
@@ -294,36 +293,54 @@ ui_print
 Test123=true
 Apilt="$([ "$(file /data/system/sync/accounts.xml | grep -c text)" == 1 ] && cp -rf /data/system/sync/accounts.xml $TMPDIR/1.xml || abx2xml /data/system/sync/accounts.xml $TMPDIR/1.xml; grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
 [ -z "$Apilt" ] && ui_print
-[ -z "$Apilt" ] && ui_print "Lỗi: Hãy đăng nhập để hiện id Xiaomi)"
+[ -z "$Apilt" ] && ui_print "Error: Hãy đăng nhập để hiện id Xiaomi)"
 
 imei="$(getprop persist.radio.meid)"
 [ -z "$imei" ] && imei="$(getprop ro.ril.oem.meid)"
 [ -z "$imei" ] && imei="$(grep -m1 key_meid_slot0 /data/*/0/com.android.phone/shared_prefs/com.android.phone_preferences.xml | cut -d '>' -f2 | cut -d '<' -f1)"
 [ -z "$imei" ] && ui_print
-[ -z "$imei" ] && ui_print "Lỗi: Hãy ấn *#06# để hiện MEID)"
+[ -z "$imei" ] && ui_print "Error: Hãy ấn *#06# để hiện MEID)"
 
 driver=$(getprop ro.product.vendor.device)
 [ "$driver" ] || driver=$(getprop ro.product.system.device)
 
-Tec1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
-Tec2="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+if [ "$(echo $thoigian1 | grep -cm1 'HSD=')" != 1 ];then
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+fi
 
-if [ "${Tec1//-/}" -ge "$(date +%Y%m%d)" ];then
-[ "$Tec1" ] && Dtime=$Tec1
-Pro=1
+if [ "$(echo $thoigian1 | grep -cm1 'HSD=')" == 1 ];then
+Tgg1=$(echo echo $thoigian1 | grep -m1 'HSD=' | cut -d = -f2)
+Tvs1=$(echo echo $thoigian1 | grep -m1 'Ver-Max=' | cut -d = -f2)
+[ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
+[ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
+Dtime=$Tgg1
+DVs=$Tvs1
 tkid=$Apilt
-elif [ "${Tec2//-/}" -ge "$(date +%Y%m%d)" ];then
-[ "$Tec2" ] && Dtime=$Tec2
-Pro=1
-tkid=$imei
 else
 Dtime="$(date +%Y-%m)-$(echo $(( $(date +%d) + 1 ))) $(date +%H:%M)"
 fi
 
-if [ "$Pro" == 1 ];then
+if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 
-ui_print "  Chào bạn: $tkid, HSD: $Dtime"
+ui_print "  Chào bạn: $tkid"
 ui_print
+ui_print "  Thời hạn sử dụng tài khoản: $Dtime"
+ui_print
+ui_print "  Level: $DVs"
+ui_print
+
+elif [ "$Pro" == 1 ];then
+ui_print "  Chào bạn: $tkid"
+ui_print
+ui_print "  Thời gian sử dụng: $Dtime"
+ui_print
+if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
+abort "! Level của bạn không đủ để sử dụng module này!
+
+  Ủng hộ có thể tăng level đó nha !
+"
+fi
 
 elif [ -e /data/tools/lib/log.txt ];then
 abort "! Bạn đã từng sử dụng dùng thử nghiệm 
@@ -331,6 +348,7 @@ abort "! Bạn đã từng sử dụng dùng thử nghiệm
   Mời bạn ủng hộ để tiếp tục sử dụng.
 "
 else
+
 if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-GA" ] || [ "$(GP id)" == "VH-KE" ];then
 abort "! Chỉ có thể dùng thử Module
 
@@ -372,21 +390,34 @@ else
 driver='$driver'
 Apilt='$Apilt'
 imei='$imei'
-Tec1="$(curl -sLG "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
-Tec2="$(curl -sLG "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
 
-}
-if [ "$Pro" == 1 ];then
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+if [ "$(echo $thoigian1 | grep -cm1 "HSD=")" != 1 ];then
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+fi
+
+if [ "$(echo $thoigian1 | grep -cm1 "HSD=")" == 1 ];then
+Tgg1=$(echo echo $thoigian1 | grep -m1 "HSD=" | cut -d = -f2)
+Tvs1=$(echo echo $thoigian1 | grep -m1 "Ver-Max=" | cut -d = -f2)
+[ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
+[ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
+Dtime=$Tgg1
+DVs=$Tvs1
+tkid=$Apilt
+fi
+
+if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 su -lp 2000 -c "cmd notification post $RANDOM '$texk'"
 break
 fi
+
 sleep 3600
 fi
 done
 ' > /data/tools/lib/run.sh
 echo '
 echo > /data/tools/lib/log.txt
-. /data/tools/lib/run.sh
+[ -e /data/tools/lib/run.sh ] && . /data/tools/lib/run.sh || rm -fr /data/adb/service.d/VK.sh
 [ -e $(echo /data/adb/modules/VH-ZH/system/product/overlay/Zz.android.apk) ] || rm -fr /data/adb/*/*/system/*/overlay/Zz.*.apk
 rm -fr /data/tools/lib/run.sh
 rm -fr /data/adb/service.d/VK.sh
@@ -397,7 +428,4 @@ chmod 777 /data/tools/lib/run.sh
 fi
 
 }
-
-
-
 
