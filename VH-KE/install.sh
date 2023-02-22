@@ -41,7 +41,7 @@ Vk 2
 gettttap=$input
 fi
 
-ui_print "- Bật tính năng mod MIUI?"
+ui_print "- Bật tính năng mod MIUI ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
@@ -59,7 +59,7 @@ chinann=$input
 fi
 
 if [ "$chinann" == 1 ];then
-ui_print "- Giữ đa nhiệm sẽ tốn pin hơn"
+ui_print "- Fix thông báo miui"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
@@ -130,7 +130,6 @@ fi
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 
-
 # Copy file & apk
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
 if [ "$keyyyy" == 2 ] || [ "$chinann" == 1 ];then
@@ -156,7 +155,7 @@ ui_print
 # Mod install
 
 if [ "$gettttap" == 1 ];then
-pm install -r "$(pm path com.xiaomi.market | cut -d : -f2)" >&2
+[ "$(pm path com.xiaomi.market | grep -cm1 '/data/')" == 1 ] || pm install -r "$(pm path com.xiaomi.market | cut -d : -f2)" >&2
 FREEZE "$(echo /*/*/*SuperMarket*)"
 
 Vsmali ".method private checkSystemSelfProtection(Z)V" \
@@ -465,7 +464,6 @@ const/4 v1, 0x1
 .end method' \
 "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils/Utils.smali"
 }
-
 
 yentj="
 com/miui/powerkeeper/customerpower/CustomerPowerCheck
