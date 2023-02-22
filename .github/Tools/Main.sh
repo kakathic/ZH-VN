@@ -291,15 +291,15 @@ ui_print "  Tải dữ liệu..."
 ui_print
 
 Test123=true
-Apilt="$([ "$(file /data/system/sync/accounts.xml | grep -c text)" == 1 ] && cp -rf /data/system/sync/accounts.xml $TMPDIR/1.xml || abx2xml /data/system/sync/accounts.xml $TMPDIR/1.xml; grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
-[ -z "$Apilt" ] && ui_print
-[ -z "$Apilt" ] && ui_print "Error: Hãy đăng nhập để hiện id Xiaomi)"
+Apilt="$( [ "$(file /data/system/sync/accounts.xml | grep -c text)" == 1 ] && cp -rf /data/system/sync/accounts.xml $TMPDIR/1.xml || abx2xml /data/system/sync/accounts.xml $TMPDIR/1.xml; grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
+[ -z "$Apilt" ] && ui_print "Error: Hãy đăng nhập để hiện id Xiaomi
+" )"
 
 imei="$(getprop persist.radio.meid)"
 [ -z "$imei" ] && imei="$(getprop ro.ril.oem.meid)"
 [ -z "$imei" ] && imei="$(grep -m1 key_meid_slot0 /data/*/0/com.android.phone/shared_prefs/com.android.phone_preferences.xml | cut -d '>' -f2 | cut -d '<' -f1)"
-[ -z "$imei" ] && ui_print
-[ -z "$imei" ] && ui_print "Error: Hãy ấn *#06# để hiện MEID)"
+[ -z "$imei" ] && ui_print "Error: Hãy ấn *#06# để hiện MEID
+" )"
 
 driver=$(getprop ro.product.vendor.device)
 [ "$driver" ] || driver=$(getprop ro.product.system.device)
