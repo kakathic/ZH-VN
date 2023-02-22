@@ -3,7 +3,9 @@
 
 Version: 1.6
 
-- Các tài khoản cũ sẽ được chuyển thành thời gian sử dụng còn lại là 5 năm
+- Các tài khoản cũ sẽ được chuyển thành thời gian sử dụng còn lại tới năm 2027 năm
+
+- Nếu Level của bạn thấp hơn phiên bản thì banh chỉ có thể dùng được 3 module Việt hóa, Cài gapps, Crack miui
 
 - Thêm các tính năng:
 
