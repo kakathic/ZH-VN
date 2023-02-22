@@ -17,41 +17,82 @@ done
 if [ ! -e $MODPATH/Vip ];then
 sleep 100
 
-jdhfjd(){
-for kdhddj in $1; do
-appops set $2 $kdhddj allow
-done; }
+dhrnfn(){ 
+for rbeh in $2; do
+pm grant "$1" $rbeh
+done
+appops get $1; }
 
-jdhfjd "READ_CALENDAR
-WRITE_CALENDAR" com.google.android.syncadapters.calendar
+# Danh bạ google 
+dhrnfn com.google.android.syncadapters.contacts \
+"
+android.permission.GET_ACCOUNTS
+android.permission.READ_CONTACTS
+android.permission.WRITE_CONTACTS
+"
 
-jdhfjd "
-MANAGE_CREDENTIALS
-GET_ACCOUNTS
-READ_CONTACTS
-WRITE_CONTACTS
-" com.google.android.syncadapters.contacts
+# Lịch google 
+dhrnfn com.google.android.syncadapters.calendar \
+"
+android.permission.WRITE_CALENDAR
+android.permission.READ_CALENDAR
+"
 
-jdhfjd "
-ACTIVATE_PLATFORM_VPN
-ACTIVATE_VPN
-ACTIVITY_RECOGNITION
-FINE_LOCATION
-COARSE_LOCATION
-MOCK_LOCATION
-" com.google.android.gms.location.history
+# khôi phục google 
+dhrnfn com.google.android.apps.restore \
+"
+android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.READ_EXTERNAL_STORAGE
+android.permission.WRITE_EXTERNAL_STORAGE
+android.permission.READ_CONTACTS
+android.permission.READ_CALL_LOG
+android.permission.WRITE_CONTACTS
+android.permission.WRITE_CALL_LOG
+"
 
-jdhfjd "
-FINE_LOCATION
-COARSE_LOCATION
-READ_CONTACTS
-READ_CALL_LOG
-READ_EXTERNAL_STORAGE
-READ_CONTACTS
-WRITE_EXTERNAL_STORAGE
-WRITE_CONTACTS
-WRITE_CALL_LOG
-" com.google.android.apps.restore
+# Lịch sử vị trí 
+dhrnfn com.google.android.gms.location.history \
+"
+android.permission.ACTIVITY_RECOGNITION
+android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.ACCESS_BACKGROUND_LOCATION
+android.permission.ACTIVITY_RECOGNITION
+"
+
+# khung dịch vụ 
+dhrnfn com.google.android.gsf \
+"
+com.google.android.providers.talk.permission.READ_ONLY
+com.google.android.providers.talk.permission.WRITE_ONLY
+android.permission.WRITE_CONTACTS
+android.permission.GET_ACCOUNTS
+android.permission.READ_CONTACTS
+android.permission.READ_LOGS
+android.permission.READ_PHONE_STATE
+android.permission.DUMP
+android.permission.INTERACT_ACROSS_USERS
+"
+
+# Android auto
+dhrnfn com.google.android.projection.gearhead \
+"
+android.permission.ACCESS_FINE_LOCATION
+android.permission.ACCESS_COARSE_LOCATION
+android.permission.CALL_PHONE
+android.permission.BLUETOOTH_SCAN
+android.permission.BLUETOOTH_CONNECT
+android.permission.READ_CALENDAR
+android.permission.READ_CONTACTS
+android.permission.READ_CALL_LOG
+android.permission.SEND_SMS
+android.permission.RECORD_AUDIO
+android.permission.RECEIVE_SMS
+android.permission.READ_PHONE_STATE
+android.permission.SYSTEM_ALERT_WINDOW
+com.google.android.gms.permission.CAR_SPEED
+"
 
 echo > $MODPATH/Vip
 fi
