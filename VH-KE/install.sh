@@ -349,8 +349,6 @@ Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObje
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
-Thaythe "com.android.packageinstaller" "t.me.kakathic" ''$APK/$miuik'services/classes*/com/android/server/pm/PackageManagerServiceImpl.smali'
-
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/ApplicationPackageManager.smali"
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/DownloadManager.smali"
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/services/classes*/com/android/server/pm/PackageManagerServiceStub.smali"
