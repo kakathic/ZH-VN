@@ -209,6 +209,7 @@ fi
 mkdir -p "$MODPATH${Ehehdb%/*}"
 cp -rf $Capk "$MODPATH$Ehehdb"
 fi
+fi
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 mkdir -p "$MODPATH${Papkp%/*}"
