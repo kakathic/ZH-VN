@@ -338,7 +338,7 @@ ui_print "  Chào bạn: $tkid"
 ui_print
 ui_print "  Thời gian sử dụng: $Dtime"
 ui_print
-if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
+if [ "$(GP id)" == "VH-KE" ];then
 abort "! Level của bạn không đủ để sử dụng module này!
 
   Ủng hộ có thể tăng level đó nha !
