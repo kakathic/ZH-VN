@@ -2,7 +2,8 @@
 
 .class public Landroid/app/ApplicationStub;
 .super Ljava/lang/Object;
-.source "ApplicationStub.java"
+.source "ApplicationInjector.java"
+
 
 # static fields
 .field private static mMiuiApplicationThread:Lmiui/process/IMiuiApplicationThread;
@@ -97,7 +98,7 @@
 
     const-string v0, "FINGERPRINT"
 
-    const-string v1, "google/marlin/marlin:12/QP1A.191005.007.A3/5972272:user/release-keys"
+    const-string v1, "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys"
 
     invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
 
