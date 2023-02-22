@@ -350,11 +350,11 @@ Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObje
 
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
+Thaythe "com.android.packageinstaller" "t.me.kakathic" ''$APK/$miuik'services/classes*/com/android/server/pm/PackageManagerServiceImpl.smali'
+
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/ApplicationPackageManager.smali"
 #Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/framework/classes*/android/app/DownloadManager.smali"
-
-Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/services/classes*/com/android/server/pm/PackageManagerServiceStub.smali"
-
+#Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/services/classes*/com/android/server/pm/PackageManagerServiceStub.smali"
 
 echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 
@@ -368,7 +368,9 @@ Vsmali ".method isSecureLocked()Z" \
 ''$APK/$miuik'services/classes*'
 
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/controlcenter/policy/GoogleController.smali"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/navigationbar/*.smali"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/systemui/qs"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.systemui/classes*/com/android/settingslib/inputmethod/*.smali"
 
 ekyl3="
 com/android/server/AppOpsServiceState
@@ -405,6 +407,18 @@ miui/view/MiuiSecurityPermissionHandler
 for dhrb in $twwt; do
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/'$dhrb'.smali'
 done
+
+
+
+Tats(){
+Vsmali ".method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z" \
+".end method" \
+'.method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z
+    .registers 5
+    const/4 v1, 0x1
+    return v1
+.end method' \
+"$APK/services/classes*/com/android/server/AppStateTrackerImpl.smali"
 
 Vsmali ".method public isForegroundService()Z" \
 ".end method" \
@@ -450,6 +464,8 @@ const/4 v1, 0x1
     return v1
 .end method' \
 "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils/Utils.smali"
+}
+
 
 yentj="
 com/miui/powerkeeper/customerpower/CustomerPowerCheck
@@ -459,13 +475,14 @@ com/miui/powerkeeper/utils/*
 miui/payment/PaymentManager
 miui/telephony/TelephonyManager
 miuix/springback/view/SpringBackLayout
+com/miui/powerkeeper/millet/MilletConfig
 "
 for ykhke in $yentj; do
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/$ykhke.smali"
 done
 
 if [ "$Vipno" == 1 ];then
-Vsmali ".method public isForegroundService()Z" \
+Vsmali ".method hasForegroundServices()Z" \
 ".end method" \
 '.method hasForegroundServices()Z
     .registers 2
