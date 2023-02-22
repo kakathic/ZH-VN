@@ -362,11 +362,9 @@ ui_print "! Thông báo ủng hộ nhà phát triển
   
   IMEI: $imei
 
-  Để sử dụng lâu dài bạn nên ủng hộ
+  Sử dụng lâu dài bạn nên ủng hộ
 
-  để sử dụng vĩnh viễn.
-
-  Thử nghiệm sẽ có tác dụng trong 24 giờ 
+  Bạn sẽ được trải nghiệm trong 24h
 
   Hết thời gian sẽ tự động reboot.
 "
