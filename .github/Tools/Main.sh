@@ -306,9 +306,11 @@ imei="$(getprop persist.radio.meid)"
 driver=$(getprop ro.product.vendor.device)
 [ "$driver" ] || driver=$(getprop ro.product.system.device)
 
+tkid=$Apilt
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
 if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" != 1 ];then
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+tkid=$imei
 fi
 
 if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" == 1 ];then
@@ -318,7 +320,6 @@ Tvs1=$(echo "$thoigian1" | grep -m1 'Ver-Max=' | cut -d = -f2)
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
 DVs=$Tvs1
-tkid=$Apilt
 else
 Dtime="$(date +%Y-%m)-$(echo $(( $(date +%d) + 1 ))) $(date +%H:%M)"
 fi
