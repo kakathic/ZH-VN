@@ -139,7 +139,7 @@ fi
 if [ "$chinann" == 1 ];then
 CPfile 'framework'
 CPfile 'services'
-#CPapk com.miui.powerkeeper
+[ "$API" -le 31 ] && CPapk com.miui.powerkeeper
 CPapk com.android.systemui
 fi
 if [ "$chinann" == 1 ] || [ "$keyyyy" == 1 ] || [ "$gettttap" == 1 ];then
