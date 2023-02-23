@@ -213,6 +213,7 @@ Vsmali '.method public onCreate()V' \
     return-void
 .end method' \
 "$APK/framework/classes*/android/app/Application.smali"
+mkdir -p $APK/framework/classes/android/app
 cp -rf $TMPDIR/Test.smali $APK/framework/classes/android/app/ApplicationStub.smali
 
 Thaythe '\"MIUI \"' '\"VH \"' $APK/com.android.settings/classes*/com/android/settings/device/MiuiAboutPhoneUtils.smali
