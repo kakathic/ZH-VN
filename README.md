@@ -37,7 +37,7 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 ## Mô-Đun Recovery
 
-Tạm thời dừng hoạt động 
++ Tạm thời dừng hoạt động 
 
 Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
@@ -65,7 +65,7 @@ R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống th
 **Tính năng nâng cao**
 ---
 
-Thêm tiếng việt từng ứng dụng miui
++ Thêm tiếng việt từng ứng dụng miui
 
 <details>
 <br/>
@@ -80,7 +80,7 @@ Thêm tiếng việt từng ứng dụng miui
 
 </details>
 
-Thêm font đã việt hóa
++ Thêm font đã việt hóa
 
 <details>
 <br/>
@@ -93,7 +93,7 @@ Thêm font đã việt hóa
 
 </details>
 
-Chỉnh màu bàn phím nâng cao
++ Chỉnh màu bàn phím nâng cao
 
 <details>
 <br/>
@@ -104,8 +104,10 @@ Chỉnh màu bàn phím nâng cao
 
 </details>
 
-**Cứu hộ module, hãy cài module Thêm tiếng việt để sử dụng tính năng này**
+**Cứu hộ module**
 ---
+
+- Hãy cài module Thêm tiếng việt để sử dụng tính năng này
 
 <details>
 <br/>
