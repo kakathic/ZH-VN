@@ -303,7 +303,7 @@ imei="$(getprop persist.radio.meid)"
 [ "$imei" ] || ui_print "  Error: Hãy ấn *#06# để hiện MEID
 "
 
-driver=$(getprop ro.product.system.device)
+driver=$(getprop ro.product.device)
 
 tkid=$Apilt
 thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
