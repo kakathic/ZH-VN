@@ -360,7 +360,7 @@ abort "! Bạn đã từng sử dụng dùng thử nghiệm
 "
 else
 
-if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-GA" ] || [ "$(GP id)" == "VH-KE" ];then
+if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
 abort "! Chỉ có thể dùng thử Module
 
   Thêm tiếng Việt"
