@@ -16,7 +16,7 @@ sleep 1
 done
 
 if [ ! -e $MODPATH/Vip ];then
-sleep 100
+sleep 500
 
 dhrnfn(){ 
 for rbeh in $2; do
