@@ -260,6 +260,14 @@ echo '
 ' >> "$MODPATH$Ksdjn"
 fi
 
+# Fix dark mod
+Egveb="$(find /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.json | head -n1)"
+mkdir -p $MODPATH${Egveb%/*}
+echo "[
+$(echo "$(pm list packages -3 | cut -d : -f2)" | awk '{print "{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"" $1 "\",\"showInSettings\":true},"}')
+{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"test.com\",\"showInSettings\":true}
+]" > $MODPATH$Egveb
+
 for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
