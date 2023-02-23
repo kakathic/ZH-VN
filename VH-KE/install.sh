@@ -544,15 +544,6 @@ Vsmali '.method public static isMiuiImeBottomSupport()Z' \
 .end method' \
 "$APK/com.android.settings/classes*/*"
 
-Vsmali '.method private static isCanLoadPlugin(Landroid/content/Context;)Z' \
-'.end method' \
-'.method private static isCanLoadPlugin(Landroid/content/Context;)Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-''$APK/$miuik'framework/classes*/android/*inputmethod*/*'
-
 fi
 ui_print
 ui_print2 "Đóng gói apk"
