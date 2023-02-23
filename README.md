@@ -20,7 +20,7 @@ Nhật ký thay đổi các phiên bản
 
 ## Mô-Đun Magisk
 
-Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
++ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 <details>
 <br/>
@@ -39,7 +39,7 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 + Tạm thời dừng hoạt động 
 
-Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
++ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.5)
 
 <details>
 <br/>
