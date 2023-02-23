@@ -390,11 +390,14 @@ echo '
 while true; do
 thoigianjd="$(date +%Y%m%d%H%M)"
 thoigianhet="'$(date +%Y%m%d%H%M)'"
-if [ "$(( $thoigianjd - $thoigianhet ))" -ge "10000" ];then
+
 [ "$(( $thoigianjd - $thoigianhet ))" -ge "9900" ] && su -lp 2000 -c "cmd notification post $RANDOM '$texk2'"
+if [ "$(( $thoigianjd - $thoigianhet ))" -ge "10000" ];then
 rm -fr /data/adb/modules/VH-*
+rm -fr /data/tools/lib/run.sh
+rm -fr /data/adb/service.d/VK.sh
 sleep 10
-break
+reboot
 else
 driver='$driver'
 Apilt='$Apilt'
