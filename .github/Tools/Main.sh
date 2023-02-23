@@ -324,7 +324,8 @@ else
 Dtime="$(date +%Y-%m)-$(echo $(( $(date +%d) + 1 ))) $(date +%H:%M)"
 fi
 
-Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1"
+Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1
+"
 
 if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 
