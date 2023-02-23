@@ -297,7 +297,6 @@ if [ "$input2" -ge 3 ];then
 for kfgh in /data/adb/modules/*; do
 echo > $kfgh/disable
 done
-reboot
 exit
 fi
 sleep 0.3
@@ -312,6 +311,7 @@ Fixmodun
 Fixmodun
 ' > /data/adb/service.d/rescue.sh
 chmod 777 /data/adb/service.d/rescue.sh
+
 settings put secure show_rotation_suggestions 0
 }
 
