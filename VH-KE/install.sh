@@ -58,7 +58,6 @@ Vk 2
 chinann=$input
 fi
 
-if [ "$chinann" == 1 ];then
 ui_print "- Fix thông báo miui"
 ui_print
 ui_print2 "1. Có"
@@ -75,9 +74,7 @@ ui_print2 "1"
 Vk 2
 Vipno=$input
 fi
-else
-Vipno=0
-fi
+
 
 ui_print "- Bật tính năng bàn phím nâng cao ?"
 ui_print
@@ -131,6 +128,7 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
 
 # Copy file & apk
+[ "$Vipno" == 1 ] && CPfile 'framework'
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
 if [ "$keyyyy" == 1 ] || [ "$chinann" == 1 ];then
 CPapk com.android.settings
@@ -478,6 +476,8 @@ for ykhke in $yentj; do
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/$ykhke.smali"
 done
 
+fi
+
 if [ "$Vipno" == 1 ];then
 Vsmali ".method hasForegroundServices()Z" \
 ".end method" \
@@ -487,8 +487,6 @@ Vsmali ".method hasForegroundServices()Z" \
     return v0
 .end method' \
 "$APK/services/classes*/com/android/server/am/ProcessServiceRecord.smali"
-fi
-
 fi
 
 if [ "$keyyyy" == 1 ];then
