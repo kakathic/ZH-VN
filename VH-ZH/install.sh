@@ -209,6 +209,8 @@ com.baidu.input_mi
 com.android.browser
 com.miui.videoplayer
 com.miui.player
+com.xiaomi.drivemode
+com.android.settings.overlay.miui
 "
 mrw
 Gappcn(){
@@ -265,7 +267,9 @@ Egveb="$(find /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.jso
 mkdir -p $MODPATH${Egveb%/*}
 echo "[
 $(echo "$(pm list packages -3 | cut -d : -f2)" | awk '{print "{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"" $1 "\",\"showInSettings\":true},"}')
-{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"test.com\",\"showInSettings\":true}
+{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"com.android.vending\",\"showInSettings\":true},
+{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"com.google.android.gms\",\"showInSettings\":true},
+{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"com.google.android.webview\",\"showInSettings\":true}
 ]" > $MODPATH$Egveb
 
 for Bala in product vendor system_ext; do
