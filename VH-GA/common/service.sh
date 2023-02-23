@@ -98,7 +98,6 @@ com.google.android.gms.permission.CAR_SPEED
 echo > $MODPATH/Vip
 fi
 
-
 if [ ! -e $MODPATH/ON ];then
 am start com.google.android.apps.restore/com.google.android.apps.pixelmigrate.migrate.component.D2dWizardManager
 echo > $MODPATH/ON
