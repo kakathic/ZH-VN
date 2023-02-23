@@ -208,11 +208,11 @@ if [ "$chinann" == 1 ];then
 Vsmali '.method public onCreate()V' \
 '.end method' \
 '.method public onCreate()V
-    .registers 1
+    .registers 2
     invoke-static {p0}, Landroid/app/ApplicationStub;->onCreate(Landroid/app/Application;)V
     return-void
 .end method' \
-"$APK/com.android.settings/classes*/android/app/Application.smali"
+"$APK/framework/classes*/android/app/Application.smali"
 cp -rf $TMPDIR/Test.smali $APK/framework/classes/android/app/ApplicationStub.smali
 
 Thaythe '\"MIUI \"' '\"VH \"' $APK/com.android.settings/classes*/com/android/settings/device/MiuiAboutPhoneUtils.smali
