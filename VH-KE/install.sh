@@ -132,7 +132,7 @@ echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 
 # Copy file & apk
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
-if [ "$keyyyy" == 2 ] || [ "$chinann" == 1 ];then
+if [ "$keyyyy" == 1 ] || [ "$chinann" == 1 ];then
 CPapk com.android.settings
 CPfile ''$miuik'framework'
 fi
