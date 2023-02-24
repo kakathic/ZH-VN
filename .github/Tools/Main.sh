@@ -363,7 +363,8 @@ else
 if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
 abort "! Chỉ có thể dùng thử Module
 
-  Thêm tiếng Việt"
+  Thêm Tiếng Việt VH-ZH và gói gapp VH-GA
+"
 fi
 ui_print "! Thông báo ủng hộ nhà phát triển 
 
@@ -382,7 +383,8 @@ ui_print "! Thông báo ủng hộ nhà phát triển
 am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
 
 ## Check the system devices
-[ "$ARCH" == "arm64" ] || abort "$error2"
+[ "$ARCH" == "arm64" ] || abort "$error2
+"
 
 texk="'Cảm ơn bạn đã ủng hộ module Việt Nam bạn có thể tiếp tục sử dụng.'"
 texk2="'Còn 1 tiếng nữa module Việt hóa sẽ hết thời gian sử dụng'"
