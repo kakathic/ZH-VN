@@ -1,5 +1,4 @@
 # classes.dex
-
 .class public Landroid/app/ApplicationStub;
 .super Ljava/lang/Object;
 .source "ApplicationInjector.java"
@@ -35,7 +34,7 @@
 
     invoke-static {p0}, Lmiui/util/TypefaceUtils;->recordApplication(Landroid/app/Application;)V
 
-    if-eqz p0, :cond_8d
+    if-eqz p0, :cond_95
 
     invoke-virtual {p0}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
 
@@ -98,26 +97,26 @@
 
     const-string v0, "FINGERPRINT"
 
-    const-string v1, "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys"
+    const-string v1, "google/marlin/marlin:8/QP1A.191005.007.A3/5972272:user/release-keys"
 
     invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_4d
+    const-string v1, "com.tencent.ig"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_76
+
     const-string v1, "com.vng.pubgmobile"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-nez p0, :cond_86
-
-    const-string v1, "com.netease.lztgglobal"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_86
+    if-nez p0, :cond_76
 
     const-string v1, "com.pubg.imobile"
 
@@ -125,15 +124,41 @@
 
     move-result p0
 
-    if-nez p0, :cond_86
+    if-nez p0, :cond_76
 
-    const-string v1, "com.pubg.newstate"
+    const-string v1, "com.gameloft.android.SAMS.GloftA9SS"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-nez p0, :cond_86
+    if-nez p0, :cond_76
+
+    const-string v1, "com.gameloft.android.ANMP.GloftA8HM"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_76
+
+    goto :goto_7d
+
+    :cond_76
+    const-string v0, "MODEL"
+
+    const-string v1, "GM1917"
+
+    invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_7d
+    const-string v1, "com.riotgames.league.wildriftvn"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_8e
 
     const-string v1, "com.riotgames.league.wildrift"
 
@@ -141,35 +166,19 @@
 
     move-result p0
 
-    if-nez p0, :cond_86
+    if-nez p0, :cond_8e
 
-    const-string v1, "com.riotgames.league.wildriftvn"
+    goto :goto_95
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_86
-
-    const-string v1, "com.riotgames.league.wildrifttw"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_86
-
-    goto :goto_8d
-
-    :cond_86
+    :cond_8e
     const-string v0, "MODEL"
 
-    const-string v1, "SO-52A"
+    const-string v1, "SM-G9880"
 
     invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_8d
-    :goto_8d
+    :cond_95
+    :goto_95
     return-void
 .end method
 
