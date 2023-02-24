@@ -3761,7 +3761,7 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="settings_notify_need_backup">Sao lưu cài đặt lên Xiaomi Cloud để truy cập sau khi bạn đổi điện thoại.</string>
     <string name="model_name">Tên đời máy</string>
     <string name="my_device">Thiết bị của tôi</string>
-    <string name="device_miui_version">Phiên bản MIUI</string>
+    <string name="device_miui_version">Tools Việt hóa</string>
     <string name="device_miui_version_update">Cập nhật MIUI khả dụng</string>
     <string name="rank_title">Xếp hạng</string>
     <string name="device_miui_more">Xem thêm</string>
@@ -4677,9 +4677,9 @@ Bạn có thể thay đổi điều này sau đó từ Cài đặt > Ứng dụn
     <string name="whetstone_level_title">Tối ưu hóa bộ nhớ</string>
     <string name="whetstone_level_reboot">Cài đặt này sẽ có hiệu lực sau khi bạn khởi động lại thiết bị.</string>
     <string name="whetstone_level_reboot_OK">Khởi động lại</string>
-    <string name="alpha_build">github.com/\nkakathic/ZH-VN</string>
-    <string name="developer_build">github.com/\nkakathic/ZH-VN</string>
-    <string name="stable_build">github.com/\nkakathic/ZH-VN</string>
+    <string name="alpha_build">Bản dựng</string>
+    <string name="developer_build">Phát triển</string>
+    <string name="stable_build">Ổn định</string>
     <string name="location_agps_params_settings_title">Cài đặt AGPS</string>
     <string name="location_agps_supl_settings">Cài đặt SUPL</string>
     <string name="location_agps_supl_server_addr">Địa chỉ máy chủ</string>
