@@ -315,6 +315,10 @@ Fixmodun
 ' > /data/adb/service.d/rescue.sh
 chmod 777 /data/adb/service.d/rescue.sh
 
+for Ksksn in $(pm list packages -3 | cut -d : -f2); do
+dumpsys deviceidle whitelist +$Ksksn >&2
+done
+
 settings put secure show_rotation_suggestions 0
 }
 
