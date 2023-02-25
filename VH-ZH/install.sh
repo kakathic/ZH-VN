@@ -216,24 +216,20 @@ com.miui.hybrid.accessory
 com.xiaomi.macro
 "
 
-Gappcn(){
-ui_print2 "Gỡ: $1" >&2
-pm uninstall $1 >&2
-Pathappvcfgvchb="$(pm path "$1" | cut -d : -f2)"
-if [ "$Pathappvcfgvchb" ];then
-echo "$Pathappvcfgvchb" >> /data/tools/Listapp
-fi
-}
 for vakkkhddddv in $Listappcn; do
-Gappcn "$vakkkhddddv"
+ui_print2 "Gỡ: $vakkkhddddv" >&2
+pm uninstall $vakkkhddddv >&2
+Gwsgn="$(pm path "$vakkkhddddv" | cut -d : -f2)"
+[ "$Gwsgn" ] && echo "$Gwsgn" >> /data/tools/Listapp
 done
 
-if [ -e /data/tools/Listapp ];then
-for mvcfbb in $(cat /data/tools/Listapp); do
+cat /data/tools/Listapp | sort | uniq > /data/tools/Listapp2
+if [ -e /data/tools/Listapp2 ];then
+for mvcfbb in $(cat /data/tools/Listapp2); do
 FREEZE $mvcfbb
 done
 fi
-
+mv /data/tools/Listapp2 /data/tools/Listapp
 fi
 
 # Dịch vụ gg
