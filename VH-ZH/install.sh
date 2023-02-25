@@ -215,15 +215,13 @@ com.xiaomi.gamecenter.sdk.service
 com.miui.hybrid.accessory
 com.xiaomi.macro
 "
-mrw
+
 Gappcn(){
 ui_print2 "Gỡ: $1" >&2
 pm uninstall $1 >&2
 Pathappvcfgvchb="$(pm path "$1" | cut -d : -f2)"
 if [ "$Pathappvcfgvchb" ];then
-rm -fr ${Pathappvcfgvchb%/*}
-sleep 0.5
-[ -e "$(magisk --path)/.magisk/mirror$Pathappvcfgvchb" ] && echo "$Pathappvcfgvchb" >> /data/tools/Listapp
+echo "$Pathappvcfgvchb" >> /data/tools/Listapp
 fi
 }
 for vakkkhddddv in $Listappcn; do
@@ -235,7 +233,7 @@ for mvcfbb in $(cat /data/tools/Listapp); do
 FREEZE $mvcfbb
 done
 fi
-mro
+
 fi
 
 # Dịch vụ gg
