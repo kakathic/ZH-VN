@@ -1,5 +1,5 @@
-# name: "ZH-VN"
-#on:
+name: "ZH-VN"
+on:
   push:
     paths:
       - 'FL-GA/**'
