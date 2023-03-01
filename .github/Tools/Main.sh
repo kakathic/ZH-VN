@@ -346,7 +346,11 @@ ui_print
 if [ "$(GP id)" == "VH-KE" ];then
 abort "! Level của bạn không đủ để sử dụng module này!
 
-  Ủng hộ có thể tăng level đó nha !
+  Ủng hộ có thể tăng level đó nha 
+
+  Tài khoản Mi: $Apilt
+
+  MEID: $imei
 "
 fi
 
@@ -357,6 +361,10 @@ elif [ -e /data/tools/lib/log.txt ];then
 abort "! Bạn đã từng sử dụng dùng thử nghiệm 
   
   Mời bạn ủng hộ để tiếp tục sử dụng.
+
+  Tài khoản Mi: $Apilt
+
+  MEID: $imei
 "
 else
 
@@ -364,6 +372,10 @@ if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
 abort "! Chỉ có thể dùng thử Module
 
   Thêm Tiếng Việt VH-ZH và gói gapp VH-GA
+
+  Tài khoản Mi: $Apilt
+
+  MEID: $imei
 "
 fi
 ui_print "! Thông báo ủng hộ nhà phát triển 
@@ -372,7 +384,7 @@ ui_print "! Thông báo ủng hộ nhà phát triển
 
   Tài khoản Mi: $Apilt
   
-  IMEI: $imei
+  MEID: $imei
 
   Sử dụng lâu dài bạn nên ủng hộ
 
