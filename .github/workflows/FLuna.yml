@@ -1,5 +1,5 @@
 name: "ZH-VN"
-on:
+#on:
   push:
     paths:
       - 'FL-GA/**'
