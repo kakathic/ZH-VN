@@ -50,8 +50,6 @@ if [ "$(Checkapp com.android.vending)" ];then
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" $TMPDIR/Phonesky.apk;
 chcon u:object_r:apk_data_file:s0 $TMPDIR/Phonesky.apk;
 pm install -r $TMPDIR/Phonesky.apk >&2
-else
-abort "- Lỗi tải CH Play"
 fi
 
 if [ ! "$(Checkapp com.google.android.inputmethod.latin)" ];then
