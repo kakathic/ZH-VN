@@ -39,7 +39,7 @@ Nhật ký thay đổi các phiên bản
 
 + Tạm thời dừng hoạt động 
 
-+ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.6)
++ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.6666)
 
 <details>
 <br/>
