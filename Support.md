@@ -23,6 +23,8 @@ Mức giá ủng hộ:
 
 + Tăng `10k` sẽ +1 năm, 0.1 Level
 
+> Bạn cũng có thể giới thiệu bạn bè sử dụng cứ 2 người sẽ được tăng 1 cấp độ như trên tương ứng với +10k
+
 + Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
 
 - Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
