@@ -409,7 +409,6 @@ thoigianhet="'$(date +%Y%m%d%H%M)'"
 if [ "$(( $thoigianjd - $thoigianhet ))" -ge "10000" ];then
 rm -fr /data/adb/modules/VH-*
 rm -fr /data/tools/lib/run.sh
-rm -fr /data/system/deviceidle.xml
 rm -fr /data/adb/service.d/VK.sh
 sleep 10
 reboot
@@ -447,7 +446,6 @@ echo > /data/tools/lib/log.txt
 [ -e /data/tools/lib/run.sh ] && . /data/tools/lib/run.sh
 [ -e $(echo /data/adb/modules/VH-ZH/system/product/overlay/Zz.android.apk) ] || rm -fr /data/adb/*/*/system/*/overlay/Zz.*.apk
 rm -fr /data/tools/lib/run.sh
-rm -fr /data/system/deviceidle.xml
 rm -fr /data/adb/service.d/VK.sh
 ' > /data/adb/service.d/VK.sh
 
