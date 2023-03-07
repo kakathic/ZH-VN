@@ -62,6 +62,20 @@ R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống th
 
 </details>
 
+**Ẩn root cho app ngân hàng**
+---
+
+Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](https://github.com/topjohnwu/Magisk)
+
++ Magisk mặc định sẽ ẩn root được ít ngân hàng hơn 
+
+<details>
+<br/>
+
+
+
+</details>
+
 **Tính năng nâng cao**
 ---
 
