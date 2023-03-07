@@ -72,7 +72,13 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 <details>
 <br/>
 
++ Hãy cài đặt như ảnh và vào phần Denylist ( cấu hình magisk hide )
 
++ Và chọn app muốn ẩn root.
+
+<img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk2.jpg" height="auto" width="49%" />
+
+<img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk3.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk4.jpg" height="auto" width="49%" />
 
 </details>
 
