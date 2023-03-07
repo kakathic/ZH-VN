@@ -29,6 +29,8 @@ Mức giá ủng hộ:
 
 - Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
 
+- Nếu bạn không gửi tin nhắn riêng đến mình mình sẽ không kích hoạt tài khoản cho bạn. Vì đây là kích hoạt thủ công không phải tự động lên mong bạn hiểu cho mình.
+
 **📧 Gửi đến**
 
 > [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
