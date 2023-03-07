@@ -76,6 +76,8 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 + Và chọn app muốn ẩn root.
 
++ Sau khi ẩn xong hãy vào ứng dụng ngân hàng và sử dụng thôi. Nếu vẫn hiện root xoá ứng dụng đa nhiệm và mở lại ứng dụng đó hoặc khởi động lại máy.
+
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk2.jpg" height="auto" width="49%" />
 
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk3.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/magisk4.jpg" height="auto" width="49%" />
