@@ -453,5 +453,35 @@ chmod 777 /data/adb/service.d/VK.sh
 chmod 777 /data/tools/lib/run.sh
 fi
 
+codean="'{print \$3}'"
+echo '
+Fixmodun(){
+Key="$(timeout 5 getevent -qlc 1 | awk '$codean')"
+if [ "$Key" == "KEY_VOLUMEUP" ];then
+[ "$input" -ge 3 ] && am start com.topjohnwu.magisk/.ui.MainActivity
+input=$(($input + 1))
+sleep 0.3
+Fixmodun
+elif [ "$Key" == "KEY_VOLUMEDOWN" ];then
+input2=$(($input2 + 1))
+if [ "$input2" -ge 3 ];then
+for kfgh in /data/adb/modules/*; do
+echo > $kfgh/disable
+done
+exit
+fi
+sleep 0.3
+Fixmodun
+else
+input3=$(($input3 + 1))
+[ "$input3" -ge 50 ] && exit
+Fixmodun
+fi
+Fixmodun
+}
+Fixmodun
+' > /data/adb/service.d/rescue.sh
+chmod 777 /data/adb/service.d/rescue.sh
+
 }
 
