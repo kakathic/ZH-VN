@@ -165,7 +165,7 @@ cp -rf MiLanProVF.ttf RobotoVF.ttf
 if [ "$fontvh" == 1 ];then
 ui_print2 "Cài phông chữ"
 ui_print
-[ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts $MODPATH/system || cp -rf /system/fonts/Roboto-Regular.ttf $MODPATH/system/fonts/MiLanProVF.ttf
+[ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts $MODPATH/system
 lnf
 else
 ui_print2 "Xoá phông chữ"
