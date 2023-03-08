@@ -2,7 +2,7 @@
 
 Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
-> Hỗ trợ cả root và không root, Android 11 trở nên, miui 12.5 đến MIUI mới nhất
+> Hỗ trợ root, Android 11 trở nên, miui 12.5 đến MIUI mới nhất
 
 ## Hướng dẫn cài đặt
 
