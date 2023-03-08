@@ -202,7 +202,7 @@ done
 for Capk in $APK/*.*; do
 if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
-if [ "$(pm path $Papkp | grep -cm1 '/data/')" == 1 ];then
+#if [ "$(pm path $Papkp | grep -cm1 '/data/')" == 1 ];then
 mkdir -p $MODPATH/app
 Ehehdb2="$(pm path $Papkp | cut -d : -f2)"
 cp -rf $Capk "$MODPATH/app/$Papkp"
@@ -210,16 +210,17 @@ chcon u:object_r:apk_data_file:s0 "$MODPATH/app/$Papkp"
 su -mm -c mount -o bind "$MODPATH/app/$Papkp" "$Ehehdb2"
 killall $Papkp
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
-else
-Ehehdb="$(pm path $Papkp | cut -d : -f2)"
-if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
-mkdir -p $MODPATH${Ehehdb%/*}/lib/$ARCH
-unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Ehehdb%/*}/lib/$ARCH
+#else
+#Ehehdb="$(pm path $Papkp | cut -d : -f2)"
+#if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
+#mkdir -p $MODPATH${Ehehdb%/*}/lib/$ARCH
+#unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Ehehdb%/*}/lib/$ARCH
+#fi
+#mkdir -p "$MODPATH${Ehehdb%/*}"
+#cp -rf $Capk "$MODPATH$Ehehdb"
+#fi
 fi
-mkdir -p "$MODPATH${Ehehdb%/*}"
-cp -rf $Capk "$MODPATH$Ehehdb"
-fi
-fi
+
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 echo 'rm -fr /data/tools/apk/'$Papkp.jar'' >> $TMPDIR/uninstall.sh
