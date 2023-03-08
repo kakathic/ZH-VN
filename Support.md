@@ -33,7 +33,7 @@ Mức giá ủng hộ:
 
 **📧 Gửi đến**
 
-> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic)
+> [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic) ( Mình ít online fb lên sẽ trả lời muộn )
 
 - Hình ảnh ở dưới cho bạn biết tài khoản mi id, và mã MEID
 
