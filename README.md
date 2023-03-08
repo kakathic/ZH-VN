@@ -6,7 +6,7 @@ Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
 ## Hướng dẫn cài đặt
 
-Magisk: Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt (VH-ZH)` trong vòng 24 giờ.
+Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt (VH-ZH)` trong vòng 24 giờ.
 
 [Xem cách ủng hộ](/Support.md)
 
