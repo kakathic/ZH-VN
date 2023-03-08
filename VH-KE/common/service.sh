@@ -11,7 +11,6 @@ rm -fr /data/resource-cache/*
 sleep 5
 reboot
 fi
-sleep 1
 done
 
 RD="$RANDOM"
@@ -20,8 +19,6 @@ echo > /sdcard/$RD
 if [ -e /sdcard/$RD ];then
 rm -fr /sdcard/$RD
 break
-else
-sleep 2
 fi
 done
 
