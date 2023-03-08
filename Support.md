@@ -27,7 +27,7 @@ Mức giá ủng hộ:
 
 + Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần. Cảm ơn bạn đã đọc những ghi chú này.
 
-- Sau khi ủng hộ xong hãy gửi ảnh chụp màn hình giao dịch
+- Sau khi ủng hộ xong, hãy gửi ảnh chụp màn hình giao dịch và thông tin điện thoại như, mã máy, meid, id mi.
 
 - Nếu bạn không gửi tin nhắn riêng đến mình mình sẽ không kích hoạt tài khoản cho bạn. Vì đây là kích hoạt thủ công không phải tự động lên mong bạn hiểu cho mình.
 
