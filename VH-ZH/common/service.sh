@@ -16,6 +16,10 @@ fi
 sleep 1
 done
 
+resetprop ro.khu.vuc VN
+resetprop ro.vi.tri vn
+resetprop ro.khu.vuc.cn CN
+resetprop ro.vi.tri.cn cn
 
 # Continues operation if the module is not disabled 
 # Code
