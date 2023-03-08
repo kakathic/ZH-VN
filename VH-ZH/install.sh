@@ -157,6 +157,7 @@ fi
 
 # Tạo font
 lnf(){
+mkdir -p $MODPATH/system/fonts
 cd $MODPATH/system/fonts
 cp -rf MiLanProVF.ttf MiSansVF.ttf
 cp -rf MiLanProVF.ttf RobotoVF.ttf
