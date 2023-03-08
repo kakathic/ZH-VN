@@ -8,10 +8,6 @@ Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
 Magisk: Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt (VH-ZH)` trong vòng 24 giờ.
 
-Recovery: Sắp ra mắt đang thử nghiệm.
-
-> Magisk và Recovery sẽ riêng biệt, nếu bạn muốn dùng cả hai thì phải gửi gấp đôi. Thanks 
-
 [Xem cách ủng hộ](/Support.md)
 
 Nhật ký thay đổi các phiên bản
