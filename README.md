@@ -35,33 +35,6 @@ Nhật ký thay đổi các phiên bản
 
 </details>
 
-## Mô-Đun Recovery
-
-+ Tạm thời dừng hoạt động 
-
-+ Tải Xuống: [FL-VH](https://github.com/kakathic/ZH-VN/releases/tag/FL-1.6666)
-
-<details>
-<br/>
-
-+ Sử dụng: TWRP, FOX v.v để cài module
-
-+ Trước khi flash thì ở điện thoại ấn *#06# hoặc nhớ thêm tài khoản mi để xác nhận.
-
-+ Lưu ý: Rom của bạn phải đã R/W, mới có thể dùng được module 
-
-> **FL-GA**: Gói Gapps thêm đầy đủ dịch vụ Google cơ bản, Có ghi rõ hỗ trợ cho Android khi tải lưu ý, lên cài module này sau khi đã cài module FL-ZH nhớ chọn yes phần xóa app china rác để có nhiều không gian trống tránh lỗi đầy bộ nhớ.
-
-> **FL-PT**: Crack theme, Mod Cài app hệ thống
-
-> **FL-KE**: Gỡ bỏ Getapps, Hiện bàn phím nâng cao cho Gboard, Fix thông báo ở phần china mod, giữ đa nhiệm v.v
-
-> **FL-ZH**: Thêm Tiếng Việt, Font Việt Hóa, Xoá App china rác, Lên cài module này đầu tiên vì nó sẽ xóa app có nhiều không gian trống để thêm những app khác của Google
-
-R/W cho phép xoá, chỉnh sửa file hệ thống, Android 11 trở xuống thì không cần R/W vì rom đã R/W sẵn, còn hầu hết các máy mới android 12 trở nên đều phải R/W hệ thống mới cho phép sửa file hệ thống.
-
-</details>
-
 **Ẩn root cho app ngân hàng**
 ---
 
