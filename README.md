@@ -98,8 +98,6 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 **Cứu hộ module**
 ---
 
-- Hãy cài module Thêm tiếng việt để sử dụng tính năng này
-
 <details>
 <br/>
 
