@@ -24,7 +24,7 @@ ui_print "! Để chọn số hiện tại ấn Vol- hoặc +1 chạm."
 ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
-if [ "$API" -le 31 ];then
+#if [ "$API" -le 31 ];then
 ui_print "- Cho phép gỡ bỏ ứng dụng Getapps ?"
 ui_print
 ui_print2 "1. Có"
@@ -60,7 +60,7 @@ Vk 2
 chinann=$input
 fi
 
-fi
+#fi
 
 ui_print "- Fix thông báo miui"
 ui_print
