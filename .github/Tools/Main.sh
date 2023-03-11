@@ -17,12 +17,6 @@ load="Tải"
 error="! Lỗi không tìm thấy hoặc lỗi mạng !"
 error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
-TTvip=1
-ui_print(){ echo "$1"; sleep 0.005; }
-ui_print2(){ echo "  $1"; }
-Xan(){ echo "  $1" >&2; }
-BatdauT=$(date +%s)
-
 # Volume keys
 Vk(){ 
 input2="$1"; input=1
@@ -62,31 +56,6 @@ echo "$time: $(printf '%d '$m', %d '$s'.' $((TongTG/60%60)) $((TongTG%60)))"
 else
 echo "$time: $(printf '%d '$s'.' $((TongTG%60)))"
 fi
-}
-
-# Download packages
-Xu_install(){
-[ "$2" ] && pb="_$2"
-if [ ! -e "/data/tools/ck/$1$pb" ];then
-ui_print "  $load $1..."
-ui_print
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
-[ "$(grep -icm1 '#\ kakathic' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || abort "$error"
-cd /data/tools
-. "$TMPDIR/$1.sh"
-chmod -R 777 /data/tools/bin
-rm -fr $HOME/tmp/*
-fi
-unset pb
-}
-
-# Internet
-User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-Taive(){
-[ -e /system/bin/curl ] && curl -s -k -L -H "$User" --connect-timeout 20 "$1" -o "$2" || wget -q --header "$User" --no-check-certificate "$1" -O "$2" >&2
-}
-Xem(){
-[ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"
 }
 
 # mount
@@ -237,49 +206,12 @@ mktouch $MODPATH$TARGET/.replace
 done
 }
 
-GP () { grep_prop $1 $TMPDIR/module.prop; }
-
 Setp () {
 [ "$(grep -cm1 "$1=" $TMPDIR/system.prop)" == 1 ] && sed -i "/$1=/d" $TMPDIR/system.prop
 echo "$1=$2" >> $TMPDIR/system.prop
 }
 
-API=$(getprop ro.build.version.sdk)
-ABI=$(getprop ro.product.cpu.abi)
-
-if [ "$ABI" = "x86" ]; then
-export ARCH=x86
-export ARMT=i686
-elif [ "$ABI" = "arm64-v8a" ]; then
-export ARCH=arm64
-export ARMT=arm64
-elif [ "$ABI" = "x86_64" ]; then
-export ARCH=x64
-export ARMT=x86-64
-else
-export ARMT=arm
-export ARCH=arm
-export ABI=armeabi-v7a
-fi
-
-TTM(){
-for vah in $1; do
-[ -e $vah ] || mkdir -p "$vah"
-done
-}
-
-TTM "/data/tools/bin
-$TMPDIR/Apk/tmp
-/data/tools/ck
-/data/tools/tmp
-/data/tools/apk
-/data/tools/lib/Tools"
-
-unset vah
-unset mklist
-
-export PATH="/data/tools/bin:$PATH"
-export HOME="/data/tools"
+mkdir -p $TMPDIR/Apk/tmp /data/tools/apk /data/tools/lib/Tools
 export APK="$TMPDIR/Apk"
 [ "$API" -ge 31 ] && miuik='miui-'
 
@@ -297,13 +229,11 @@ Apilt="$(
 grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
 [ "$Apilt" ] || ui_print "  Error: Hãy đăng nhập để hiện id Xiaomi
 "
-
 imei="$(getprop persist.radio.meid)"
 [ "$imei" ] || imei="$(getprop ro.ril.oem.meid)"
 [ "$imei" ] || imei="$(grep -m1 key_meid_slot0 /data/*/0/com.android.phone/shared_prefs/com.android.phone_preferences.xml | cut -d '>' -f2 | cut -d '<' -f1)"
 [ "$imei" ] || ui_print "  Error: Hãy ấn *#06# để hiện MEID
 "
-
 driver=$(getprop ro.product.device)
 
 tkid=$Apilt
@@ -316,6 +246,10 @@ fi
 if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" == 1 ];then
 Tgg1=$(echo "$thoigian1" | grep -m1 'HSD=' | cut -d = -f2)
 Tvs1=$(echo "$thoigian1" | grep -m1 'Ver-Max=' | cut -d = -f2)
+
+
+stcb="$(echo "$(echo $Tgg1 | cut -d '-' -f1) - $(date +%Y)" | bc)"
+
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
@@ -324,25 +258,20 @@ else
 Dtime="$(date +%Y-%m)-$(echo $(( $(date +%d) + 1 ))) $(date +%H:%M)"
 fi
 
-Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1, $driver/$(echo -n "$imei" | base32 -w0)
-"
+Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1, $driver/$(echo -n "$imei" | base32 -w0)"
 
 if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 
-ui_print "  Chào bạn: $tkid"
+ui_print "  Chào bạn: $tkid, Level: $DVs, HSD: $Dtime"
 ui_print
-ui_print "  Thời hạn sử dụng tài khoản: $Dtime"
-ui_print
-ui_print "  Level: $DVs"
+ui_print '  Tiền đã ủng hộ còn: '$stcb'0k'
 ui_print
 
 rm -fr /data/tools/lib/run.sh
 rm -fr /data/adb/service.d/VK.sh
 
 elif [ "$Pro" == 1 ];then
-ui_print "  Chào bạn: $tkid"
-ui_print
-ui_print "  Thời gian sử dụng: $Dtime"
+ui_print "  Chào bạn: $tkid, Level: $DVs, HSD: $Dtime"
 ui_print
 if [ "$(GP id)" == "VH-KE" ];then
 abort "! Level của bạn không đủ để sử dụng module này!
@@ -367,6 +296,7 @@ abort "! Bạn đã từng sử dụng dùng thử nghiệm
 
   MEID: $imei
 "
+am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
 else
 
 if [ "$(GP id)" == "VH-PT" ] || [ "$(GP id)" == "VH-KE" ];then
@@ -387,11 +317,9 @@ ui_print "! Thông báo ủng hộ nhà phát triển
   
   MEID: $imei
 
-  Sử dụng lâu dài bạn nên ủng hộ
+  Bạn sẽ được trải nghiệm 72h
 
-  Bạn sẽ được trải nghiệm trong 24h
-
-  Hết thời gian sẽ tự động reboot.
+  Hết thời gian sẽ tự động khởi động lại máy.
 "
 am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
 
@@ -400,14 +328,16 @@ am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Supp
 "
 
 texk="'Cảm ơn bạn đã ủng hộ module Việt Nam bạn có thể tiếp tục sử dụng.'"
-texk2="'Còn 1 tiếng nữa module Việt hóa sẽ hết thời gian sử dụng'"
+texk2="'Còn 1 tiếng nữa module Việt hóa sẽ hết thời gian sử dụng, hãy ủng hộ để tiếp tục sử dụng module'"
 echo '
 while true; do
 thoigianjd="$(date +%Y%m%d%H%M)"
 thoigianhet="'$(date +%Y%m%d%H%M)'"
 
-[ "$(( $thoigianjd - $thoigianhet ))" -ge "9900" ] && su -lp 2000 -c "cmd notification post $RANDOM '$texk2'"
-if [ "$(( $thoigianjd - $thoigianhet ))" -ge "10000" ];then
+[ "$(( $thoigianjd - $thoigianhet ))" -ge "19900" ] && su -lp 2000 -c "cmd notification post $RANDOM '$texk2'"
+[ "$(( $thoigianjd - $thoigianhet ))" -ge "19900" ] && am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
+
+if [ "$(( $thoigianjd - $thoigianhet ))" -ge "20000" ];then
 echo > /data/adb/modules*/VH-*/remove
 rm -fr /data/tools/lib/run.sh
 rm -fr /data/adb/service.d/VK.sh
@@ -438,7 +368,7 @@ su -lp 2000 -c "cmd notification post $RANDOM '$texk'"
 break
 fi
 
-sleep 3600
+sleep 3000
 fi
 done
 ' > /data/tools/lib/run.sh
@@ -453,36 +383,6 @@ rm -fr /data/adb/service.d/VK.sh
 chmod 777 /data/adb/service.d/VK.sh 
 chmod 777 /data/tools/lib/run.sh
 fi
-
-codean="'{print \$3}'"
-echo '
-Fixmodun(){
-Key="$(timeout 5 getevent -qlc 1 | awk '$codean')"
-if [ "$Key" == "KEY_VOLUMEUP" ];then
-[ "$input" -ge 3 ] && am start com.topjohnwu.magisk/.ui.MainActivity
-input=$(($input + 1))
-sleep 0.3
-Fixmodun
-elif [ "$Key" == "KEY_VOLUMEDOWN" ];then
-input2=$(($input2 + 1))
-if [ "$input2" -ge 3 ];then
-for kfgh in /data/adb/modules/*; do
-echo > $kfgh/disable
-done
-exit
-fi
-sleep 0.3
-Fixmodun
-else
-input3=$(($input3 + 1))
-[ "$input3" -ge 50 ] && exit
-Fixmodun
-fi
-Fixmodun
-}
-Fixmodun
-' > /data/adb/service.d/rescue.sh
-chmod 777 /data/adb/service.d/rescue.sh
 
 }
 
