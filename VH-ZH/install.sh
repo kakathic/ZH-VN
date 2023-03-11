@@ -10,11 +10,7 @@ POSTFSDATA=true
 LATESTARTSERVICE=true
 
 # Internet
-User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
-Viewonline(){
-[ -e /system/bin/curl ] && curl -s -k -G -L -H "$User" --connect-timeout 20 "$1" || wget -q --header "$User" --no-check-certificate -O - "$1"; }
-Viewonline "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/.github/Tools/Main.sh" > $TMPDIR/Main.sh
-[ "$(grep -c '# Kakathic' $TMPDIR/Main.sh)" == 1 ] && . $TMPDIR/Main.sh || abort "! Lỗi tải dữ liệu.";
+chmod 777 $TMPDIR/Loading.sh && $TMPDIR/Loading.sh; . $TMPDIR/1.sh
 
 ## Start the installation
 on_install(){
@@ -26,10 +22,11 @@ ui_print "! Ấn nút nguồn để hủy."
 ui_print
 
 
-ui_print "- Thêm ngôn ngữ Tiếng Việt vào Rom ?"
+ui_print "- Chọn kiểu cài Tiếng Việt vào Rom ?"
 ui_print
-ui_print2 "1. Có"
-ui_print2 "2. Không"
+ui_print2 "1. Mặc định"
+ui_print2 "2. Rom port"
+ui_print2 "3. Không cài"
 
 if [ "$(GP VH)" ];then
 VHI=$(GP VH)
@@ -39,7 +36,7 @@ ui_print
 else
 ui_print
 ui_print2 "1"
-Vk 2
+Vk 3
 VHI=$input
 fi
 
@@ -95,18 +92,14 @@ Vk 2
 fontvh=$input
 fi
 
-echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
-. $TMPDIR/khi.sh
-[ -e /system/product/overlay ] && Overlay=/system/product/overlay || Overlay=/system/vendor/overlay
+eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
+[ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
+[ "$VHI" == 1 ] && Overlay=/system/product/overlay
 VHMI=/sdcard/VH-MI
 
 # Tạo thư mục
-TTM "$MODPATH/system/media/theme/default
-$VHMI/fonts
-$TMPDIR/apk
-$TMPDIR/Apk/tmp
-$MODPATH$Overlay
-"
+mkdir -p $MODPATH/system/media/theme/default $VHMI/fonts $TMPDIR/apk $TMPDIR/Apk/tmp $MODPATH$Overlay
+
 ## Unzip system
 ui_print2 "$unzip"
 ui_print
@@ -116,13 +109,12 @@ mkdir -p /sdcard/Android/data/com.android.thememanager/files/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/MIUI
 unzip -qo "$ZIPFILE" "theme/*" -d /sdcard/Android/data/com.android.thememanager/files/MIUI
 
-Xu_install zip
-Xu_install jq
-Xu_install toybox
-
+Xu_install zip static
+Xu_install static jq
+Xu_install toybox static
 $Test123 || abort
 
-if [ "$VHI" == 1 ];then
+if [ "$VHI" == 1 ] || [ "$VHI" == 2 ];then
 # Cài đặt ngôn ngữ
 settings put system system_locales $(GP Linknn)
 ui_print2 "Thêm ngôn ngữ: $(GP LinkTn)"
@@ -160,7 +152,6 @@ lnf(){
 mkdir -p $MODPATH/system/fonts
 cd $MODPATH/system/fonts
 cp -rf MiLanProVF.ttf MiSansVF.ttf
-cp -rf MiLanProVF.ttf RobotoVF.ttf
 }
 if [ "$fontvh" == 1 ];then
 ui_print2 "Cài phông chữ"
@@ -175,7 +166,7 @@ fi
 
 # Gỡ cài đặt app
 if [ "$goappcn" == 1 ];then
-ui_print2 "Gỡ ứng dụng rác"
+ui_print2 "Gỡ app rác"
 ui_print
 # Danh sách những app cần gỡ 
 
@@ -279,7 +270,6 @@ ui_print
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn >&2
 done
-
 settings put secure show_rotation_suggestions 0
 }
 
