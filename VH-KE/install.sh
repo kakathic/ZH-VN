@@ -316,16 +316,7 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.syst
 echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 
 ekyl3="
-com/android/server/AppOpsServiceState
-com/android/server/AppOpsServiceStubImpl
-com/android/server/alarm/AlarmManagerServiceStubImpl
-com/android/server/am/BroadcastQueueImpl
 com/android/server/am/ProcessManagerService
-com/android/server/display/BrightnessMappingStrategyImpl
-com/android/server/location/GnssCollectDataImpl
-com/android/server/net/MiuiNetworkPolicyAppBuckets
-com/android/server/net/MiuiNetworkPolicyManagerService
-com/android/server/net/MiuiNetworkPolicyQosUtils
 com/android/server/notification/NotificationManagerServiceImpl
 "
 for bffdb in $ekyl3; do
@@ -333,18 +324,8 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services
 done
 
 twwt="
-android/telephony/MiuiCellSignalStrength
 android/widget/ToastInjectorImpl
-android/view/ViewRootImplInjector
 com/android/internal/app/ChooserActivityStubImpl
-com/android/internal/app/ResolverActivityStubImpl
-com/miui/mishare/app/NearbyUtils
-miui/content/pm/PreloadedAppPolicy
-miui/provider/MiProfile
-miui/security/SecurityManager
-miui/securityspace/XSpaceConstant
-miui/telephony/*
-miui/view/MiuiSecurityPermissionHandler
 "
 for dhrb in $twwt; do
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/'$dhrb'.smali'
@@ -352,12 +333,6 @@ done
 
 yentj="
 com/miui/powerkeeper/customerpower/CustomerPowerCheck
-com/miui/powerkeeper/statemachine/*
-com/miui/powerkeeper/ui/NightAbnormalReceiver
-com/miui/powerkeeper/utils/*
-miui/payment/PaymentManager
-miui/telephony/TelephonyManager
-miuix/springback/view/SpringBackLayout
 com/miui/powerkeeper/millet/MilletConfig
 "
 for ykhke in $yentj; do
