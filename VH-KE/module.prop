@@ -1,7 +1,7 @@
 # kakathic
 
 id=VH-KE
-name=MOD MIUI
+name=VH-KE
 description=Tổ hợp 3 tính năng, xoá getapps, mod miui, bật bàn phím
 updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-KE.json
 author=kakathic
