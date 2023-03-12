@@ -107,9 +107,9 @@ Xu_install zipalign static
 Xu_install zip static
 Xu_install toybox static
 
-sed(){ toybox sed "$@";}
-grep(){ toybox grep "$@";}
-cut(){ toybox cut "$@";}
+sed(){ toybox sed "$@" || busybox sed "$@";}
+grep(){ toybox grep "$@" || busybox grep "$@";}
+cut(){ toybox cut "$@" || busybox cut "$@";}
 
 mkdir -p $APK/tmp /sdcard/VH-MI/color /data/tools/apk
 
