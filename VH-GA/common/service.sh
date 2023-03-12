@@ -15,8 +15,11 @@ fi
 sleep 1
 done
 
+# Hỗ trợ nếu bị treo
+/system/bin/Support &>/dev/null &
+
 if [ ! -e $MODPATH/Vip ];then
-sleep 500
+sleep 200
 
 dhrnfn(){ 
 for rbeh in $2; do
