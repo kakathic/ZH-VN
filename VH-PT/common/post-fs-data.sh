@@ -7,12 +7,3 @@ rm -fr /data/system/package_cache/*
 rm -fr /data/resource-cache/*
 echo > ${0%/*}/Check
 fi
-
-for fwten in $(find ${0%/*}/framework/*.txt); do
-su -mm -c mount -o bind ${0%/*}/framework/${fwten%.*} "$(cat $fwten)"
-done
-
-for tenapk in $(find ${0%/*}/app/*.txt); do
-chcon u:object_r:apk_data_file:s0 ${0%/*}/app/${tenapk%.*}
-su -mm -c mount -o bind ${0%/*}/app/${tenapk%.*} "$(cat $tenapk)"
-done
