@@ -262,7 +262,7 @@ Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1, $driver/$(echo -n "$i
 
 if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 
-ui_print "  Chào bạn: $tkid, Level: $DVs, HSD: $Dtime"
+ui_print "  Chào: $tkid, Level: $DVs, HSD: $Dtime"
 ui_print
 ui_print '  Tiền đã ủng hộ còn: '$stcb'0k'
 ui_print
@@ -271,7 +271,7 @@ rm -fr /data/tools/lib/run.sh
 rm -fr /data/adb/service.d/VK.sh
 
 elif [ "$Pro" == 1 ];then
-ui_print "  Chào bạn: $tkid, Level: $DVs, HSD: $Dtime"
+ui_print "  Chào: $tkid, Level: $DVs, HSD: $Dtime"
 ui_print
 if [ "$(GP id)" == "VH-KE" ];then
 abort "! Level của bạn không đủ để sử dụng module này!
