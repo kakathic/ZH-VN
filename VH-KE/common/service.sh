@@ -31,5 +31,3 @@ su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
 killall $tenapk
 done
 
-# Hỗ trợ nếu bị treo
-/system/bin/Support &>/dev/null &
