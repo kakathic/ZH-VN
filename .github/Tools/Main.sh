@@ -95,7 +95,7 @@ ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD: $1 -> $2 > $3"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
-[ -e "$Tt2" ] && echo "$Tt2" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+[ -e "$Tt2" ] && Xan "$Tt2" | tee -a "$APK/$(echo $3 | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
@@ -104,8 +104,7 @@ ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD: $1 -> $2 > $3"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 eval "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
-echo "$vakkddhh" >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
-Xan "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+Xan "$vakkddhh" | tee -a "$APK/$(echo $3 | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
