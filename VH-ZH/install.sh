@@ -94,7 +94,6 @@ fi
 
 eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 [ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
-[ "$VHI" == 1 ] && Overlay=/system/product/overlay
 VHMI=/sdcard/VH-MI
 
 # Tạo thư mục
