@@ -84,7 +84,7 @@ Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
 Vsmali(){
 for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e $Vka ] && ui_print2 "MOD: $RANDOM"
-[ -e $Vka ] && Xan "MOD: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
+[ -e $Vka ] && Xan "MOD: $1 > $Vka" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 [ -e $Vka ] && echo "$Vka" 2>/dev/null >> "$APK/$(echo "$4" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
@@ -92,7 +92,7 @@ done
 
 Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
-Xan "MOD: $1 -> $2"
+Xan "MOD: $1 -> $2 > $3"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
 [ -e "$Tt2" ] && echo "$Tt2" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
@@ -101,7 +101,7 @@ done
 
 Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
-Xan "MOD: $1 -> $2"
+Xan "MOD: $1 -> $2 > $3"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
 echo "$vakkddhh" >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
