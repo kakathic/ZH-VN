@@ -104,14 +104,13 @@ ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD: $1 -> $2"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
-echo "$vakkddhh" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+echo "$vakkddhh" >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
 CPapk(){
 PTC="$(pm path "$1" | cut -d : -f2)"
 if [ "$(echo "$PTC" | grep -cm1 '/data/')" == 1 ];then
-su -mm -c umount -l "$PTC"
 cp -rf $PTC "/data/tools/apk/$1.apk"
 cp -rf "$PTC" "$APK/$1.apk"
 else
