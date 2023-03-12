@@ -1,7 +1,7 @@
 # kakathic
  
 id=VH-ZH
-name=VH MIUI
+name=VH-ZH
 description=Thêm Tiếng Việt và thêm font chữ, lịch âm v.v
 updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-ZH.json
 author=kakathic
@@ -17,9 +17,10 @@ LinkTn=Tiếng Việt
 # Tùy chọn tự động
 
 #-----------------------#
-# Bật tắt dịch ngôn ngữ: 
-# 1 Bật
-# 2 Tắt
+# Chọn kiểu cài tiếng việt vào rom: 
+# 1 Mặc định 
+# 2 Rom port
+# 3 Không cài
 VH=
 
 # Thêm lịch âm vào màn hình khóa và thanh thông báo 
@@ -58,8 +59,4 @@ fontchu=
 ListApp=
 #-----------------------#
 
-
-
-versionCode=16
-version=1.6
 
