@@ -295,17 +295,6 @@ Vsmali '.method public static isSupportSafetyEmergencySettings(Landroid/content/
 .end method' \
 "$APK/com.android.settings/classes*/com/android/settings/MiuiUtils.smali"
 
-Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObject;)Z" \
-".end method" \
-'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
-    .registers 5
-    const/4 v0, 0x1
-    return v0
-.end method' \
-''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
-
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
-
 Vsmali ".method isSecureLocked()Z" \
 ".end method" \
 '.method isSecureLocked()Z
@@ -377,6 +366,16 @@ done
 
 # Không hoạt động 
 Tats(){
+Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObject;)Z" \
+".end method" \
+'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
+    .registers 5
+    const/4 v0, 0x1
+    return v0
+.end method' \
+''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
+
+Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
 
 Vsmali '.method public static isRapidCharge(I)Z' \
 '.end method' \
