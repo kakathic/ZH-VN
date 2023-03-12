@@ -31,7 +31,7 @@ Nhật ký thay đổi các phiên bản
 
 </details>
 
-**Ẩn root cho app ngân hàng**
+**Ẩn root ngân hàng**
 ---
 
 Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](https://github.com/topjohnwu/Magisk)
@@ -95,7 +95,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-**Cứu hộ module**
+**Cứu hộ module, khi bị lag**
 ---
 
 <details>
