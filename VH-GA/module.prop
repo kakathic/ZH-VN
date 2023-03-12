@@ -1,7 +1,8 @@
 # kakathic
  
 id=VH-GA
-name=Gapps MIUI
+name=VH-GA
 description=Thêm các dịch vụ Google vào thiết bị chưa có dịch vụ google.
 updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-GA.json
 author=kakathic
+
