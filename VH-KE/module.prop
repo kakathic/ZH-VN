@@ -11,7 +11,7 @@ author=kakathic
 # 2 Tắt
 global=
 
-# Fix thông báo ứng dụng sẽ chạy nền.
+# Cho phép ứng dụng chạy nền.
 # 1 Bật
 # 2 Tắt
 ram=
