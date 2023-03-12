@@ -95,7 +95,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-**Cứu hộ module, khi bị lag**
+**Cứu hộ module, khi bị đơ**
 ---
 
 <details>
