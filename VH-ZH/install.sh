@@ -150,6 +150,7 @@ fi
 lnf(){
 mkdir -p $MODPATH/system/fonts
 cd $MODPATH/system/fonts
+cp -rf /system/fonts/Roboto-Regular.ttf MiLanProVF.ttf
 cp -rf MiLanProVF.ttf MiSansVF.ttf
 }
 if [ "$fontvh" == 1 ];then
