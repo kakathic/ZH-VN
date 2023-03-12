@@ -179,7 +179,7 @@ mkdir -p $APK/framework/classes/android/app
 cp -rf $TMPDIR/Test.smali $APK/framework/classes/android/app/ApplicationStub.smali
 
 # Dịch EU
-unzip -qo "$TMPDIR/Traneu.zip" -d ''$APK/$miuik'framework/classes'
+#unzip -qo "$TMPDIR/Traneu.zip" -d ''$APK/$miuik'framework/classes'
 
 # Vá chữ ký v1
 Vsmali ".method private checkSysAppCrack()Z" \
