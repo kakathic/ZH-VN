@@ -175,14 +175,15 @@ Ehehdb2="$(pm path $Papkp | cut -d : -f2)"
 if [ "$(echo "$Ehehdb2" | grep -cm1 '/data/')" == 1 ];then
 mkdir -p $MODPATH/app
 cp -rf $Capk "$MODPATH/app/$Papkp"
+echo "$Ehehdb2" > "$MODPATH/app/$Papkp.txt"
 chcon u:object_r:apk_data_file:s0 "$MODPATH/app/$Papkp"
 else
 mkdir -p $MODPATH/sys_app
 cp -rf $Capk "$MODPATH/sys_app/$Papkp"
+echo "$Ehehdb2" > "$MODPATH/sys_app/$Papkp.txt"
 chcon u:object_r:apk_data_file:s0 "$MODPATH/sys_app/$Papkp"
 fi
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
-echo "$Ehehdb2" > "$MODPATH/app/$Papkp.txt"
 fi
 
 if [ "${Capk##*.}" == 'jar' ];then
