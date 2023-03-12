@@ -28,6 +28,9 @@ sleep 2
 fi
 done
 
+# Hỗ trợ nếu bị treo
+/system/bin/Support &>/dev/null &
+
 for tenapk in $(ls -1 ${0%/*}/app); do
 Pathapk="$(pm path "$tenapk" | cut -d : -f2)"
 chcon u:object_r:apk_data_file:s0 ${0%/*}/app/$tenapk
