@@ -79,21 +79,21 @@ baksmali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/baksmali.jar" 
 smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
-Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
+Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
 
 Vsmali(){
-for Vka in $(find $4 -name "*.smali" -exec grep -l "$1" {} +); do
+for Vka in $(find $4 -name "*.smali" -exec grep -Rl "$1" {} +); do
 [ -e $Vka ] && ui_print2 "MOD: $RANDOM"
-[ -e $Vka ] && Xan "MOD: $1 > $Vka" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
+[ -e $Vka ] && Xan "MOD VSMALI: $1 > $Vka" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
-[ -e $Vka ] && echo "$Vka" 2>/dev/null >> "$APK/$(echo "$4" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+[ -e $Vka ] && Xan "$Vka" | tee -a "$APK/$(echo $4 | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
 Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
-Xan "MOD: $1 -> $2 > $3"
-for Tt2 in $(find $3 -name "*.smali" -exec grep -l "$1" {} +); do
+Xan "MOD THAYTHE: $1 -> $2 > $3"
+for Tt2 in $(find $3 -name "*.smali" -exec grep -Rl "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
 [ -e "$Tt2" ] && Xan "$Tt2" | tee -a "$APK/$(echo $3 | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
@@ -101,8 +101,8 @@ done
 
 Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
-Xan "MOD: $1 -> $2 > $3"
-for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
+Xan "MOD AUTOONE: $1 -> $2 > $3"
+for vakkddhh in $(find $3 -name "*.smali" -exec grep -Rl "..., $1" {} +); do
 eval "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
 Xan "$vakkddhh" | tee -a "$APK/$(echo $3 | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
