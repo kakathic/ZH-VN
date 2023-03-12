@@ -180,6 +180,7 @@ cp -rf $TMPDIR/Test.smali $APK/framework/classes/android/app/ApplicationStub.sma
 
 # Dịch EU
 unzip -qo "$TMPDIR/Traneu.zip" -d ''$APK/$miuik'framework/classes'
+echo "$APK/$miuik"framework/classes/eu/xiaomi/util >> "$APK/$miuik"framework/class
 
 # Vá chữ ký v1
 Vsmali ".method private checkSysAppCrack()Z" \
@@ -315,123 +316,15 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.android.syst
 
 echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 
-ekyl3="
-com/android/server/am/ProcessManagerService
-com/android/server/notification/NotificationManagerServiceImpl
-"
-for bffdb in $ekyl3; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/'$bffdb'.smali'
-done
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/am/ProcessManagerService.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/notification/NotificationManagerServiceImpl.smali'
 
-twwt="
-android/widget/ToastInjectorImpl
-com/android/internal/app/ChooserActivityStubImpl
-"
-for dhrb in $twwt; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/'$dhrb'.smali'
-done
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/android/widget/ToastInjectorImpl.smali'
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/com/android/internal/app/ChooserActivityStubImpl.smali'
 
-yentj="
-com/miui/powerkeeper/customerpower/CustomerPowerCheck
-com/miui/powerkeeper/millet/MilletConfig
-"
-for ykhke in $yentj; do
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/$ykhke.smali"
-done
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
 
-# Không hoạt động 
-Tats(){
-Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObject;)Z" \
-".end method" \
-'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
-    .registers 5
-    const/4 v0, 0x1
-    return v0
-.end method' \
-''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
-
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" ''$APK/$miuik'framework/classes*/miui/drm/DrmManager.smali'
-
-Vsmali '.method public static isRapidCharge(I)Z' \
-'.end method' \
-'.method public static isRapidCharge(I)Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/com.android.settings/classes*/com/android/settings/MiuiUtils.smali"
-
-Vsmali '.method public static shouldShowAiButton()Z' \
-'.end method' \
-'.method public static shouldShowAiButton()Z
-    .registers 2
-    const/4 v1, 0x0
-    return v1
-.end method' \
-"$APK/com.android.settings/classes*/com/android/settings/MiuiUtils.smali"
-Vsmali '.method public static isNotSupported()Z' \
-'.end method' \
-'.method public static isNotSupported()Z
-    .registers 2
-    const/4 v1, 0x0
-    return v1
-.end method' \
-"$APK/com.android.settings/classes*/com/android/settings/lab/*"
-
-Vsmali ".method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z" \
-".end method" \
-'.method public isRunAnyInBackgroundAppOpsAllowed(ILjava/lang/String;)Z
-    .registers 5
-    const/4 v1, 0x1
-    return v1
-.end method' \
-"$APK/services/classes*/com/android/server/AppStateTrackerImpl.smali"
-
-Vsmali ".method public isForegroundService()Z" \
-".end method" \
-'.method public isForegroundService()Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/services/classes*/com/android/server/notification/NotificationRecord.smali"
-
-Vsmali ".method public isBubbleNotification()Z" \
-".end method" \
-'.method public isBubbleNotification()Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/framework/classes*/android/app/Notification.smali"
-
-Vsmali ".method public isForegroundService()Z" \
-".end method" \
-'.method public isForegroundService()Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/framework/classes*/android/app/Notification.smali"
-
-Vsmali ".method public static isForegroundService(I)Z" \
-".end method" \
-'.method public static isForegroundService(I)Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/framework/classes*/android/app/ActivityManager.smali"
-
-Vsmali ".method public static isSleepModeViewVisable(Z)Z" \
-".end method" \
-'.method public static isSleepModeViewVisable(Z)Z
-    .registers 3
-const/4 v1, 0x1
-    return v1
-.end method' \
-"$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/utils/Utils.smali"
-}
 fi
 
 if [ "$Vipno" == 1 ];then
