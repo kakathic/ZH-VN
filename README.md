@@ -95,22 +95,6 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-**Cứu hộ module, khi bị đơ**
----
-
-<details>
-<br/>
-
-   + Sau khi khởi động lại nếu nó bị đơ
-   + Hẫy ấn 3 lần hoặc nhiều hơn cho đến khi hành động được thực hiện
-   + Tăng âm lượng +3 mở ứng dụng magisk
-   + Giảm âm lượng +3 Tắt toàn bộ module và sau đó bạn nên reboot lại máy, dí phím nguồn 1 lúc là reboot.
-   + Tính năng này sẽ tự hủy nếu bạn vuốt vào màn hình 4 5 lần tùy ý nó sẽ tự tắt 
-   + Lưu ý: Nếu bị đơ ít nên chạm vào màn hình mà hãy thực hiện hành động ấn âm lượng như trên để tính năng không bị tắt
-   + Nếu bị tắt bạn có thể khởi động lại máy = cách dí phím nguồn và thực hiện lại các hành động bên trên
-
-</details>
-
 Chúc các bạn cài đặt thành công
 
 **Xem ảnh demo**
