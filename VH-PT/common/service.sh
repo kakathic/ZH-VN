@@ -1,6 +1,7 @@
 # Kakathic
 # Later in the booting process, the class late_start will be triggered, and Magisk “service” mode will be started. In this mode, service scripts are executed.
 # Automatically turn off the module if 100 seconds wait at the logo
+
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ];then
@@ -16,6 +17,16 @@ done
 
 # Continues operation if the module is not disabled 
 # Code
+
+for fwten in $(find ${0%/*}/framework/*.txt); do
+su -mm -c mount -o bind ${0%/*}/framework/${fwten%.*} "$(cat $fwten)"
+done
+
+for tenapk in $(find ${0%/*}/app/*.txt); do
+chcon u:object_r:apk_data_file:s0 ${0%/*}/app/${tenapk%.*}
+su -mm -c mount -o bind ${0%/*}/app/${tenapk%.*} "$(cat $tenapk)"
+done
+
 
 while true; do
 if [ -e /sdcard/Android ];then
