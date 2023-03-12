@@ -258,7 +258,7 @@ Vsmali '.method public getAvailabilityStatus()I' \
 .end method' \
 "$APK/com.android.settings/classes*/com/android/settings/special/ColorLampEntryController.smali"
 
-Vsmali "Lcom/android/settings/utils/SettingsFeatures;->isNeedShowColorLamp()Z" \
+Thaythe "Lcom/android/settings/utils/SettingsFeatures;->isNeedShowColorLamp()Z" \
 "Landroid/os/AnrMonitor;->isSystemBootCompleted()Z" "$APK/com.android.settings/classes*/com/android/settings/popup/PopupSettings.smali"
 
 dnrnr="$(grep -m1 "Lcom/android/settings/utils/SettingsFeatures;->IS_NEED_REMOVE_KID_SPACE:Z" $APK/com.android.settings/classes*/com/android/settings/utils/SettingsFeatures.smali | awk '{print $2}')"
