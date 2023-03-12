@@ -427,7 +427,6 @@ ui_print
 echo > /data/adb/modules/safetynet-fix/disable
 echo "echo > /data/adb/modules/safetynet-fix/disable" >> $TMPDIR/post-fs-data.sh
 fi
-fi
 
 ui_print "  $(End_time)"
 ui_print
