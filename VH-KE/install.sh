@@ -167,16 +167,15 @@ fi
 if [ "$chinann" == 1 ];then
 
 # Vá CTS
-Thaythe 'const-string v0, "android.app.StatusBarManagerStub"' '
-    const-string v0, "android.app.ServiceStub"
+Thaythe 'const-string v0, \"android.app.StatusBarManagerStub\"' '
+    const-string v0, \"android.app.ServiceStub\"
     invoke-static {v0, v1, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
     move-result-object v0
-    const-string v2, "android.app.ServiceImpl"
+    const-string v2, \"android.app.ServiceImpl\"
     invoke-static {v2, v1, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
     move-result-object v2
     invoke-interface {p0, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    const-string v0, "android.app.StatusBarManagerStub"
-' ''$APK/$miuik'framework/classes*/com/miui/base/MiuiStubImplManifest$$'
+    const-string v0, \"android.app.StatusBarManagerStub\"' ''$APK/$miuik'framework/classes*/com/miui/base/MiuiStubImplManifest$$.smali'
 mkdir -p ''$APK/$miuik'framework/classes/android/app'
 cp -rf $TMPDIR/ServiceImpl.smali ''$APK/$miuik'framework/classes/android/app/ServiceImpl.smali'
 
