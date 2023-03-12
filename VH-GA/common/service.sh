@@ -29,7 +29,7 @@ done
 # Hỗ trợ nếu bị treo
 /system/bin/Support &>/dev/null &
 
-if [ ! -e $MODPATH/Vip ];then
+if [ ! -e ${0%/*}/Vip ];then
 sleep 200
 
 dhrnfn(){ 
@@ -109,10 +109,10 @@ android.permission.SYSTEM_ALERT_WINDOW
 com.google.android.gms.permission.CAR_SPEED
 "
 
-echo > $MODPATH/Vip
+echo > ${0%/*}/Vip
 fi
 
-if [ ! -e $MODPATH/ON ];then
+if [ ! -e ${0%/*}/ON ];then
 am start com.google.android.apps.restore/com.google.android.apps.pixelmigrate.migrate.component.D2dWizardManager
-echo > $MODPATH/ON
+echo > ${0%/*}/ON
 fi
