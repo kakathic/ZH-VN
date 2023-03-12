@@ -115,19 +115,17 @@ unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 Setp ro.product.vip "$(getprop ro.product.device)_global"
 
 ## code
-Xu_install busybox
-Xu_install jre
+Xu_install jre static
 Xu_install smali 2.5.2
 Xu_install baksmali 2.3.4
-Xu_install zipalign
-Xu_install zip
-Xu_install toybox
+Xu_install zipalign static
+Xu_install zip static
+Xu_install toybox static
 
 sed(){ toybox sed "$@";}
 cut(){ toybox cut "$@";}
 
-TTM "$APK/tmp
-/data/tools/apk"
+mkdir -p $APK/tmp /data/tools/apk
 
 echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
 . $TMPDIR/khi.sh
