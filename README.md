@@ -53,7 +53,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-**Tính năng nâng cao**
+**Nâng cao**
 ---
 
 + Thêm tiếng việt từng ứng dụng miui
