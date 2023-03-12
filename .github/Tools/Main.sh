@@ -196,9 +196,9 @@ Papkp="$(cat ${Capk%.*}.txt)"
 echo 'rm -fr /data/tools/apk/'$Papkp.jar'' >> $TMPDIR/uninstall.sh
 #mkdir -p "$MODPATH${Papkp%/*}"
 #cp -rf $Capk "$MODPATH$Papkp"
-mkdir -p $MODPATH/app
-cp -rf $Capk "$MODPATH/app/$Papkp"
-echo "$Papkp" > "$MODPATH/app/$Papkp.txt"
+mkdir -p $MODPATH/framework
+cp -rf $Capk "$MODPATH/framework/$Papkp"
+echo "$Papkp" > "$MODPATH/framework/$Papkp.txt"
 fi
 done
 }
