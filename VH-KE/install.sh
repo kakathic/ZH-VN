@@ -405,17 +405,28 @@ if [ "$chinann" == 1 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
 # Hệ thống mount
 mrw
 xoaodex="
-/system/framework/*/boot-miui-framework.*
-/system/framework/*/boot-framework.*
-/system/framework/oat/*/services.*
+/system/framework/arm
+/system/framework/arm64
 "
 
 for fhbrfh in $xoaodex; do
-#rm -fr $fhbrfh 2>/dev/null
-#rm -fr $(magisk --path)/.magisk/mirror/system_root$fhbrfh 2>/dev/null
+rm -fr $fhbrfh 2>/dev/null
+rm -fr $(magisk --path)/.magisk/mirror/system_root$fhbrfh 2>/dev/null
 [ -e $fhbrfh ] && FREEZE $fhbrfh
 done
 mro
+fi
+
+if [ -e /system/framework/arm/boot-framework.art ];then
+ui_print2 "Cảnh báo!"
+ui_print
+ui_print2 "Nếu bạn đang cài Safetynet"
+ui_print
+ui_print2 "Module đó sẽ bị tắt vì xung đột hệ thống."
+ui_print
+echo > /data/adb/modules/safetynet-fix/disable
+echo "echo > /data/adb/modules/safetynet-fix/disable" >> $TMPDIR/post-fs-data.sh
+fi
 fi
 
 ui_print "  $(End_time)"
