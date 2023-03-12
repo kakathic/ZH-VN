@@ -171,9 +171,14 @@ done
 for Capk in $APK/*.*; do
 if [ "${Capk##*.}" == 'apk' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
-mkdir -p $MODPATH/app
 Ehehdb2="$(pm path $Papkp | cut -d : -f2)"
+if [ "$(echo "$Ehehdb2" | grep -cm1 '/data/')" == 1 ];then
+mkdir -p $MODPATH/app
 cp -rf $Capk "$MODPATH/app/$Papkp"
+else
+mkdir -p $MODPATH/sys_app
+cp -rf $Capk "$MODPATH/sys_app/$Papkp"
+fi
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
 echo "$Ehehdb2" > "$MODPATH/app/$Papkp.txt"
 fi
