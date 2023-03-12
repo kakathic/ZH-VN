@@ -183,8 +183,8 @@ Papkp="$(cat ${Capk%.*}.txt)"
 echo 'rm -fr /data/tools/apk/'$Papkp.jar'' >> $TMPDIR/uninstall.sh
 mkdir -p $MODPATH/framework
 Ehehdb2="${Papkp##*/}"
-cp -rf $Capk "$MODPATH/framework/$Ehehdb2"
-echo "$Papkp" > "$MODPATH/framework/$Papkp.txt"
+cp -rf $Capk "$MODPATH/framework/${Ehehdb2%.*}"
+echo "$Papkp" > "$MODPATH/framework/${Ehehdb2%.*}.txt"
 fi
 done
 }
