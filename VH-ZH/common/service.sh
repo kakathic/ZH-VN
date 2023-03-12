@@ -29,9 +29,6 @@ done
 cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
 
-# Hỗ trợ nếu bị treo
-/system/bin/Support &>/dev/null &
-
 sleep 200
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn >&2
