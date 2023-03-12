@@ -201,7 +201,6 @@ com.android.browser
 com.miui.videoplayer
 com.miui.player
 com.xiaomi.drivemode
-com.android.settings.overlay.miui
 com.xiaomi.gamecenter.sdk.service
 com.miui.hybrid.accessory
 com.xiaomi.macro
