@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="cancel">Hủy</string>
     <string name="copy">Sao chép</string>
     <string name="copyUrl">Sao chép URL</string>
