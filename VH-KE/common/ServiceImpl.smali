@@ -89,7 +89,40 @@
 
     move-result v0
 
-    if-eqz v0, :cond_24
+    if-nez v0, :cond_27
+    
+    invoke-virtual {p0}, Landroid/app/Service;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "com.google.android.apps.photos"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_27
+    
+    invoke-virtual {p0}, Landroid/app/Service;->getApplication()Landroid/app/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+    
+    const-string v1, "com.androidfung.drminfo"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_27
+    :cond_27
 
     invoke-virtual {p0}, Landroid/app/Service;->getClassName()Ljava/lang/String;
 
@@ -117,6 +150,7 @@
     const/4 v0, 0x0
 
     :goto_25
+
     return v0
 .end method
 
