@@ -179,6 +179,7 @@ chcon u:object_r:apk_data_file:s0 "$MODPATH/app/$Papkp"
 su -mm -c mount -o bind "$MODPATH/app/$Papkp" "$Ehehdb2"
 killall $Papkp
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
+echo "$Ehehdb2" > "$MODPATH/app/$Papkp.txt"
 #else
 #Ehehdb="$(pm path $Papkp | cut -d : -f2)"
 #if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
@@ -193,8 +194,11 @@ fi
 if [ "${Capk##*.}" == 'jar' ];then
 Papkp="$(cat ${Capk%.*}.txt)"
 echo 'rm -fr /data/tools/apk/'$Papkp.jar'' >> $TMPDIR/uninstall.sh
-mkdir -p "$MODPATH${Papkp%/*}"
-cp -rf $Capk "$MODPATH$Papkp"
+#mkdir -p "$MODPATH${Papkp%/*}"
+#cp -rf $Capk "$MODPATH$Papkp"
+mkdir -p $MODPATH/app
+cp -rf $Capk "$MODPATH/app/$Papkp"
+echo "$Papkp" > "$MODPATH/app/$Papkp.txt"
 fi
 done
 }
