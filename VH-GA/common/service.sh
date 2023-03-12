@@ -1,11 +1,11 @@
 # Kakathic
 
-# Home module magisk
-MODPATH="${0%/*}"
+# Code
+# Automatically turn off the module if 100 seconds wait at the logo
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ];then
-echo > $MODPATH/disable
+echo > ${0%/*}/disable
 rm -fr /data/dalvik-cache/*
 rm -fr /data/system/package_cache/*
 rm -fr /data/resource-cache/*
@@ -13,6 +13,17 @@ sleep 5
 reboot
 fi
 sleep 1
+done
+
+# Continues operation if the module is not disabled 
+# Code
+
+while true; do
+if [ -e /sdcard/Android ];then
+break
+else
+sleep 1
+fi
 done
 
 # Hỗ trợ nếu bị treo
