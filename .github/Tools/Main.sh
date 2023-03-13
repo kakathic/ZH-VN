@@ -264,9 +264,6 @@ if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" == 1 ];then
 Tgg1=$(echo "$thoigian1" | grep -m1 'HSD=' | cut -d = -f2)
 Tvs1=$(echo "$thoigian1" | grep -m1 'Ver-Max=' | cut -d = -f2)
 
-
-stcb="$(echo "$(echo $Tgg1 | cut -d '-' -f1) - $(date +%Y)" | bc)"
-
 [ "${Tgg1//-/}" -ge "$(date +%Y%m%d)" ] && Pro=1
 [ "${Tvs1//./}" -ge "$(GP versionCode)" ] && VsPro=1
 Dtime=$Tgg1
@@ -279,9 +276,9 @@ Xan "Check: $tkid, $thoigian1, $Pro, $VsPro, $Tgg1, $Tvs1, $driver/$(echo -n "$i
 
 if [ "$Pro" == 1 ] && [ "$VsPro" == 1 ];then
 
-ui_print "  Chào: $tkid, Level: $DVs, HSD: $Dtime"
+ui_print "  Chào: $tkid, HSD: $Dtime"
 ui_print
-ui_print '  Tiền đã ủng hộ còn: '$stcb'0k'
+ui_print "  Level: $DVs"
 ui_print
 
 rm -fr /data/tools/lib/run.sh
