@@ -97,7 +97,7 @@ ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD THAYTHE: $1 -> $2"
 #$(find $3 -name "*.smali" -exec grep -Rl "$1" {} +)
 for Ttcfg in $(Timkiem "$1" $3); do
-[ -e "$Ttcfg" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" Ttcfg || Xan "- Lỗi: $1"
+[ -e "$Ttcfg" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Ttcfg || Xan "- Lỗi: $1"
 [ -e "$Ttcfg" ] && Xan "$Ttcfg" | tee -a "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 [ -e "$Ttcfg" ] && Xan "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
