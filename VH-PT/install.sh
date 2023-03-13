@@ -134,9 +134,8 @@ eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
 [ "$apkcai" == 1 ] && CPapk com.miui.packageinstaller
 [ "$baomat" == 1 ] && CPapk com.miui.securitycenter
-[ "$Teme" == 1 ] && CPapk com.miui.system
-if [ "$ttiet" == 1 ];then
 
+if [ "$ttiet" == 1 ];then
 for vakkksk in $(echo "$(GP lit)" | tr ',' '\n'); do
 CPapk $vakkksk
 done
@@ -153,9 +152,9 @@ ui_print
 if [ "$ttiet" == 1 ];then
 for jusjdnnd in $(GP lit); do
 if [ "$jusjdnnd" == "com.miui.weather2" ];then
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$(eval "Timkiem weatherapi.market.xiaomi.com $APK/$jusjdnnd/classes*" | head -n1)"
+Thaythe "IS_INTERNATIONAL_BUILD:Z" "IS_MIUI:Z" $(Timkiem weatherapi.market.xiaomi.com $APK/$jusjdnnd/classes*)
 else
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/$jusjdnnd/classes*"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/$jusjdnnd/classes*"
 Thaythe "ro.miui.region" "ro.khu.vuc" "$APK/$jusjdnnd/classes*"
 Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/$jusjdnnd/classes*"
 fi
@@ -164,7 +163,7 @@ fi
 
 if [ "$apkcai" == 1 ];then
 VB="iget p0, p0, Landroid/content/pm/ApplicationInfo;->uid:I"
-Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(eval "Timkiem \"$VB\" $APK/com.miui.packageinstaller/classes*" | head -n1)"
+Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" $(Timkiem "$VB" $APK/com.miui.packageinstaller/classes*)
 
 Vsmali ".method public static final c(Landroid/content/pm/ApplicationInfo;)Z" \
 ".end method" \
@@ -183,34 +182,6 @@ Vsmali ".method public static q(Landroid/content/pm/ApplicationInfo;)Z" \
     return v1
 .end method' \
 "$APK/com.miui.packageinstaller/classes*"
-fi
-
-if [ "$tietkiem" == 1 ];then
-pm clear com.miui.powerkeeper >&2
-Bebrb="com/miui/powerkeeper/customerpower
-com/miui/powerkeeper/feedbackcontrol
-com/miui/powerkeeper/powerchecker
-com/miui/powerkeeper/statemachine
-com/miui/powerkeeper/ai
-com/miui/powerkeeper/bucket
-com/miui/powerkeeper/cloudcontrol
-com/miui/powerkeeper/millet
-com/miui/powerkeeper/ui
-com/miui/powerkeeper/utils"
-
-for vhjs in $Bebrb; do
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/$vhjs/*.smali"
-done
-
-Vsmali ".method public static isFeatureOn()Z" \
-".end method" \
-'.method public static isFeatureOn()Z
-    .registers 3
-    const/4 v1, 0x0
-    return v1
-.end method' \
-"$APK/com.miui.powerkeeper/classes*/*"
-
 fi
 
 if [ "$Teme" == 1 ];then
@@ -264,46 +235,7 @@ Thaythe "iget-boolean v1, v0, Lcom/android/thememanager/detail/theme/model/Onlin
 Thaythe "ro.miui.region" "ro.khu.vuc.cn" "$APK/com.android.thememanager/classes*"
 Thaythe "ro.product.mod_device" "ro.product.modcn" "$APK/com.android.thememanager/classes*"
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$APK/com.android.thememanager/classes*"
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x0" "$APK/com.android.thememanager/classes*/*"
-
-if [ "$(grep -cm1 'DRM_SUCCESS' $APK/com.miui.system/classes*/miui/drm/DrmManager.smali)" == 1 ];then
-Vsmali ".method private static isPermanentRights(Lmiui/drm/DrmManager\$RightObject;)Z" \
-".end method" \
-'.method private static isPermanentRights(Lmiui/drm/DrmManager$RightObject;)Z
-    .registers 5
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/com.miui.system/classes*/miui/drm/DrmManager.smali"
-
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$APK/com.miui.system/classes*/miui/drm/DrmManager.smali"
-else
-rm -fr $APK/com.miui.system*
-fi
-
-fi
-
-if [ "$baomat" == 1 ];then
-Autoone "Lmiui/os/Build;->IS_DEVELOPMENT_VERSION:Z" "0x1" "$APK/com.miui.securitycenter/classes*/com/miui/dock/*.smali"
-
-Listbm="com/miui/securityscan
-com/miui/securityscan/b0
-com/miui/securityscan/cards
-com/miui/securityscan/d0
-com/miui/securityscan/fileobserver
-com/miui/securityscan/model/manualitem
-com/miui/securityscan/model/manualitem/defaultapp
-com/miui/securityscan/s
-com/miui/securityscan/scanner
-com/miui/securityscan/u
-com/miui/securityscan/ui/main
-com/miui/securityscan/ui/settings"
-
-for vkks in $Listbm; do
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/com.miui.securitycenter/classes*/$vkks/*.smali"
-done
-
-Autoone "Lmiui/os/Build;->IS_STABLE_VERSION:Z" "0x1" "$APK/com.miui.securitycenter/classes*/com/miui/permcenter/x/*.smali"
+Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_GLOBAL_BUILD:Z" "$APK/com.android.thememanager/classes*"
 fi
 
 ui_print
