@@ -122,8 +122,7 @@ cp -f $TMPDIR/*.ini /sdcard/VH-MI/color
 fi
 fi
 
-echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
-. $TMPDIR/khi.sh
+eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 
 # Copy file & apk
 [ "$Vipno" == 1 ] && CPfile 'framework'
