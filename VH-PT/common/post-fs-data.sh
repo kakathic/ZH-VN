@@ -7,11 +7,3 @@ rm -fr /data/system/package_cache/*
 rm -fr /data/resource-cache/*
 echo > ${0%/*}/Check
 fi
-
-for fwten in $(find ${0%/*}/framework/*.txt); do
-su -mm -c mount -o bind ${fwten%.*} "$(cat $fwten)"
-done
-
-for tenapk in $(find ${0%/*}/sys_app/*.txt); do
-su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
-done
