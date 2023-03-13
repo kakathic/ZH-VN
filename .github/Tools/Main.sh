@@ -79,7 +79,7 @@ baksmali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/baksmali.jar" 
 smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
-Timkiem(){ find $APK/$2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
+Timkiem(){ find $2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
 
 Vsmali(){
 for Vka in $(find $4 -name "*.smali" -exec grep -Rl "$1" {} +); do
