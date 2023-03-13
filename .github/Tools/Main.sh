@@ -201,6 +201,10 @@ mkdir -p $MODPATH/sys_app
 cp -rf $Capk "$MODPATH/sys_app/$Papkp"
 echo "$Ehehdb2" > "$MODPATH/sys_app/$Papkp.txt"
 chcon u:object_r:apk_data_file:s0 "$MODPATH/sys_app/$Papkp"
+if [ "$(unzip -l $Capk 2>/dev/null | grep -cm1 "lib/$ABI/")" == 1 ];then
+mkdir -p $MODPATH${Ehehdb2%/*}/lib/$ARCH
+unzip -qo -j $Capk "lib/$ABI/*" -d $MODPATH${Ehehdb2%/*}/lib/$ARCH
+fi
 fi
 echo 'rm -fr /data/tools/apk/'$Papkp.apk'' >> $TMPDIR/uninstall.sh
 fi
