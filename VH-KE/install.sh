@@ -110,6 +110,7 @@ Xu_install toybox static
 sed(){ toybox sed "$@" || busybox sed "$@";}
 grep(){ toybox grep "$@" || busybox grep "$@";}
 cut(){ toybox cut "$@" || busybox cut "$@";}
+find(){ toybox find "$@" || busybox find "$@";}
 
 mkdir -p $APK/tmp /sdcard/VH-MI/color /data/tools/apk
 
