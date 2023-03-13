@@ -26,10 +26,10 @@ sleep 1
 fi
 done
 
+sleep 200
 cmd settings put global GPUTUNER_SWITCH true
 pm disable com.miui.analytics
 
-sleep 200
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn >&2
 appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
