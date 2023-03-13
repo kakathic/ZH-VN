@@ -263,6 +263,8 @@ for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
 done
 
+[ "$VHI" == 2 ] && rm -fr $MODPATH/system/product
+
 $Test123 || abort
 ui_print2 "$(End_time)"
 ui_print
