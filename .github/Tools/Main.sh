@@ -87,7 +87,7 @@ Xan "MOD THAYTHE: $1 -> $2";
 for Ttcfg in $(Timkiem "$1" "$3"); do
 [ -e "$Ttcfg" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Ttcfg || Xan "- Lỗi: $1";
 [ -e "$Ttcfg" ] && echo "$Ttcfg" >> "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
-[ -e "$Ttcfg" ] && echo "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
+[ -e "$Ttcfg" ] && Xan "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
 done
 }
 
@@ -97,7 +97,7 @@ Xan "MOD AUTOONE: $1 -> $2";
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} + ); do
 eval "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')";
 echo "$vakkddhh" >> "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
-echo "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
+Xan "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
 done
 }
 
@@ -107,7 +107,7 @@ for Vka in $(Timkiem "$1" "$4"); do
 [ -e $Vka ] && Xan "MOD VSMALI: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')";
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka";
 [ -e $Vka ] && echo "$Vka" >> "$APK/$(echo "$Vka" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
-[ -e $Vka ] && echo "$APK/$(echo "$Vka" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
+[ -e $Vka ] && Xan "$APK/$(echo "$Vka" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
 done
 }
 
