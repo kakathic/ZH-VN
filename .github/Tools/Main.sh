@@ -79,7 +79,7 @@ baksmali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/baksmali.jar" 
 smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
-Timkiem(){ find $2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
+Timkiem(){ find $2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
 
 Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
@@ -94,7 +94,7 @@ done
 Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD AUTOONE: $1 -> $2"
-for vakkddhh in $(find $3 -name "*.smali" -exec grep -Rl "..., $1" {} +); do
+for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} + ); do
 eval "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
 echo "$vakkddhh" >> "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 echo "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
