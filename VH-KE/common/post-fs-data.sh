@@ -11,7 +11,3 @@ fi
 for fwten in $(find ${0%/*}/framework/*.txt); do
 su -mm -c mount -o bind ${fwten%.*} "$(cat $fwten)"
 done
-
-for tenapk in $(find ${0%/*}/sys_app/*.txt); do
-su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
-done
