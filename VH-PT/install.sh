@@ -203,39 +203,9 @@ Vsmali ".method private static isAdValid" \
 .end method' \
 "$APK/com.android.thememanager/classes*"
 
-Vsmali ".method public isAuthorizedResource()Z" \
-".end method" \
-'.method public isAuthorizedResource()Z
-    .registers 2
-     const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
-
-Vsmali ".method public isCanNotPlay()Z" \
-".end method" \
-'.method public isCanNotPlay()Z
-    .registers 4
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
-
-Vsmali ".method public isProductBought()Z" \
-".end method" \
-'.method public isProductBought()Z
-    .registers 2
-    const/4 v0, 0x1
-    return v0
-.end method' \
-"$APK/com.android.thememanager/classes*/com/android/thememanager/basemodule/resource/model/*"
-
 Thaythe "iget-boolean v1, v0, Lcom/android/thememanager/detail/theme/model/OnlineResourceDetail;->bought:Z" "iget-boolean v1, v0, Lcom/android/thememanager/detail/theme/model/OnlineResourceDetail;->bought:Z \n const/4 v0, 0x1 \n return v0" "$APK/com.android.thememanager/classes*"
 
-Thaythe "ro.miui.region" "ro.khu.vuc.cn" "$APK/com.android.thememanager/classes*"
-Thaythe "ro.product.mod_device" "ro.product.modcn" "$APK/com.android.thememanager/classes*"
 Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$APK/com.android.thememanager/classes*"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_GLOBAL_BUILD:Z" "$APK/com.android.thememanager/classes*"
 fi
 
 ui_print
