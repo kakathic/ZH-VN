@@ -96,6 +96,17 @@ for Ttcfg in $(Timkiem "$1" "$3"); do
 done
 }
 
+Chose(){
+for skd in $(Timkiem "$1" "$4"); do
+[ -e $skd ] && ndbdhd="$(grep -A3 "$1" $skd | grep -m1 "$2" | awk '{print $2}')"
+[ -e $skd ] && ui_print2 "MOD: $RANDOM";
+[ -e $skd ] && Xan "MOD CHOSE: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')";
+[ -e $skd ] && sed -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c const/4 $ndbdhd, $3" "$skd";
+[ -e $skd ] && echo "$skd" >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
+[ -e $skd ] && Xan "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
+done
+}
+
 Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM";
 Xan "MOD AUTOONE: $1 -> $2";
