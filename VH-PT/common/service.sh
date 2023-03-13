@@ -15,6 +15,8 @@ fi
 sleep 1
 done
 
+chmod 0731 /data/system/theme
+
 # Continues operation if the module is not disabled 
 # Code
 
