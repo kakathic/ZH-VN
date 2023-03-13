@@ -207,12 +207,15 @@ com.miui.hybrid.accessory
 com.xiaomi.macro
 "
 
+mrw
 for vakkkhddddv in $Listappcn; do
 ui_print2 "Gỡ: $vakkkhddddv" >&2
 pm uninstall $vakkkhddddv >&2
 Gwsgn="$(pm path "$vakkkhddddv" | cut -d : -f2)"
+rm -fr $Gwsgn
 [ "$Gwsgn" ] && echo "$Gwsgn" >> /data/tools/Listapp
 done
+mro
 
 cat /data/tools/Listapp | sort | uniq > /data/tools/Listapp2
 if [ -e /data/tools/Listapp2 ];then
