@@ -92,9 +92,9 @@ Vk 2
 fontvh=$input
 fi
 
-eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 [ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
 VHMI=/sdcard/VH-MI
+eval "$(echo 'WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA==' | base64 -r)"
 
 # Tạo thư mục
 mkdir -p $MODPATH/system/media/theme/default $VHMI/fonts $TMPDIR/apk $TMPDIR/Apk/tmp $MODPATH$Overlay
