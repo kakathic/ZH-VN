@@ -84,7 +84,7 @@ baksmali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/baksmali.jar" 
 smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; }
 
 # Tìm kiếm
-Timkiem(){ find $2 -name "*.smali" -exec grep -l "${1//\//\\\/}" {} +; }
+Timkiem(){ find $2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
 
 Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM";
