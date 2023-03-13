@@ -111,7 +111,7 @@ Autoone(){
 ui_print2 "MOD: $RANDOM -> $RANDOM";
 Xan "MOD AUTOONE: $1 -> $2";
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -l "..., $1" {} +); do
-Xan "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
+Xan "SHOW: sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
 echo "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')" | sh
 echo "$vakkddhh" 2>/dev/null >> "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
 Xan "$APK/$(echo "$3" | sed "s|$APK/||g" | cut -d '/' -f1)/class";
