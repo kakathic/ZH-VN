@@ -116,7 +116,7 @@ Setp ro.product.vip "$(getprop ro.product.device)_global"
 
 ## code
 Xu_install jre static
-Xu_install smali 2.5.2
+Xu_install smali 2.3.4
 Xu_install baksmali 2.3.4
 Xu_install zipalign static
 Xu_install zip static
