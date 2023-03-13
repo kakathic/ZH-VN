@@ -17,6 +17,11 @@ load="Tải"
 error="! Lỗi không tìm thấy hoặc lỗi mạng !"
 error2="- Mô-đun này chỉ chạy trên thiết bị arm64, của bạn là $ARCH !"
 
+ui_print(){ echo "$1"; sleep 0.005; }
+ui_print2(){ echo "  $1"; }
+Xan(){ echo "  $1" >&2; }
+BatdauT=$(date +%s);
+
 # Volume keys
 Vk(){ 
 input2="$1"; input=1
