@@ -102,56 +102,7 @@
     invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_4d
-    const-string v1, "com.tencent.ig"
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_76
-
-    const-string v1, "com.vng.pubgmobile"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_76
-
-    const-string v1, "com.pubg.imobile"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_76
-
-    const-string v1, "com.gameloft.android.SAMS.GloftA9SS"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_76
-
-    const-string v1, "com.gameloft.android.ANMP.GloftA8HM"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_76
-
-    goto :goto_7d
-
-    :cond_76
-    const-string v0, "MODEL"
-
-    const-string v1, "GM1917"
-
-    invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_7d
     const-string v1, "com.riotgames.league.wildriftvn"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -173,12 +124,18 @@
     :cond_8e
     const-string v0, "MODEL"
 
-    const-string v1, "SM-G9880"
+    const-string v1, "IN2020"
 
     invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
+    
+    const-string v0, "MANUFACTURER"
+
+    const-string v1, "OnePlus"
+
+    invoke-static {v0, v1}, Landroid/app/ApplicationStub;->setBuildField(Ljava/lang/String;Ljava/lang/String;)V
+    
     :goto_95
     :cond_95
-
     return-void
 .end method
 
