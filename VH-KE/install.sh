@@ -107,10 +107,10 @@ Xu_install zipalign static
 Xu_install zip static
 Xu_install toybox static
 
-sed(){ toybox sed "$@" || busybox sed "$@";}
-grep(){ toybox grep "$@" || busybox grep "$@";}
-cut(){ toybox cut "$@" || busybox cut "$@";}
-find(){ toybox find "$@" || busybox find "$@";}
+sed(){ toybox sed "$@"; }
+grep(){ toybox grep "$@"; }
+cut(){ toybox cut "$@"; }
+find(){ toybox find "$@"; }
 
 mkdir -p $APK/tmp /sdcard/VH-MI/color /data/tools/apk
 
@@ -320,7 +320,7 @@ echo "ro.product.vip=$(getprop ro.product.device)_global" >> $TMPDIR/system.prop
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/am/ProcessManagerService.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'services/classes*/com/android/server/notification/NotificationManagerServiceImpl.smali'
 
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/android/widget/ToastInjectorImpl.smali'
+#Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/android/widget/ToastInjectorImpl.smali'
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/com/android/internal/app/ChooserActivityStubImpl.smali'
 
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
