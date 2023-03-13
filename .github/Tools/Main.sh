@@ -105,6 +105,7 @@ Xan "MOD AUTOONE: $1 -> $2"
 for vakkddhh in $(find $3 -name "*.smali" -exec grep -Rl "..., $1" {} +); do
 eval "sed -i $(grep "..., $1" "$vakkddhh" | awk '{print "-e \"s|sget-boolean "$2" '$1'|const/4 "$2" '$2'|g\"" }' | sort | uniq | tr '\n' ' ') $(echo "$vakkddhh" | sed 's|\$|\\\$|g')"
 Xan "$vakkddhh" | tee -a "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+Xan "$APK/$(echo "$vakkddhh" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
