@@ -259,6 +259,11 @@ Vsmali '.method public getAvailabilityStatus()I' \
 .end method' \
 "$APK/com.android.settings/classes*/com/android/settings/special/ColorLampEntryController.smali"
 
+Chose "invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isNeedShowColorLamp()Z" \
+"move-result" \
+"0x1" \
+"$APK/com.android.settings/classes*/com/android/settings/popup/PopupSettings.smali"
+
 Thaythe "Lcom/android/settings/utils/SettingsFeatures;->isNeedShowColorLamp()Z" \
 "Landroid/os/AnrMonitor;->isSystemBootCompleted()Z" "$APK/com.android.settings/classes*/com/android/settings/popup/PopupSettings.smali"
 
