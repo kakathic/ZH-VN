@@ -122,10 +122,10 @@ Xu_install zipalign static
 Xu_install zip static
 Xu_install toybox static
 
-sed(){ toybox sed "$@" || busybox sed "$@";}
-grep(){ toybox grep "$@" || busybox grep "$@";}
-cut(){ toybox cut "$@" || busybox cut "$@";}
-find(){ toybox find "$@" || busybox find "$@";}
+sed(){ toybox sed "$@"; }
+grep(){ toybox grep "$@"; }
+cut(){ toybox cut "$@"; }
+find(){ toybox find "$@"; }
 
 mkdir -p $APK/tmp /data/tools/apk
 eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
