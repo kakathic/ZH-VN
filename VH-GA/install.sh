@@ -23,8 +23,7 @@ unzip -qo "$ZIPFILE" "system/*" -d $MODPATH
 #Xu_install jre
 TTM "/data/local/tmp
 $MODPATH/system/product/priv-app"
-echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
-. $TMPDIR/khi.sh
+
 # Copy file apk
 # Dịch vụ gg
 Ptkkf=$(echo /*/*/etc/permissions/*cn.google*.xml)
@@ -41,6 +40,7 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API2.zip" 
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
 Checkapp(){ pm path "$1" | grep -m1 base.apk | cut -d : -f2; }
+eval "$(echo 'WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA==' | base64 -r)"
 
 pm enable com.google.android.gms >&2
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" $TMPDIR/Phonesky.apk;
