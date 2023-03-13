@@ -87,6 +87,8 @@ for Vka in $(find $4 -name "*.smali" -exec grep -Rl "$1" {} +); do
 [ -e $Vka ] && Xan "MOD VSMALI: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
 [ -e $Vka ] && Xan "$Vka" | tee -a "$APK/$(echo "$Vka" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+[ -e $Vka ] && Xan "$APK/$(echo "$Vka" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+
 done
 }
 
@@ -96,6 +98,8 @@ Xan "MOD THAYTHE: $1 -> $2"
 for Tt2 in $(find $3 -name "*.smali" -exec grep -Rl "$1" {} +); do
 [ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
 [ -e "$Tt2" ] && Xan "$Tt2" | tee -a "$APK/$(echo "$Tt2" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+[ -e "$Tt2" ] && Xan "$APK/$(echo "$$Tt2" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+
 done
 }
 
