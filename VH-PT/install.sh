@@ -128,7 +128,7 @@ cut(){ toybox cut "$@"; }
 find(){ toybox find "$@"; }
 
 mkdir -p $APK/tmp /data/tools/apk
-eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
+eval "$(echo 'WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA==' | base64 -r)"
 
 # Copy file apk
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
