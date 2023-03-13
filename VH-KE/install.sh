@@ -324,8 +324,14 @@ Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framewor
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" ''$APK/$miuik'framework/classes*/com/android/internal/app/ChooserActivityStubImpl.smali'
 
 Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/customerpower/CustomerPowerCheck.smali"
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/com.miui.powerkeeper/classes*/com/miui/powerkeeper/millet/MilletConfig.smali"
-
+Vsmali ".method public static isFeatureOn()Z" \
+".end method" \
+'.method public static isFeatureOn()Z
+    .registers 3
+    const/4 v1, 0x0
+    return v1
+.end method' \
+"$APK/com.miui.powerkeeper/classes*/*"
 fi
 
 if [ "$Vipno" == 1 ];then
