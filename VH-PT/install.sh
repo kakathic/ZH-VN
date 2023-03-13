@@ -128,7 +128,6 @@ cut(){ toybox cut "$@" || busybox cut "$@";}
 find(){ toybox find "$@" || busybox find "$@";}
 
 mkdir -p $APK/tmp /data/tools/apk
-
 eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 
 # Copy file apk
@@ -154,7 +153,7 @@ ui_print
 if [ "$ttiet" == 1 ];then
 for jusjdnnd in $(GP lit); do
 if [ "$jusjdnnd" == "com.miui.weather2" ];then
-Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$(Timkiem weatherapi.market.xiaomi.com $APK/$jusjdnnd/classes*)"
+Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$(eval "Timkiem weatherapi.market.xiaomi.com $APK/$jusjdnnd/classes*" | head -n1)"
 else
 Autoone "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "0x1" "$APK/$jusjdnnd/classes*"
 Thaythe "ro.miui.region" "ro.khu.vuc" "$APK/$jusjdnnd/classes*"
@@ -165,7 +164,7 @@ fi
 
 if [ "$apkcai" == 1 ];then
 VB="iget p0, p0, Landroid/content/pm/ApplicationInfo;->uid:I"
-Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(Timkiem "$VB" "$APK/com.miui.packageinstaller/classes*")"
+Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" "$(eval "Timkiem \"$VB\" $APK/com.miui.packageinstaller/classes*" | head -n1)"
 
 Vsmali ".method public static final c(Landroid/content/pm/ApplicationInfo;)Z" \
 ".end method" \
