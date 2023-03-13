@@ -18,6 +18,10 @@ done
 # Continues operation if the module is not disabled 
 # Code
 
+for tenapk in $(find ${0%/*}/sys_app/*.txt); do
+su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
+done
+
 while true; do
 if [ -e /sdcard/Android ];then
 break
