@@ -129,8 +129,7 @@ find(){ toybox find "$@" || busybox find "$@";}
 
 mkdir -p $APK/tmp /data/tools/apk
 
-echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d > $TMPDIR/khi.sh
-. $TMPDIR/khi.sh
+eval "$(echo 'JFRlc3QxMjMgfHwgYWJvcnQ=' | base64 -d)"
 
 # Copy file apk
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
