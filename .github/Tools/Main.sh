@@ -82,7 +82,8 @@ smali () { java -Xms150m -Xmx1028m -jar "/data/tools/lib/Tools/smali.jar" "$@"; 
 Timkiem(){ find $2 -name "*.smali" -exec grep -Rl "${1//\//\\\/}" {} +; }
 
 Vsmali(){
-for Vka in $(find $4 -name "*.smali" -exec grep -Rl "$1" {} +); do
+#$(find $4 -name "*.smali" -exec grep -Rl "$1" {} +)
+for Vka in $(Timkiem "$1" $4); do
 [ -e $Vka ] && ui_print2 "MOD: $RANDOM"
 [ -e $Vka ] && Xan "MOD VSMALI: $1" || Xan "- Lỗi: $(echo "$1" | sed 's|\\||g')"
 [ -e $Vka ] && sed -i -e "/^${1//\//\\\/}/,/${2//\//\\\/}/c $(echo "$3" | sed -z 's|\n|\\n|g')" "$Vka"
@@ -95,10 +96,10 @@ Thaythe(){
 ui_print2 "MOD: $RANDOM -> $RANDOM"
 Xan "MOD THAYTHE: $1 -> $2"
 #$(find $3 -name "*.smali" -exec grep -Rl "$1" {} +)
-for Tt2 in $(Timkiem "$1" $3); do
-[ -e "$Tt2" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
-[ -e "$Tt2" ] && Xan "$Tt2" | tee -a "$APK/$(echo "$Tt2" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
-[ -e "$Tt2" ] && Xan "$APK/$(echo "$$Tt2" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+for Ttcfg in $(Timkiem "$1" $3); do
+[ -e "$Ttcfg" ] && sed -i "s|${1//\//\\\/}|${2//\//\\\/}|g" $Tt2 || Xan "- Lỗi: $1"
+[ -e "$Ttcfg" ] && Xan "$Ttcfg" | tee -a "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
+[ -e "$Ttcfg" ] && Xan "$APK/$(echo "$Ttcfg" | sed "s|$APK/||g" | cut -d '/' -f1)/class"
 done
 }
 
