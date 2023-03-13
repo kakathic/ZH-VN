@@ -115,7 +115,7 @@ $Test123 || abort
 
 if [ "$VHI" == 1 ] || [ "$VHI" == 2 ];then
 # Cài đặt ngôn ngữ
-settings put system system_locales $(GP Linknn)
+cmd settings put system system_locales $(GP Linknn)
 ui_print2 "Thêm ngôn ngữ: $(GP LinkTn)"
 ui_print
 ui_print2 "Đang Việt hóa"
@@ -273,7 +273,7 @@ ui_print
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn >&2
 done
-settings put secure show_rotation_suggestions 0
+cmd settings put secure show_rotation_suggestions 0
 }
 
 ## Grant permission
