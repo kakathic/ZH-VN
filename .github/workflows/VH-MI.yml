@@ -4,6 +4,7 @@ on:
     paths:
       - 'Language/**'
       - 'Miui/**'
+      - '.github/Version.md'
   workflow_dispatch:
 jobs:
   build:
