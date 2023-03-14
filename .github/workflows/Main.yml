@@ -32,7 +32,7 @@ jobs:
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
-          name: MS-VH
+          name: MS-VH ${{ env.VS }}
           tag_name: MS-${{ env.VS }}
           files: Zip/*
           prerelease: true
