@@ -36,9 +36,9 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 **Ẩn root ngân hàng**
 ---
 
-Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](https://github.com/topjohnwu/Magisk)
+Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Official](https://github.com/topjohnwu/Magisk)
 
-Magisk mặc định sẽ ẩn root được ít ngân hàng hơn 
+Nên sử dụng magisk chính thức vì tính ổn định.
 
 <details>
 <br/>
