@@ -11,10 +11,10 @@ author=kakathic
 # 2 Tắt
 global=
 
-# Cho phép ứng dụng chạy nền.
+# Fix thông báo ứng dụng
 # 1 Bật
 # 2 Tắt
-ram=2
+ram=
 
 # Xoá bỏ ứng dụng GetApps mà không bị treo logo:
 # 1 Bật
