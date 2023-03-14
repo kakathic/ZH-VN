@@ -40,7 +40,7 @@ Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Gapp$API2.zip" 
 [ -e $TMPDIR/Gapp.zip ] && unzip -qo $TMPDIR/Gapp.zip -d $MODPATH || abort "$error"
 
 Checkapp(){ pm path "$1" | grep -m1 base.apk | cut -d : -f2; }
-evol "WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA=="
+evol "WyAiJFRlc⁰QxMjMiID⁵³IHRydWUgXSB⁴fCBhYm³ydAo="
 
 pm enable com.google.android.gms >&2
 Taive "https://github.com/kakathic/ZH-VN/releases/download/Gapps/Chplay.apk" $TMPDIR/Phonesky.apk;
