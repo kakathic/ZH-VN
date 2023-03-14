@@ -3,7 +3,7 @@
 
 Version: 1.7
 
-- Chưa ra mắt
+- Đang phát triển beta
 
 - Phiên bản 1.6 đã kết thúc tiến hành vào beta 1.7
 
@@ -14,8 +14,6 @@ Các tính năng dự kiến
 + Cập nhật tính năng fix thông báo ở module VH-KE
 
 + Cập nhật ngôn ngữ ứng dụng tự động.
-
-+ Sắp ra mắt.
 
 Version: 1.6
 
