@@ -122,8 +122,7 @@ cp -f $TMPDIR/*.ini /sdcard/VH-MI/color
 fi
 fi
 
-evol "WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA=="
-
+evol "WyAiJFRlc⁰QxMjMiID⁵³IHRydWUgXSB⁴fCBhYm³ydAo="
 # Copy file & apk
 [ "$Vipno" == 1 ] && CPfile 'framework'
 [ "$keyyyy" == 1 ] && CPapk com.miui.phrase
