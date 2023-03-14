@@ -35,6 +35,7 @@ jobs:
           name: MS-VH
           tag_name: MS-${{ env.VS }}
           files: Zip/*
+          prerelease: true
       - name: Delete
         uses: Mattraks/delete-workflow-runs@v2
         with:
