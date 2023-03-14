@@ -18,7 +18,7 @@ Nhật ký thay đổi các phiên bản
 
 ## Mô-Đun Magisk
 
-+ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
+Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 <details>
 <br/>
@@ -38,7 +38,7 @@ Nhật ký thay đổi các phiên bản
 
 Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](https://github.com/topjohnwu/Magisk)
 
-+ Magisk mặc định sẽ ẩn root được ít ngân hàng hơn 
+Magisk mặc định sẽ ẩn root được ít ngân hàng hơn 
 
 <details>
 <br/>
@@ -58,7 +58,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 **Nâng cao**
 ---
 
-+ Thêm tiếng việt từng ứng dụng miui
+Thêm tiếng việt từng ứng dụng miui
 
 <details>
 <br/>
@@ -73,7 +73,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-+ Thêm font đã việt hóa
+Thêm font đã việt hóa
 
 <details>
 <br/>
@@ -86,7 +86,7 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Canary](h
 
 </details>
 
-+ Chỉnh màu bàn phím nâng cao
+Chỉnh màu bàn phím nâng cao
 
 <details>
 <br/>
