@@ -94,7 +94,7 @@ fi
 
 [ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
 VHMI=/sdcard/VH-MI
-eval "$(echo 'WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA==' | base64 -r)"
+evol "WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA=="
 
 # Tạo thư mục
 mkdir -p $MODPATH/system/media/theme/default $VHMI/fonts $TMPDIR/apk $TMPDIR/Apk/tmp $MODPATH$Overlay
