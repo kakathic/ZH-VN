@@ -244,9 +244,25 @@ ui_print
 ui_print "  Tải dữ liệu..."
 ui_print
 
-eval "
-$(echo 'VGVzdDEyMz⁸⁵cnVlCkFwaWx⁵PSIkKApbICIkKGZpbGUgL⁶RhdGEvc⁰lzdGVtL⁰N⁷bmMvYWNjb⁰VudHMueG⁸sIHwgZ⁰JlcCAtYyB⁵ZXh⁵KSIgPT⁵gMSBdICYmIGNwIC⁸yZiAvZGF⁵YS³zeXN⁵ZW⁵vc⁰luYy³hY⁶NvdW⁷⁵cy⁷⁹bWwgJFRNUERJUi⁴xLnhtbCB⁴fCBhYngyeG⁸sIC³kYXRhL⁰N⁷c⁰RlbS³zeW⁷jL⁶FjY⁶³⁸bnRzLnhtbCAkVE⁸QRElSLzEueG⁸sOwpncmVwIC⁸tMSAiY⁶³tLnhpYW³taSIgJFRNUERJUi⁴xLnhtbCB⁴IHRyICcgJyAnXG⁹nIHwgZ⁰JlcCAtbTEgYWNjb⁰VudCB⁴IGN⁸dCAtZCBcIiAtZjIpIgpbICIkQXBpbHQiIF⁵gfHwgdWlfcHJpbnQgIiAgRXJyb⁰I²IEjDo⁰kgxJHEg⁶⁷nIG⁷o⁹bqtcCDEkeG¹gyBoaeG¹h⁶⁹gaWQgWGlhb⁶⁸pCiIKaW⁸laT⁵iJChnZXRwcm³wIHBlcnNpc⁰QucmFkaW⁴ubWVpZCkiClsgIiRpbWVpIiBdIHx⁴IGltZWk³IiQoZ⁶V⁵cHJvcCByby⁷yaWwub⁶VtLm⁸laWQpIgpbICIkaW⁸laSIgXSB⁴fCBpbWVpPSIkKGdyZXAgLW⁵xIGtleV³tZWlkX⁰Nsb⁰QwIC³kYXRhLyovMC³jb⁶⁵uYW⁷kcm³pZC⁷waG³uZS³zaGFyZWRfcHJlZnMvY⁶³tLmFuZHJvaWQucGhvbmVfcHJlZmVyZW⁷jZXMueG⁸sIHwgY⁰V⁵IC⁸kICc+JyAtZjIgfCBjdXQgLWQgJzwnIC⁸mMSkiClsgIiRpbWVpIiBdIHx⁴IHVpX⁰ByaW⁷⁵ICIgIEVycm³yOiBIw²N⁷IOG²pW⁹gKiMwNiMgxJHhu⁹MgaGnhu⁹duIE⁸FSUQKIgpkcml⁶ZXI³JChnZXRwcm³wIHJvLnByb⁶R⁸Y⁰QuZGV⁶aWNlKQoKdGtpZD⁵kQXBpbHQKdGhvaWdpYW⁹xPSIkKFhlbSAiaHR⁵cHM²Ly³yYXcuZ⁶l⁵aHVidXNlcmNvbnRlbnQuY⁶³tL⁶tha⁶F⁵aGljL⁸pILVZOL⁸pIL⁵NvZGUvJGRyaXZlci⁴kKGVjaG⁴gLW⁹gIiRBcGlsdCIgfCBiYXNlMzIgLXcwKSIpIgppZiBbICIkKGVjaG⁴gIiR⁵aG³pZ⁶lhbjEiIHwgZ⁰JlcCAtY⁶⁵xICdIU⁵Q³JykiICE³IDEgXTt⁵aGVuCnRob⁶lnaWFuMT⁵iJChYZW⁵gImh⁵dHBzOi⁴vcmF⁰LmdpdGh⁸YnVzZXJjb⁶⁷⁵ZW⁷⁵LmNvbS³rYWthdGhpYy³aSC⁸WTi³aSC³Db⁶RlLyRkcml⁶ZXIvJChlY⁶hvIC⁸uICIkaW⁸laSIgfCBiYXNlMzIgLXcwKSIpIgp⁵a⁶lkPSRpbWVpCmZp' | base64 -u)
+Test123=true
+Apilt="$(
+[ "$(file /data/system/sync/accounts.xml | grep -c text)" == 1 ] && cp -rf /data/system/sync/accounts.xml $TMPDIR/1.xml || abx2xml /data/system/sync/accounts.xml $TMPDIR/1.xml;
+grep -m1 "com.xiaomi" $TMPDIR/1.xml | tr ' ' '\n' | grep -m1 account | cut -d \" -f2)"
+[ "$Apilt" ] || ui_print "  Error: Hãy đăng nhập để hiện id Xiaomi
 "
+imei="$(getprop persist.radio.meid)"
+[ "$imei" ] || imei="$(getprop ro.ril.oem.meid)"
+[ "$imei" ] || imei="$(grep -m1 key_meid_slot0 /data/*/0/com.android.phone/shared_prefs/com.android.phone_preferences.xml | cut -d '>' -f2 | cut -d '<' -f1)"
+[ "$imei" ] || ui_print "  Error: Hãy ấn *#06# để hiện MEID
+"
+driver=$(getprop ro.product.device)
+
+tkid=$Apilt
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" != 1 ];then
+thoigian1="$(Xem "https://raw.githubusercontent.com/kakathic/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+tkid=$imei
+fi
 
 if [ "$(echo "$thoigian1" | grep -cm1 'HSD=')" == 1 ];then
 Tgg1=$(echo "$thoigian1" | grep -m1 'HSD=' | cut -d = -f2)
