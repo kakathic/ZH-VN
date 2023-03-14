@@ -7,7 +7,7 @@ Version: 1.7
 
 - Phiên bản 1.6 đã kết thúc tiến hành vào beta 1.7
 
-> Các tính năng dự kiến 
+Các tính năng dự kiến 
 
 + Cập nhật tiếng Việt cho Android 13
 
@@ -42,88 +42,5 @@ Version: 1.6
 - Lưu ý: không nên cập nhật các phiên bản cũ từ 1.5 lên 1.6 mà hãy gỡ bỏ 1.5 rùi khởi động lại máy, rùi có thể cài 1.6 vì 1.6 thay đổi khá nhiều.
 
 - Fix
-
-Version: 1.5
-
-- Fix thông báo android 13
-
-- Cập nhật Tiếng Việt
-
-1.4
-
-- Fix lỗi vh widget
-
-- Fix lỗi thông báo
-
-1.3
-
-- Fix
-
-1.2
-
-- Thêm vài mod nhỏ ở cài đặt 
-
-1.1
-
-- Tối ưu hóa 
-
-1.0
-
-- Phiên bản tách
-
-x.x
-
-+ Sửa lại file VH
-
-x.x
-
-+ Fix thông báo
-
-x.x
-
-- Fix trình cài đặt 
-
-x.x
-
-- Fix
-
-x.x
-
-+ Chuyển đổi căn bản module
-
-x.x
-
-+ Siêu tối ưu hệ thống module cài nhanh hơn 
-
-x.x
-
-+ Thêm tính năng khoá tự động thay đổi fps ở tính năng mod china
-
-x.x
-
-+ Sửa chữa lại VH widget
-
-x.x
-
-+ Việt hóa widget
-
-x.x
-
-+ Fix thông báo
-
-x.x
-
-+ Thêm tính năng sửa màu ở nền bàn phím nâng cao 
-
-x.x
-
-+ Lưu ý từ bản cũ cập nhật lên vui lòng gỡ bỏ bản cũ và cài đặt bản mới 
-+ Nâng cấp lại module
-+ Quá trình chạy module sẽ hiện trên thông báo 
-+ Fix lỗi
-
-x.x
-
-+ Hỗ trợ android 13
 
 **Các phiên bản cũ không có nhật ký.**
