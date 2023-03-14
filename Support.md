@@ -1,8 +1,6 @@
 **💵 Hướng dẫn ủng hộ**
 ----
 
-Từ phiên bản 1.7 trở nên sẽ áp dụng như sau
-
 | Mức Giá | Thời gian | Cấp độ |
 |---------|-----------|--------|
 |   20K   |   2 Năm   |  +0.2  |
@@ -11,7 +9,7 @@ Từ phiên bản 1.7 trở nên sẽ áp dụng như sau
 
 Nếu bạn ủng hộ nhiều hơn mức giá hiện tại sẽ được tính như sau.
 
-- Tăng 10k sẽ +1 Năm +0.1 Level
+> Tăng 10k sẽ +1 Năm +0.1 Level
 
 **Thông tin chi tiết**
 ---
@@ -35,7 +33,7 @@ Hãy làm theo các bước sau, dùng ví điện tử hoặc app ngân hàng g
 
 - Ví dụ:
 
-> Code máy: raphaelxx<br/>
+> Mã máy: raphaelxx<br/>
 > Xiaomi id: 152533xxxxxxx<br/>
 > MEID: 24272427xxx
 
