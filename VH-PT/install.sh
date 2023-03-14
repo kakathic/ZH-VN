@@ -128,7 +128,7 @@ cut(){ toybox cut "$@"; }
 find(){ toybox find "$@"; }
 
 mkdir -p $APK/tmp /data/tools/apk
-eval "$(echo 'WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA==' | base64 -r)"
+evol "WyAiJFRlc⁰QxMjMiID⁵³IDEgXSB⁴fCBhYm³ydA=="
 
 # Copy file apk
 [ "$Teme" == 1 ] && CPapk com.android.thememanager
@@ -149,64 +149,7 @@ ui_print2 "Chỉnh sửa apk"
 ui_print
 # Mod theme
 
-if [ "$ttiet" == 1 ];then
-for jusjdnnd in $(GP lit); do
-if [ "$jusjdnnd" == "com.miui.weather2" ];then
-Thaythe "IS_INTERNATIONAL_BUILD:Z" "IS_MIUI:Z" $(Timkiem weatherapi.market.xiaomi.com $APK/$jusjdnnd/classes*)
-else
-Thaythe "Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z" "Lmiui/os/Build;->IS_MIUI:Z" "$APK/$jusjdnnd/classes*"
-Thaythe "ro.miui.region" "ro.khu.vuc" "$APK/$jusjdnnd/classes*"
-Thaythe "ro.product.mod_device" "ro.product.vip" "$APK/$jusjdnnd/classes*"
-fi
-done
-fi
-
-if [ "$apkcai" == 1 ];then
-VB="iget p0, p0, Landroid/content/pm/ApplicationInfo;->uid:I"
-Thaythe "$VB" "$VB \n const/4 v1, 0x1 \n return v1" $(Timkiem "$VB" $APK/com.miui.packageinstaller/classes*)
-
-Vsmali ".method public static final c(Landroid/content/pm/ApplicationInfo;)Z" \
-".end method" \
-'.method public static final c(Landroid/content/pm/ApplicationInfo;)Z
-    .registers 3
-    const/4 v1, 0x1
-    return v1
-.end method' \
-"$APK/com.miui.packageinstaller/classes*"
-
-Vsmali ".method public static q(Landroid/content/pm/ApplicationInfo;)Z" \
-".end method" \
-'.method public static q(Landroid/content/pm/ApplicationInfo;)Z
-    .registers 3
-    const/4 v1, 0x1
-    return v1
-.end method' \
-"$APK/com.miui.packageinstaller/classes*"
-fi
-
-if [ "$Teme" == 1 ];then
-Vsmali ".method public isVideoAd()Z" \
-".end method" \
-'.method public isVideoAd()Z
-    .registers 2
-    const/4 v0, 0x0
-    return v0
-.end method' \
-"$APK/com.android.thememanager/classes*"
-
-Vsmali ".method private static isAdValid" \
-".end method" \
-'.method private static isAdValid(Lcom/android/thememanager/basemodule/ad/model/AdInfo;)Z
-    .registers 2
-    const/4 p0, 0x0
-    return p0
-.end method' \
-"$APK/com.android.thememanager/classes*"
-
-Thaythe "iget-boolean v1, v0, Lcom/android/thememanager/detail/theme/model/OnlineResourceDetail;->bought:Z" "iget-boolean v1, v0, Lcom/android/thememanager/detail/theme/model/OnlineResourceDetail;->bought:Z \n const/4 v0, 0x1 \n return v0" "$APK/com.android.thememanager/classes*"
-
-Thaythe "DRM_ERROR_UNKNOWN" "DRM_SUCCESS" "$APK/com.android.thememanager/classes*"
-fi
+evol "aWYgWyAiJHR⁵aWV⁵IiA³PSAxIF⁵¹dGhlbgpmb⁰IganVzamRubmQgaW⁹gJChHUCBsaXQpOyBkbwppZiBbICIkanVzamRubmQiID⁵³ICJjb⁶⁵ubWl⁸aS⁷⁰ZWF⁵aGVyMiIgXTt⁵aGVuClRoYXl⁵aGUgIklTX⁵lOVEVSTkFUSU³OQUxfQlVJTEQ²WiIgIklTX⁵⁸JVUk²WiIgJChUaW⁸raWVtIHdlYXRoZXJhcGkubWFya⁶V⁵LnhpYW³taS⁷jb⁶⁵gJEFQSy⁴kanVzamRubmQvY⁶xhc⁰NlcyopCmVsc⁶UKVGhheXRoZSAiTG⁸pdWkvb⁰MvQnVpbGQ¹LT⁷JU⁸³JTlRFUk⁷BVElPTkFMX⁵JVSUxEOloiICJMbWl⁸aS³vcy³CdWlsZDstPklTX⁵⁸JVUk²WiIgIiRBUEsvJGp⁸c⁶pkbm⁷kL⁶NsYXNzZXMqIgpUaGF⁷dGhlICJyby⁷taXVpLnJlZ⁶lvbiIgInJvLmtodS⁷⁶dWMiICIkQVBLLyRqdXNqZG⁷uZC³jbGFzc⁶VzKiIKVGhheXRoZSAicm⁴ucHJvZHVjdC⁷tb⁶RfZGV⁶aWNlIiAicm⁴ucHJvZHVjdC⁷⁶aXAiICIkQVBLLyRqdXNqZG⁷uZC³jbGFzc⁶VzKiIKZmkKZG³uZQpmaQoKaWYgWyAiJGFwa⁶NhaSIgPT⁵gMSBdO⁰RoZW⁹KVkI³ImlnZXQgcDAsIHAwLCBMYW⁷kcm³pZC³jb⁶⁷⁵ZW⁷⁵L⁰BtL⁵FwcGxpY⁶F⁵aW³uSW⁷mbzstPnVpZDpJIgpUaGF⁷dGhlICIkVkIiICIkVkIgXG⁹gY⁶³uc⁰QvNCB⁶MSwgMHgxIFxuIHJldHVybiB⁶MSIgJChUaW⁸raWVtICIkVkIiICRBUEsvY⁶³tLm⁸pdWkucGFja⁶FnZWluc⁰RhbGxlci³jbGFzc⁶VzKikKClZzbWFsaSAiLm⁸ldGhvZCBwdWJsaWMgc⁰RhdGljIGZpbmFsIGMoTGFuZHJvaWQvY⁶³udGVudC³wbS³BcHBsaWNhdGlvbkluZm⁴¹KVoiIFwKIi⁷lbmQgbWV⁵aG³kIiBcCicubWV⁵aG³kIHB⁸YmxpYyBzdGF⁵aWMgZmluYWwgYyhMYW⁷kcm³pZC³jb⁶⁷⁵ZW⁷⁵L⁰BtL⁵FwcGxpY⁶F⁵aW³uSW⁷mbzspWgogICAgLnJlZ⁶lzdGVycyAzCiAgICBjb⁶⁷zdC⁴⁵IHYxLCAweDEKICAgIHJldHVybiB⁶MQouZW⁷kIG⁸ldGhvZCcgXAoiJEFQSy³jb⁶⁵ubWl⁸aS⁷wYWNrYWdlaW⁷zdGFsbGVyL⁶NsYXNzZXMqIgoKVnNtYWxpICIubWV⁵aG³kIHB⁸YmxpYyBzdGF⁵aWMgcShMYW⁷kcm³pZC³jb⁶⁷⁵ZW⁷⁵L⁰BtL⁵FwcGxpY⁶F⁵aW³uSW⁷mbzspWiIgXAoiLmVuZCBtZXRob⁶QiIFwKJy⁷tZXRob⁶QgcHVibGljIHN⁵YXRpYyBxKExhbmRyb⁶lkL⁶NvbnRlbnQvcG⁵vQXBwbGljYXRpb⁶⁷JbmZvOylaCiAgICAucmVnaXN⁵ZXJzIDMKICAgIGNvbnN⁵LzQgdjEsIDB⁹MQogICAgcmV⁵dXJuIHYxCi⁷lbmQgbWV⁵aG³kJyBcCiIkQVBLL⁶NvbS⁷taXVpLnBhY⁶thZ⁶VpbnN⁵YWxsZXIvY⁶xhc⁰NlcyoiCmZpCgppZiBbICIkVGVtZSIgPT⁵gMSBdO⁰RoZW⁹KVnNtYWxpICIubWV⁵aG³kIHB⁸YmxpYyBpc⁸ZpZGVvQWQoKVoiIFwKIi⁷lbmQgbWV⁵aG³kIiBcCicubWV⁵aG³kIHB⁸YmxpYyBpc⁸ZpZGVvQWQoKVoKICAgIC⁷yZWdpc⁰RlcnMgMgogICAgY⁶³uc⁰QvNCB⁶MCwgMHgwCiAgICByZXR⁸cm⁹gdjAKLmVuZCBtZXRob⁶QnIFwKIiRBUEsvY⁶³tLmFuZHJvaWQudGhlbWVtYW⁷hZ⁶VyL⁶NsYXNzZXMqIgoKVnNtYWxpICIubWV⁵aG³kIHByaXZhdGUgc⁰RhdGljIGlzQWRWYWxpZCIgXAoiLmVuZCBtZXRob⁶QiIFwKJy⁷tZXRob⁶QgcHJpdmF⁵ZSBzdGF⁵aWMgaXNBZFZhbGlkKExjb⁶⁵vYW⁷kcm³pZC³⁵aGVtZW⁸hbmFnZXIvYmFzZW⁸vZHVsZS³hZC³tb⁶RlbC³BZEluZm⁴¹KVoKICAgIC⁷yZWdpc⁰RlcnMgMgogICAgY⁶³uc⁰QvNCBwMCwgMHgwCiAgICByZXR⁸cm⁹gcDAKLmVuZCBtZXRob⁶QnIFwKIiRBUEsvY⁶³tLmFuZHJvaWQudGhlbWVtYW⁷hZ⁶VyL⁶NsYXNzZXMqIgoKVGhheXRoZSAiaWdldC⁸ib⁶³sZWFuIHYxLCB⁶MCwgTGNvbS³hbmRyb⁶lkL⁰RoZW⁸lbWFuYWdlci³kZXRhaWwvdGhlbWUvbW³kZWwvT⁶⁷saW⁷lUmVzb⁰VyY⁶VEZXRhaWw¹LT⁷ib⁰VnaHQ²WiIgImlnZXQtYm³vbGVhbiB⁶MSwgdjAsIExjb⁶⁵vYW⁷kcm³pZC³⁵aGVtZW⁸hbmFnZXIvZGV⁵YWlsL⁰RoZW⁸lL⁶⁸vZGVsL⁵³ubGluZVJlc⁶³⁸cmNlRGV⁵YWlsOy⁵+Ym³⁸Z⁶h⁵OlogXG⁹gY⁶³uc⁰QvNCB⁶MCwgMHgxIFxuIHJldHVybiB⁶MCIgIiRBUEsvY⁶³tLmFuZHJvaWQudGhlbWVtYW⁷hZ⁶VyL⁶NsYXNzZXMqIgoKVGhheXRoZSAiRFJNX⁵VSUk³SX⁸VOS⁵⁷PV⁵⁹iICJEUk⁸fU⁸VDQ⁵VTUyIgIiRBUEsvY⁶³tLmFuZHJvaWQudGhlbWVtYW⁷hZ⁶VyL⁶NsYXNzZXMqIgpmaQ=="
 
 ui_print
 ui_print2 "Đóng gói apk"
