@@ -14,11 +14,11 @@ Nếu bạn ủng hộ nhiều hơn mức giá hiện tại sẽ được tính 
 **Thông tin chi tiết**
 ---
 
-20k là mức giá cần chuyển khoản, tương ứng với 20 nghìn
++ 20k là mức giá cần chuyển khoản, tương ứng với 20 nghìn
 
-2 năm là thời gian sử dụng module, sau khi hết 2 năm bạn sẽ không được sử dụng module này nữa.
++ 2 năm là thời gian sử dụng module, sau khi hết 2 năm bạn sẽ không được sử dụng module này nữa.
 
-Cấp độ "Level" nó sẽ tương ứng với phiên bản, ví dụ: 1.7 + 0.2 thì module VH-PT, VH-KE sẽ chỉ được sử dụng đến bản 1.9, đến 2.0, 2 module này sẽ không hoạt động được, bạn có thể ủng hộ thêm hoặc chỉ sử dụng 2 module còn lại, cũng có thể sử dụng module cũ.
++ Cấp độ "Level" nó sẽ tương ứng với phiên bản, ví dụ: 1.7 + 0.2 thì module VH-PT, VH-KE sẽ chỉ được sử dụng đến bản 1.9, đến 2.0, 2 module này sẽ không hoạt động được, bạn có thể ủng hộ thêm hoặc chỉ sử dụng 2 module còn lại, cũng có thể sử dụng module cũ.
 
 **Cách chuyển khoản**
 ---
