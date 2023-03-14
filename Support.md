@@ -45,7 +45,7 @@ Hãy làm theo các bước sau, dùng ví điện tử hoặc app ngân hàng g
 
 - Sau khi ủng hộ xong, hãy gửi ảnh chụp màn hình giao dịch và thông tin điện thoại như, mã máy, meid, id mi.
 
-- Nếu bạn không gửi tin nhắn riêng đến mình, mình sẽ không kích hoạt tài khoản cho bạn. Vì đây là kích hoạt thủ công không phải tự động lên mong bạn thông cảm.
+Nếu bạn không gửi tin nhắn riêng đến mình, mình sẽ không kích hoạt tài khoản cho bạn. Vì đây là kích hoạt thủ công không phải tự động lên mong bạn thông cảm.
 
 **📧 Gửi đến**
 
