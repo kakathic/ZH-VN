@@ -15,6 +15,8 @@ Các tính năng dự kiến
 
 + Cập nhật ngôn ngữ ứng dụng tự động.
 
++ Fix lỗi không hiện nhật ký cập nhật 
+
 Version: 1.6
 
 - Các tài khoản cũ sẽ được chuyển thành thời gian sử dụng còn lại tới năm 2099
