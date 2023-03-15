@@ -238,18 +238,22 @@ Ksdjn="$(find /*/etc/device_features/*.xml /*/*/etc/device_features/*.xml | head
 if [ -e "$Ksdjn" ];then
 mkdir -p $MODPATH${Ksdjn%/*}
 cp -rf $Ksdjn $MODPATH${Ksdjn%/*}
-sed -i "s|</features>||" $MODPATH$Ksdjn
-echo '
+gcfgvvg='
 <bool name="support_screen_paper_mode">true</bool>
 <bool name="support_screen_enhance_engine">true</bool>
 <bool name="support_AI_display">true</bool>
-<integer name="support_widevine_l1">2</integer>
-</features>
-' >> "$MODPATH$Ksdjn"
+<integer name="support_widevine_l1">2</integer>'
+for kkabs in $gcfgvvg; do
+Trsggc="$(echo "$kkabs" | grep -m1 name= | cut -d '"' -f2)"
+sed -i "/\"$Trsggc\"/d" $MODPATH$Ksdjn
+done
+sed -i "s|</features>||" $MODPATH$Ksdjn
+echo "$gcfgvvg
+</features>" >> "$MODPATH$Ksdjn"
 fi
 
 # Fix dark mod
-Egveb="$(find /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.json | head -n1)"
+Egveb="$(find /etc/ForceDarkAppSettings.json /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.json | head -n1)"
 mkdir -p $MODPATH${Egveb%/*}
 echo "[
 $(echo "$(pm list packages -3 | cut -d : -f2)" | awk '{print "{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"" $1 "\",\"showInSettings\":true},"}')
@@ -258,7 +262,7 @@ $(echo "$(pm list packages -3 | cut -d : -f2)" | awk '{print "{\"defaultEnable\"
 {\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"com.google.android.webview\",\"showInSettings\":true}
 ]" > $MODPATH$Egveb
 
-for Bala in product vendor system_ext; do
+for Bala in product vendor system_ext etc; do
 [ -e $MODPATH/$Bala ] && cp -rf $MODPATH/$Bala $MODPATH/system
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
 done
