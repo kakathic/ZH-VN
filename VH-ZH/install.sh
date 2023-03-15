@@ -128,6 +128,7 @@ ui_print
 Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
 [ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
 if [ "$Licham" != 1 ];then
+echo > $MODPATH/luna
 cp -rf $TMPDIR/notamlich/*.apk $TMPDIR/apk
 cp -rf $TMPDIR/notamlich/framework-miui-res $TMPDIR
 fi
@@ -163,6 +164,7 @@ ui_print2 "Cài phông chữ"
 ui_print
 [ -e "$VHMI/fonts/MiLanProVF.ttf" ] && cp -rf $VHMI/fonts $MODPATH/system
 lnf
+echo > $MODPATH/font
 else
 ui_print2 "Xoá phông chữ"
 ui_print
