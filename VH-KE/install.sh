@@ -156,7 +156,7 @@ for Bala in product vendor system_ext; do
 [ -e $MODPATH/$Bala ] && rm -fr $MODPATH/$Bala
 done
 
-if [ "$chinann" == 1 ] || [ "$chinann" == 4 ] || [ "$keyyyy" == 1 ];then
+if [ "$chinann" == 1 ] || [ "$keyyyy" == 1 ];then
 # Hệ thống mount
 mrw
 xoaodex="
