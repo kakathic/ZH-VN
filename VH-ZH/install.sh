@@ -93,6 +93,10 @@ fontvh=$input
 fi
 
 [ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
+mrw
+[ "$VHI" == 2 ] && mkdir -p $Overlay /vendor/overlay
+mro
+
 VHMI=/sdcard/VH-MI
 evol "WyAiJFRlc⁰QxMjMiID⁵³IHRydWUgXSB⁴fCBhYm³ydAo="
 
