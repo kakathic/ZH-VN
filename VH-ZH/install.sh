@@ -94,7 +94,8 @@ fi
 
 [ "$VHI" == 2 ] && Overlay=/system/vendor/overlay || Overlay=/system/product/overlay
 mrw
-[ "$VHI" == 2 ] && mkdir -p $Overlay /vendor/overlay
+[ "$VHI" == 2 ] && mkdir -p $Overlay
+[ -e $Overlay ] || abort "Lỗi không tìm thấy thư mục overlay trong vendor."
 mro
 
 VHMI=/sdcard/VH-MI
