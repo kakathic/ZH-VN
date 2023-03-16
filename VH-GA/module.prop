@@ -6,3 +6,22 @@ description=Thêm các dịch vụ Google vào thiết bị chưa có dịch v�
 updateJson=https://github.com/kakathic/ZH-VN/releases/download/Package/VH-GA.json
 author=kakathic
 
+# Cài đặt gói gapp dịch vụ Google
+# 1 bật
+# 2 tắt
+gapp=
+
+# Cài đặt gói dịch vụ Google play
+# 1 bật
+# 2 tắt
+chplay=
+
+# Cài đặt gói dịch vụ bàn phím Google
+# 1 bật
+# 2 tắt
+gbphim=
+
+# Cài đặt ứng dụng máy tính Mi
+# 1 bật
+# 2 tắt
+mtmi=
