@@ -27,7 +27,7 @@ Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases/tag/MS-1.6)
 
 > **VH-PT**: Crack Miui, hack theme, thời tiết bản global <br/>
 
-> **VH-KE**: Cho phép gỡ cài đặt getapps, bật bàn phím, mod miui con lai giữa nền global và china vô số tiện ích hay, fix thông báo, mod tính năng Google photo không giới hạn sau lưu ảnh, 1 số game hỗ trợ fps max 90 120 v.v pupg, tốc chiến v.v<br/>
+> **VH-KE**: Cho phép gỡ cài đặt getapps, bật bàn phím nâng cao, mod miui lai giữa nền global và china, fix thông báo, mod tính năng Google photo không giới hạn sau lưu ảnh, 1 số game hỗ trợ fps max 90 120, tốc chiến v.v<br/>
 
 > **VH-ZH**: Thêm lịch âm , Thêm tiếng Việt, Xoá app china không dùng được ở Việt Nam, có thể fix thông báo cho android 13 <br/>
 
