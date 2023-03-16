@@ -110,3 +110,8 @@ Chúc các bạn cài đặt thành công
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo4.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo5.jpg" height="auto" width="49%" />
 
 </details>
+
+**Hướng dẫn cài Tool VH**
+---
+
+> [Xem Video](https://youtu.be/o0TQWWKFEyk)
