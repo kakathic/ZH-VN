@@ -22,6 +22,7 @@ chmod 0731 /data/system/theme
 
 for tenapk in $(find ${0%/*}/sys_app/*.txt); do
 su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
+killall $tenapk
 done
 
 while true; do
