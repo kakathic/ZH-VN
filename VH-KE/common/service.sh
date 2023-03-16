@@ -2,6 +2,12 @@
 # Later in the booting process, the class late_start will be triggered, and Magisk “service” mode will be started. In this mode, service scripts are executed.
 # Automatically turn off the module if 100 seconds wait at the logo
 
+sleep 5
+
+for tenapk in $(find ${0%/*}/sys_app/*.txt); do
+su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
+done
+
 while [ "$(getprop sys.boot_completed)" != 1 ]; do
 Auto=$(($Auto + 1))
 if [ "$Auto" == 100 ];then
@@ -13,11 +19,6 @@ sleep 5
 reboot
 fi
 sleep 1
-done
-
-for tenapk in $(find ${0%/*}/sys_app/*.txt); do
-su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
-killall $tenapk
 done
 
 # Continues operation if the module is not disabled 
