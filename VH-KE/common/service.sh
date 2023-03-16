@@ -17,6 +17,7 @@ done
 
 for tenapk in $(find ${0%/*}/sys_app/*.txt); do
 su -mm -c mount -o bind ${tenapk%.*} "$(cat $tenapk)"
+killall $tenapk
 done
 
 # Continues operation if the module is not disabled 
