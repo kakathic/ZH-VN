@@ -17,8 +17,8 @@ fi
 
 if [ ! -e ${0%/*}/Check ];then
 rm -fr /data/dalvik-cache/*
-#rm -fr /data/system/package_cache/*
-#rm -fr /data/resource-cache/*
+rm -fr /data/system/package_cache/*
+rm -fr /data/resource-cache/*
 echo > ${0%/*}/Check
 fi
 
