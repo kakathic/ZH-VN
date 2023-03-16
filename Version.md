@@ -21,6 +21,8 @@ Các tính năng dự kiến
 
 + Thêm font bất kỳ vào mục VH-MI/fonts ở bộ nhớ trong nó sẽ tự động cập font khi bạn khởi động lại máy.
 
++ Fix cài apk
+
 Version: 1.6
 
 - Các tài khoản cũ sẽ được chuyển thành thời gian sử dụng còn lại tới năm 2099
