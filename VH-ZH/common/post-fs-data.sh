@@ -10,5 +10,7 @@ resetprop ro.khu.vuc.cn CN
 resetprop ro.vi.tri.cn cn
 
 # Cập nhật font
-[ -e "${0%/*}/font ] && cp -rf /data/media/0/VH-MI/fonts/* ${0%/*}/system/fonts
+[ -e "${0%/*}/font" ] && cp -rf /data/media/0/VH-MI/fonts/* ${0%/*}/system/fonts
+[ -e "${0%/*}/font" ] && cp -rf ${0%/*}/system/fonts/MiLanProVF.ttf ${0%/*}/system/fonts/MiSansVF.ttf
+
 
