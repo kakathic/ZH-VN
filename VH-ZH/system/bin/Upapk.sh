@@ -28,3 +28,6 @@ if [ -e $PVH/luna ];then
 cp -rf /data/tools/VH/notamlich/*.apk $pathfilevh
 cp -rf /data/tools/VH/notamlich/framework-miui-res $PVH/system/media/theme/default
 fi
+
+rm -fr /data/tools/TT.zip
+rm -fr /data/tools/VH
