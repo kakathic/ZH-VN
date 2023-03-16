@@ -54,7 +54,7 @@ Nếu bạn không gửi tin nhắn riêng đến mình, mình sẽ không kích
 
 - Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
-- Tên mã máy `ALIOTH` là mã máy mình cần, hoặc bạn có thể flash module nó sẽ hiện đầy đủ thông tin chỉ cần chụp ảnh gửi qua cho mình.
+- Tên mã máy Giống như `ALIOTH` là mã máy mình cần, hoặc bạn có thể flash module nó sẽ hiện đầy đủ thông tin chỉ cần chụp ảnh gửi qua cho mình.
 
 - Hình ảnh ở dưới cho bạn biết tài khoản mi id, và mã MEID
 
