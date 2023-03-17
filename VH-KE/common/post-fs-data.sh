@@ -6,6 +6,7 @@ mount -o rw,remount / || mount -o rw,remount /
 rm -fr /system/framework/arm64/*
 rm -fr /system/framework/arm/*
 mount -o ro,remount / || mount -o ro,remount /
+echo > /data/adb/modules/safetynet-fix/disable
 fi
 
 if [ -e /system/framework/arm64/boot-ext.art ] || [ -e /system/framework/arm/boot-ext.oat ];then
