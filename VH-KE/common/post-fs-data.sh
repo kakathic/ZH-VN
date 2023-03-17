@@ -13,6 +13,7 @@ mkdir -p ${0%/*}/system/framework/arm64
 mkdir -p ${0%/*}/system/framework/arm
 echo > ${0%/*}/system/framework/arm64/.replace
 echo > ${0%/*}/system/framework/arm/.replace
+echo > /data/adb/modules/safetynet-fix/disable
 fi
 
 if [ ! -e ${0%/*}/Check ];then
