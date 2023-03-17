@@ -75,7 +75,7 @@ Vk 2
 goappcn=$input
 fi
 
-ui_print "- Sử dụng phông chữ chữ Việt hóa ?"
+ui_print "- Sử dụng phông chữ Việt hóa ?"
 ui_print
 ui_print2 "1. Có"
 ui_print2 "2. Không"
