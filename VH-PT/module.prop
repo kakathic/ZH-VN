@@ -14,7 +14,7 @@ theme=
 # Cho phép cập nhật ứng dụng hệ thống
 # 1 Bật
 # 2 Tắt
-caiapk=
+caiapk=2
 
 # Hiện Aqi ứng dụng thời tiết ?
 # 1 Bật, 2 Tắt
