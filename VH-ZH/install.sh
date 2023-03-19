@@ -260,7 +260,7 @@ echo "$gcfgvvg
 fi
 
 # Fix dark mod
-Egveb="$(find /etc/ForceDarkAppSettings.json /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.json | head -n1)"
+Egveb="$(find /etc/ForceDarkAppSettings.json /*/etc/ForceDarkAppSettings.json /*/*/etc/ForceDarkAppSettings.json /*/*/etc/forcedarkconfig/ForceDarkAppSettings.json /*/etc/forcedarkconfig/ForceDarkAppSettings.json | head -n1)"
 mkdir -p $MODPATH${Egveb%/*}
 echo "[
 $(echo "$(pm list packages -3 | cut -d : -f2)" | awk '{print "{\"defaultEnable\":false,\"overrideEnableValue\":0,\"packageName\":\"" $1 "\",\"showInSettings\":true},"}')
