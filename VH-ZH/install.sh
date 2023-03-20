@@ -125,7 +125,7 @@ ui_print2 "Thêm ngôn ngữ: $(GP LinkTn)"
 ui_print
 ui_print2 "Đang Việt hóa"
 ui_print
-Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
+Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT_$(GP version).Zip" "$TMPDIR/TT.Zip"
 [ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2 || abort "- Lỗi tải TT.Zip thất bại !"
 if [ "$Licham" != 1 ];then
 echo > $MODPATH/luna
@@ -146,7 +146,7 @@ ui_print
 fi
 
 if [ "$Licham" == 1 ];then
-[ -e "$TMPDIR/TT.Zip" ] || Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT.Zip" "$TMPDIR/TT.Zip"
+[ -e "$TMPDIR/TT.Zip" ] || Taive "https://github.com/kakathic/ZH-VN/releases/download/HH/TT_$(GP version).Zip" "$TMPDIR/TT.Zip"
 [ -e "$TMPDIR/TT.Zip" ] && unzip -qo "$TMPDIR/TT.Zip" -d $TMPDIR >&2
 cp -rf $TMPDIR/apk/*com.android.systemui*.apk $MODPATH$Overlay
 cp -rf $TMPDIR/framework-miui-res $MODPATH/system/media/theme/default
