@@ -6,7 +6,7 @@ on:
       - 'Miui/**'
       - '.github/Version.md'
       - '.github/workflows/VH-MI.yml'
-      - '.github/Tools/VH-MI.sh'
+      - '.github/VH-MI.sh'
   workflow_dispatch:
 jobs:
   build:
