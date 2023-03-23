@@ -284,6 +284,9 @@ ui_print
 for Ksksn in $(pm list packages -3 | cut -d : -f2); do
 dumpsys deviceidle whitelist +$Ksksn >&2
 done
+dumpsys deviceidle whitelist +com.android.mms >&2
+dumpsys deviceidle whitelist +com.android.providers.telephony >&2
+
 cmd settings put secure show_rotation_suggestions 0
 }
 
