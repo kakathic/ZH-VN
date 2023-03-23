@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="verbose_mode">Chế độ chi tiết</string>
+    <string name="traffic_log">Nhật ký traffic</string>
 	<string name="abc_action_bar_home_description">Điều hướng về nhà</string>
 	<string name="abc_action_bar_up_description">Điều hướng lên</string>
 	<string name="abc_action_menu_overflow_description">Lựa chọn khác</string>
@@ -351,7 +353,7 @@
 	<string name="settings_how_use">Sử dụng bàn giao</string>
 	<string name="settings_log_options">Nhật ký</string>
 	<string name="settings_more_help">Giúp đỡ</string>
-	<string name="settings_pad">Viên thuốc</string>
+	<string name="settings_pad">Tablet</string>
 	<string name="settings_pad_handoff_title">Kết nối tự động</string>
 	<string name="settings_pc">Máy tính</string>
 	<string name="settings_pc_handoff_title">Kết nối với máy tính</string>
