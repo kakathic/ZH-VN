@@ -1,32 +1,32 @@
-<?xml version='1.0' encoding='utf-8' ?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cancel" public="true">Hủy</string>
-    <string name="copy" public="true">Sao chép</string>
-    <string name="copyUrl" public="true">Sao chép URL</string>
-    <string name="cut" public="true">Cắt</string>
-    <string name="defaultVoiceMailAlphaTag" public="true">Thư thoại</string>
-    <string name="defaultMsisdnAlphaTag" public="true">MSISDN1</string>
-    <string name="emptyPhoneNumber" public="true">(Không có số điện thoại nào)</string>
-    <string name="httpErrorBadUrl" public="true">Không thể mở trang này vì URL không hợp lệ.</string>
-    <string name="httpErrorUnsupportedScheme" public="true">Không hỗ trợ giao thức này.</string>
-    <string name="no" public="true">Hủy</string>
-    <string name="ok" public="true">OK</string>
-    <string name="paste" public="true">Dán</string>
-    <string name="search_go" public="true">Tìm kiếm</string>
-    <string name="selectAll" public="true">Chọn tất cả</string>
-    <string name="unknownName" public="true">Không xác định</string>
-    <string name="untitled" public="true">&lt;Không có tiêu đề&gt;</string>
-    <string name="VideoView_error_button" public="true">OK</string>
-    <string name="VideoView_error_text_unknown" public="true">Không thể phát video này.</string>
-    <string name="VideoView_error_title" public="true">Sự cố video</string>
-    <string name="yes" public="true">OK</string>
-    <string name="dialog_alert_title" public="true">Chú ý</string>
-    <string name="VideoView_error_text_invalid_progressive_playback" public="true">Video này không hợp lệ để phát trực tuyến đến thiết bị này.</string>
-    <string name="selectTextMode" public="true">Chọn văn bản</string>
-    <string name="status_bar_notification_info_overflow" public="true">999+</string>
-    <string name="fingerprint_icon_content_description" public="true">Biểu tượng vân tay</string>
-    <string name="paste_as_plain_text" public="true">Dán dưới dạng văn bản thuần túy</string>
-    <string name="autofill" public="true">Tự động điền</string>
+    <string name="cancel">Hủy</string>
+    <string name="copy">Sao chép</string>
+    <string name="copyUrl">Sao chép URL</string>
+    <string name="cut">Cắt</string>
+    <string name="defaultVoiceMailAlphaTag">Thư thoại</string>
+    <string name="defaultMsisdnAlphaTag">MSISDN1</string>
+    <string name="emptyPhoneNumber">(Không có số điện thoại nào)</string>
+    <string name="httpErrorBadUrl">Không thể mở trang này vì URL không hợp lệ.</string>
+    <string name="httpErrorUnsupportedScheme">Không hỗ trợ giao thức này.</string>
+    <string name="no">Hủy</string>
+    <string name="ok">OK</string>
+    <string name="paste">Dán</string>
+    <string name="search_go">Tìm kiếm</string>
+    <string name="selectAll">Chọn tất cả</string>
+    <string name="unknownName">Không xác định</string>
+    <string name="untitled">&lt;Không có tiêu đề></string>
+    <string name="VideoView_error_button">OK</string>
+    <string name="VideoView_error_text_unknown">Không thể phát video này.</string>
+    <string name="VideoView_error_title">Sự cố video</string>
+    <string name="yes">OK</string>
+    <string name="dialog_alert_title">Chú ý</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Video này không hợp lệ để phát trực tuyến đến thiết bị này.</string>
+    <string name="selectTextMode">Chọn văn bản</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="fingerprint_icon_content_description">Biểu tượng vân tay</string>
+    <string name="paste_as_plain_text">Dán dưới dạng văn bản thuần túy</string>
+    <string name="autofill">Tự động điền</string>
     <string name="BaMmi">Chặn cuộc gọi</string>
     <string name="CLIRDefaultOffNextCallOff">Số gọi đến mặc định thành không bị giới hạn. Cuộc gọi tiếp theo. Không bị giới hạn</string>
     <string name="CLIRDefaultOffNextCallOn">Số gọi đến mặc định thành không bị giới hạn. Cuộc gọi tiếp theo. Bị giới hạn</string>
@@ -194,19 +194,19 @@
     <string name="accessibility_shortcut_enabling_service">Bạn đã giữ các phím âm lượng. %1$s đã bật.</string>
     <string name="accessibility_shortcut_menu_item_status_off">ĐANG TẮT</string>
     <string name="accessibility_shortcut_menu_item_status_on">ĐANG BẬT</string>
-    <string name="accessibility_shortcut_multiple_service_list">	• %1$s
-</string>
-    <string name="accessibility_shortcut_multiple_service_warning">Thao tác nhấn và giữ cả hai phím âm lượng trong vài giây sẽ bật các tính năng hỗ trợ tiếp cận. Việc bật các tính năng này có thể thay đổi cách thiết bị của bạn hoạt động.
+    <string name="accessibility_shortcut_multiple_service_list">"\u0009• %1$s
+"</string>
+    <string name="accessibility_shortcut_multiple_service_warning">"Thao tác nhấn và giữ cả hai phím âm lượng trong vài giây sẽ bật các tính năng hỗ trợ tiếp cận. Việc bật các tính năng này có thể thay đổi cách thiết bị của bạn hoạt động.
 
 Các tính năng hiện tại:
 %1$s
-Bạn có thể thay đổi những tính năng đã chọn trong phần Cài đặt &gt; Hỗ trợ tiếp cận.</string>
+Bạn có thể thay đổi những tính năng đã chọn trong phần Cài đặt > Hỗ trợ tiếp cận."</string>
     <string name="accessibility_shortcut_multiple_service_warning_title">Bật phím tắt cho các tính năng hỗ trợ tiếp cận?</string>
     <string name="accessibility_shortcut_off">Không bật</string>
     <string name="accessibility_shortcut_on">Bật</string>
-    <string name="accessibility_shortcut_single_service_warning">Thao tác nhấn và giữ cả hai phím âm lượng trong vài giây sẽ bật %1$s, một tính năng hỗ trợ tiếp cận. Việc bật tính năng này có thể thay đổi cách thiết bị của bạn hoạt động.
+    <string name="accessibility_shortcut_single_service_warning">"Thao tác nhấn và giữ cả hai phím âm lượng trong vài giây sẽ bật %1$s, một tính năng hỗ trợ tiếp cận. Việc bật tính năng này có thể thay đổi cách thiết bị của bạn hoạt động.
 
-Bạn có thể chuyển phím tắt này thành một tính năng khác trong phần Cài đặt &gt; Hỗ trợ tiếp cận.</string>
+Bạn có thể chuyển phím tắt này thành một tính năng khác trong phần Cài đặt > Hỗ trợ tiếp cận."</string>
     <string name="accessibility_shortcut_single_service_warning_title">Bật phím tắt cho %1$s?</string>
     <string name="accessibility_shortcut_spoken_feedback">Nhấn và giữ đồng thời cả hai phím âm lượng trong 3 giây để sử dụng %1$s</string>
     <string name="accessibility_shortcut_toogle_warning">Khi phím tắt này đang bật, thao tác nhấn cả hai nút âm lượng trong 3 giây sẽ mở tính năng hỗ trợ tiếp cận.</string>
@@ -276,7 +276,7 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="anr_activity_process">%1$s không phản hồi</string>
     <string name="anr_application_process">%1$s không phản hồi</string>
     <string name="anr_process">Quá trình %1$s không phản hồi</string>
-    <string name="anr_title"></string>
+    <string name="anr_title" />
     <string name="app_blocked_message">%1$s hiện không dùng được.</string>
     <string name="app_blocked_title">Ứng dụng này không dùng được</string>
     <string name="app_category_accessibility">Hỗ trợ tiếp cận</string>
@@ -298,10 +298,10 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="app_suspended_unsuspend_message">Mở lại ứng dụng</string>
     <string name="app_upgrading_toast">%1$s đang nâng cấp…</string>
     <string name="as_app_forced_to_restricted_bucket">Đã đưa %1$s vào bộ chứa BỊ HẠN CHẾ</string>
-    <string name="autofill_address_name_separator"> </string>
+    <string name="autofill_address_name_separator">" "</string>
     <string name="autofill_address_summary_format">$1$2$3</string>
     <string name="autofill_address_summary_name_format">$1$2$3</string>
-    <string name="autofill_address_summary_separator">, </string>
+    <string name="autofill_address_summary_separator">", "</string>
     <string name="autofill_area">Khu vực</string>
     <string name="autofill_continue_yes">Tiếp tục</string>
     <string name="autofill_county">Hạt</string>
@@ -320,10 +320,10 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="autofill_save_never">Không bao giờ</string>
     <string name="autofill_save_no">Không, cảm ơn</string>
     <string name="autofill_save_notnow">Để sau</string>
-    <string name="autofill_save_title">Lưu vào <b>%1$</b>s?</string>
-    <string name="autofill_save_title_with_2types">Lưu %1$s và %2$s vào <b>%3$</b>s?</string>
-    <string name="autofill_save_title_with_3types">Lưu %1$s, %2$s và %3$s vào <b>%4$</b>s?</string>
-    <string name="autofill_save_title_with_type">Lưu %1$s vào <b>%2$</b>s?</string>
+    <string name="autofill_save_title">Lưu vào <b>%1$s</b>?</string>
+    <string name="autofill_save_title_with_2types">Lưu %1$s và %2$s vào <b>%3$s</b>?</string>
+    <string name="autofill_save_title_with_3types">Lưu %1$s, %2$s và %3$s vào <b>%4$s</b>?</string>
+    <string name="autofill_save_title_with_type">Lưu %1$s vào <b>%2$s</b>?</string>
     <string name="autofill_save_type_address">địa chỉ</string>
     <string name="autofill_save_type_credit_card">thẻ tín dụng</string>
     <string name="autofill_save_type_debit_card">thẻ ghi nợ</string>
@@ -335,10 +335,10 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="autofill_save_yes">Lưu</string>
     <string name="autofill_state">Tiểu bang</string>
     <string name="autofill_this_form">Tự động điền</string>
-    <string name="autofill_update_title">Cập nhật trong <b>%1$</b>s?</string>
-    <string name="autofill_update_title_with_2types">Cập nhật %1$s và %2$s trong <b>%3$</b>s?</string>
-    <string name="autofill_update_title_with_3types">Cập nhật các mục này: %1$s, %2$s và %3$s trong <b>%4$</b>s?</string>
-    <string name="autofill_update_title_with_type">Cập nhật %1$s trong <b>%2$</b>s?</string>
+    <string name="autofill_update_title">Cập nhật trong <b>%1$s</b>?</string>
+    <string name="autofill_update_title_with_2types">Cập nhật %1$s và %2$s trong <b>%3$s</b>?</string>
+    <string name="autofill_update_title_with_3types">Cập nhật các mục này: %1$s, %2$s và %3$s trong <b>%4$s</b>?</string>
+    <string name="autofill_update_title_with_type">Cập nhật %1$s trong <b>%2$s</b>?</string>
     <string name="autofill_update_yes">Cập nhật</string>
     <string name="autofill_window_title">Tự động điền với %1$s</string>
     <string name="autofill_zip_code">Mã ZIP</string>
@@ -413,17 +413,17 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="chooser_all_apps_button_label">Danh sách ứng dụng</string>
     <string name="chooser_no_direct_share_targets">Không có gợi ý nào về người mà bạn có thể chia sẻ</string>
     <string name="chooser_wallpaper">Thay đổi hình nền</string>
-    <string name="clearDefaultHintMsg">Xóa mặc định trong Cài đặt hệ thống &gt; Ứng dụng &gt; Đã tải xuống.</string>
+    <string name="clearDefaultHintMsg">Xóa mặc định trong Cài đặt hệ thống > Ứng dụng > Đã tải xuống.</string>
     <string name="close_button_text">Đóng</string>
     <string name="color_correction_feature_name">Chỉnh màu</string>
     <string name="color_inversion_feature_name">Đảo màu</string>
     <string name="common_name">Tên chung:</string>
     <string name="condition_provider_service_binding_label">Trình cung cấp điều kiện</string>
     <string name="conference_call">Cuộc gọi nhiều bên</string>
-    <string name="config_pdp_reject_dialog_title"></string>
-    <string name="config_pdp_reject_multi_conn_to_same_pdn_not_allowed"></string>
-    <string name="config_pdp_reject_service_not_subscribed"></string>
-    <string name="config_pdp_reject_user_authentication_failed"></string>
+    <string name="config_pdp_reject_dialog_title" />
+    <string name="config_pdp_reject_multi_conn_to_same_pdn_not_allowed" />
+    <string name="config_pdp_reject_service_not_subscribed" />
+    <string name="config_pdp_reject_user_authentication_failed" />
     <string name="confirm_battery_saver">OK</string>
     <string name="console_running_notification_message">Hiệu suất sẽ bị ảnh hưởng. Để tắt, hãy chọn trình tải khởi động.</string>
     <string name="console_running_notification_title">Đã bật bảng điều khiển cổng nối tiếp</string>
@@ -438,8 +438,8 @@ Bạn có thể chuyển phím tắt này thành một tính năng khác trong p
     <string name="copied">Đã sao chép</string>
     <string name="country_detector">Trình phát hiện quốc gia</string>
     <string name="country_selection_title">Tùy chọn khu vực</string>
-    <string name="create_contact_using">Tạo liên hệ
-sử dụng %s</string>
+    <string name="create_contact_using">"Tạo liên hệ
+sử dụng %s"</string>
     <string name="crossSimFormat_spn_cross_sim_calling">Gọi điện dự phòng %s</string>
     <string name="data_saver_description">Để giúp giảm mức sử dụng dữ liệu, Trình tiết kiệm dữ liệu sẽ chặn một số ứng dụng gửi hoặc nhận dữ liệu trong nền. Ứng dụng mà bạn hiện sử dụng có thể dùng dữ liệu nhưng tần suất sẽ giảm. Ví dụ: hình ảnh sẽ không hiển thị cho đến khi bạn nhấn vào hình ảnh đó.</string>
     <string name="data_saver_enable_button">Bật</string>
@@ -457,7 +457,7 @@ sử dụng %s</string>
     <string name="data_usage_warning_title">Cảnh báo dữ liệu</string>
     <string name="data_usage_wifi_limit_snoozed_title">Vượt quá giới hạn dữ liệu Wi-Fi</string>
     <string name="data_usage_wifi_limit_title">Đã đạt tới g.hạn dữ liệu Wi-Fi</string>
-    <string name="date_and_time">%d-%m-%Y %H:%M:%S</string>
+    <string name="date_and_time" formatted="false">%d-%m-%Y %H:%M:%S</string>
     <string name="date_picker_decrement_day_button">Giảm ngày</string>
     <string name="date_picker_decrement_month_button">Giảm tháng</string>
     <string name="date_picker_decrement_year_button">Giảm năm</string>
@@ -492,8 +492,8 @@ sử dụng %s</string>
     <string name="description_target_unlock_tablet">Trượt để mở khóa.</string>
     <string name="device_ownership_relinquished">Quản trị viên đã từ bỏ quyền sở hữu thiết bị để cho phép dùng vào mục đích cá nhân</string>
     <string name="device_storage_monitor_notification_channel">Bộ nhớ của thiết bị</string>
-    <string name="dial_number_using">Quay số
-sử dụng %s</string>
+    <string name="dial_number_using">"Quay số
+sử dụng %s"</string>
     <string name="disable_accessibility_shortcut">Tắt phím tắt</string>
     <string name="dismiss_action">Đóng</string>
     <string name="display_manager_built_in_display_name">Màn hình tích hợp</string>
@@ -533,7 +533,7 @@ sử dụng %s</string>
     <string name="error_message_title">Lỗi</string>
     <string name="etws_primary_default_message_earthquake">Hãy bình tĩnh và tìm kiếm nơi trú ẩn gần đó.</string>
     <string name="etws_primary_default_message_earthquake_and_tsunami">Hãy bình tĩnh và tìm kiếm nơi trú ẩn gần đó.</string>
-    <string name="etws_primary_default_message_others"></string>
+    <string name="etws_primary_default_message_others" />
     <string name="etws_primary_default_message_test">Kiểm tra thông báo khẩn cấp</string>
     <string name="etws_primary_default_message_tsunami">Ngay lập tức sơ tán khỏi các vùng ven biển và khu vực ven sông để tới một nơi an toàn hơn như vùng đất cao.</string>
     <string name="eventTypeAnniversary">Ngày kỷ niệm</string>
@@ -629,17 +629,17 @@ sử dụng %s</string>
     <string name="face_setup_notification_content">Mở khóa điện thoại bằng cách nhìn vào điện thoại</string>
     <string name="face_setup_notification_title">Thiết lập tính năng Mở khóa bằng khuôn mặt</string>
     <string name="faceunlock_multiple_failures">Đã vượt quá số lần Mở khóa bằng khuôn mặt tối đa</string>
-    <string name="factory_reset_message">Không thể sử dụng ứng dụng quản trị. Thiết bị của bạn sẽ bị xóa ngay bây giờ.
+    <string name="factory_reset_message">"Không thể sử dụng ứng dụng quản trị. Thiết bị của bạn sẽ bị xóa ngay bây giờ.
 
-Hãy liên hệ với quản trị viên của tổ chức nếu bạn có thắc mắc.</string>
+Hãy liên hệ với quản trị viên của tổ chức nếu bạn có thắc mắc."</string>
     <string name="factory_reset_warning">Thiết bị của bạn sẽ bị xóa</string>
     <string name="factorytest_failed">Thử nghiệm ban đầu không thành công</string>
     <string name="factorytest_no_action">Không tìm thấy gói cung cấp tác vụ FACTORY_TEST.</string>
     <string name="factorytest_not_system">Tác vụ FACTORY_TEST chỉ được hỗ trợ cho các gói được cài đặt trong /system/app.</string>
     <string name="factorytest_reboot">Khởi động lại</string>
     <string name="failed_to_copy_to_clipboard">Không sao chép được vào bảng nhớ tạm</string>
-    <string name="fast_scroll_alphabet"> ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
-    <string name="fast_scroll_numeric_alphabet"> 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
+    <string name="fast_scroll_numeric_alphabet">" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
     <string name="fcComplete">Mã tính năng đã hoàn tất.</string>
     <string name="fcError">Sự cố kết nối hoặc mã tính năng không hợp lệ.</string>
     <string name="fileSizeSuffix">%1$s %2$s</string>
@@ -689,9 +689,9 @@ Hãy liên hệ với quản trị viên của tổ chức nếu bạn có thắ
     <string name="foreground_service_tap_for_details">Nhấn để biết chi tiết về mức sử dụng dữ liệu và pin</string>
     <string name="forward_intent_to_owner">Bạn đang sử dụng ứng dụng này bên ngoài hồ sơ công việc của mình</string>
     <string name="forward_intent_to_work">Bạn đang sử dụng ứng dụng này trong hồ sơ công việc của mình</string>
-    <string name="fp_enrollment_powerbutton_intent_message">Trong khi thiết lập vân tay, bạn đã nhấn vào nút Nguồn.
+    <string name="fp_enrollment_powerbutton_intent_message">"Trong khi thiết lập vân tay, bạn đã nhấn vào nút Nguồn.
 
-Thông thường, thao tác này sẽ tắt màn hình.</string>
+Thông thường, thao tác này sẽ tắt màn hình."</string>
     <string name="fp_enrollment_powerbutton_intent_negative_button">Hủy</string>
     <string name="fp_enrollment_powerbutton_intent_positive_button">Tắt</string>
     <string name="fp_enrollment_powerbutton_intent_title">Tắt màn hình?</string>
@@ -794,13 +794,13 @@ Thông thường, thao tác này sẽ tắt màn hình.</string>
     <string name="issued_by">Cấp bởi:</string>
     <string name="issued_on">Cấp vào:</string>
     <string name="issued_to">Cấp cho:</string>
-    <string name="js_dialog_before_unload">%s
+    <string name="js_dialog_before_unload">"%s
 
-Bạn có chắc chắn muốn điều hướng khỏi trang này không?</string>
+Bạn có chắc chắn muốn điều hướng khỏi trang này không?"</string>
     <string name="js_dialog_before_unload_negative_button">Ở lại trang này</string>
     <string name="js_dialog_before_unload_positive_button">Rời khỏi trang này</string>
     <string name="js_dialog_before_unload_title">Xác nhận điều hướng</string>
-    <string name="js_dialog_title">Trang tại "%s" cho biết:</string>
+    <string name="js_dialog_title">Trang tại \"%s\" cho biết:</string>
     <string name="js_dialog_title_default">JavaScript</string>
     <string name="keyboardview_keycode_alt">Alt</string>
     <string name="keyboardview_keycode_cancel">Hủy</string>
@@ -839,12 +839,12 @@ Bạn có chắc chắn muốn điều hướng khỏi trang này không?</strin
     <string name="keyguard_password_enter_pin_prompt">Mã PIN mới</string>
     <string name="keyguard_password_enter_puk_code">Nhập PUK và mã PIN mới</string>
     <string name="keyguard_password_enter_puk_prompt">Mã PUK</string>
-    <string name="keyguard_password_entry_touch_hint"><font size="17">Nhấn để nhập mật khẩ</font>u</string>
+    <string name="keyguard_password_entry_touch_hint"><font size="17">Nhấn để nhập mật khẩu</font></string>
     <string name="keyguard_password_wrong_pin_code">Mã PIN không chính xác.</string>
     <string name="kg_enter_confirm_pin_hint">Xác nhận mã PIN mong muốn</string>
-    <string name="kg_failed_attempts_almost_at_login">Bạn đã %1$d lần vẽ không chính xác hình mở khóa của mình. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng tài khoản email.
+    <string name="kg_failed_attempts_almost_at_login">"Bạn đã %1$d lần vẽ không chính xác hình mở khóa của mình. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng tài khoản email.
 
- Vui lòng thử lại sau %3$d giây.</string>
+ Vui lòng thử lại sau %3$d giây."</string>
     <string name="kg_failed_attempts_almost_at_wipe">Bạn đã %1$d lần mở khóa điện thoại không đúng cách. Sau %2$d lần mở khóa không thành công nữa, điện thoại sẽ được đặt lại về mặc định ban đầu và tất cả dữ liệu người dùng sẽ bị mất.</string>
     <string name="kg_failed_attempts_now_wiping">Bạn đã %d lần mở khóa điện thoại không đúng cách. Bây giờ, điện thoại sẽ được đặt lại về mặc định ban đầu.</string>
     <string name="kg_forgot_pattern_button_text">Đã quên hình</string>
@@ -852,8 +852,8 @@ Bạn có chắc chắn muốn điều hướng khỏi trang này không?</strin
     <string name="kg_invalid_puk">Hãy nhập lại mã PUK chính xác. Nhiều lần lặp lại sẽ vô hiệu hóa vĩnh viễn thẻ SIM.</string>
     <string name="kg_invalid_sim_pin_hint">Nhập mã PIN có từ 4 đến 8 số.</string>
     <string name="kg_invalid_sim_puk_hint">Mã PUK phải có 8 số.</string>
-    <string name="kg_login_account_recovery_hint">Bạn quên tên người dùng hoặc mật khẩu?
-Hãy truy cập <b>google.com/accounts/recover</b>y.</string>
+    <string name="kg_login_account_recovery_hint">"Bạn quên tên người dùng hoặc mật khẩu?
+Hãy truy cập "<b>google.com/accounts/recovery</b>.</string>
     <string name="kg_login_checking_password">Đang kiểm tra tài khoản…</string>
     <string name="kg_login_instructions">Để mở khóa, hãy đăng nhập bằng tài khoản Google của bạn.</string>
     <string name="kg_login_invalid_input">Tên người dùng hoặc mật khẩu không hợp lệ.</string>
@@ -870,16 +870,16 @@ Hãy truy cập <b>google.com/accounts/recover</b>y.</string>
     <string name="kg_reordering_delete_drop_target_text">Xóa</string>
     <string name="kg_sim_pin_instructions">Nhập PIN của SIM</string>
     <string name="kg_sim_unlock_progress_dialog_message">Đang mở khóa thẻ SIM…</string>
-    <string name="kg_text_message_separator"> — </string>
-    <string name="kg_too_many_failed_password_attempts_dialog_message">Bạn đã %1$d lần nhập sai mật khẩu. 
+    <string name="kg_text_message_separator">" — "</string>
+    <string name="kg_too_many_failed_password_attempts_dialog_message">"Bạn đã %1$d lần nhập sai mật khẩu. 
 
-Hãy thử lại sau %2$d giây.</string>
-    <string name="kg_too_many_failed_pattern_attempts_dialog_message">Bạn đã %1$d lần vẽ không chính xác hình mở khóa. 
+Hãy thử lại sau %2$d giây."</string>
+    <string name="kg_too_many_failed_pattern_attempts_dialog_message">"Bạn đã %1$d lần vẽ không chính xác hình mở khóa. 
 
-Hãy thử lại sau %2$d giây.</string>
-    <string name="kg_too_many_failed_pin_attempts_dialog_message">Bạn đã %1$d lần nhập sai mã PIN. 
+Hãy thử lại sau %2$d giây."</string>
+    <string name="kg_too_many_failed_pin_attempts_dialog_message">"Bạn đã %1$d lần nhập sai mã PIN. 
 
-Hãy thử lại sau %2$d giây.</string>
+Hãy thử lại sau %2$d giây."</string>
     <string name="kg_wrong_password">Mật khẩu sai</string>
     <string name="kg_wrong_pattern">Hình mở khóa không chính xác</string>
     <string name="kg_wrong_pin">PIN sai</string>
@@ -898,12 +898,12 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="location_changed_notification_text">Hãy liên hệ với quản trị viên CNTT để tìm hiểu thêm</string>
     <string name="location_changed_notification_title">Ứng dụng có thể truy cập vào thông tin vị trí của bạn</string>
     <string name="location_service">Dịch vụ vị trí</string>
-    <string name="lock_to_app_description">Ghim màn hình khóa hiển thị trong màn hình duy nhất.
+    <string name="lock_to_app_description">"Ghim màn hình khóa hiển thị trong màn hình duy nhất.
 
-Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn.</string>
-    <string name="lock_to_app_description_accessible">Ghim màn hình khóa hiển thị trong màn hình duy nhất.
+Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn."</string>
+    <string name="lock_to_app_description_accessible">"Ghim màn hình khóa hiển thị trong màn hình duy nhất.
 
-Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn.</string>
+Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn."</string>
     <string name="lock_to_app_toast">Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn.</string>
     <string name="lock_to_app_toast_accessible">Để hủy ghim màn hình này, bấm và giữ đồng thời phím Trang chính và nút Nguồn.</string>
     <string name="lock_to_app_unlock_password">Hỏi mật khẩu trước khi bỏ ghim</string>
@@ -918,13 +918,13 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="lockscreen_carrier_default">Không có dịch vụ</string>
     <string name="lockscreen_emergency_call">Cuộc gọi khẩn cấp</string>
     <string name="lockscreen_failed_attempts_almost_at_wipe">Bạn đã mở khóa điện thoại không đúng cách %1$d lần. Sau %2$d lần mở khóa không thành công nữa, điện thoại sẽ được đặt lại về mặc định ban đầu và tất cả dữ liệu người dùng sẽ bị mất.</string>
-    <string name="lockscreen_failed_attempts_almost_glogin">Bạn đã %1$d lần vẽ không chính xác hình mở khóa. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng thông tin đăng nhập Google của bạn.
+    <string name="lockscreen_failed_attempts_almost_glogin">"Bạn đã %1$d lần vẽ không chính xác hình mở khóa. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng thông tin đăng nhập Google của bạn.
 
- Vui lòng thử lại sau %3$d giây.</string>
+ Vui lòng thử lại sau %3$d giây."</string>
     <string name="lockscreen_failed_attempts_now_wiping">Bạn đã mở khóa điện thoại không đúng cách %d lần. Bây giờ, điện thoại sẽ được đặt lại về mặc định ban đầu.</string>
     <string name="lockscreen_forgot_pattern_button_text">Đã quên hình?</string>
-    <string name="lockscreen_glogin_account_recovery_hint">Bạn quên tên người dùng hoặc mật khẩu?
-Hãy truy cập <b>google.com/accounts/recover</b>y.</string>
+    <string name="lockscreen_glogin_account_recovery_hint">"Bạn quên tên người dùng hoặc mật khẩu?
+Hãy truy cập "<b>google.com/accounts/recovery</b>.</string>
     <string name="lockscreen_glogin_checking_password">Đang kiểm tra…</string>
     <string name="lockscreen_glogin_forgot_pattern">Mở khóa tài khoản</string>
     <string name="lockscreen_glogin_instructions">Để mở khóa, hãy đăng nhập bằng tài khoản Google của bạn.</string>
@@ -944,8 +944,8 @@ Hãy truy cập <b>google.com/accounts/recover</b>y.</string>
     <string name="lockscreen_pattern_correct">Chính xác!</string>
     <string name="lockscreen_pattern_instructions">Vẽ hình để mở khóa</string>
     <string name="lockscreen_pattern_wrong">Thử lại</string>
-    <string name="lockscreen_permanent_disabled_sim_instructions">Thẻ SIM của bạn đã bị vô hiệu hóa vĩnh viễn.
-Liên hệ với nhà cung cấp dịch vụ không dây để cung cấp thẻ SIM khác.</string>
+    <string name="lockscreen_permanent_disabled_sim_instructions">"Thẻ SIM của bạn đã bị vô hiệu hóa vĩnh viễn.
+Liên hệ với nhà cung cấp dịch vụ không dây để cung cấp thẻ SIM khác."</string>
     <string name="lockscreen_permanent_disabled_sim_message_short">Thẻ SIM không khả dụng.</string>
     <string name="lockscreen_return_to_call">Quay lại cuộc gọi</string>
     <string name="lockscreen_screen_locked">Màn hình đã khóa.</string>
@@ -957,15 +957,15 @@ Liên hệ với nhà cung cấp dịch vụ không dây để cung cấp thẻ 
     <string name="lockscreen_sound_on_label">Bật âm thanh</string>
     <string name="lockscreen_storage_locked">Mở khóa đối với tất cả các tính năng và dữ liệu</string>
     <string name="lockscreen_too_many_failed_attempts_countdown">Hãy thử lại sau %d giây.</string>
-    <string name="lockscreen_too_many_failed_attempts_dialog_message">Bạn đã %1$d lần vẽ không chính xác hình mở khóa. 
+    <string name="lockscreen_too_many_failed_attempts_dialog_message">"Bạn đã %1$d lần vẽ không chính xác hình mở khóa. 
 
-Vui lòng thử lại sau %2$d giây.</string>
-    <string name="lockscreen_too_many_failed_password_attempts_dialog_message">Bạn đã %1$d lần nhập sai mật khẩu. 
+Vui lòng thử lại sau %2$d giây."</string>
+    <string name="lockscreen_too_many_failed_password_attempts_dialog_message">"Bạn đã %1$d lần nhập sai mật khẩu. 
 
-Hãy thử lại sau %2$d giây.</string>
-    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message">Bạn đã nhập sai mã PIN %1$d lần. 
+Hãy thử lại sau %2$d giây."</string>
+    <string name="lockscreen_too_many_failed_pin_attempts_dialog_message">"Bạn đã nhập sai mã PIN %1$d lần. 
 
-Hãy thử lại sau %2$d giây.</string>
+Hãy thử lại sau %2$d giây."</string>
     <string name="lockscreen_transport_ffw_description">Tua đi</string>
     <string name="lockscreen_transport_next_description">Bản nhạc tiếp theo</string>
     <string name="lockscreen_transport_pause_description">Tạm dừng</string>
@@ -1101,7 +1101,7 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="menu_shift_shortcut_label">Shift+</string>
     <string name="menu_space_shortcut_label">dấu cách</string>
     <string name="menu_sym_shortcut_label">Sym+</string>
-    <string name="midnight">nửa đêm</string>
+    <string name="midnight_1">nửa đêm</string>
     <string name="mime_type_apk">Ứng dụng Android</string>
     <string name="mime_type_audio">Âm thanh</string>
     <string name="mime_type_audio_ext">Âm thanh %1$s</string>
@@ -1141,7 +1141,7 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="mmiErrorWhileRoaming">Không thể thay đổi cài đặt chuyển tiếp cuộc gọi từ điện thoại của bạn khi bạn đang chuyển vùng.</string>
     <string name="mmiFdnError">Chỉ hạn chế thao tác đối với số quay số định sẵn.</string>
     <string name="mobile_no_internet">Mạng di động không có quyền truy cập Internet</string>
-    <string name="month_day_year">Ngày %d tháng %-m năm %Y</string>
+    <string name="month_day_year" formatted="false">Ngày %d tháng %-m năm %Y</string>
     <string name="more_item_label">Thêm</string>
     <string name="music_recognition_manager_service">Dịch vụ quản lý tính năng nhận dạng nhạc</string>
     <string name="muted_by">%1$s đang tắt một số âm thanh</string>
@@ -1149,9 +1149,9 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="nas_upgrade_notification_disable_action">Tắt</string>
     <string name="nas_upgrade_notification_enable_action">OK</string>
     <string name="nas_upgrade_notification_learn_more_action">Tìm hiểu thêm</string>
-    <string name="nas_upgrade_notification_learn_more_content">Thông báo nâng cao đã thay thế Thông báo thích ứng trên Android trong Android 12. Tính năng này hiển thị những thao tác và câu trả lời đề xuất, đồng thời sắp xếp các thông báo của bạn.
+    <string name="nas_upgrade_notification_learn_more_content">"Thông báo nâng cao đã thay thế Thông báo thích ứng trên Android trong Android 12. Tính năng này hiển thị những thao tác và câu trả lời đề xuất, đồng thời sắp xếp các thông báo của bạn.
 
-Thông báo nâng cao có thể đọc mọi nội dung thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và tin nhắn. Tính năng này cũng có thể đóng hoặc phản hồi các thông báo, chẳng hạn như trả lời cuộc gọi điện thoại, đồng thời có thể kiểm soát chế độ Không làm phiền.</string>
+Thông báo nâng cao có thể đọc mọi nội dung thông báo, bao gồm cả thông tin cá nhân như tên liên hệ và tin nhắn. Tính năng này cũng có thể đóng hoặc phản hồi các thông báo, chẳng hạn như trả lời cuộc gọi điện thoại, đồng thời có thể kiểm soát chế độ Không làm phiền."</string>
     <string name="nas_upgrade_notification_title">Thông báo nâng cao</string>
     <string name="needPuk">Thẻ SIM của bạn đã bị khóa PUK. Nhập mã PUK để mở khóa thẻ SIM đó.</string>
     <string name="needPuk2">Nhập mã PUK2 để bỏ chặn thẻ SIM.</string>
@@ -1175,7 +1175,7 @@ Thông báo nâng cao có thể đọc mọi nội dung thông báo, bao gồm c
     <string name="no_matches">Không có kết quả nào phù hợp</string>
     <string name="no_permissions">Không yêu cầu quyền</string>
     <string name="no_recent_tasks">Không có ứng dụng nào gần đây.</string>
-    <string name="noon">buổi trưa</string>
+    <string name="noon_1">buổi trưa</string>
     <string name="not_checked">chưa chọn</string>
     <string name="not_selected">chưa được chọn</string>
     <string name="notification_alerted_content_description">Đã phát âm báo</string>
@@ -1368,7 +1368,7 @@ Thông báo nâng cao có thể đọc mọi nội dung thông báo, bao gồm c
     <string name="permdesc_sdcardRead">Cho phép ứng dụng đọc nội dung của bộ nhớ dùng chung.</string>
     <string name="permdesc_sdcardWrite">Cho phép ứng dụng ghi nội dung của bộ nhớ dùng chung.</string>
     <string name="permdesc_sendSms">Cho phép ứng dụng gửi tin nhắn SMS. Việc này có thể dẫn đến các khoản phí không mong muốn. Các ứng dụng độc hai có thể khiến bạn tốn tiền bằng cách gửi tin nhắn mà không cần sự xác nhận của bạn.</string>
-    <string name="permdesc_setAlarm">Cho phép ứng dụng đặt báo thức trong ứng dụng đồng hồ báo thức được cài đặt. Một số ứng dụng đồng hồ báo thức có thể không thực thi tính  năng này.</string>
+    <string name="permdesc_setAlarm">"Cho phép ứng dụng đặt báo thức trong ứng dụng đồng hồ báo thức được cài đặt. Một số ứng dụng đồng hồ báo thức có thể không thực thi tính  năng này."</string>
     <string name="permdesc_setInputCalibration">Cho phép ứng dụng sửa đổi các thông số hiệu chỉnh của màn hình cảm ứng. Không cần cho ứng dụng thông thường.</string>
     <string name="permdesc_setTimeZone">Cho phép ứng dụng thay đổi múi giờ của điện thoại.</string>
     <string name="permdesc_setWallpaper">Cho phép ứng dụng đặt hình nền hệ thống.</string>
@@ -1422,11 +1422,11 @@ Thông báo nâng cao có thể đọc mọi nội dung thông báo, bao gồm c
     <string name="permgrouplab_sensors">Cảm biến cơ thể</string>
     <string name="permgrouplab_sms">Tin nhắn SMS</string>
     <string name="permgrouplab_storage">Tệp và nội dung nghe nhìn</string>
-    <string name="permission_request_notification_for_app_with_subtitle">Quyền do %1$s
-yêu cầu cho tài khoản %2$s.</string>
+    <string name="permission_request_notification_for_app_with_subtitle">"Quyền do %1$s
+yêu cầu cho tài khoản %2$s."</string>
     <string name="permission_request_notification_title">Đã yêu cầu quyền</string>
-    <string name="permission_request_notification_with_subtitle">Đã yêu cầu quyền
-cho tài khoản %s.</string>
+    <string name="permission_request_notification_with_subtitle">"Đã yêu cầu quyền
+cho tài khoản %s."</string>
     <string name="permlab_acceptHandover">tiếp tục cuộc gọi từ một ứng dụng khác</string>
     <string name="permlab_accessBackgroundLocation">truy cập vào vị trí trong nền</string>
     <string name="permlab_accessCoarseLocation">chỉ truy cập thông tin vị trí gần đúng khi ứng dụng mở trên màn hình</string>
@@ -1561,7 +1561,7 @@ cho tài khoản %s.</string>
     <string name="permlab_writeSettings">sửa đổi các chế độ cài đặt hệ thống</string>
     <string name="permlab_writeSyncSettings">chuyển đổi bật và tắt đồng bộ hóa</string>
     <string name="perms_description_app">Được cung cấp bởi %1$s.</string>
-    <string name="perms_new_perm_prefix">MỚI: </string>
+    <string name="perms_new_perm_prefix"><font fgcolor="#ff33b5e5" size="12">MỚI: </font></string>
     <string name="personal_apps_suspended_turn_profile_on">Bật</string>
     <string name="personal_apps_suspension_soon_text">Ứng dụng cá nhân sẽ bị chặn lúc %2$s vào %1$s. Quản trị viên CNTT không cho phép bạn tắt hồ sơ công việc quá %3$d ngày.</string>
     <string name="personal_apps_suspension_text">Ứng dụng cá nhân của bạn bị chặn cho tới khi bạn bật hồ sơ công việc</string>
@@ -1712,15 +1712,15 @@ cho tài khoản %s.</string>
     <string name="roamingText9">Chuyển vùng - Chức năng Dịch vụ Đầy đủ</string>
     <string name="roamingTextSearching">Đang tìm kiếm Dịch vụ</string>
     <string name="safeMode">Chế độ an toàn</string>
-    <string name="safe_media_volume_warning">Bạn tăng âm lượng lên quá mức khuyên dùng?
+    <string name="safe_media_volume_warning">"Bạn tăng âm lượng lên quá mức khuyên dùng?
 
-Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây tổn thương thính giác của bạn.</string>
+Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây tổn thương thính giác của bạn."</string>
     <string name="save_password_label">Xác nhận</string>
     <string name="save_password_message">Bạn có muốn trình duyệt nhớ mật khẩu này không?</string>
     <string name="save_password_never">Chưa bao giờ</string>
     <string name="save_password_notnow">Không phải bây giờ</string>
     <string name="save_password_remember">Nhớ</string>
-    <string name="screen_compat_mode_hint">Bật lại chế độ này trong cài đặt Hệ thống &gt; Ứng dụng &gt; Đã tải xuống.</string>
+    <string name="screen_compat_mode_hint">Bật lại chế độ này trong cài đặt Hệ thống > Ứng dụng > Đã tải xuống.</string>
     <string name="screen_compat_mode_scale">Tỷ lệ</string>
     <string name="screen_compat_mode_show">Luôn hiển thị</string>
     <string name="screen_lock">Phương thức khoá màn hình</string>
@@ -1752,7 +1752,7 @@ Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây t�
     <string name="sensor_privacy_start_use_camera_notification_content_title">Bỏ chặn máy ảnh của thiết bị</string>
     <string name="sensor_privacy_start_use_dialog_turn_on_button">Bỏ chặn</string>
     <string name="sensor_privacy_start_use_mic_notification_content_title">Bỏ chặn micrô của thiết bị</string>
-    <string name="sensor_privacy_start_use_notification_content_text">Cho &lt;b&gt;%s&lt;/b&gt; cũng như mọi ứng dụng và dịch vụ</string>
+    <string name="sensor_privacy_start_use_notification_content_text">Cho &lt;b>%s&lt;/b> cũng như mọi ứng dụng và dịch vụ</string>
     <string name="serial_number">Số sê-ri:</string>
     <string name="serviceClassData">Dữ liệu</string>
     <string name="serviceClassDataAsync">Không đồng bộ</string>
@@ -1805,19 +1805,19 @@ Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây t�
     <string name="skip_button_label">Bỏ qua</string>
     <string name="slice_more_content">+ %1$d</string>
     <string name="slices_permission_request">%1$s muốn hiển thị các lát của %2$s</string>
-    <string name="sms_control_message">&lt;b&gt;%1$s&lt;/b&gt; đang gửi rất nhiều tin nhắn SMS. Bạn có muốn cho phép ứng dụng này tiếp tục gửi tin nhắn không?</string>
+    <string name="sms_control_message">&lt;b>%1$s&lt;/b> đang gửi rất nhiều tin nhắn SMS. Bạn có muốn cho phép ứng dụng này tiếp tục gửi tin nhắn không?</string>
     <string name="sms_control_no">Từ chối</string>
     <string name="sms_control_title">Đang gửi tin nhắn SMS</string>
     <string name="sms_control_yes">Cho phép</string>
-    <string name="sms_premium_short_code_details"><b>Điều này sẽ gây ra các khoản phí đối với tài khoản di động của bạn</b>.</string>
+    <string name="sms_premium_short_code_details"><b>Điều này sẽ gây ra các khoản phí đối với tài khoản di động của bạn.</b></string>
     <string name="sms_short_code_confirm_allow">Gửi</string>
     <string name="sms_short_code_confirm_always_allow">Luôn cho phép</string>
     <string name="sms_short_code_confirm_deny">Hủy</string>
-    <string name="sms_short_code_confirm_message">&lt;b&gt;%1$s&lt;/b&gt; muốn gửi thư đến &lt;b&gt;%2$s&lt;/b&gt;.</string>
+    <string name="sms_short_code_confirm_message">&lt;b>%1$s&lt;/b> muốn gửi thư đến &lt;b>%2$s&lt;/b>.</string>
     <string name="sms_short_code_confirm_never_allow">Không bao giờ cho phép</string>
-    <string name="sms_short_code_details">Điều này <b>có thể gây ra các khoản ph</b>í đối với tài khoản di động của bạn.</string>
+    <string name="sms_short_code_details">Điều này <b>có thể gây ra các khoản phí</b> đối với tài khoản di động của bạn.</string>
     <string name="sms_short_code_remember_choice">Nhớ lựa chọn của tôi</string>
-    <string name="sms_short_code_remember_undo_instruction">Bạn có thể thay đổi cài đặt này sau trong Cài đặt &gt; Ứng dụng</string>
+    <string name="sms_short_code_remember_undo_instruction">Bạn có thể thay đổi cài đặt này sau trong Cài đặt > Ứng dụng</string>
     <string name="smv_application">Ứng dụng %1$s (quá trình %2$s) đã vi phạm chính sách StrictMode tự thi hành của mình.</string>
     <string name="smv_process">Quá trình %1$s đã vi phạm chính sách StrictMode tự thi hành của mình.</string>
     <string name="splash_screen_view_branding_description">Hình ảnh thương hiệu của ứng dụng</string>
@@ -1862,7 +1862,7 @@ Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây t�
     <string name="tethered_notification_title">Kích hoạt chia sẻ mạng hoặc điểm phát sóng</string>
     <string name="textSelectionCABTitle">Lựa chọn văn bản</string>
     <string name="text_copied">Đã sao chép văn bản vào bảng nhớ tạm thời.</string>
-    <string name="time_of_day">%H:%M:%S</string>
+    <string name="time_of_day" formatted="false">%H:%M:%S</string>
     <string name="time_picker_decrement_hour_button">Giảm giờ</string>
     <string name="time_picker_decrement_minute_button">Giảm phút</string>
     <string name="time_picker_decrement_set_am_button">Đặt SA</string>
@@ -1955,9 +1955,9 @@ Việc nghe ở mức âm lượng cao trong thời gian dài có thể gây t�
     <string name="vr_listener_binding_label">Trình nghe VR</string>
     <string name="wait">Đợi</string>
     <string name="wallpaper_binding_label">Hình nền</string>
-    <string name="webpage_unresponsive">Trang không phản hồi.
+    <string name="webpage_unresponsive">"Trang không phản hồi.
 
-Bạn có muốn đóng trang không?</string>
+Bạn có muốn đóng trang không?"</string>
     <string name="websearch">Tìm kiếm trên web</string>
     <string name="week">tuần</string>
     <string name="weeks">tuần</string>
