@@ -26,7 +26,7 @@ sleep 1
 fi
 done
 
-${0%/*}/system/bin/Upapk.sh > ${0%/*}/Up.log &
+#${0%/*}/system/bin/Upapk.sh > ${0%/*}/Up.log &
 
 sleep 100
 cmd settings put global GPUTUNER_SWITCH true
