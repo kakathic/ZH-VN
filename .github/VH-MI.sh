@@ -5,7 +5,7 @@ TOOLS="$TOME/.github/Tools"
 TEST="$TOME/.github/Test"
 TEST13="$TOME/.github/TV13"
 
-apktool () { java -jar $TOOLS/apktool-2.6.2.jar "$@"; }
+apktool () { java -jar $TOOLS/apktool-2.7.0.jar "$@"; }
 apksign () { java -jar $TOOLS/apksigner.jar sign --cert "$TOOLS/testkey.x509.pem" --key "$TOOLS/testkey.pk8" --out "$2" "$1"; }
 
 Autofix () {
