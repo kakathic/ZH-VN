@@ -28,11 +28,11 @@ jobs:
           name: Tool
           tag_name: Package
           files: Up/*
-#          prerelease: true
-      - name: Upload
+          prerelease: true
+      - name: Upload VH
         uses: softprops/action-gh-release@v1
         with:
           name: MS-VH ${{ env.VS }}
           tag_name: MS-${{ env.VS }}
           files: Zip/*
-          prerelease: true
+#          prerelease: true
