@@ -3,7 +3,6 @@
 TOME="$GITHUB_WORKSPACE"
 TOOLS="$TOME/.github/Tools"
 TEST="$TOME/.github/Test"
-TEST13="$TOME/.github/TV13"
 
 apktool () { java -jar $TOOLS/apktool_2.7.0.jar "$@"; }
 apksign () { java -jar $TOOLS/apksigner.jar sign --cert "$TOOLS/testkey.x509.pem" --key "$TOOLS/testkey.pk8" --out "$2" "$1"; }
@@ -20,6 +19,7 @@ apktool b -f -s $1 -o $TOME/Tmp/Zz.$1 >$TOME/log 2>>$TOME/log
 VA="$(grep -m1 Version: $GITHUB_WORKSPACE/Version.md | awk '{print $2}')"
 
 ListTM="Tmp
+Miui/nightmode
 Up
 pro
 notamlich
@@ -60,39 +60,6 @@ $(cat $TOME/log)
 "
 fi
 done
-
-cd $TOME/Split_lang
-
-for vad in *.apk; do
-
-cp -rf $TEST13/* $vad
-sed -i "s|Test.com.android|${vad%.*}|g" $vad/AndroidManifest.xml
-Xdauto "$vad" "$TOME/apk/Zz.13.$vad"
-spt=$(($spt + 1))
-
-if [ -s "$TOME/apk/Zz.13.$vad" ];then
-echo "$spt $vad" 
-else
-if [ "$(grep -cm1 'is already defined.' $TOME/log)" == 1 ];then
-while true; do
-Linktk=$(grep -m1 'is already defined.' $TOME/log | cut -d : -f2)
-Vbtk=$(grep -m1 'is already defined.' $TOME/log | awk '{print $6}')
-sotk=$(grep -nm1 "$Vbtk" $Linktk | cut -d : -f1)
-sed -i ''$sotk'd' $Linktk
-sed -i '/'$Vbtk'/d' $TOME/log
-[ "$(grep -cm1 'is already defined.' $TOME/log)" == 0 ] && break
-done
-Autofix
-fi
-
-[ -s "$TOME/apk/Zz.13.$vad" ] && echo "$spt $vad" || echo "Error: $vad
-
-$(cat $TOME/log)
-"
-fi
-done
-
-mkdir -p $TOME/Miui/nightmode
 
 cd $TOME/Miui
 cp -rf theme_values.xml nightmode
