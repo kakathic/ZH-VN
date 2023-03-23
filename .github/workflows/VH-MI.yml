@@ -5,6 +5,7 @@ on:
       - 'Language/**'
       - 'Miui/**'
       - '.github/Version.md'
+      - '.github/workflows/Main.yml'
   workflow_dispatch:
 jobs:
   build:
