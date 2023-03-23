@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8' ?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="abc_action_bar_home_description">Chỉ đường về nhà</string>
     <string name="abc_action_bar_up_description">Điều hướng lên trên</string>
@@ -119,7 +119,7 @@
     <string name="accessibility_detail_switch_disable">Không khả dụng</string>
     <string name="accessibility_detail_switch_off">Tắt</string>
     <string name="accessibility_detail_switch_on">Bật</string>
-    <string name="accessibility_display_daltonizer_preference_subtitle">Điều chỉnh cách các màu hiển thị trên thiết bị. Tùy chọn này có thể hữu ích khi bạn muốn:&lt;br/&gt;&lt;br/&gt; &lt;ol&gt; &lt;li&gt;&amp;nbsp;Xem các màu chính xác hơn&lt;/li&gt; &lt;li&gt;&amp;nbsp;Loại bỏ các màu để giúp bạn tập trung&lt;/li&gt; &lt;/ol&gt;</string>
+    <string name="accessibility_display_daltonizer_preference_subtitle">Điều chỉnh cách các màu hiển thị trên thiết bị. Tùy chọn này có thể hữu ích khi bạn muốn:&lt;br/>&lt;br/> &lt;ol> &lt;li>&amp;nbsp;Xem các màu chính xác hơn&lt;/li> &lt;li>&amp;nbsp;Loại bỏ các màu để giúp bạn tập trung&lt;/li> &lt;/ol></string>
     <string name="accessibility_display_daltonizer_preference_title">Chỉnh màu</string>
     <string name="accessibility_divider">Bộ chia chia đôi màn hình</string>
     <string name="accessibility_enter_hint">truy cập thiết bị</string>
@@ -140,12 +140,12 @@
     <string name="accessibility_floating_button_action_move_top_left">Chuyển lên trên cùng bên trái</string>
     <string name="accessibility_floating_button_action_move_top_right">Chuyển lên trên cùng bên phải</string>
     <string name="accessibility_floating_button_docking_tooltip">Di chuyển nút sang cạnh để ẩn nút tạm thời</string>
-    <string name="accessibility_floating_button_migration_tooltip">Nút hỗ trợ tiếp cận đã thay thế cử chỉ hỗ trợ tiếp cận
+    <string name="accessibility_floating_button_migration_tooltip">"Nút hỗ trợ tiếp cận đã thay thế cử chỉ hỗ trợ tiếp cận
 
-<annotation id="link">Xem chế độ cài đặ</annotation>t</string>
-    <string name="accessibility_floating_button_switch_migration_tooltip">Bạn có thể chuyển từ cử chỉ hỗ trợ tiếp cận sang nút hỗ trợ tiếp cận
+"<annotation id="link">Xem chế độ cài đặt</annotation></string>
+    <string name="accessibility_floating_button_switch_migration_tooltip">"Bạn có thể chuyển từ cử chỉ hỗ trợ tiếp cận sang nút hỗ trợ tiếp cận
 
-<annotation id="link">Cài đặ</annotation>t</string>
+"<annotation id="link">Cài đặt</annotation></string>
     <string name="accessibility_gps_acquiring">Nhận GPS.</string>
     <string name="accessibility_gps_enabled">Đã bật GPS.</string>
     <string name="accessibility_home">Trang chủ</string>
@@ -367,9 +367,9 @@
     <string name="airplane_mode">Chế độ máy bay</string>
     <string name="alarm_template">lúc %1$s</string>
     <string name="alarm_template_far">vào %1$s</string>
-    <string name="alarms_and_reminders_footer_title">Cho phép ứng dụng này đặt chuông báo và lên lịch các hành động cần chính xác về thời gian. Tùy chọn này cho phép ứng dụng chạy ở chế độ nền và có thể làm tiêu hao nhiều pin.
+    <string name="alarms_and_reminders_footer_title">"Cho phép ứng dụng này đặt chuông báo và lên lịch các hành động cần chính xác về thời gian. Tùy chọn này cho phép ứng dụng chạy ở chế độ nền và có thể làm tiêu hao nhiều pin.
 
-Nếu không cấp quyền này, các chuông báo và sự kiện theo thời gian do ứng dụng này lên lịch sẽ không hoạt động.</string>
+Nếu không cấp quyền này, các chuông báo và sự kiện theo thời gian do ứng dụng này lên lịch sẽ không hoạt động."</string>
     <string name="alarms_and_reminders_label">Chuông báo và lời nhắc</string>
     <string name="alarms_and_reminders_switch_title">Cho phép đặt chuông báo và lời nhắc</string>
     <string name="alarms_and_reminders_title">Chuông báo và lời nhắc</string>
@@ -440,8 +440,8 @@ Nếu không cấp quyền này, các chuông báo và sự kiện theo thời g
     <string name="biometric_dialog_authenticated">Đã xác thực</string>
     <string name="biometric_dialog_confirm">Xác nhận</string>
     <string name="biometric_dialog_credential_attempts_before_wipe">Thử lại. Lần thử %1$d/%2$d.</string>
-    <string name="biometric_dialog_credential_too_many_attempts">Bạn đã nhập sai quá nhiều lần.
-Hãy thử lại sau %d giây.</string>
+    <string name="biometric_dialog_credential_too_many_attempts">"Bạn đã nhập sai quá nhiều lần.
+Hãy thử lại sau %d giây."</string>
     <string name="biometric_dialog_empty_space_description">Nhấn để hủy quá trình xác thực</string>
     <string name="biometric_dialog_face_icon_description_authenticated">Đã xác thực khuôn mặt</string>
     <string name="biometric_dialog_face_icon_description_authenticating">Đang tìm khuôn mặt của bạn</string>
@@ -540,21 +540,21 @@ Hãy thử lại sau %d giây.</string>
     <string name="bluetooth_sap_profile_summary_connected">Đã kết nối với SAP</string>
     <string name="bluetooth_sap_profile_summary_use_for">Sử dụng để truy cập SIM</string>
     <string name="bluetooth_select_a2dp_codec_bits_per_sample">Số bit âm thanh Bluetooth mỗi mẫu</string>
-    <string name="bluetooth_select_a2dp_codec_bits_per_sample_dialog_title">Kích hoạt chế độ chọn codec
-âm thanh Bluetooth: Số bit trên mỗi mẫu</string>
+    <string name="bluetooth_select_a2dp_codec_bits_per_sample_dialog_title">"Kích hoạt chế độ chọn codec
+âm thanh Bluetooth: Số bit trên mỗi mẫu"</string>
     <string name="bluetooth_select_a2dp_codec_channel_mode">Chế độ kênh âm thanh Bluetooth</string>
-    <string name="bluetooth_select_a2dp_codec_channel_mode_dialog_title">Kích hoạt chế độ chọn codec
-âm thanh Bluetooth: Chế độ kênh</string>
+    <string name="bluetooth_select_a2dp_codec_channel_mode_dialog_title">"Kích hoạt chế độ chọn codec
+âm thanh Bluetooth: Chế độ kênh"</string>
     <string name="bluetooth_select_a2dp_codec_ldac_playback_quality">Codec LDAC âm thanh qua Bluetooth: Chất lượng phát</string>
-    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">Kích hoạt chế độ chọn codec LDAC
-âm thanh Bluetooth: Chất lượng phát</string>
+    <string name="bluetooth_select_a2dp_codec_ldac_playback_quality_dialog_title">"Kích hoạt chế độ chọn codec LDAC
+âm thanh Bluetooth: Chất lượng phát"</string>
     <string name="bluetooth_select_a2dp_codec_sample_rate">Tốc độ lấy mẫu âm thanh Bluetooth</string>
-    <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">Kích hoạt chế độ chọn codec
-âm thanh Bluetooth: Tần số lấy mẫu</string>
+    <string name="bluetooth_select_a2dp_codec_sample_rate_dialog_title">"Kích hoạt chế độ chọn codec
+âm thanh Bluetooth: Tần số lấy mẫu"</string>
     <string name="bluetooth_select_a2dp_codec_streaming_label">Truyền trực tuyến: %1$s</string>
     <string name="bluetooth_select_a2dp_codec_type">Codec âm thanh Bluetooth</string>
-    <string name="bluetooth_select_a2dp_codec_type_dialog_title">Kích hoạt chế độ chọn codec
-âm thanh Bluetooth</string>
+    <string name="bluetooth_select_a2dp_codec_type_dialog_title">"Kích hoạt chế độ chọn codec
+âm thanh Bluetooth"</string>
     <string name="bluetooth_select_a2dp_codec_type_help_info">Trạng thái chuyển sang màu xám có nghĩa là điện thoại hoặc tai nghe không hỗ trợ</string>
     <string name="bluetooth_select_avrcp_version_dialog_title">Chọn phiên bản Bluetooth AVRCP</string>
     <string name="bluetooth_select_avrcp_version_string">Phiên bản Bluetooth AVRCP</string>
@@ -703,10 +703,10 @@ Hãy thử lại sau %d giây.</string>
     <string name="controls_seeding_in_progress">Đang tải các đề xuất</string>
     <string name="controls_structure_tooltip">Vuốt để xem thêm</string>
     <string name="controls_tile_locked">Đã khóa thiết bị</string>
-    <string name="convert_to_fbe_warning">Chuyển đổi phân vùng dữ liệu sang chế độ mã hóa dựa trên tệp.
+    <string name="convert_to_fbe_warning">"Chuyển đổi phân vùng dữ liệu sang chế độ mã hóa dựa trên tệp.
  !!Cảnh báo!! Tính năng này sẽ xóa tất cả dữ liệu của bạn.
  Tính năng này trong giai đoạn alpha và có thể không hoạt động đúng cách.
- Nhấn 'Xóa và chuyển đổi...' để tiếp tục.</string>
+ Nhấn 'Xóa và chuyển đổi...' để tiếp tục."</string>
     <string name="convert_to_file_encryption">Chuyển đổi sang mã hóa tệp</string>
     <string name="convert_to_file_encryption_done">Đã mã hóa tệp</string>
     <string name="convert_to_file_encryption_enabled">Chuyển đổi...</string>
@@ -733,9 +733,9 @@ Hãy thử lại sau %d giây.</string>
     <string name="data_connection_no_internet">Không có Internet</string>
     <string name="data_connection_roaming">Chuyển vùng</string>
     <string name="data_saver">Trình tiết kiệm dữ liệu</string>
-    <string name="data_usage_disabled_dialog">Dữ liệu đã đạt đến mức giới hạn mà bạn đã đặt. Bạn hiện không sử dụng dữ liệu di động nữa.
+    <string name="data_usage_disabled_dialog">"Dữ liệu đã đạt đến mức giới hạn mà bạn đã đặt. Bạn hiện không sử dụng dữ liệu di động nữa.
 
-Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</string>
+Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu."</string>
     <string name="data_usage_disabled_dialog_3g_title">Đã tạm dừng dữ liệu 2G-3G</string>
     <string name="data_usage_disabled_dialog_4g_title">Đã tạm dừng dữ liệu 4G</string>
     <string name="data_usage_disabled_dialog_enable">Tiếp tục</string>
@@ -744,9 +744,9 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
     <string name="data_usage_ota">Bản cập nhật hệ thống</string>
     <string name="data_usage_uninstalled_apps">Ứng dụng đã xóa</string>
     <string name="data_usage_uninstalled_apps_users">Ứng dụng và người dùng bị xóa</string>
-    <string name="date_picker_label_day"></string>
-    <string name="date_picker_label_month"></string>
-    <string name="date_picker_label_year"></string>
+    <string name="date_picker_label_day" />
+    <string name="date_picker_label_month" />
+    <string name="date_picker_label_year" />
     <string name="date_picker_lunar">Lịch Truyền thống Trung Quốc</string>
     <string name="date_time_picker_dialog_title">Đặt ngày và giờ</string>
     <string name="days_timestamp">%1$s ngày trước</string>
@@ -818,7 +818,7 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
     <string name="drag_to_remove_tiles">Kéo vào đây để xóa</string>
     <string name="early_morning">Buổi sáng</string>
     <string name="emergency_call_string">Khẩn cấp</string>
-    <string name="empty"></string>
+    <string name="empty" />
     <string name="empty_shade_text">Không có thông báo nào</string>
     <string name="empty_status">Tối nay nói chuyện nhé!</string>
     <string name="empty_user_name">Bạn bè</string>
@@ -876,22 +876,22 @@ Nếu tiếp tục, bạn có thể bị tính phí sử dụng dữ liệu.</st
     <string name="face_unlock_success">Mở khóa thành công</string>
     <string name="face_unlock_swipe_up_retry">Trượt lên để thử lại</string>
     <string name="failed_to_open_app_settings_toast">Không thể mở cài đặt cho %1$s</string>
-    <string name="feedback_alerted">Hệ thống đã tự động &lt;b&gt;thay đổi thành Mặc định&lt;/b&gt; theo tầm quan trọng của thông báo này.</string>
-    <string name="feedback_demoted">Hệ thống đã tự động &lt;b&gt;giảm mức độ quan trọng&lt;/b&gt; của thông báo này trong ngăn thông báo.</string>
+    <string name="feedback_alerted">Hệ thống đã tự động &lt;b>thay đổi thành Mặc định&lt;/b> theo tầm quan trọng của thông báo này.</string>
+    <string name="feedback_demoted">Hệ thống đã tự động &lt;b>giảm mức độ quan trọng&lt;/b> của thông báo này trong ngăn thông báo.</string>
     <string name="feedback_ok">OK</string>
-    <string name="feedback_promoted">Hệ thống đã tự động &lt;b&gt;tăng mức độ quan trọng&lt;/b&gt; của thông báo này trong ngăn thông báo.</string>
+    <string name="feedback_promoted">Hệ thống đã tự động &lt;b>tăng mức độ quan trọng&lt;/b> của thông báo này trong ngăn thông báo.</string>
     <string name="feedback_prompt">Chia sẻ ý kiến phản hồi của bạn với nhà phát triển. Thông tin này có chính xác không?</string>
     <string name="feedback_response">Cảm ơn bạn đã phản hồi!</string>
-    <string name="feedback_silenced">Hệ thống đã tự động &lt;b&gt;thay đổi thành Im lặng&lt;/b&gt; theo tầm quan trọng của thông báo này.</string>
+    <string name="feedback_silenced">Hệ thống đã tự động &lt;b>thay đổi thành Im lặng&lt;/b> theo tầm quan trọng của thông báo này.</string>
     <string name="fingerprint_add_text">Giao diện vân tay đã được cập nhật. Hãy thêm vân tay lại.</string>
     <string name="fingerprint_add_title">Thêm vân tay</string>
     <string name="fingerprint_again_identified_msg">Vân tay của bạn được kích hoạt. Hãy sử dụng để mở khóa thiết bị, hoặc nhập mật khẩu.</string>
-    <string name="fingerprint_again_identified_msg_password">Vân tay của bạn được kích hoạt.
-Hãy sử dụng để mở khóa thiết bị, hoặc nhập mật khẩu.</string>
-    <string name="fingerprint_again_identified_msg_pattern">Vân tay của bạn được kích hoạt.
-Hãy sử dụng để mở khóa thiết bị, hoặc vẽ hình mở khóa.</string>
-    <string name="fingerprint_again_identified_msg_pin">Vân tay của bạn được kích hoạt.
-Hãy sử dụng để mở khóa thiết bị, hoặc nhập mã PIN.</string>
+    <string name="fingerprint_again_identified_msg_password">"Vân tay của bạn được kích hoạt.
+Hãy sử dụng để mở khóa thiết bị, hoặc nhập mật khẩu."</string>
+    <string name="fingerprint_again_identified_msg_pattern">"Vân tay của bạn được kích hoạt.
+Hãy sử dụng để mở khóa thiết bị, hoặc vẽ hình mở khóa."</string>
+    <string name="fingerprint_again_identified_msg_pin">"Vân tay của bạn được kích hoạt.
+Hãy sử dụng để mở khóa thiết bị, hoặc nhập mã PIN."</string>
     <string name="fingerprint_dialog_cant_recognize_fp_use_screenlock">Không thể nhận dạng vân tay. Hãy dùng phương thức khóa màn hình.</string>
     <string name="fingerprint_dialog_touch_sensor">Chạm vào cảm biến vân tay</string>
     <string name="fingerprint_dialog_use_fingerprint">Hãy dùng vân tay để tiếp tục</string>
@@ -901,12 +901,12 @@ Hãy sử dụng để mở khóa thiết bị, hoặc nhập mã PIN.</string>
     <string name="fingerprint_enter_second_psw_title">Nhập mật khẩu Không gian thứ hai</string>
     <string name="fingerprint_not_identified_msg">Quá nhiều lần không thành công. Nhập mật khẩu ngay hoặc thử sử dụng vân tay của bạn trong vài phút nữa.</string>
     <string name="fingerprint_not_identified_msg_lock">Quá nhiều lần thử không thành công. Nhập mật khẩu ngay.</string>
-    <string name="fingerprint_not_identified_msg_password">Quá nhiều lần thử không thành công.
-Nhập mật khẩu để mở khóa.</string>
-    <string name="fingerprint_not_identified_msg_pattern">Quá nhiều lần thử không thành công.
-Vẽ hình để mở khóa.</string>
-    <string name="fingerprint_not_identified_msg_pin">Quá nhiều lần thử không thành công.
-Nhập mã PIN để mở khóa.</string>
+    <string name="fingerprint_not_identified_msg_password">"Quá nhiều lần thử không thành công.
+Nhập mật khẩu để mở khóa."</string>
+    <string name="fingerprint_not_identified_msg_pattern">"Quá nhiều lần thử không thành công.
+Vẽ hình để mở khóa."</string>
+    <string name="fingerprint_not_identified_msg_pin">"Quá nhiều lần thử không thành công.
+Nhập mã PIN để mở khóa."</string>
     <string name="fingerprint_not_identified_title">Nhập mật khẩu</string>
     <string name="fingerprint_try_again_msg">Không thể xác minh vân tay, hãy thử lại.</string>
     <string name="fingerprint_try_again_text">Thử lại</string>
@@ -933,7 +933,7 @@ Nhập mã PIN để mở khóa.</string>
     <string name="fmt_date_timezone">D z</string>
     <string name="fmt_date_year">yyyy</string>
     <string name="fmt_time">T</string>
-    <string name="fmt_time_12hour">h 'giờ'</string>
+    <string name="fmt_time_12hour">"h 'giờ'"</string>
     <string name="fmt_time_12hour_minute">h:mm</string>
     <string name="fmt_time_12hour_minute_pm">h:mm a</string>
     <string name="fmt_time_12hour_minute_second">h:mm:ms</string>
@@ -941,16 +941,16 @@ Nhập mã PIN để mở khóa.</string>
     <string name="fmt_time_12hour_minute_second_millis_pm">h:mm:ss.S a</string>
     <string name="fmt_time_12hour_minute_second_pm">h:mm:ss a</string>
     <string name="fmt_time_12hour_pm">ha</string>
-    <string name="fmt_time_24hour">H 'giờ'</string>
+    <string name="fmt_time_24hour">"H 'giờ'"</string>
     <string name="fmt_time_24hour_minute">H:mm</string>
     <string name="fmt_time_24hour_minute_second">H:mm:ss</string>
     <string name="fmt_time_24hour_minute_second_millis">H:mm:ss.S</string>
-    <string name="fmt_time_millis">S'mili giây'</string>
-    <string name="fmt_time_minute">m'phút'</string>
-    <string name="fmt_time_minute_second">m'phút' s'giây'</string>
-    <string name="fmt_time_minute_second_millis">m'phút' s.S'giây'</string>
-    <string name="fmt_time_second">s'giây'</string>
-    <string name="fmt_time_second_millis">s.S'giây'</string>
+    <string name="fmt_time_millis">"S'mili giây'"</string>
+    <string name="fmt_time_minute">"m'phút'"</string>
+    <string name="fmt_time_minute_second">"m'phút' s'giây'"</string>
+    <string name="fmt_time_minute_second_millis">"m'phút' s.S'giây'"</string>
+    <string name="fmt_time_second">"s'giây'"</string>
+    <string name="fmt_time_second_millis">"s.S'giây'"</string>
     <string name="fmt_time_timezone">T z</string>
     <string name="fmt_timezone">z</string>
     <string name="fmt_weekday">W</string>
@@ -973,7 +973,7 @@ Nhập mã PIN để mở khóa.</string>
     <string name="force_rtl_layout_all_locales_summary">Buộc hướng bố cục màn hình phải sang trái cho tất cả ngôn ngữ</string>
     <string name="forced_resizable_secondary_display">Ứng dụng có thể không hoạt động trên màn hình phụ.</string>
     <string name="forget_password_string">Quên mật khẩu</string>
-    <string name="forget_password_string_for_esim"><u>Quên mã PU</u>K</string>
+    <string name="forget_password_string_for_esim"><u>Quên mã PUK</u></string>
     <string name="friday">Thứ sáu</string>
     <string name="friday_short">Th 6</string>
     <string name="friday_shortest">Th 6</string>
@@ -981,8 +981,8 @@ Nhập mã PIN để mở khóa.</string>
     <string name="fs_gesture_back_ready_title">Quay lại</string>
     <string name="fs_gesture_final_over">Hoàn tất</string>
     <string name="fs_gesture_final_restart">Một lần nữa</string>
-    <string name="fs_gesture_final_see_more">Xem thêm demo trong Cài đặt &gt; Màn hình chính &gt; Điều hướng hệ thống</string>
-    <string name="fs_gesture_final_summary">Bạn có thể chuyển lại sử dụng các nút trong Cài đặt &gt; Màn hình tràn cạnh</string>
+    <string name="fs_gesture_final_see_more">Xem thêm demo trong Cài đặt > Màn hình chính > Điều hướng hệ thống</string>
+    <string name="fs_gesture_final_summary">Bạn có thể chuyển lại sử dụng các nút trong Cài đặt > Màn hình tràn cạnh</string>
     <string name="fs_gesture_final_title">Xin chúc mừng!</string>
     <string name="fs_gesture_finish">Tuyệt vời!</string>
     <string name="fs_gesture_left_back_ready_summary">Vuốt qua phải từ cạnh</string>
@@ -1058,11 +1058,11 @@ Nhập mã PIN để mở khóa.</string>
     <string name="high_temp_alarm_notify_message">Đã xảy ra sự cố khi sạc thiết bị này. Hãy rút phích cắm bộ chuyển đổi điện và cẩn thận vì dây cáp có thể nóng.</string>
     <string name="high_temp_alarm_title">Rút phích cắm bộ sạc</string>
     <string name="high_temp_dialog_help_text">Xem các bước chăm sóc</string>
-    <string name="high_temp_dialog_message">Điện thoại của bạn sẽ tự động nguội dần. Bạn vẫn có thể sử dụng điện thoại, nhưng điện thoại có thể chạy chậm hơn. 
+    <string name="high_temp_dialog_message">"Điện thoại của bạn sẽ tự động nguội dần. Bạn vẫn có thể sử dụng điện thoại, nhưng điện thoại có thể chạy chậm hơn. 
 
-Sau khi đã nguội, điện thoại sẽ chạy bình thường.</string>
-    <string name="high_temp_notif_message">Một số tính năng bị hạn chế trong khi điện thoại nguội dần.
-Hãy nhấn để biết thêm thông tin</string>
+Sau khi đã nguội, điện thoại sẽ chạy bình thường."</string>
+    <string name="high_temp_notif_message">"Một số tính năng bị hạn chế trong khi điện thoại nguội dần.
+Hãy nhấn để biết thêm thông tin"</string>
     <string name="high_temp_title">Điện thoại đang nóng lên</string>
     <string name="home">Trang chủ cài đặt</string>
     <string name="how_to_back_home">Vào Màn hình chính</string>
@@ -1088,8 +1088,8 @@ Hãy nhấn để biết thêm thông tin</string>
     <string name="incorrect_pincode">Mã PIN không chính xác</string>
     <string name="incorrect_pukcode">Mã PUK không chính xác</string>
     <string name="inline_block_button">Chặn</string>
-    <string name="inline_blocking_helper">Bạn thường bỏ qua những thông báo này. 
-Tiếp tục hiển thị thông báo?</string>
+    <string name="inline_blocking_helper">"Bạn thường bỏ qua những thông báo này. 
+Tiếp tục hiển thị thông báo?"</string>
     <string name="inline_deliver_silently_button">Gửi mà không phát âm báo</string>
     <string name="inline_done_button">Xong</string>
     <string name="inline_keep_button">Tiếp tục hiển thị</string>
@@ -1127,15 +1127,15 @@ Tiếp tục hiển thị thông báo?</string>
     <string name="instant_apps_message_with_help">Ứng dụng được mở mà không cần cài đặt. Nhấn để tìm hiểu thêm.</string>
     <string name="instant_apps_title">%1$s đang chạy</string>
     <string name="interruption_level_alarms">Chỉ chuông báo</string>
-    <string name="interruption_level_alarms_twoline">Chỉ
-báo thức</string>
+    <string name="interruption_level_alarms_twoline">"Chỉ
+báo thức"</string>
     <string name="interruption_level_none">Hoàn toàn tắt tiếng</string>
-    <string name="interruption_level_none_twoline">Hoàn toàn
-tắt tiếng</string>
+    <string name="interruption_level_none_twoline">"Hoàn toàn
+tắt tiếng"</string>
     <string name="interruption_level_none_with_warning">Tắt tiếng hoàn toàn. Cài đặt này cũng sẽ tắt tiếng trình đọc màn hình.</string>
     <string name="interruption_level_priority">Chỉ cho các mục ưu tiên</string>
-    <string name="interruption_level_priority_twoline">Chỉ
-ưu tiên</string>
+    <string name="interruption_level_priority_twoline">"Chỉ
+ưu tiên"</string>
     <string name="invalid_charger">Không thể sạc qua USB. Hãy sử dụng bộ sạc đi kèm với thiết bị.</string>
     <string name="invalid_charger_text">Sử dụng bộ sạc đi kèm với thiết bị</string>
     <string name="invalid_charger_title">Không thể sạc qua USB</string>
@@ -1143,7 +1143,7 @@ tắt tiếng</string>
     <string name="item_view_role_description">Thẻ</string>
     <string name="keep_screen_on">Không khóa màn hình</string>
     <string name="keep_screen_on_summary">Màn hình sẽ không bao giờ chuyển sang chế độ ngủ khi sạc</string>
-    <string name="keyboard_key">"</string>
+    <string name="keyboard_key">\"</string>
     <string name="keyboard_key_back">Quay lại</string>
     <string name="keyboard_key_backspace">Backspace</string>
     <string name="keyboard_key_button_template">Nút %1$s</string>
@@ -1213,8 +1213,8 @@ tắt tiếng</string>
     <string name="keyguard_indication_charging_time_wireless">%2$s • Đang sạc không dây • Sẽ đầy sau %1$s</string>
     <string name="keyguard_indication_trust_disabled">Thiết bị sẽ vẫn bị khóa cho tới khi bạn mở khóa theo cách thủ công</string>
     <string name="keyguard_indication_trust_unlocked">Luôn được TrustAgent mở khóa</string>
-    <string name="keyguard_indication_trust_unlocked_plugged_in">%1$s
-%2$s</string>
+    <string name="keyguard_indication_trust_unlocked_plugged_in">"%1$s
+%2$s"</string>
     <string name="keyguard_instructions_when_pattern_disabled">Nhấn vào Menu để mở khóa.</string>
     <string name="keyguard_invalid_sim_puk_hint">Mã PUK phải chứa %1$d chữ số.</string>
     <string name="keyguard_left_mi_wallet">Mi Wallet</string>
@@ -1235,10 +1235,10 @@ tắt tiếng</string>
     <string name="keyguard_password_enter_pin_prompt">Mã PIN mới của SIM</string>
     <string name="keyguard_password_enter_puk_code">Nhập mã PIN mới và mã PUK của SIM</string>
     <string name="keyguard_password_enter_puk_prompt">Mã PUK của SIM</string>
-    <string name="keyguard_password_entry_touch_hint"><font size="17">Chạm để nhập mật khẩ</font>u</string>
+    <string name="keyguard_password_entry_touch_hint"><font size="17">Chạm để nhập mật khẩu</font></string>
     <string name="keyguard_password_wrong_pin_code">Mã PIN không chính xác.</string>
-    <string name="keyguard_permanent_disabled_sim_instructions">Thẻ SIM của bạn đã bị vô hiệu hóa vĩnh viễn.
- Hãy liên hệ với nhà cung cấp dịch vụ không dây của bạn để lấy thẻ SIM khác.</string>
+    <string name="keyguard_permanent_disabled_sim_instructions">"Thẻ SIM của bạn đã bị vô hiệu hóa vĩnh viễn.
+ Hãy liên hệ với nhà cung cấp dịch vụ không dây của bạn để lấy thẻ SIM khác."</string>
     <string name="keyguard_permanent_disabled_sim_message_short">Thẻ SIM không sử dụng được.</string>
     <string name="keyguard_plugged_in">%s • Đang sạc</string>
     <string name="keyguard_plugged_in_charging_fast">%s • Đang sạc nhanh</string>
@@ -1261,9 +1261,9 @@ tắt tiếng</string>
     <string name="kg_face_not_recognized">Không nhận dạng được</string>
     <string name="kg_failed_attempts_almost_at_erase_profile">Bạn đã mở khóa điện thoại sai %1$d lần. Sau %2$d lần mở khóa không thành công nữa, hồ sơ công việc sẽ bị xóa, tức là tất cả dữ liệu hồ sơ sẽ bị xóa.</string>
     <string name="kg_failed_attempts_almost_at_erase_user">Bạn đã mở khóa điện thoại sai %1$d lần. Sau %2$d lần mở khóa không thành công nữa, người dùng này sẽ bị xóa, tức là tất cả dữ liệu người dùng sẽ bị xóa.</string>
-    <string name="kg_failed_attempts_almost_at_login">Bạn đã vẽ không chính xác hình mở khóa %1$d lần. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng tài khoản email.
+    <string name="kg_failed_attempts_almost_at_login">"Bạn đã vẽ không chính xác hình mở khóa %1$d lần. Sau %2$d lần thử không thành công nữa, bạn sẽ được yêu cầu mở khóa điện thoại bằng tài khoản email.
 
- Hãy thử lại sau %3$d giây.</string>
+ Hãy thử lại sau %3$d giây."</string>
     <string name="kg_failed_attempts_almost_at_wipe">Bạn đã mở khóa điện thoại sai %1$d lần. Sau %2$d lần mở khóa không thành công nữa, điện thoại này sẽ được đặt lại, tức là tất cả dữ liệu của điện thoại sẽ bị xóa.</string>
     <string name="kg_failed_attempts_now_erasing_profile">Bạn đã mở khóa điện thoại sai %d lần. Hồ sơ công việc sẽ bị xóa, tức là tất cả dữ liệu hồ sơ sẽ bị xóa.</string>
     <string name="kg_failed_attempts_now_erasing_user">Bạn đã mở khóa điện thoại sai %d lần. Người dùng này sẽ bị xóa, tức là tất cả dữ liệu người dùng sẽ bị xóa.</string>
@@ -1296,20 +1296,20 @@ tắt tiếng</string>
     <string name="kg_prompt_reason_user_request">Thiết bị đã bị khóa theo cách thủ công</string>
     <string name="kg_puk_enter_pin_hint">Nhập mã PIN mong muốn</string>
     <string name="kg_puk_enter_puk_hint">SIM hiện bị vô hiệu hóa. Hãy nhập mã PUK để tiếp tục. Liên hệ với nhà cung cấp dịch vụ để biết chi tiết.</string>
-    <string name="kg_puk_enter_puk_hint_multi">SIM "%1$s" hiện bị vô hiệu hóa. Hãy nhập mã PUK để tiếp tục. Liên hệ với nhà cung cấp dịch vụ để biết chi tiết.</string>
+    <string name="kg_puk_enter_puk_hint_multi">SIM \"%1$s\" hiện bị vô hiệu hóa. Hãy nhập mã PUK để tiếp tục. Liên hệ với nhà cung cấp dịch vụ để biết chi tiết.</string>
     <string name="kg_sim_lock_esim_instructions">%1$s Tắt eSIM để sử dụng thiết bị khi không có dịch vụ di động.</string>
     <string name="kg_sim_pin_instructions">Nhập mã PIN của SIM.</string>
-    <string name="kg_sim_pin_instructions_multi">Nhập mã PIN của SIM dành cho "%1$s".</string>
+    <string name="kg_sim_pin_instructions_multi">Nhập mã PIN của SIM dành cho \"%1$s\".</string>
     <string name="kg_sim_unlock_progress_dialog_message">Đang mở khóa thẻ SIM…</string>
-    <string name="kg_too_many_failed_password_attempts_dialog_message">Bạn đã nhập sai mật khẩu %1$d lần. 
+    <string name="kg_too_many_failed_password_attempts_dialog_message">"Bạn đã nhập sai mật khẩu %1$d lần. 
 
-Hãy thử lại sau %2$d giây.</string>
-    <string name="kg_too_many_failed_pattern_attempts_dialog_message">Bạn đã vẽ không chính xác hình mở khóa %1$d lần. 
+Hãy thử lại sau %2$d giây."</string>
+    <string name="kg_too_many_failed_pattern_attempts_dialog_message">"Bạn đã vẽ không chính xác hình mở khóa %1$d lần. 
 
-Hãy thử lại sau %2$d giây.</string>
-    <string name="kg_too_many_failed_pin_attempts_dialog_message">Bạn đã nhập sai mã PIN %1$d lần. 
+Hãy thử lại sau %2$d giây."</string>
+    <string name="kg_too_many_failed_pin_attempts_dialog_message">"Bạn đã nhập sai mã PIN %1$d lần. 
 
-Hãy thử lại sau %2$d giây.</string>
+Hãy thử lại sau %2$d giây."</string>
     <string name="kg_wrong_password">Mật khẩu sai</string>
     <string name="kg_wrong_pattern">Hình mở khóa không chính xác</string>
     <string name="kg_wrong_pin">Mã PIN sai</string>
@@ -1372,10 +1372,10 @@ Hãy thử lại sau %2$d giây.</string>
     <string name="lock_screen_carrier_airplane_mode_on">Chế độ máy bay</string>
     <string name="lock_screen_date">EEEE, d MMMM</string>
     <string name="lock_screen_date_12">EEEE, d MMMM</string>
-    <string name="lock_screen_date_two_lines">EEEE
-d MMMM</string>
-    <string name="lock_screen_date_two_lines_12">EEEE
-d MMMM</string>
+    <string name="lock_screen_date_two_lines">"EEEE
+d MMMM"</string>
+    <string name="lock_screen_date_two_lines_12">"EEEE
+d MMMM"</string>
     <string name="lock_screen_magazine_default_content">Hình nền đẹp được làm mới mỗi ngày</string>
     <string name="lock_screen_magazine_default_title">Khóa tạp chí</string>
     <string name="lock_screen_magazine_global_button_text">Thêm</string>
@@ -1454,14 +1454,14 @@ d MMMM</string>
     <string name="miui_keyguard_ble_unlock_succeed_msg">Mở khóa bằng thiết bị Bluetooth</string>
     <string name="miui_lock_screen_date">EEEE dd/MM</string>
     <string name="miui_lock_screen_date_12">EEEE dd/MM</string>
-    <string name="miui_lock_screen_date_two_lines">EEEE
-dd/MM</string>
-    <string name="miui_lock_screen_date_two_lines_12">EEEE
-dd/MM</string>
-    <string name="miui_lock_screen_large_date">EEE
-dd/MM</string>
-    <string name="miui_lock_screen_large_date_12">EEE
-dd/MM</string>
+    <string name="miui_lock_screen_date_two_lines">"EEEE
+dd/MM"</string>
+    <string name="miui_lock_screen_date_two_lines_12">"EEEE
+dd/MM"</string>
+    <string name="miui_lock_screen_large_date">"EEE
+dd/MM"</string>
+    <string name="miui_lock_screen_large_date_12">"EEE
+dd/MM"</string>
     <string name="miui_notification_menu_aggregate_feedback">Phản hồi</string>
     <string name="miui_notification_menu_allow">Cho phép</string>
     <string name="miui_notification_menu_feedback_success">Cảm ơn phản hồi của bạn!</string>
@@ -1474,23 +1474,23 @@ dd/MM</string>
     <string name="miui_notification_menu_snooze">Báo lại</string>
     <string name="miui_notification_menu_title_not_allow">Chặn</string>
     <string name="miui_notification_menu_unfold">Đánh dấu quan trọng</string>
-    <string name="miui_notification_slide_menu_msg_ongoing">Giới hạn thông báo cố định đối với "%1$s" ngay?</string>
+    <string name="miui_notification_slide_menu_msg_ongoing">Giới hạn thông báo cố định đối với \"%1$s\" ngay?</string>
     <string name="miui_notification_slide_menu_ongoing">Giới hạn thông báo cố định</string>
     <string name="miui_screen_rotation_freeze_message">Khóa hướng màn hình trong chế độ nằm ngang</string>
     <string name="miui_snooze_always_float">Không ẩn</string>
     <string name="miui_snooze_cancel">Hủy</string>
     <string name="miui_snooze_default_time">Khoảng %d phút</string>
     <string name="miui_snooze_to_settings">Cài đặt</string>
-    <string name="miui_snooze_toast_hint_default">Các thông báo sắp tới sẽ bị ẩn trong %d phút. </string>
-    <string name="miui_snooze_toast_hint_until_unlock_screen">Các thông báo sắp tới sẽ bị ẩn cho đến khi thiết bị khóa. </string>
+    <string name="miui_snooze_toast_hint_default">"Các thông báo sắp tới sẽ bị ẩn trong %d phút. "</string>
+    <string name="miui_snooze_toast_hint_until_unlock_screen">"Các thông báo sắp tới sẽ bị ẩn cho đến khi thiết bị khóa. "</string>
     <string name="miui_snooze_until_unlock_screen">Đến khi khóa màn hình</string>
-    <string name="miui_snooze_user_set_fail">Vào Cài đặt &gt; Thông báo &amp; Trung tâm điều khiển để có thêm tùy chọn</string>
-    <string name="miui_snooze_user_set_success">Áp dụng thành công. Vào Cài đặt &gt; Thông báo &amp; Trung tâm điều khiển để có thêm tùy chọn.</string>
+    <string name="miui_snooze_user_set_fail">Vào Cài đặt > Thông báo &amp; Trung tâm điều khiển để có thêm tùy chọn</string>
+    <string name="miui_snooze_user_set_success">Áp dụng thành công. Vào Cài đặt > Thông báo &amp; Trung tâm điều khiển để có thêm tùy chọn.</string>
     <string name="miui_unimportant_notifications">Thông báo không quan trọng</string>
-    <string name="miui_vertical_time_format_12">hh
-mm</string>
-    <string name="miui_vertical_time_format_24">HH
-mm</string>
+    <string name="miui_vertical_time_format_12">"hh
+mm"</string>
+    <string name="miui_vertical_time_format_24">"HH
+mm"</string>
     <string name="miuix_access_state_desc">Đã chọn</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Bỏ chọn</string>
     <string name="miuix_appcompat_action_mode_select_all">Chọn tất cả</string>
@@ -1532,58 +1532,58 @@ mm</string>
     <string name="monitoring_button_view_policies">Xem chính sách</string>
     <string name="monitoring_description_app">Bạn đang kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng của bạn bao gồm email, ứng dụng và trang web.</string>
     <string name="monitoring_description_app_personal">Bạn đang kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng cá nhân của bạn bao gồm email, ứng dụng và trang web.</string>
-    <string name="monitoring_description_app_personal_work">Hồ sơ công việc của bạn do %1$s quản lý. Hồ sơ này được kết nối với %2$s, ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.
+    <string name="monitoring_description_app_personal_work">"Hồ sơ công việc của bạn do %1$s quản lý. Hồ sơ này được kết nối với %2$s, ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.
 
-Bạn cũng đang kết nối với %3$s, ứng dụng này có thể giám sát hoạt động mạng cá nhân của bạn.</string>
-    <string name="monitoring_description_app_work">Hồ sơ công việc của bạn do %1$s quản lý. Hồ sơ này được kết nối với %2$s, ứng dụng này có thể giám sát hoạt động mạng cơ quan của bạn, bao gồm email, ứng dụng và trang web.
+Bạn cũng đang kết nối với %3$s, ứng dụng này có thể giám sát hoạt động mạng cá nhân của bạn."</string>
+    <string name="monitoring_description_app_work">"Hồ sơ công việc của bạn do %1$s quản lý. Hồ sơ này được kết nối với %2$s, ứng dụng này có thể giám sát hoạt động mạng cơ quan của bạn, bao gồm email, ứng dụng và trang web.
 
-Để biết thêm thông tin, hãy liên hệ với quản trị viên của bạn.</string>
+Để biết thêm thông tin, hãy liên hệ với quản trị viên của bạn."</string>
     <string name="monitoring_description_ca_cert_settings">Mở thông tin xác thực tin cậy</string>
-    <string name="monitoring_description_ca_cert_settings_separator"> </string>
+    <string name="monitoring_description_ca_cert_settings_separator">" "</string>
     <string name="monitoring_description_ca_certificate">Một tổ chức phát hành chứng chỉ được cài đặt trên thiết bị này. Lưu lượng truy cập mạng bảo mật của bạn có thể được giám sát hoặc sửa đổi.</string>
     <string name="monitoring_description_do_body">Quản trị viên của bạn có thể giám sát và quản lý cài đặt, quyền truy cập dữ liệu công ty, ứng dụng, dữ liệu được liên kết với thiết bị và thông tin vị trí thiết bị của bạn.</string>
     <string name="monitoring_description_do_body_vpn">Bạn đang kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
     <string name="monitoring_description_do_header_generic">Thiết bị của bạn do %1$s quản lý.</string>
     <string name="monitoring_description_do_header_with_name">%1$s sử dụng %2$s để quản lý thiết bị của bạn.</string>
     <string name="monitoring_description_do_learn_more">Tìm hiểu thêm</string>
-    <string name="monitoring_description_do_learn_more_separator"> </string>
+    <string name="monitoring_description_do_learn_more_separator">" "</string>
     <string name="monitoring_description_managed_profile_ca_certificate">Tổ chức của bạn đã cài đặt một tổ chức phát hành chứng chỉ trong hồ cơ công việc của bạn. Lưu lượng truy cập mạng bảo mật của bạn có thể được giám sát hoặc sửa đổi.</string>
     <string name="monitoring_description_managed_profile_named_vpn">Hồ sơ công việc của bạn được kết nối với %1$s, ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
     <string name="monitoring_description_managed_profile_network_logging">Quản trị viên của bạn đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trong hồ sơ công việc chứ không giám sát lưu lượng truy cập trong hồ sơ cá nhân của bạn.</string>
-    <string name="monitoring_description_management">Thiết bị này thuộc về tổ chức của bạn.
+    <string name="monitoring_description_management">"Thiết bị này thuộc về tổ chức của bạn.
 
 Quản trị viên CNTT có thể giám sát và quản lý các tùy chọn cài đặt, quyền truy cập vào dữ liệu công ty, ứng dụng, dữ liệu liên kết với thiết bị và thông tin vị trí thiết bị của bạn.
 
-Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn.</string>
+Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn."</string>
     <string name="monitoring_description_management_ca_certificate">Tổ chức của bạn đã cài đặt một tổ chức phát hành chứng chỉ trên thiết bị này. Lưu lượng truy cập mạng bảo mật của bạn có thể được giám sát hoặc sửa đổi.</string>
     <string name="monitoring_description_management_network_logging">Quản trị viên của bạn đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trên thiết bị của bạn.</string>
-    <string name="monitoring_description_named_management">Thiết bị này thuộc về %1$s.
+    <string name="monitoring_description_named_management">"Thiết bị này thuộc về %1$s.
 
 Quản trị viên CNTT có thể giám sát và quản lý các tùy chọn cài đặt, quyền truy cập vào dữ liệu công ty, ứng dụng, dữ liệu liên kết với thiết bị và thông tin vị trí thiết bị của bạn.
 
-Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn.</string>
+Để biết thêm thông tin, hãy liên hệ với quản trị viên CNTT của bạn."</string>
     <string name="monitoring_description_named_vpn">Bạn đang kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
-    <string name="monitoring_description_network_logging">Quản trị viên đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trên thiết bị của bạn.
+    <string name="monitoring_description_network_logging">"Quản trị viên đã bật tính năng ghi nhật ký mạng. Tính năng này giám sát lưu lượng truy cập trên thiết bị của bạn.
 
-Để biết thêm thông tin, hãy liên hệ với quản trị viên của bạn.</string>
+Để biết thêm thông tin, hãy liên hệ với quản trị viên của bạn."</string>
     <string name="monitoring_description_parental_controls">Thiết bị này do cha mẹ bạn quản lý. Cha mẹ có thể có thể xem và quản lý những thông tin như ứng dụng bạn dùng, vị trí của bạn và thời gian bạn sử dụng thiết bị.</string>
     <string name="monitoring_description_personal_profile_named_vpn">Hồ sơ cá nhân của bạn được kết nối với %1$s. Ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
     <string name="monitoring_description_two_named_vpns">Bạn đang kết nối với %1$s và %2$s. Các ứng dụng này có thể giám sát hoạt động mạng của bạn, bao gồm email, ứng dụng và trang web.</string>
-    <string name="monitoring_description_vpn">Bạn đã cấp cho ứng dụng quyền thiết lập kết nối VPN.
+    <string name="monitoring_description_vpn">"Bạn đã cấp cho ứng dụng quyền thiết lập kết nối VPN.
 
-Ứng dụng này có thể giám sát hoạt động mạng và thiết bị của bạn, bao gồm email, ứng dụng và trang web.</string>
-    <string name="monitoring_description_vpn_profile_owned">Hồ sơ công việc của bạn do %1$s quản lý.
+Ứng dụng này có thể giám sát hoạt động mạng và thiết bị của bạn, bao gồm email, ứng dụng và trang web."</string>
+    <string name="monitoring_description_vpn_profile_owned">"Hồ sơ công việc của bạn do %1$s quản lý.
 
 Quản trị viên có thể giám sát hoạt động mạng của bạn bao gồm email, ứng dụng và trang web.
 
 Để biết thêm thông tin, hãy liên hệ với quản trị viên của bạn.
 
-Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sát hoạt động mạng của bạn.</string>
+Bạn cũng được kết nối với VPN. Dịch vụ này có thể giám sát hoạt động mạng của bạn."</string>
     <string name="monitoring_description_vpn_settings">Mở cài đặt VPN</string>
-    <string name="monitoring_description_vpn_settings_separator"> </string>
-    <string name="monitoring_financed_description_named_management">%1$s có thể truy cập vào dữ liệu liên kết với thiết bị này, quản lý ứng dụng và thay đổi các chế độ cài đặt trên thiết bị này.
+    <string name="monitoring_description_vpn_settings_separator">" "</string>
+    <string name="monitoring_financed_description_named_management">"%1$s có thể truy cập vào dữ liệu liên kết với thiết bị này, quản lý ứng dụng và thay đổi các chế độ cài đặt trên thiết bị này.
 
-Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
+Nếu bạn có thắc mắc, hãy liên hệ với %2$s."</string>
     <string name="monitoring_subtitle_ca_certificate">Chứng chỉ CA</string>
     <string name="monitoring_subtitle_network_logging">Ghi nhật ký mạng</string>
     <string name="monitoring_subtitle_vpn">VPN</string>
@@ -1726,10 +1726,10 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="notification_channel_silenced">Các thông báo này sẽ được hiển thị mà không phát âm báo</string>
     <string name="notification_channel_storage">Bộ nhớ</string>
     <string name="notification_channel_summary_automatic">Cho phép hệ thống quyết định xem thông báo này phát âm thanh hay rung</string>
-    <string name="notification_channel_summary_automatic_alerted">&lt;b&gt;Trạng thái:&lt;/b&gt; Đã thay đổi thành Mặc định</string>
-    <string name="notification_channel_summary_automatic_demoted">&lt;b&gt;Trạng thái:&lt;/b&gt; Đã giảm mức độ quan trọng</string>
-    <string name="notification_channel_summary_automatic_promoted">&lt;b&gt;Trạng thái:&lt;/b&gt; Đã tăng mức độ quan trọng</string>
-    <string name="notification_channel_summary_automatic_silenced">&lt;b&gt;Trạng thái:&lt;/b&gt; Đã thay đổi thành Im lặng</string>
+    <string name="notification_channel_summary_automatic_alerted">&lt;b>Trạng thái:&lt;/b> Đã thay đổi thành Mặc định</string>
+    <string name="notification_channel_summary_automatic_demoted">&lt;b>Trạng thái:&lt;/b> Đã giảm mức độ quan trọng</string>
+    <string name="notification_channel_summary_automatic_promoted">&lt;b>Trạng thái:&lt;/b> Đã tăng mức độ quan trọng</string>
+    <string name="notification_channel_summary_automatic_silenced">&lt;b>Trạng thái:&lt;/b> Đã thay đổi thành Im lặng</string>
     <string name="notification_channel_summary_bubble">Luôn chú ý vào nội dung này bằng phím tắt nổi.</string>
     <string name="notification_channel_summary_default">Có thể đổ chuông hoặc rung tùy theo chế độ cài đặt trên điện thoại</string>
     <string name="notification_channel_summary_default_with_bubbles">Có thể đổ chuông hoặc rung tùy theo chế độ cài đặt trên điện thoại. Các cuộc trò chuyện từ %1$s sẽ hiện ở dạng bong bóng theo mặc định.</string>
@@ -1789,10 +1789,10 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="ongoing_privacy_chip_content_single_app">%1$s đang dùng %2$s của bạn.</string>
     <string name="ongoing_privacy_dialog_attribution_text">(thông qua %s)</string>
     <string name="ongoing_privacy_dialog_enterprise">(công việc)</string>
-    <string name="ongoing_privacy_dialog_last_separator"> và </string>
+    <string name="ongoing_privacy_dialog_last_separator">" và "</string>
     <string name="ongoing_privacy_dialog_phonecall">Cuộc gọi điện thoại</string>
     <string name="ongoing_privacy_dialog_recent_op">%1$s đã dùng gần đây</string>
-    <string name="ongoing_privacy_dialog_separator">, </string>
+    <string name="ongoing_privacy_dialog_separator">", "</string>
     <string name="ongoing_privacy_dialog_using_op">%1$s đang dùng</string>
     <string name="open_camera_hint_text">Kéo biểu tượng để mở Camera</string>
     <string name="open_lock_screen_magazine_hint_text">Trượt sang phải để có thêm tùy chọn</string>
@@ -1828,11 +1828,11 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="phone_locked_foget_password">Quên mật khẩu?</string>
     <string name="phone_locked_foget_password_mehod_back">Quay lại</string>
     <string name="phone_locked_foget_password_method">Quên mật khẩu?</string>
-    <string name="phone_locked_foget_password_method_content">&lt;Data&gt;Bạn phải &lt;font color=#a5220e&gt;xóa tất cả dữ liệu &lt;/font&gt;trên thiết bị, bao gồm ảnh và liên hệ, và thiết lập mật khẩu Màn hình khóa mới.&lt;/Data&gt;</string>
+    <string name="phone_locked_foget_password_method_content">&lt;Data>Bạn phải &lt;font color=#a5220e>xóa tất cả dữ liệu &lt;/font>trên thiết bị, bao gồm ảnh và liên hệ, và thiết lập mật khẩu Màn hình khóa mới.&lt;/Data></string>
     <string name="phone_locked_foget_password_method_next">Tiếp theo</string>
     <string name="phone_locked_foget_password_ok">Tôi biết</string>
-    <string name="phone_locked_forget_password_suggesstion_one_content">&lt;Data&gt;Tắt thiết bị, bấm giữ &lt;font color=#a5220e&gt;phím Nguồn&lt;/font&gt; và &lt;font color=#a5220e&gt;phím Tăng âm lượng&lt;/font&gt; đồng thời cho đến khi bạn nhìn thấy logo Mi.&lt;/Data&gt;</string>
-    <string name="phone_locked_forget_password_suggesstion_two_content">&lt;Data&gt;Chọn &lt;font color=#a5220e&gt;"Xóa &amp;amp; Đặt lại"&lt;/font&gt; và chờ cho đến khi thiết bị khởi động lại.;&lt;/Data&gt;</string>
+    <string name="phone_locked_forget_password_suggesstion_one_content">&lt;Data>Tắt thiết bị, bấm giữ &lt;font color=#a5220e>phím Nguồn&lt;/font> và &lt;font color=#a5220e>phím Tăng âm lượng&lt;/font> đồng thời cho đến khi bạn nhìn thấy logo Mi.&lt;/Data></string>
+    <string name="phone_locked_forget_password_suggesstion_two_content">&lt;Data>Chọn &lt;font color=#a5220e>\"Xóa &amp;amp; Đặt lại\"&lt;/font> và chờ cho đến khi thiết bị khởi động lại.;&lt;/Data></string>
     <string name="phone_locked_forget_password_suggesstions_title">Làm thế nào để xóa dữ liệu?</string>
     <string name="phone_locked_string">Thiết bị này đã khóa</string>
     <string name="phone_locked_string_owner_user">Quá nhiều lần nhập mật khẩu Không gian thứ nhất không thành công. Thiết bị này hiện đã bị khóa.</string>
@@ -1865,35 +1865,35 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="power_discharge_by_only_short">Cho đến %1$s</string>
     <string name="power_discharging_duration">Còn khoảng %1$s (%2$s)</string>
     <string name="power_discharging_duration_enhanced">Còn khoảng %1$s dựa trên mức sử dụng của bạn (%2$s)</string>
-    <string name="power_notification_controls_description">Với các kiểm soát thông báo nguồn, bạn có thể đặt cấp độ quan trọng từ 0 đến 5 cho các thông báo của ứng dụng. 
+    <string name="power_notification_controls_description">"Với các kiểm soát thông báo nguồn, bạn có thể đặt cấp độ quan trọng từ 0 đến 5 cho các thông báo của ứng dụng. 
 
-<b>Cấp </b>5 
+"<b>Cấp 5</b>" 
 - Hiển thị ở đầu danh sách thông báo 
 - Cho phép gián đoạn ở chế độ toàn màn hình 
 - Luôn xem nhanh 
 
-<b>Cấp </b>4 
+"<b>Cấp 4</b>" 
 - Ngăn gián đoạn ở chế độ toàn màn hình 
 - Luôn xem nhanh 
 
-<b>Cấp </b>3 
+"<b>Cấp 3</b>" 
 - Ngăn gián đoạn ở chế độ toàn màn hình 
 - Không bao giờ xem nhanh 
 
-<b>Cấp </b>2 
+"<b>Cấp 2</b>" 
 - Ngăn gián đoạn ở chế độ toàn màn hình 
 - Không bao giờ xem nhanh 
 - Không bao giờ có âm báo và rung 
 
-<b>Cấp </b>1 
+"<b>Cấp 1</b>" 
 - Ngăn gián đoạn ở chế độ toàn màn hình 
 - Không bao giờ xem nhanh 
 - Không bao giờ có âm báo và rung 
 - Ẩn khỏi màn hình khóa và thanh trạng thái 
 - Hiển thị ở cuối danh sách thông báo 
 
-<b>Cấp </b>0 
-- Chặn tất cả các thông báo từ ứng dụng</string>
+"<b>Cấp 0</b>" 
+- Chặn tất cả các thông báo từ ứng dụng"</string>
     <string name="power_remaining_charging_duration_only">%1$s nữa là pin đầy</string>
     <string name="power_remaining_duration_only">Còn khoảng %1$s</string>
     <string name="power_remaining_duration_only_enhanced">Còn khoảng %1$s dựa trên mức sử dụng của bạn</string>
@@ -1906,7 +1906,7 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="power_remaining_settings_home_page">%1$s - %2$s</string>
     <string name="power_suggestion_battery_run_out">Điện thoại có thể hết pin vào %1$s</string>
     <string name="pref_show_lunar_calendar_title">Hiển thị lịch Trung Quốc truyền thống trên Màn hình khóa</string>
-    <string name="preference_copied">Đã sao chép "%1$s" vào khay nhớ tạm.</string>
+    <string name="preference_copied">Đã sao chép \"%1$s\" vào khay nhớ tạm.</string>
     <string name="preference_summary_default_combination">%1$s / %2$s</string>
     <string name="priority_conversations">Cuộc trò chuyện ưu tiên</string>
     <string name="privacy_dialog_title">Thông báo các hành động nhạy cảm</string>
@@ -2089,7 +2089,7 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="quick_settings_screenshot_label">Chụp ảnh màn hình</string>
     <string name="quick_settings_secondary_label_until">Cho đến %s</string>
     <string name="quick_settings_settings_label">Cài đặt</string>
-    <string name="quick_settings_sim_disabled"> (Đã tắt)</string>
+    <string name="quick_settings_sim_disabled">" (Đã tắt)"</string>
     <string name="quick_settings_sync_label">Đồng bộ</string>
     <string name="quick_settings_tethering_label">Chia sẻ Internet</string>
     <string name="quick_settings_time_label">Thời gian</string>
@@ -2264,8 +2264,8 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="show_silently">Hiển thị im lặng các thông báo</string>
     <string name="show_touches">Hiện số lần nhấn</string>
     <string name="show_touches_summary">Hiển thị phản hồi trực quan cho các lần nhấn</string>
-    <string name="shut_down_password_forget_password_suggesstion_one_content">&lt;Data&gt;Bấm và giữ phím&lt;font color=#e6e6e6&gt;[Nguồn]&lt;/font&gt; và &lt;font color=#e6e6e6&gt;[Âm lượng +]&lt;/font&gt; cho đến khi bạn nhìn thấy &lt;img src=""&gt;.&lt;/Data&gt;</string>
-    <string name="shut_down_password_forget_password_suggesstion_two_content">&lt;Data&gt;Chọn &lt;font color=#e6e6e6&gt;[Xóa dữ liệu (Wipe data)]&lt;/font&gt; và chạm &lt;font color=#e6e6e6&gt;[Khởi động lại (Reboot)]&lt;/font&gt; sau đó.&lt;/Data&gt;</string>
+    <string name="shut_down_password_forget_password_suggesstion_one_content">&lt;Data>Bấm và giữ phím&lt;font color=#e6e6e6>[Nguồn]&lt;/font> và &lt;font color=#e6e6e6>[Âm lượng +]&lt;/font> cho đến khi bạn nhìn thấy &lt;img src=\"\">.&lt;/Data></string>
+    <string name="shut_down_password_forget_password_suggesstion_two_content">&lt;Data>Chọn &lt;font color=#e6e6e6>[Xóa dữ liệu (Wipe data)]&lt;/font> và chạm &lt;font color=#e6e6e6>[Khởi động lại (Reboot)]&lt;/font> sau đó.&lt;/Data></string>
     <string name="sim_state_locked_dialog_title">Thẻ SIM không hợp lệ</string>
     <string name="sim_state_locked_puk_dialog_message">Bạn đã nhập sai mã PUK ít nhất %d lần. Thẻ SIM của bạn hiện không hợp lệ. Hãy thay thẻ SIM này bằng thẻ khác.</string>
     <string name="simulate_color_space">Mô phỏng không gian màu</string>
@@ -2284,8 +2284,8 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="speed_label_slow">Chậm</string>
     <string name="speed_label_very_fast">Rất nhanh</string>
     <string name="speed_label_very_slow">Rất chậm</string>
-    <string name="ssl_ca_cert_warning">Mạng có thể
-được giám sát</string>
+    <string name="ssl_ca_cert_warning">"Mạng có thể
+được giám sát"</string>
     <string name="standby_bucket_summary">Trạng thái chờ ứng dụng: %s</string>
     <string name="start_camera_error_try_again">Không thể khởi chạy Camera. Thử lại.</string>
     <string name="start_dreams">Trình bảo vệ m.hình</string>
@@ -2301,10 +2301,10 @@ Nếu bạn có thắc mắc, hãy liên hệ với %2$s.</string>
     <string name="status_bar_clock_date_weekday_format_12">EEEE, dd MMMM</string>
     <string name="status_bar_clock_date_weekday_format_12_brief">@string/status_bar_clock_date_format_12</string>
     <string name="status_bar_clock_date_weekday_format_brief">@string/status_bar_clock_date_format</string>
-    <string name="status_bar_date_format">E
-d MMM</string>
-    <string name="status_bar_date_format_12">E
-d MMM</string>
+    <string name="status_bar_date_format">"E
+d MMM"</string>
+    <string name="status_bar_date_format_12">"E
+d MMM"</string>
     <string name="status_bar_ethernet">Ethernet</string>
     <string name="status_bar_input_method_settings_configure_input_methods">Thiết lập phương thức nhập</string>
     <string name="status_bar_latest_events_title">Thông báo</string>
@@ -2397,14 +2397,14 @@ d MMM</string>
     <string name="the_valentines_day">Ngày Lễ tình nhân</string>
     <string name="the_water_lantern_festival">Tết Hạ Nguyên</string>
     <string name="thermal_shutdown_dialog_help_text">Xem các bước chăm sóc</string>
-    <string name="thermal_shutdown_dialog_message">Do quá nóng nên điện thoại đã tắt để hạ nhiệt. Hiện điện thoại của bạn đang chạy bình thường.
+    <string name="thermal_shutdown_dialog_message">"Do quá nóng nên điện thoại đã tắt để hạ nhiệt. Hiện điện thoại của bạn đang chạy bình thường.
 
 Điện thoại có thể bị quá nóng nếu bạn:
-	• Dùng các ứng dụng tốn nhiều tài nguyên (như ứng dụng trò chơi, video hoặc điều hướng)
-	• Tải xuống hoặc tải lên tệp có dung lượng lớn
-	• Dùng điện thoại ở nhiệt độ cao</string>
-    <string name="thermal_shutdown_message">Điện thoại của bạn đang chạy bình thường.
-Hãy nhấn để biết thêm thông tin</string>
+\u0009• Dùng các ứng dụng tốn nhiều tài nguyên (như ứng dụng trò chơi, video hoặc điều hướng)
+\u0009• Tải xuống hoặc tải lên tệp có dung lượng lớn
+\u0009• Dùng điện thoại ở nhiệt độ cao"</string>
+    <string name="thermal_shutdown_message">"Điện thoại của bạn đang chạy bình thường.
+Hãy nhấn để biết thêm thông tin"</string>
     <string name="thermal_shutdown_title">Điện thoại đã tắt do nhiệt</string>
     <string name="thursday">Thứ năm</string>
     <string name="thursday_short">Th 5</string>
@@ -2502,23 +2502,23 @@ Hãy nhấn để biết thêm thông tin</string>
     <string name="usb_accessory_uri_prompt">Không có ứng dụng được cài đặt nào hoạt động với phụ kiện USB này. Tìm hiểu thêm về phụ kiện này tại %1$s</string>
     <string name="usb_audio_disable_routing">Tắt chế độ định tuyến âm thanh USB</string>
     <string name="usb_audio_disable_routing_summary">Tắt chế độ tự động định tuyến tới thiết bị âm thanh ngoại vi USB</string>
-    <string name="usb_contaminant_message">Để bảo vệ thiết bị của bạn khỏi chất lỏng hay mảnh vỡ, cổng USB sẽ tắt và không phát hiện được bất kỳ phụ kiện nào.
+    <string name="usb_contaminant_message">"Để bảo vệ thiết bị của bạn khỏi chất lỏng hay mảnh vỡ, cổng USB sẽ tắt và không phát hiện được bất kỳ phụ kiện nào.
 
-Bạn sẽ nhận được thông báo khi có thể sử dụng lại cổng USB.</string>
+Bạn sẽ nhận được thông báo khi có thể sử dụng lại cổng USB."</string>
     <string name="usb_contaminant_title">Đã tắt cổng USB</string>
     <string name="usb_debugging_allow">Cho phép</string>
     <string name="usb_debugging_always">Luôn cho phép từ máy tính này</string>
-    <string name="usb_debugging_message">Vân tay khóa RSA của máy tính là:
-%1$s</string>
+    <string name="usb_debugging_message">"Vân tay khóa RSA của máy tính là:
+%1$s"</string>
     <string name="usb_debugging_secondary_user_message">Người dùng hiện đã đăng nhập vào thiết bị này không thể bật tính năng gỡ lỗi USB. Để sử dụng tính năng này, hãy chuyển sang người dùng chính.</string>
     <string name="usb_debugging_secondary_user_title">Không cho phép chế độ gỡ lỗi qua USB</string>
     <string name="usb_debugging_title">Cho phép gỡ lỗi qua USB?</string>
     <string name="usb_device_confirm_prompt">Mở %1$s để điều khiển %2$s?</string>
-    <string name="usb_device_confirm_prompt_warn">Mở %1$s để điều khiển %2$s?
-Dù chưa được cấp quyền ghi âm, nhưng ứng dụng có thể ghi âm thông qua thiết bị USB này.</string>
+    <string name="usb_device_confirm_prompt_warn">"Mở %1$s để điều khiển %2$s?
+Dù chưa được cấp quyền ghi âm, nhưng ứng dụng có thể ghi âm thông qua thiết bị USB này."</string>
     <string name="usb_device_permission_prompt">Cho phép %1$s truy cập %2$s?</string>
-    <string name="usb_device_permission_prompt_warn">Cho phép %1$s truy cập vào %2$s?
-Ứng dụng này chưa được cấp quyền ghi âm nhưng vẫn có thể ghi âm thông qua thiết bị USB này.</string>
+    <string name="usb_device_permission_prompt_warn">"Cho phép %1$s truy cập vào %2$s?
+Ứng dụng này chưa được cấp quyền ghi âm nhưng vẫn có thể ghi âm thông qua thiết bị USB này."</string>
     <string name="usb_disable_contaminant_detection">Bật USB</string>
     <string name="usb_port_enabled">Đã bật cổng USB để phát hiện bộ sạc và phụ kiện</string>
     <string name="usb_preference_title">Tùy chọn truyền tệp USB</string>
@@ -2530,14 +2530,14 @@ Dù chưa được cấp quyền ghi âm, nhưng ứng dụng có thể ghi âm 
     <string name="user_add_user">Thêm người dùng</string>
     <string name="user_add_user_item_summary">Người dùng có ứng dụng và nội dung riêng của mình</string>
     <string name="user_add_user_item_title">Người dùng</string>
-    <string name="user_add_user_message_long">Bạn có thể chia sẻ thiết bị này với người khác bằng cách tạo thêm người dùng. Mỗi người dùng sẽ có không gian riêng của mình. Họ có thể tùy chỉnh không gian riêng đó bằng các ứng dụng, hình nền, v.v. Người dùng cũng có thể điều chỉnh các tùy chọn cài đặt thiết bị có ảnh hưởng đến tất cả mọi người, chẳng hạn như Wi‑Fi.
+    <string name="user_add_user_message_long">"Bạn có thể chia sẻ thiết bị này với người khác bằng cách tạo thêm người dùng. Mỗi người dùng sẽ có không gian riêng của mình. Họ có thể tùy chỉnh không gian riêng đó bằng các ứng dụng, hình nền, v.v. Người dùng cũng có thể điều chỉnh các tùy chọn cài đặt thiết bị có ảnh hưởng đến tất cả mọi người, chẳng hạn như Wi‑Fi.
 
 Khi bạn thêm người dùng mới, họ cần thiết lập không gian của mình.
 
-Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả người dùng khác. Các dịch vụ và các tùy chọn cài đặt hỗ trợ tiếp cận có thể không chuyển sang người dùng mới.</string>
-    <string name="user_add_user_message_short">Khi bạn thêm người dùng mới, họ cần thiết lập không gian của mình.
+Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả người dùng khác. Các dịch vụ và các tùy chọn cài đặt hỗ trợ tiếp cận có thể không chuyển sang người dùng mới."</string>
+    <string name="user_add_user_message_short">"Khi bạn thêm người dùng mới, họ cần thiết lập không gian của mình.
 
-Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả người dùng khác.</string>
+Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả người dùng khác."</string>
     <string name="user_add_user_title">Thêm người dùng mới?</string>
     <string name="user_add_user_type_title">Thêm</string>
     <string name="user_guest">Chế độ khách</string>
@@ -2614,17 +2614,17 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="wednesday_shortest">Th 4</string>
     <string name="wifi_ap_unable_to_handle_new_sta">Điểm truy cập tạm thời đã đạt đến giới hạn số lượng thiết bị truy cập.</string>
     <string name="wifi_cant_connect">Không thể kết nối</string>
-    <string name="wifi_cant_connect_to_ap">Không thể kết nối với '%1$s'</string>
+    <string name="wifi_cant_connect_to_ap">"Không thể kết nối với '%1$s'"</string>
     <string name="wifi_check_password_try_again">Kiểm tra mật khẩu và thử lại</string>
     <string name="wifi_connected_low_quality">Chất lượng thấp</string>
     <string name="wifi_connected_no_internet">Không có Internet</string>
     <string name="wifi_debugging_allow">Cho phép</string>
     <string name="wifi_debugging_always">Luôn cho phép trên mạng này</string>
-    <string name="wifi_debugging_message">Tên mạng (SSID)
+    <string name="wifi_debugging_message">"Tên mạng (SSID)
 %1$s
 
 Địa chỉ Wi‑Fi (BSSID)
-%2$s</string>
+%2$s"</string>
     <string name="wifi_debugging_secondary_user_message">Người dùng hiện đã đăng nhập vào thiết bị này không thể bật tính năng gỡ lỗi qua Wi-Fi. Để sử dụng tính năng này, hãy chuyển sang người dùng chính.</string>
     <string name="wifi_debugging_secondary_user_title">Không cho phép gỡ lỗi qua Wi-Fi</string>
     <string name="wifi_debugging_title">Cho phép gỡ lỗi qua Wi-Fi trên mạng này?</string>
@@ -2663,7 +2663,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="wifitrackerlib_connected_via_app">Đã kết nối qua %1$s</string>
     <string name="wifitrackerlib_connected_via_network_scorer">Đã tự động kết nối qua %1$s</string>
     <string name="wifitrackerlib_connected_via_network_scorer_default">Đã tự động kết nối qua nhà cung cấp dịch vụ xếp hạng mạng</string>
-    <string name="wifitrackerlib_imsi_protection_warning">Mạng này nhận được một mã nhận dạng SIM có thể dùng để theo dõi vị trí của thiết bị. <annotation id="url">Tìm hiểu thê</annotation>m</string>
+    <string name="wifitrackerlib_imsi_protection_warning">Mạng này nhận được một mã nhận dạng SIM có thể dùng để theo dõi vị trí của thiết bị. <annotation id="url">Tìm hiểu thêm</annotation></string>
     <string name="wifitrackerlib_osu_completing_sign_up">Đang hoàn tất đăng ký…</string>
     <string name="wifitrackerlib_osu_connect_failed">Không thể kết nối</string>
     <string name="wifitrackerlib_osu_opening_provider">Đang mở %1$s</string>
@@ -2677,7 +2677,7 @@ Mọi người dùng đều có thể cập nhật ứng dụng cho tất cả n
     <string name="wifitrackerlib_speed_label_slow">Chậm</string>
     <string name="wifitrackerlib_speed_label_very_fast">Rất nhanh</string>
     <string name="wifitrackerlib_speed_label_very_slow">Rất chậm</string>
-    <string name="wifitrackerlib_summary_separator"> / </string>
+    <string name="wifitrackerlib_summary_separator">" / "</string>
     <string name="wifitrackerlib_tap_to_renew_subscription_and_connect">Nhấn để gia hạn gói đăng ký và kết nối</string>
     <string name="wifitrackerlib_tap_to_sign_up">Nhấn để đăng ký</string>
     <string name="wifitrackerlib_wifi_ap_unable_to_handle_new_sta">Điểm truy cập đã tạm thời đạt đến giới hạn số lượng thiết bị truy cập</string>
