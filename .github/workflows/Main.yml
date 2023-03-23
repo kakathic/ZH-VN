@@ -36,10 +36,3 @@ jobs:
           tag_name: MS-${{ env.VS }}
           files: Zip/*
           prerelease: true
-      - name: Delete
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
