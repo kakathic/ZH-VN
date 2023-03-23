@@ -415,7 +415,7 @@
     <string name="chinese_day_30">30</string>
     <string name="am">SA</string>
     <string name="pm">CH</string>
-    <string name="chinese_leap">Nhuận</string>
+    <string name="chinese_leap"/>
     <string name="chinese_month_january">1</string>
     <string name="chinese_month_february">2</string>
     <string name="chinese_month_march">3</string>
@@ -1388,7 +1388,7 @@
     <string name="solar_calendar">Dương lịch</string>
     <string name="lunar_calendar">Âm lịch</string>
     <string name="lunar_zheng">1</string>
-    <string name="lunar_leap">Nhuận</string>
+    <string name="lunar_leap"/>
     <string name="lunar_ling">0</string>
     <string name="lunar_yi">1</string>
     <string name="lunar_er">2</string>
