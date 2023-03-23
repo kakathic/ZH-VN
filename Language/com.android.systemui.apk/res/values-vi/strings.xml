@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="miui_lock_screen_date">E, dd.MM - (e.N)</string>
+    <string name="miui_lock_screen_date_12">E, dd.MM - (e.N)</string>
+    <string name="status_bar_clock_date_weekday_format">E, dd.MM - (e.N)</string>
+    <string name="status_bar_clock_date_weekday_format_12">E, dd.MM - (e.N)</string>
+    <string name="status_bar_clock_date_format_12">aa E, dd - MM</string>
+    <string name="status_bar_clock_date_format">E, dd.MM - (e.N)</string>
+    <string name="status_bar_clock_date_time_format">HH:mm - E, dd.MM - (e.N)</string>
+    <string name="status_bar_clock_date_time_format_12">hh:mm aa - E, dd.MM - (e.N)</string>
     <string name="abc_action_bar_home_description">Chỉ đường về nhà</string>
     <string name="abc_action_bar_up_description">Điều hướng lên trên</string>
     <string name="abc_action_menu_overflow_description">Tùy chọn khác</string>
