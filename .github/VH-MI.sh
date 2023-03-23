@@ -92,7 +92,8 @@ $(cat $TOME/log)
 fi
 done
 
-mkdir -p TOME/Miui/nightmode
+mkdir -p $TOME/Miui/nightmode
+
 cd $TOME/Miui
 cp -rf theme_values.xml nightmode
 zip -qr $TOME/framework.zip *
