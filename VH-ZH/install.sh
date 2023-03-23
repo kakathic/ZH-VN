@@ -25,7 +25,7 @@ ui_print
 ui_print "- Chọn kiểu cài Tiếng Việt vào Rom ?"
 ui_print
 ui_print2 "1. Mặc định"
-ui_print2 "2. Rom port"
+ui_print2 "2. Nếu như mặc định bị treo"
 ui_print2 "3. Không cài"
 
 if [ "$(GP VH)" ];then
