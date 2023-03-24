@@ -23,10 +23,3 @@ jobs:
           echo "$T1@$T2" | tee -a Free2.json
           cat Free2.json | sort | uniq > Free.json
           [[ "$T1" ]] || exit 1
-      - name: Upload Account
-        uses: softprops/action-gh-release@v1
-        with:
-          name: Tool
-          tag_name: Package
-          files: Free.json
-          prerelease: true
