@@ -2,10 +2,9 @@ name: "Trial 2 day"
 on:
   push:
     paths:
-      - '.github/workflows/Free.yml'
       - 'Free2day.md'
   pull_request:
-    types: [auto_merge]
+    types: [auto_merge, synchronize, review_request_removed, closed]
     paths:
       - 'Free2day.md'
 jobs:
