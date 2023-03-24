@@ -1,8 +1,8 @@
 ## Nhập imei 
 
-+ Hãy điền số imei của bạn vào bên dưới
+> Hãy điền số imei của bạn vào bên dưới
 
-+ Ví dụ kk=9273747838291872
+> Ví dụ kk=9273747838291872
 
 imei=
 
