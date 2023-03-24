@@ -1,0 +1,29 @@
+name: "Trial 2 day"
+on:
+  push:
+    paths:
+      - '.github/workflows/Free.yml'
+      - 'Free2day.md'
+jobs:
+  build:
+    name: 'Add...'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Process
+        run: |
+          # kakathic
+          T1="$(grep -m1 imei= Free2day.md | cut -d = -f2)"
+          T2="$(date +%Y-%m-%d-%H:%M)"
+          curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Free.json -o Free2.json
+          [[ "$(grep -cm1 $T1 Free2.json)" == 1 ]] && exit 1
+          echo "$T1@$T2" | tee -a Free2.json
+          cat Free2.json | sort | uniq > Free.json
+          [[ "$T1" ]] || exit 1
+      - name: Upload Account
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Tool
+          tag_name: Package
+          files: Free.json
+          prerelease: true
