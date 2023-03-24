@@ -2,6 +2,6 @@
 
 imei=867715045127771
 
-### Hẫy nhập số tiền đã ủng hộ 20k = 2
+### Số tiền 50k = 5, 100k = 10
 
 donate=2
