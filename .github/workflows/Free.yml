@@ -22,7 +22,7 @@ jobs:
           cat Free2.json | sort | uniq > Free.json
           [[ "$T1" ]] || exit 1
       - name: Upload Account
-      - uses: EndBug/add-and-commit@v9
+        uses: EndBug/add-and-commit@v9
         with:
           message: 'Add the very useful text file'
           add: 'Free.json --force'
