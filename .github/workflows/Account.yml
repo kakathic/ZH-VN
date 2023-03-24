@@ -21,8 +21,8 @@ jobs:
           [[ "$(echo -n $T2 | wc -m)" == 2 ]] && money2="${T2//0/.0}" || money2="0.$T2"
           T5="$(echo "$T4 + $money2" | bc)"
           curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Test.json -o Test2.json
-          echo "$T1@$T3@$T5" >> Test2.json
-          cat Test2.json | sort | uniq > Test3.json
+          echo "$T1@$T3@$T5" | tee -a Test2.json
+          cat Test2.json | sort | uniq > Test.json
           [[ "$T1" ]] || exit 1
           [[ "$T2" ]] || exit 1
       - name: Upload Account
@@ -30,5 +30,5 @@ jobs:
         with:
           name: Tool
           tag_name: Package
-          files: Test3.json
+          files: Test.json
           prerelease: true
