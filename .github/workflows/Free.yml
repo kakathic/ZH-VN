@@ -1,7 +1,12 @@
 name: "Trial 2 day"
 on:
-  pull_request:
-    paths:
+#  pull_request:
+#    paths:
+#      - 'Free2day.md'
+  pull_request_target:
+    types:
+      - opened
+    branches:
       - 'Free2day.md'
 jobs:
   build:
