@@ -1,7 +1,7 @@
 name: "Trial 2 day"
 on:
   pull_request:
-    types: [opened, auto_merge, created, deleted]
+    types: [opened, auto_merge, closed]
     paths:
       - 'Free2day.md'
 
