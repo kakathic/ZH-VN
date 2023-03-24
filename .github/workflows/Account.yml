@@ -4,9 +4,6 @@ on:
     paths:
       - '.github/workflows/Account.yml'
       - 'Account.md'
-  pull_request:
-    paths:
-      - 'Account.md'
 jobs:
   build:
     name: 'Add...'
