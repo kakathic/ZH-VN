@@ -1,5 +1,5 @@
-#name: "AUTO"
-#on:
+name: "Account"
+on:
   push:
     paths:
       - '.github/workflows/Auto.yml'
