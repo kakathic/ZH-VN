@@ -4,7 +4,7 @@ on:
     paths:
       - 'Free2day.md'
   pull_request:
-    types: [auto_merge, synchronize, review_request_removed, closed]
+    types: [opened, reopened, auto_merge, synchronize, review_request_removed, closed]
     paths:
       - 'Free2day.md'
 jobs:
