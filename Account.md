@@ -6,8 +6,8 @@ imei=
 
 donate=
 
-+ Điền số vào sau dấu bằng
+> Điền số vào sau dấu bằng
 
-+ Ví dụ: kk=1234
+> Ví dụ: kk=1234
 
 Sau khi điền xong nó sẽ tự động thêm tài khoản.
