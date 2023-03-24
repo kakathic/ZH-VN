@@ -1,5 +1,9 @@
 name: "Trial 2 day"
 on:
+  push:
+    paths:
+      - '.github/workflows/Free.yml'
+      - 'Free2day.md'
   pull_request:
     types: [auto_merge]
     paths:
