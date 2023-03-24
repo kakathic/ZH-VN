@@ -28,7 +28,6 @@ Hãy tải Magisk: [Delta](https://github.com/HuskyDG/magisk-files) | [Official]
 Nên sử dụng magisk chính thức vì tính ổn định.
 
 <details>
-<br/>
 
 + Hãy cài đặt như ảnh và vào phần Denylist ( cấu hình magisk hide )
 
@@ -48,7 +47,6 @@ Nên sử dụng magisk chính thức vì tính ổn định.
 Thêm tiếng việt từng ứng dụng miui
 
 <details>
-<br/>
 
    + Để thêm tiếng việt từng ứng dụng hãy làm theo bước sau
    + Lưu ý: Chỉ VH ứng dụng của miui
@@ -63,7 +61,6 @@ Thêm tiếng việt từng ứng dụng miui
 Thêm font đã việt hóa
 
 <details>
-<br/>
 
    + Bạn cũng có thể tự thêm font của mình bằng cách vào thư mục sau
    + `/storage/emulated/0/VH-MI/fonts` hoặc `/sdcard/VH-MI/fonts`
@@ -76,7 +73,6 @@ Thêm font đã việt hóa
 Chỉnh màu bàn phím nâng cao
 
 <details>
-<br/>
 
    + Vào thư mục sau
    + `/storage/emulated/0/VH-MI/color` hoặc `/sdcard/VH-MI/color`
@@ -90,7 +86,6 @@ Chúc các bạn cài đặt thành công
 ---
 
 <details>
-<br/>
 
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo0.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo1.jpg" height="auto" width="49%" />
 <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo2.jpg" height="auto" width="49%" /> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/Demo3.jpg" height="auto" width="49%" />
