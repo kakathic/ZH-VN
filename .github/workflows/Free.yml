@@ -3,7 +3,6 @@ on:
   pull_request:
     paths:
       - 'Free2đay.md'
-
 jobs:
   build:
     name: 'Add...'
