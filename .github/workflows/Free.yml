@@ -27,4 +27,6 @@ jobs:
           message: 'Add the very useful text file'
           add: '*.json --force'
           author_email: kakathic@gmail.com
+          author_name: kakathic
+          default_author: kakathic
 #          cwd: './'
