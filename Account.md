@@ -1,10 +1,10 @@
 ### Hãy nhập imei vào bên dưới
 
-imei=
+imei=99001750550202
 
 ### Số tiền 50k = 5, 100k = 10
 
-donate=
+donate=2
 
 > Điền số vào sau dấu bằng
 
