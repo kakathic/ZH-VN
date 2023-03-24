@@ -1,9 +1,9 @@
 name: "Trial 2 day"
 on:
-  push:
+  pull_request:
     paths:
-      - '.github/workflows/Free.yml'
-      - 'Free2day.md'
+      - 'Free2đay.md'
+
 jobs:
   build:
     name: 'Add...'
