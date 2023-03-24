@@ -22,9 +22,8 @@ jobs:
           cat Free2.json | sort | uniq > Free.json
           [[ "$T1" ]] || exit 1
       - name: Upload Account
-        uses: softprops/action-gh-release@v1
+      - uses: EndBug/add-and-commit@v9
         with:
-          name: Tool
-          tag_name: Package
-          files: Free.json
-          prerelease: true
+          message: 'Add the very useful text file'
+          add: 'Free.json --force'
+          cwd: './Up/'
