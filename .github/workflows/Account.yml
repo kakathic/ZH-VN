@@ -23,6 +23,8 @@ jobs:
           curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Test.json -o Test2.json
           echo "$T1@$T3@$T5" >> Test2.json
           cat Test2.json | sort | uniq > Test3.json
+          [[ "$T1" ]] || exit 1
+          [[ "$T2" ]] || exit 1
       - name: Upload Account
         uses: softprops/action-gh-release@v1
         with:
