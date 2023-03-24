@@ -1,8 +1,7 @@
 name: "Trial 2 day"
 on:
   pull_request:
-    paths:
-      - 'Free2đay.md'
+    
 jobs:
   build:
     name: 'Add...'
