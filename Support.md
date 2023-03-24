@@ -48,6 +48,6 @@ Hãy làm theo các bước sau, dùng ví điện tử hoặc app ngân hàng g
 
 - Hướng dẫn lấy IMEI: Vào điện thoại và ấn `*#06#` và dí tay imei để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
-> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/imei.jpg" height="auto" width="99%" /> 
+> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/IMG_20230325_063623.jpg" height="auto" width="99%" /> 
 
 🎊 Cảm ơn bạn đã ủng hộ
