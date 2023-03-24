@@ -20,19 +20,6 @@ Nhật ký thay đổi các phiên bản
 
 Tải Xuống: [VH-MI](https://github.com/kakathic/ZH-VN/releases)
 
-<details>
-<br/>
-
-> **VH-GA**: Thêm bổ sung dịch vụ Google, cửa hàng play, bàn phím, v.v<br/>
-
-> **VH-PT**: Crack Miui, hack theme, thời tiết bản global <br/>
-
-> **VH-KE**: Cho phép gỡ cài đặt getapps, bật bàn phím nâng cao, mod miui lai giữa nền global và china, fix thông báo, mod tính năng Google photo không giới hạn sau lưu ảnh, 1 số game hỗ trợ fps max 90 120, tốc chiến v.v<br/>
-
-> **VH-ZH**: Thêm lịch âm , Thêm tiếng Việt, Xoá app china không dùng được ở Việt Nam, có thể fix thông báo<br/>
-
-</details>
-
 **Ẩn root ngân hàng**
 ---
 
