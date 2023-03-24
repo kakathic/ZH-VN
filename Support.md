@@ -34,33 +34,19 @@ Hãy làm theo các bước sau, dùng ví điện tử hoặc app ngân hàng g
 
 - Ví dụ:
 
-> Mã máy: raphaelxx<br/>
-> Xiaomi id: 152533xxxxxxx<br/>
-> MEID: 24272427xxx
-
-+ Có thể gửi 1 trong 2 id hoặc meid
+> IMEI: 24272427xxx
 
 + Áp dụng cho mọi rom miui, bạn thay đổi rom cũng không mất, dữ liệu của bạn.
 
 > Mỗi lần ủng hộ chỉ có tác dụng cho 1 thiết bị, nếu sử dụng 2 máy vui lòng ủng hộ 2 lần
 
-- Sau khi ủng hộ xong, hãy gửi ảnh chụp màn hình giao dịch và thông tin điện thoại như, mã máy, meid, id mi.
-
-Nếu bạn không gửi tin nhắn riêng đến mình, mình sẽ không kích hoạt tài khoản cho bạn. Vì đây là kích hoạt thủ công không phải tự động lên mong bạn thông cảm.
+- Sau khi ủng hộ xong, hãy gửi ảnh chụp màn hình giao dịch và thông tin điện thoại như, imei 
 
 **📧 Gửi đến**
 
 > [Telegram](http://t.me/kakathic) | [Facebook](https://m.me/kakathic) ( Mình ít online fb lên sẽ trả lời muộn )
 
-- Hướng dẫn lấy MEID: Vào điện thoại và ấn `*#06#` và dí tay MEID để sao chép hoặc chụp ảnh màn hình, gửi cho mình
-
-- Tên mã máy Giống như `ALIOTH` là mã máy mình cần, hoặc bạn có thể flash module nó sẽ hiện đầy đủ thông tin chỉ cần chụp ảnh gửi qua cho mình.
-
-- Hình ảnh ở dưới cho bạn biết tài khoản mi id, và mã MEID
-
-> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp0.jpg" height="auto" width="99%" />
-
-> <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/sp1.jpg" height="auto" width="99%" /> 
+- Hướng dẫn lấy IMEI: Vào điện thoại và ấn `*#06#` và dí tay imei để sao chép hoặc chụp ảnh màn hình, gửi cho mình
 
 > <img src="https://github.com/kakathic/ZH-VN/releases/download/Test-Vip/imei.jpg" height="auto" width="99%" /> 
 
