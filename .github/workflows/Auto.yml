@@ -1,5 +1,5 @@
-name: "AUTO"
-on:
+#name: "AUTO"
+#on:
   push:
     paths:
       - '.github/workflows/Auto.yml'
@@ -14,11 +14,18 @@ jobs:
       - name: Process
         run: |
           # kakathic
-          ls
+          T1="$(cat Account.md | grep -m1 imei= | cut -d = -f2)"
+          T2="$(cat Account.md | grep -m1 donate= | cut -d = -f2)"
+          T3="$(date +%Y%-m%-d%)"
+          #curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Test.json -o Test2.json
+
+
+          echo "" >> Test2.json
+          cat Test2.json | sort | uniq > Test3.json
       - name: Upload Account
         uses: softprops/action-gh-release@v1
         with:
           name: Tool
           tag_name: Package
-          files: acc/*
+          files: Test3.json
           prerelease: true
