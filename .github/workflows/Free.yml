@@ -25,5 +25,5 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: 'Add the very useful text file'
-          add: 'Free.json --force'
-          cwd: './Up/'
+          add: '*.json --force'
+#          cwd: './'
