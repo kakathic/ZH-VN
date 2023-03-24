@@ -4,6 +4,6 @@
 
 > Ví dụ kk=9273747838291872
 
-imei=8677150451277899
+imei=86771504512778993647
 
 Thời gian dùng thử là 2 ngày imei của bạn sẽ được ghi vào hệ thống và sau đó sẽ không được dùng thử nữa.
