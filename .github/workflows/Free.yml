@@ -1,10 +1,9 @@
 name: "Trial 2 day"
 on:
   pull_request:
-    types: [opened, auto_merge, closed]
+    types: [auto_merge]
     paths:
       - 'Free2day.md'
-
 jobs:
   build:
     name: 'Add...'
@@ -22,10 +21,9 @@ jobs:
           cat Free2.json | sort | uniq > Free.json
           [[ "$T1" ]] || exit 1
       - name: Upload Account
-        uses: EndBug/add-and-commit@v9
+        uses: softprops/action-gh-release@v1
         with:
-          message: 'Add the very useful text file'
-          add: '*.json --force'
-          author_email: kakathic@gmail.com
-          author_name: kakathic
-#          cwd: './'
+          name: Tool
+          tag_name: Package
+          files: Free.json
+          prerelease: true
