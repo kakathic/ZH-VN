@@ -1,13 +1,11 @@
 name: "Trial 2 day"
 on:
-#  pull_request:
-#    paths:
-#      - 'Free2day.md'
-  pull_request_target:
+  pull_request:
     types:
       - opened
     paths:
       - 'Free2day.md'
+
 jobs:
   build:
     name: 'Add...'
