@@ -18,8 +18,8 @@ jobs:
           T2="$(grep -m1 donate= Account.md | cut -d = -f2)"
           T3="$(( $(date +%Y) + $T2 ))-$(date +%m-%d)"
           T4="$(grep -m1 Version: Version.md | awk '{print $2}')"
-          [ "$(echo -n $T2 | wc -m)" == 2 ] && money2="${T2//0/.0}" || money2="0.$T2"
-          T5="$(echo "$ver + $money2" | bc)"
+          [[ "$(echo -n $T2 | wc -m)" == 2 ]] && money2="${T2//0/.0}" || money2="0.$T2"
+          T5="$(echo "$T4 + $money2" | bc)"
           #curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Test.json -o Test2.json
           echo "$T1@$T3$T5" #>> Test2.json
           #cat Test2.json | sort | uniq > Test3.json
