@@ -8,7 +8,7 @@ on:
       - 'VH-ZH/**'
       - '.github/workflows/Main.yml'
       - '.github/Install.sh'
-      - '.github/Version.md'
+      - 'Version.md'
 jobs:
   build:
     name: 'Build Zip...'
