@@ -1,19 +1,19 @@
 **Nhật ký thay đổi**
 ----
 
+Version: 1.8
+
++ Beta
+
++ Thay đổi kích hoạt chỉ cần imei.
+
+Phiên bản 1.7 đã kết thúc tiến hành vào beta 1.8
+
 Version: 1.7
-
-- Đang phát triển beta
-
-- Phiên bản 1.6 đã kết thúc tiến hành vào beta 1.7
-
-Các tính năng dự kiến 
 
 + Cập nhật tiếng Việt cho Android 13
 
 + Cập nhật tính năng fix thông báo ở module VH-KE
-
-+ Cập nhật ngôn ngữ ứng dụng tự động.
 
 + Fix lỗi không hiện nhật ký cập nhật 
 
