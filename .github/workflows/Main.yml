@@ -35,4 +35,4 @@ jobs:
           name: MS-VH ${{ env.VS }}
           tag_name: MS-${{ env.VS }}
           files: Zip/*
-#          prerelease: true
+          prerelease: true
