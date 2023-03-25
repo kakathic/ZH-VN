@@ -4,7 +4,7 @@ on:
     paths:
       - 'Language/**'
       - 'Miui/**'
-      - '.github/Version.md'
+      - 'Version.md'
       - '.github/workflows/VH-MI.yml'
       - '.github/VH-MI.sh'
   workflow_dispatch:
