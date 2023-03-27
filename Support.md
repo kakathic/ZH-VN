@@ -3,6 +3,7 @@
 
 | Mức Giá | Thời gian | Cấp độ |
 |---------|-----------|--------|
+|   20K   |   2 Năm   |  +0.2  |
 |   50K   |   5 Năm   |  +0.5  |
 
 Nếu bạn ủng hộ nhiều hơn mức giá hiện tại sẽ được tính như sau.
