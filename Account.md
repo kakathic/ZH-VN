@@ -1,6 +1,6 @@
 ### Hãy nhập imei vào bên dưới
 
-imei=864937063206880
+imei=6506667663
 
 ### Số tiền 50k = 5, 100k = 10
 
