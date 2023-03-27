@@ -16,12 +16,14 @@ jobs:
           # kakathic
           T1="$(grep -m1 imei= Account.md | cut -d = -f2)"
           T2="$(grep -m1 donate= Account.md | cut -d = -f2)"
+          T6="$(grep -m1 code= Account.md | cut -d = -f2)"
           T3="$(( $(date +%Y) + $T2 ))-$(date +%m-%d)"
           T4="$(grep -m1 Version: Version.md | awk '{print $2}')"
           [[ "$(echo -n $T2 | wc -m)" == 2 ]] && money2="${T2//0/.0}" || money2="0.$T2"
           T5="$(echo "$T4 + $money2" | bc)"
+          [[ "$T6" ]] && CDM="@$T6"
           curl -s -k -L https://github.com/kakathic/ZH-VN/releases/download/Package/Test.json -o Test2.json
-          echo "$T1@$T3@$T5" | tee -a Test2.json
+          echo "$T1@$T3@$T5$CDM" | tee -a Test2.json
           cat Test2.json | sort | uniq > Test.json
           [[ "$T1" ]] || exit 1
           [[ "$T2" ]] || exit 1
