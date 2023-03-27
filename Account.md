@@ -1,6 +1,6 @@
 ### Hãy nhập imei vào bên dưới
 
-imei=6506667663
+imei=35569310271920
 
 ### Số tiền 50k = 5, 100k = 10
 
@@ -8,7 +8,7 @@ donate=2
 
 ### Mã máy
 
-code=elish
+code=
 
 > Điền số vào sau dấu bằng
 
