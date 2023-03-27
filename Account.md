@@ -6,6 +6,10 @@ imei=864937063206880
 
 donate=2
 
+### Mã máy
+
+code=elish
+
 > Điền số vào sau dấu bằng
 
 > Ví dụ: kk=1234
