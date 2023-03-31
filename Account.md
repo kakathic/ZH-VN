@@ -1,10 +1,10 @@
 ### Hãy nhập imei vào bên dưới
 
-imei=861886050399773
+imei=861404062219789
 
 ### Số tiền 50k = 5, 100k = 10
 
-donate=2
+donate=5
 
 ### Mã máy
 
