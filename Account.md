@@ -4,7 +4,7 @@ imei=99001534094414
 
 ### Số tiền 50k = 5, 100k = 10
 
-donate=5
+donate=2
 
 ### Mã máy
 
