@@ -37,7 +37,7 @@ dumpsys deviceidle whitelist +$Ksksn >&2
 appops set $Ksksn RUN_ANY_IN_BACKGROUND allow
 done
 
-if [ -e /sdcard/vip ];then
+if [ -e /sdcard/vip ] || [ -e /sdcard/Vip ] || [ -e /sdcard/VIP ];then
 while true; do
 kncfgvv="$(grep -m1 "ListApp=" ${0%/*}/module.prop | cut -d "=" -f2 | tr ',' '\n')";
 [ "$kncfgvv" ] || kncfgvv="$(pm list packages -3 | cut -d : -f2)";
