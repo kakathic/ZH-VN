@@ -12,7 +12,7 @@ Mô-Đun thêm Tiếng Việt cho rom MIUI và mod một số tính năng hay.
 
 Nếu chưa ủng hộ có thể dùng thử module `Thêm tiếng việt (VH-ZH)` trong 72 giờ.
 
-> [Xem cách ủng hộ](/)
+> [Xem cách ủng hộ]()
 
 Nhật ký thay đổi các phiên bản
 
